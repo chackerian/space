@@ -1,0 +1,449 @@
+.leftNav {
+    float: left;
+    width: 50%;
+    height: inherit;
+}
+
+.rightNav {
+    float: right;
+    margin-right: 2em;
+    height: inherit;
+    display: inline-block;
+}
+
+.headerNav {
+    background-color: $color-spacered;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    max-width: 1920px;
+    height: 75px;
+    position: fixed !important;
+    border-bottom: 2px solid $color-spacegrey;
+    a {
+        transition: none !important;
+    }
+    ul {
+        display: inline-block;
+    }
+    ul li {
+        display: inline-block;
+        color: $color-spacegrey !important;
+    }
+}
+
+.headerNavLogo {
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 1.3rem !important;
+    font-weight: 700;
+    color: $color-spacegrey !important;
+}
+
+// Nav
+
+.headerAuth {
+    li a {
+        color: #fff !important;
+        border: 1px solid #fff !important;
+        padding: 10px 14px;
+        margin: 0.5em;
+    }
+    li a:hover {
+        color: white;
+        background: $color-spacegrey;
+    }
+}
+
+.headerCompass {
+    font-size: 0.8rem;
+    vertical-align: middle;
+    i {
+        vertical-align: middle !important;
+    }
+}
+
+.headerLocation {
+    font-size: 0.8rem !important;
+}
+
+.headerLocationRadius {
+    float: left;
+    margin-top: 0;
+    font-size: 0.9rem;
+    &:hover {
+        color: yellow !important;
+    }
+}
+
+#radiusLogo {
+    font-size: 1.4rem !important;
+}
+
+.headerSearchNav {
+    outline: none !important;
+    background-color: $color-spacered;
+    margin-top: 5px;
+    border-bottom: 2px solid $color-spacegrey !important;
+    padding-bottom: 5px;
+    font-family: $font-header !important;
+    ::-webkit-input-placeholder {
+        color: #333 !important;
+    }
+    ::-moz-placeholder {
+        color: #333 !important;
+    }
+    :-mozplaceholder {
+        color: #333 !important;
+    }
+    :-ms-input-placeholder {
+        color: #333 !important;
+    }
+}
+
+.headerSearchNavField {
+    color: black;
+    float: right;
+    font-weight: 400;
+    font-size: 0.9rem !important;
+    i {
+        color: $color-spacegrey !important;
+        margin-right: -5px;
+        border-bottom: 2px solid $color-spacegrey;
+        padding: 0 5px 6px 0;
+    }
+}
+
+.headerRadius {
+    width: 150px;
+    margin-left: 10px;
+    padding: 8px 2px;
+    color: white !important;
+    background-color: #f73c37;
+    text-align: center;
+    input {
+        width: 16px;
+        display: inline-block;
+        text-align: center;
+        outline: none !important;
+        background-color: $color-ruddy;
+        color: white;
+        margin-left: -4px;
+        border: 1px solid $color-ruddy;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        font-family: $font-header;
+        &:focus {
+          outline: none !important;
+          -webkit-appearance: none !important;
+          -moz-appearance: none !important;
+          appearance: none !important;
+        }
+    }
+    span {
+        display: inline-block;
+        margin-left: 0;
+        padding-right: 4px;
+    }
+}
+
+.clickDropper {
+    li ul li a {
+      padding: 15px 0px 15px 0px !important;
+      font-size: 0.8rem !important;
+    }
+    & > li > ul > a:first-child::before {
+      color: #404040;
+      margin: -30px 15px -4px 0;
+      font-size: 1.3rem;
+      left: 6.6em !important;
+      pointer-events: none;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 11.5px solid transparent;
+      border-right: 11.5px solid transparent;
+      border-bottom: 11px solid #404040;
+      margin-top: -13px;
+    }
+}
+
+.headerCatDropLi ul {
+  margin: 0.7em 0px 0px -4.55em !important;
+}
+
+.headerDropDown {
+    position: relative;
+    ul {
+        display: none;
+        position: absolute;
+        margin: 1.6em -1px 0px -10.2em !important;
+        border: 3px solid $color-spacegrey;
+        animation: 0.5s pulse;
+        padding: 0;
+        background-color: white !important;
+        font-size: 0.8rem;
+        width: 13.5em;
+        z-index: 3;
+
+        li {
+            padding: 18px 50px 18px 20px;
+            color: black;
+            text-align: left !important;
+            width: 6.5em;
+            font-size: 1rem !important;
+
+            a {
+                color: black;
+                margin: 0 !important;
+                padding: 0;
+                padding: 15px 80px 15px 15px !important;
+            }
+        }
+
+    }
+}
+
+.headerDropDownShow {
+    padding: 12px;
+    span {
+        font-size: 0.8rem !important;
+    }
+    &:hover {
+        background-color: $color-spacegrey !important;
+        color: white !important;
+    }
+    &:hover > .headerDropDownNav {
+        display: grid;
+        position: absolute;
+        z-index: 2;
+    }
+    ul {
+      position: absolute;
+      display: none;
+      border: 6px solid #404040;
+      padding: 0;
+      background-color: white !important;
+      font-size: 0.8rem;
+      margin: 0.7em 0px 0px -5.9em;
+      z-index: 3;
+
+      li {
+          padding: 18px 50px 18px 20px;
+          color: black;
+          text-align: left !important;
+          width: 50px;
+          font-size: 1rem !important;
+
+          a {
+              color: black;
+              margin: 0 !important;
+              padding: 0;
+              padding:15px 80px 15px 15px !important;
+          }
+      }
+
+      li:last-child {
+          border-bottom: none !important;
+      }
+    }
+}
+
+.headerDropDownNav {
+  box-shadow: 0px 2px 5px;
+}
+
+.headerDropDownNav a li {
+  border-bottom: 4px solid #404040 !important;
+  &:hover {
+      text-decoration: underline;
+      transition: 0.2s;
+      color: red !important;
+  }
+}
+
+.navGeneral a li {
+  border-bottom: 4px solid #404040 !important;
+}
+
+.notifLi {
+    width: 100%;
+    margin: 2px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d7;
+    ul > li {
+        display: inline-block;
+    }
+}
+
+.notifMessage {
+    margin-right: 6px;
+    img {
+        height: 30px;
+        width: 30px;
+        border-radius: 3px;
+        margin-top: -3px;
+    }
+    img .notifInfo {
+        vertical-align: middle !important;
+    }
+    p {
+        font-size: 0.9rem;
+        margin-bottom: -5px;
+    }
+    p a {
+        font-weight: 700 !important;
+        color: $color-spacegrey !important;
+    }
+    p a:hover {
+        color: $color-spacegrey !important;
+    }
+    p span {
+        font-weight: 400 !important;
+        font-family: 'Helvetica Neue', sans-serif !important;
+    }
+}
+
+.headerNotDrop {
+    margin: 5px !important;
+}
+
+.headerCatDrop {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid $color-spacegrey !important;
+    font-size: 0.9rem !important;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-spacegrey !important;
+        color: white !important;
+    }
+}
+
+.headerCatDropDown {
+    margin-left: -151px !important;
+    ul {
+      margin: 0.9em -1px 0px -14em !important;
+    }
+}
+
+.headerNotDrop a {
+    font-size: 0.9rem !important;
+}
+
+// Dropdowns
+
+.modTriggerJoin {
+    font-family: $font-header !important;
+}
+
+.hoverDropper {
+    padding: 12px !important;
+    span {
+        font-size: 0.9rem;
+    }
+}
+
+.headerCat,
+.headerBigCat {
+    margin: 0 0 0 0;
+}
+
+.headerPreDrop {
+    margin-left: -172px !important;
+}
+
+.hoverDropDown {
+    max-height: 400px !important;
+    overflow-y: scroll !important;
+}
+
+.headerNameOptions {
+    margin: 0;
+    li {
+        margin: 0 2px;
+    }
+    li img {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 3px;
+    }
+}
+
+.headerNameOptions li a,
+.headerHomeButton li a {
+    padding: 12px !important;
+}
+
+.headerNameOptions li a:hover,
+.headerHomeButton li a:hover {
+    color: #fff !important;
+    background-color: $color-spacegrey !important;
+}
+
+.headerPostOptions {
+    li a i {
+        font-size: 1.6rem;
+        padding: 6px;
+        margin-right: 5px;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+}
+
+/////////////////////////////////////////
+// Notifications
+/////////////////////////////////////////
+
+.notifInfo ul > li {
+    display: block;
+}
+
+.notifMessage p, .notifDate p {
+    margin: 0 5px;
+}
+
+.notifDate p {
+    font-size: 0.7rem;
+    color: #7b7b7b;
+    margin-top: -5px;
+}
+
+.notificationHighlight {
+    color: deepskyblue;
+    text-shadow: 1px 1px black;
+}
+
+/////////////////////////////////////////
+
+.headerHomeButton {
+    margin: 0;
+    a {
+        color: black !important;
+    }
+}
+
+.headerNameOptions li a {
+    color: black !important;
+}
+
+.headerSearchRadiusLogo {
+    margin-left: 22px;
+    margin-right: 22px;
+    font-weight: 400;
+     a {
+        font-size: 1.3rem !important;
+        color: $color-spacegrey !important;
+    }
+}
+
+.headerNotDrop a {
+    color: $color-spacegrey !important;
+    padding: 12px !important;
+    font-size: 0.8rem !important;
+}

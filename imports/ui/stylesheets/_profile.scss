@@ -1,0 +1,932 @@
+#starry::after {
+    color: gold !important;
+    content: 'star_outline' !important;
+    float: left;
+}
+
+.desc {
+    float: left;
+    width: 48%;
+}
+
+.guardian {
+    float: right;
+    width: 48%;
+}
+
+.offerDiv {
+  display: inline-block;
+  width: 65%;
+}
+
+.profileSettingsSubmit {
+  background: $color-spacered;
+}
+
+.profileSettingsDiv {
+    margin: 5em;
+    padding-top: 5em;
+}
+
+.managerListingStatus {
+    color: $color-purple;
+}
+
+.managerReceivedOffers {
+    display: inline-block;
+}
+
+.managerOfferStatus {
+    color: $color-purple !important;
+}
+
+.managerOfferImage {
+    width: 49% !important;
+    margin-right: 2%;
+    li a img {
+        width: 100% !important;
+        height: 150px !important;
+    }
+}
+
+.managerOfferView {
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
+    text-align: right;
+    a {
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 10px 8px !important;
+        color: #fff !important;
+        background-color: $color-spacered !important;
+        border: none !important;
+        border-radius: 4px !important;
+    }
+}
+
+.profile-link {
+    color: $color-spacegrey !important;
+    text-underline: underline;
+    :hover {
+        color: #0890F2 !important;
+        text-decoration: underline;
+    }
+}
+
+.box-title {
+    background: $color-spacered !important;
+    font-family: inherit;
+    font-size: 1.1em !important;
+    color: white;
+    margin: 0 !important;
+    padding: 5px 8px;
+}
+
+.desc-box {
+    border: 1px solid $color-spacered;
+    border-bottom-left-radius: 4px;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 3em;
+    p {
+        width: 95%;
+        padding: 10px 10px 13px 10px;
+        margin: 5px;
+    }
+    ul li {
+        padding: 10px;
+        font-size: 1rem !important;
+    }
+    ul li:first-child {
+        padding-bottom: 1px !important;
+    }
+    ul li:last-child {
+        padding-top: 6px !important;
+    }
+}
+
+.desc-box-listing {
+    border: 1px solid $color-spacered;
+    border-radius: 4px;
+    width: 100%;
+    p {
+        padding: 1em;
+    }
+    input {
+        padding: 1em;
+    }
+}
+
+.desc-box-details {
+    margin-bottom: 12em;
+}
+
+.profileUserArea li {
+    color: black;
+}
+
+#defaultProfileUserH2 {
+    margin-left: 0 !important;
+}
+
+.defaultProfileUserDiv {
+    margin-top: 0 !important;
+}
+
+.profileUserFeedbackUl {
+    margin: 0;
+}
+
+.profileUserButtonUl > li {
+    display: inline-block !important;
+}
+
+.profileUserImg {
+    height: 200px !important;
+    border-radius: 5px !important;
+}
+
+.optionsProClick {
+    margin-left: 10px;
+    ul {
+        position:relative;
+        font-weight:400;
+    }
+    ul li {
+        position:relative;
+        list-style:none;
+        cursor:pointer;
+    }
+    ul li a {
+        display:block;
+        padding: 15px;
+        background:#fff;
+        color:#333;
+        text-decoration:none;
+    }
+    ul li ul {
+        position:absolute;
+        left:0;
+        right:0;
+        border: 1px solid #f39d00;
+        margin-top: -2px;
+    }
+    ul .clicker {
+        position:relative;
+        background:orange;
+        color:#FFF;
+        text-align: center;
+        padding: 17px 40px 14px 40px;
+    }
+    ul .clicker i {
+        color: #fff !important;
+        margin: 0 0 -3px 8px;
+    }
+    img {
+        position:absolute;
+        top:9px;
+        left:12px;
+    }
+    .no-js ul {
+        display:none;
+    }
+    .no-js:hover ul {
+        display:block;
+    }
+}
+
+.profileUserCards {
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    h2 {
+        text-decoration: underline;
+    }
+}
+
+.profileUserCardsUl li {
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+    margin: 0.6%;
+    border: 1px solid $color-spaceblue;
+    border-radius: 4px !important;
+    a {
+        padding: 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px !important;
+    }
+}
+
+.profileUserMore {
+    margin: 0 0 4rem 0 !important;
+    text-align: center !important;
+    li a i {
+        font-size: 4rem;
+        color: $color-spaceblue;
+    }
+    li a i:hover {
+        color: #04B2EC !important;
+    }
+}
+
+.profileManagerOffer {
+    margin: 0;
+}
+
+.profileManagerUl > li {
+    display: inline-block;
+}
+
+.profileUser {
+  margin: 8em 1em 3em 2em;
+  min-height: 50em;
+}
+
+.profileUser > div {
+    display: inline-block;
+    margin: 1em 3em;
+}
+
+.profileUserLeft {
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 50%;
+}
+
+.profileUserRight {
+    width: 58%;
+    vertical-align: top;
+    margin-top: 0rem !important;
+    font-size: 1.1rem !important;
+}
+
+.profileUserImage {
+    height: 200px;
+    width: 200px;
+    background-color: $color-spacered;
+    border-radius: 6px;
+    box-shadow: 0px 5px 7px;
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        box-shadow: 0px 5px 1px;
+    }
+}
+
+.profileUserNameHidden,
+.profileUserGraphHidden {
+    display: none !important;
+}
+
+.profileUserGraph {
+    margin-top: 2rem;
+    text-align: center !important;
+    canvas {
+        max-width: 80% !important;
+        height: 170px !important;
+    }
+}
+
+.profileUserName {
+    h1 {
+        font-size: 2.2rem;
+        font-weight: bold !important;
+        margin: 0;
+    }
+    ul {
+        margin: 0;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.profileUserRating ul {
+    margin: 1em 0px 0px 0px;
+    li {
+        display: inline-block;
+    }
+    li span {
+        margin-left: 5px;
+        font-size: 1.3rem;
+    }
+    li span a {
+        color: $color-spacegrey !important;
+    }
+    li i {
+        margin-left: 15px;
+        font-size: 1.3rem;
+        color: #3b5998 !important;
+    }
+}
+
+.devsite-rating-stars {
+    display: inline;
+    letter-spacing: -1em;
+}
+
+.reviews-count {
+    display: inline;
+}
+
+.profileUserInfo ul {
+    margin: 10px 0 0 0 ;
+    vertical-align: middle;
+    li a {
+        padding: 2px 5px;
+        font-size: 1.6rem;
+        vertical-align: middle !important;
+    }
+    li a i {
+        color: $color-darkblue !important;
+    }
+}
+
+.profileUserInfo > ul li {
+    display: inline-block;
+    vertical-align: middle !important;
+}
+
+.profileUserAmount {
+    display: inline-block;
+}
+
+.profileUserAmount ul {
+    margin: 15px 0 8px 0 !important;
+    li {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        background-color: $color-spaceblue !important;
+        font-family: 'Helvetica Neue', sans-serif !important;
+        color: white !important;
+    }
+}
+
+.profileStars {
+    font-size: 1.5em;
+    vertical-align: middle !important;
+    span {
+        color: #777 !important;
+        vertical-align: middle !important;
+    }
+    span:hover {
+        color: #555 !important;
+    }
+}
+
+.profileSettingsUl {
+    width: 70% !important;
+    margin: auto !important;
+    & > li {
+        display: block;
+    }
+}
+
+.profileSettingsLi {
+    width: 100%;
+    h4 {
+        font-weight: 400 !important;
+        font-size: 1.1rem !important;
+    }
+    ul > li {
+        display: inline-block;
+    }
+    ul li h4 {
+        margin-right: 40px;
+    }
+    ul li input {
+        padding: 10px 12px;
+        width: 95%;
+        border-radius: 4px;
+        border: 1px solid #d3d3d3;
+    }
+}
+
+.profileSettingsEmail li input {
+    margin-left: 38px;
+}
+
+.profileSettingsLocation li input {
+    margin-left: 14px;
+}
+
+.profileSettingsUsername li input {
+    margin-left: -5px;
+}
+
+.profileSettingsImage {
+    margin-left: 35px;
+}
+
+.profileSettingsPhoto li h4 {
+    vertical-align: top !important;
+}
+
+.profileSettingsPhoto li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.profileSettingsPhoto li input {
+    padding: 0 !important;
+    width: 200px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    margin-left: 20px;
+}
+
+/* View Feedback */
+
+.profileUserFeedbackView {
+    width: 90%;
+}
+
+.profileUserFeedbackView h2 {
+    font-weight: 400 !important;
+    margin-left: 120px !important;
+}
+
+.profileUserFeedbackViewSymbols {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #989898;
+    margin: 40px auto;
+}
+
+.profileUserFeedbackViewSymbols li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 40px;
+}
+
+.profileUserFeedbackViewSymbols li i {
+    vertical-align: middle;
+    margin-right: 15px;
+    color: #989898;
+}
+
+.profileUserFeedbackViewPositive {
+    margin-left: 0 !important;
+}
+
+.profileUserFeedbackViewNegative {
+    margin-right: 0 !important;
+}
+
+.profileUserFeedbackViewPositive, .profileUserFeedbackViewPositive i, .profileUserFeedbackViewPositive i:hover {
+    color: #396 !important;
+}
+
+.profileUserFeedbackViewNegative, .profileUserFeedbackViewNegative i, .profileUserFeedbackViewNegative i:hover {
+    color: tomato !important;
+}
+
+.profileUserFeedbackViewCriteria {
+    margin: auto;
+    width: 73%;
+}
+
+.profileUserFeedbackViewCriteria li ul > li {
+    display: inline-block;
+}
+
+.profileUserFeedbackViewCriteria li > ul {
+    font-size: 1.2rem;
+}
+
+.profileUserFeedbackViewCriteria > li {
+ margin: 25px 0;
+ display: inline-block;
+}
+
+.profileUserFeedbackViewQuestion {
+    font-weight: 400 !important;
+}
+
+/************ IMPORTANT - CHANGE THE VALUES OF THE FOLLOWING AS THE CRITERIA TEXT CHANGES */
+
+/************ END END END END END */
+
+.profileUserFeedbackViewResponse {
+    font-size: 1rem;
+    border-radius: 4px;
+    width: 80% !important;
+    margin: 25px auto;
+}
+
+.profileUserFeedbackViewResponse li {
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d7;
+}
+
+.profileUserFeedbackViewResponse li b {
+    font-weight: 400 !important;
+    font-size: 0.96rem !important;
+}
+
+.profileUserFeedbackViewResponse li p {
+    margin: 10px 0 0 0 !important;
+    font-size: 0.9rem !important;
+    overflow: initial !important;
+}
+
+.profileUserFeedbackViewResponse li i {
+    font-size: 0.8rem !important;
+    color: $color-purple !important;
+}
+
+.profileUserFeedbackViewResponse li i:hover {
+    color: $color-purple !important;
+}
+
+.profileUserFeedbackViewResponse li i a {
+    text-decoration: underline !important;
+    color: $color-purple !important;
+}
+
+.profileUserFeedbackViewResponse li i a:hover {
+    color: $color-spaceblue !important;
+}
+
+.profileCard > h2 {
+    margin-left: 5px;
+}
+
+.profileCard > ul {
+    text-align: center;
+}
+
+.profileCardUl > li {
+    display: inline-block;
+    border: 1px solid $color-spaceblue;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 0px 10px 0px 10px;
+    width: 28.9%;
+    &:hover {
+        border: 1px solid #999;
+    }
+}
+
+.profileCardInfo {
+    text-align: left !important;
+    width: 45%;
+    margin-left: 2%;
+    vertical-align: top;
+    &  > li {
+        margin-bottom: 12px;
+    }
+    li a h4 {
+        margin: 0;
+        color: $color-spaceblue;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 400 !important;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1.5em;
+        font-family: "Oswald";
+    }
+    li a h4:hover {
+        text-decoration: underline;
+    }
+}
+
+.profileCardLi {
+    background-color: white;
+    width: 15em;
+    padding: 1em;
+    ul {
+        display: inline-block;
+    }
+    p {
+        text-align: right;
+        margin: -3px 0 5px 0;
+        height: 17px;
+        font-size: 0.6rem;
+        vertical-align: top !important;
+        color: #6c54b3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        b {
+            float: left !important;
+        }
+        a {
+            font-style: italic;
+            color: #6c54b3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.profileCardImage {
+    width: 49%;
+    margin-right: 2%;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px !important;
+    }
+}
+
+.profileCardName {
+    text-decoration: underline !important;
+    font-style: italic;
+    &:hover {
+        color: $color-blue2 !important;
+    }
+}
+
+.profileCardView {
+    margin: 25px 0 0 0;
+    text-align: right;
+    a {
+        padding: 10px 18px !important;
+        font-size: 0.9rem;
+        background-color: $color-spacered;
+        color: #fff;
+        border-radius: 4px;
+    }
+}
+
+.profileCardItem {
+    font-size: 0.9rem;
+    margin-bottom: 5px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.featurePageTitle {
+    text-decoration: underline;
+}
+
+.profileReceivedOffers h2 {
+    margin: 0;
+}
+
+.profileReceivedOffers > ul {
+    margin-left: 0%;
+}
+
+.profileReceivedOriginal {
+    margin: 3px 0 0 0;
+    font-size: 0.9rem;
+}
+
+.profileReceivedUl {
+    width: 97%;
+    margin: 0;
+}
+
+.profileReceivedLi {
+    height: 475px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.profileReceivedLi > ul {
+    display: inline-block !important;
+}
+
+.profileReceivedCardLeft {
+    width: 35% !important;
+}
+
+.profileReceivedImage {
+    width: 100% !important;
+    height: 260px;
+}
+
+.profileReceivedImg {
+    width: 100% !important;
+    height: 100%;
+    border-radius: 6px !important;
+}
+
+.profileReceivedCardRight {
+    width: 50% !important;
+    margin-left: 5%;
+    vertical-align: top;
+    li a {
+        margin: 0;
+        color: $color-spaceblue !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    li a:hover {
+        color: $color-spaceblue !important;
+        text-decoration: underline;
+    }
+    li a h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.profileReceivedName {
+    font-size: 0.8rem;
+    color: #6c54b3;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 2px 0 20px 0 !important;
+}
+
+.profileReceivedPrice {
+    margin: 12px 0 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profileReceivedDate,
+.profileReceivedLocation {
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profileReceivedButtons {
+    margin-top: 15px;
+    li a {
+        padding: 14px 12px;
+        font-size: 1rem;
+        color: #fff !important;
+        background-color: $color-spacered;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        border-radius: 6px;
+        overflow: hidden;
+        float: right;
+    }
+}
+
+.profileReceivedButtonsUl > li {
+    display: inline-block;
+}
+
+.profileReceivedAccept a {
+    background-color: #49E20E !important;
+}
+
+.profileReceivedDecline {
+    margin: 0 0 0 10px !important;
+}
+
+#profileReceivedOffersMaps {
+    margin-top: 10px;
+    width: 100%;
+    height: 180px;
+}
+
+.profileViewMeetupRight li {
+    margin: 16px 0 !important;
+}
+
+.profileViewMeetupLi {
+    margin-bottom: 50px;
+}
+
+.abouttext textarea {
+    width: 95% !important;
+    padding: 10px 12px !important;
+    height: 80px !important;
+    border-radius: 4px !important;
+    border: 1px solid #d3d3d3 !important;
+    vertical-align: middle !important;
+}
+
+/** Social Button CSS **/
+
+.share-btn {
+    display: inline-block !important;
+    color: white !important;
+    width: 4em !important;
+    text-align: center !important;
+    border-radius: 4px;
+    margin: 0 1px !important;
+
+    &:hover {
+        color: #eeeeee !important;
+    }
+
+    &:active {
+        position: relative !important;
+        top: 2px !important;
+        box-shadow: none !important;
+        color: #e2e2e2 !important;
+        outline: none !important;
+    }
+
+    i {
+    color: #fff !important;
+    }
+}
+
+.share-btn.twitter     {
+    background: #55acee !important;
+}
+
+.share-btn.google-plus {
+    background: #dd4b39 !important;
+}
+
+.share-btn.facebook {
+    background: #3B5998 !important;
+}
+
+.share-btn.linkedin {
+    background: #4875B4 !important;
+}
+
+.share-btn.email {
+    background: #444444 !important;
+}
+
+.share-btn.reddit {
+    background: #ff5700 !important;
+}
+
+.share-btn.twitter:hover {
+    background: #0091FF !important;
+}
+
+.share-btn.google-plus:hover {
+    background: #FF1C00 !important;
+}
+
+.share-btn.facebook:hover {
+    background: #0B3388 !important;
+}
+
+.share-btn.linkedin:hover {
+    background: #4875B4 !important;
+}
+
+.share-btn.email:hover {
+    background: #444444 !important;
+}
+
+.share-btn.reddit:hover {
+    background: #FF2F00 !important;
+}
+
+.status-pending {
+    border: 2px solid $color-platinum;
+    color: $color-platinum;
+}
+
+.status-accepted {
+    border: 2px solid $color-spacegreen;
+    color: $color-spacegreen;
+}
+
+.status-rejected {
+    border: 2px solid #FF0000;
+    color: #FF0000;
+}
+
+.defaultProfileDiv {
+    text-align: center;
+    h2 {
+        font-weight: 400 !important;
+        color: #555 !important;
+        vertical-align: middle !important;
+    }
+     h2 i {
+        margin-right: 15px;
+        vertical-align: middle !important;
+        padding: 10px !important;
+        background-color: $color-spacered !important;
+        color: #fff !important;
+    }
+}
+
+.listtitle {
+    width: 80%;
+}
+
+.defaultProfileDiv p {
+    color: #666 !important;
+}

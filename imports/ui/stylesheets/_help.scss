@@ -1,0 +1,253 @@
+.aboutDiv {
+    text-align: center;
+}
+
+.aboutImg {
+    width: 100% !important;
+    height: auto;
+    max-height: 200px;
+    border-radius: 6px;
+    background-color: $color-spacered !important;
+}
+
+// Contact
+
+.sent {
+    display: none;
+}
+
+// Help
+
+.helplogo {
+    font-weight: 400 !important;
+}
+
+.termsdiv {
+    padding-right: 0 !important;
+    p {
+        text-align: justify !important;
+        margin-bottom: 50px;
+        font-size: 0.9rem;
+    }
+}
+
+.helplogol {
+    list-style: none;
+}
+
+.helpDiv {
+    padding: 1em 1em;
+    text-align: center;
+    ul li img {
+        width: 100%;
+        margin: 3rem 0 1rem 0;
+    }
+}
+
+.helpwel {
+    font-weight: bold;
+}
+
+.helpPagesPar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.helpAboutUl li ul li,
+.helpDiv ul li {
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.helpAboutUl li ul li img {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.helpImgUl li {
+    width: 25%;
+}
+
+.helpCenterThree {
+    border-top: 1px solid $color-spacegrey;
+    text-align: left !important;
+}
+
+.helpThree {
+  & > li {
+      width: 28%;
+      display: inline-block;
+      vertical-align: top !important;
+  }
+  li ul li h3 {
+      margin: 5px 0 4px 0;
+  }
+  li ul li p {
+      margin: 0 0 2px 0;
+  }
+  li ul li:last-child {
+      margin-top: 5px;
+      list-style-type: circle;
+      line-height: 1.5;
+  }
+}
+
+.faq ul {
+    padding: 0;
+
+    li ul li p {
+        width: 70%;
+    }
+}
+
+.faqsec {
+    margin-left: 1rem;
+}
+
+.faqheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqinfo {
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+
+.contactform {
+    max-width: 400px !important;
+}
+
+.contactsubmit input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: $color-spacegrey;
+    background-color: #fff;
+    border: none;
+    border: 1px solid $color-spacered;
+    &:hover {
+        color: #fff;
+        background-color: $color-spacered;
+    }
+}
+
+.contactname input,
+.contactsubject input,
+.contactemail input {
+    padding: 10px 12px !important;
+    width: 100% !important;
+    border-radius: 4px !important;
+    border: 1px solid #d3d3d3 !important;
+}
+
+.contactname input,
+.contactsubject input .contactemail input {
+     width: 30%;
+     height: 20px;
+     padding-left: 5px;
+ }
+
+.phoneNumber {
+    width: 200px;
+}
+
+.phone {
+    color: $color-spaceblue;
+}
+
+.helpiteml {
+    margin-top: 5.2rem;
+    text-align: center;
+    li {
+        padding: 0.9em !important;
+        font-family: $font-norm;
+        a {
+            color: $color-spacegrey !important;
+        }
+        a:hover {
+            color: white !important;
+        }
+    }
+}
+
+.helpcenternav {
+    margin-top: 2em;
+}
+
+.helpnav ul li {
+    display: inline-block;
+    font-size: 1rem;
+
+    a {
+        padding: 12px 15px;
+        margin: 5px;
+        border-radius: 3px;
+    }
+
+    a:hover {
+        background-color: $color-spacered;
+        color: white;
+    }
+}
+
+.helpNavSelected {
+    background-color: $color-spacered;
+    color: white !important;
+}
+
+.faqdiv {
+    ul {
+        padding: 0;
+    }
+    ul li ul li p {
+        width: 70%;
+    }
+    h3 {
+        margin-bottom: 10px !important;
+        margin-left: -15px;
+    }
+    p {
+        margin-bottom: 25px !important;
+    }
+}
+
+.helpDiv a:hover, .aboutDiv a:hover, .faqdiv a:hover, .safetydiv a:hover, .reportdiv a:hover,
+.prohibiteddiv a:hover, .termsDiv a:hover {
+    color: #0890F2 !important;
+    text-decoration: underline;
+}
+
+.faqdiv ol,
+.safetydiv ol,
+.reportdiv ol {
+    margin-left: 30px;
+}
+
+.faqSec {
+    margin-left: 1rem;
+}
+
+.faqHeading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.contacttext textarea {
+    width: 100% !important;
+    padding: 10px 12px !important;
+    height: 80px !important;
+    border-radius: 4px !important;
+    border: 1px solid #d3d3d3 !important;
+}
+
+.faqInfo {
+    text-align: center;
+    margin: 2rem 0 0 0;
+    h3, .faqInfo p {
+        margin: 5px 0;
+    }
+}

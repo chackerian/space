@@ -1,0 +1,378 @@
+.itemMoney {
+    font-size: 1.7rem !important;
+    width: 3.5em;
+}
+
+.listingItemOptionsDrop {
+    width: 100%;
+    margin-top: 23px;
+    ul li {
+        width: 100%;
+        padding: 20px 0;
+        background-color: orange;
+        text-align: center;
+        border-radius: 4px;
+    }
+    ul li a {
+        padding: 20px;
+        background-color: orange;
+        color: white;
+    }
+    ul li a i {
+        color: white !important;
+        margin-left: 10px;
+    }
+}
+
+.profileBtn {
+    background-color: $color-spacered !important;
+    &:hover {
+        background-color: #f73c37;
+    }
+}
+
+.lat,
+.lng {
+    display: none;
+}
+
+.click-nav {
+    display: inline-block !important;
+    ul .clicker {
+        position: relative;
+        background: orange;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .no-js ul {
+        display: none;
+    }
+    ul {
+        position: relative;
+        font-weight: 400;
+        margin: 5px 0 0 0 !important;
+    }
+    ul li {
+        position: relative;
+        list-style: none;
+        cursor: pointer;
+    }
+    ul li a {
+        display: block;
+        padding: 15px;
+        background: #fff;
+        color: #333;
+        text-decoration: none;
+    }
+    ul li ul {
+        position: absolute;
+        left: 0;
+        right: 0;
+        border: 2px solid #f39d00;
+        margin: 0 !important;
+    }
+    ul .clicker i {
+        color: #fff !important;
+        margin: 0 0 -3px 8px;
+    }
+    img {
+        position: absolute;
+        top: 9px;
+        left: 12px;
+    }
+    .no-js:hover ul {
+        display: block;
+    }
+}
+
+.optionsItems {
+    margin: 0 !important;
+    li {
+        margin: 0 !important;
+    }
+    li a i {
+        margin-right: 12px;
+    }
+}
+
+.listingItemUserImg {
+    margin-top: 10px !important;
+    ul li a img {
+        height: 80px !important;
+        width: 80px !important;
+    }
+}
+
+.listingItemUserInfo {
+    margin-left: 15px !important;
+    margin-top: 10px !important;
+    vertical-align: middle;
+    width: 60% !important;
+}
+
+.listingItemUserName {
+    margin-bottom: 5px;
+    width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-size: 0.9em;
+    a {
+       white-space: nowrap !important;
+       float: left !important;
+       font-weight: bold;
+   }
+}
+
+.listingItemUserInfo {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.listingItemOffersReceived {
+    color: purple;
+    font-weight: bold;
+    width: 94%;
+    float: left;
+    font-size: 0.9em !important;
+}
+
+.listingItemLocationString {
+    margin-top: 18px;
+    padding: 10px 0px 10px 0px;
+    background-color: $color-spacered;
+    border-radius: 4px;
+}
+
+.listingItemLocationString p {
+    color: #fff !important;
+    text-align: center;
+}
+
+.listingItemDiv {
+  margin: 3em 2em 2em 2em;
+  & > div {
+      display: inline-block;
+  }
+  & > h1, .listingItemDiv p {
+      margin: 0;
+  }
+  &  > p {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #6c54b3;
+  }
+}
+
+.listingItemPriceButtons {
+    width: 25%;
+    padding-bottom: 2em;
+    float: right;
+    text-align: center;
+     ul {
+        margin: 0;
+        display: inline-block;
+        li {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.listingItemBrand,
+.listingItemColor,
+.listingItemSize,
+.listingItemCondition,
+.listingItemQuantity,
+.listingItemTrade {
+    font-family: $font-header !important;
+}
+
+.listingItemLeft {
+    width: 100%;
+}
+
+.listingItemDetails {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.listingItemDetails h4,
+.listingItemDesc h4 {
+    font-size: 1.6rem;
+    margin: 0;
+    border-bottom: 1px solid $color-spaceblue;
+    padding-bottom: 5px;
+    color: $color-spaceblue;
+}
+
+.listingItemDetailLeft {
+    width: 45%;
+    float: left;
+}
+
+.listingItemDetailRight {
+    width: 45%;
+    float: right;
+}
+
+.listingItemDetailLeft ul li:nth-child(2),
+.listingItemDetailLeft ul li:nth-child(3),
+.listingItemDetailRight ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(3) {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.listingItemSize a {
+    margin-left: 1.7rem !important;
+}
+
+.listingItemCondition a {
+    margin-left: 2.4rem !important;
+}
+
+.listingItemQuantity a {
+    margin-left: 2.9rem !important;
+}
+
+.listingItemDesc {
+    margin: 50px 0;
+    width: 75%;
+}
+
+.listingMapsCanvas {
+    height: 500px !important;
+}
+
+.listingItemOptions {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    ul {
+        text-align: right !important;
+    }
+    ul li {
+        display: inline-block;
+    }
+}
+
+.listingItemOptionsLeft {
+    float: left !important;
+    margin: 0;
+    vertical-align: middle;
+    display: block;
+}
+
+.listingItemTrades {
+    margin-left: 15px;
+}
+
+.listingItemTitle {
+    font-size: 2.3em !important;
+    color: #404040;
+    margin: 1em 0 0 0 !important;
+}
+
+.listingItemBrand,
+.listingItemColor,
+.listingItemSize,
+.listingItemCondition,
+.listingItemQuantity,
+.listingItemTrades {
+    // width: 50% !important;
+}
+
+.listingItemBrand a, .listingItemBrand span, .listingItemColor span, .listingItemSize span,
+.listingItemCondition span, .listingItemQuantity span, .listingItemTrades span {
+    // margin-left: 10% !important;
+}
+
+.listingItemBrand a, .listingItemColor span {
+    margin-left: 5px !important;
+}
+
+.listingItemSize span {
+    margin-left: 5px !important;
+}
+
+.listingItemType a {
+    margin-left: 5px !important;
+}
+
+.listingItemTrade span {
+    margin-left: 5px !important;
+}
+
+.listingItemQuantity span {
+    margin-left: 5px !important;
+}
+
+.listingItemCondition span {
+    margin-left: 5px !important;
+}
+
+.listingItemCat span {
+    margin-left: 5px !important;
+}
+
+.listingPayment {
+    display: block !important;
+    margin: -75px -100px 0 0;
+}
+
+.listingItemShare {
+    padding-top: 2em;
+    text-align: center;
+    a {
+        padding: 0.5em 0.1em;
+    }
+}
+
+.itemAfterBanner {
+    background-color: $color-purple;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    b {
+        color: #fff;
+        font-weight: 700;
+    }
+}
+
+.listingItemOptions ul li a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.listingItemOptions ul li a i {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.listingItemOptionsDropDown {
+    font-family: $font-secondary;
+}
+
+// Edits
+
+.editing {
+    border: 1px solid black;
+}
+
+.titleEdit {
+    font-size: 3.4em !important;
+    color: $color-spaceblue !important;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    width: 85% !important;
+}
+
+.descEdit {
+    width: 50% !important
+}

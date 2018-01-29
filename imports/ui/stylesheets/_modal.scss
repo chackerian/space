@@ -1,0 +1,1016 @@
+.modal-dialog {
+	opacity: 1 !important;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10000;
+ 	outline: 0;
+	height: 500px;
+	margin:0 auto;
+	padding: 2em;
+	position: absolute;
+	transition: all .3s ease;
+}
+
+.modal-content {
+	transition: all .3s ease;
+	border: 8px solid $color-spacered !important;
+	border-radius: 15px !important;
+	box-shadow: 0 0 16px black !important;
+	overflow-y: hidden !important;
+	& > div {
+		background-color: white !important;
+		overflow-y: hidden !important;
+		border-radius: 11px;
+	}
+}
+
+.modal-close {
+	float: right;
+}
+
+.close i {
+	font-size: 2em;
+	&:hover {
+		color: $color-spacered;
+	}
+}
+
+.modal-body {
+	max-height: 500px;
+	overflow-y: scroll !important;
+	overflow-x: hidden;
+	padding: 40px !important;
+	img {
+    	height: 30em;
+	}
+}
+
+.modalNext {
+	background-color: #04b2ec !important;
+	&:hover {
+		background-color: #06C1FF !important;
+	}
+}
+
+.modalBack,
+.modalExit  {
+	background-color: #999 !important;
+	margin-right: 10px;
+	&:hover {
+		background-color: #ababab !important;
+	}
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: red;
+	opacity: 0.6;
+	-webkit-transition: opacity 0.15s linear;
+	-o-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
+}
+
+.listdescription {
+    resize: none;
+    width: 92%;
+    height: 150px;
+}
+
+.currentLocation input {
+	padding: 11px 50px !important;
+	color: #fff !important;
+	background-color: red;
+	border: none;
+	border-radius: 4px !important;
+}
+
+.modLocationRadiusTrigger {
+	color: #404040 !important;
+	background-color: #f8504b !important;
+
+	&:hover {
+
+	}
+}
+
+.modLocationRadiusBody {
+	margin-bottom: 17em;
+}
+
+.notifMainWrap {
+    width: 70%;
+    margin:auto;
+    h2 {
+		margin-top: 50px !important;
+		font-weight: 400 !important;
+	}
+}
+
+/*~~ Button End ~~*/
+
+.modOfferRequestPageOne, .modAddListingPage {
+	width: 100%;
+	vertical-align: top;
+}
+
+.modOfferRequestPageOneUl li h2,
+.modOfferRequestPageTwo li h2,
+.modOfferRequestPageThree h2,
+.modFeedbackInitialDiv h2,
+.modReportDiv h2 {
+	color: #555 !important;
+	font-size: 2rem !important;
+	font-weight: 400 !important;
+	margin: 20px 0 !important;
+}
+
+.modOfferRequestPageOneUl > li:first-child input,
+.modOfferRequestPageTwo li:first-child input,
+.modAddListingPageOneUl > li input {
+	padding: 12px 10px 12px 20px !important;
+	border-radius: 4px !important;
+	text-align: left !important;
+	outline: none !important;
+	border: 2px solid #d3d3d3 !important;
+}
+
+.modOfferRequestPageOneUl > li:first-child input:focus,
+.modAddListingPageOneUl > li input:focus {
+	border-color: $color-spacered !important;
+}
+
+.modOfferRequestPageOneUl > li:nth-child(2) {
+	margin-top: 10px;
+}
+
+.modOfferRequestDateWrap {
+	list-style: none !important;
+}
+
+.modSentOfferTrigger {
+	font-size: 0.9rem;
+	font-weight: 400;
+	padding: 10px 8px !important;
+	color: #fff !important;
+	background-color: #f8504b !important;
+	border: none !important;
+	border-radius: 4px !important;
+	margin-bottom: 4px;
+	width: 100% !important;
+}
+
+.profileSentOfferLi {
+	margin-bottom: 0 !important;
+	height: 100%;
+	border-top: 1px solid #00bfff;
+	& :first-child {
+		border-top: none !important;
+	}
+}
+
+.offer {
+    color: #523f8c;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    width: 40%;
+}
+
+#profileReceivedCancel {
+	width: 100% !important;
+	background-color: #f8504b !important;
+	padding: 15px 0 !important;
+	text-align: center !important;
+	border-radius: 4px !important;
+	color: #fff !important;
+	text-decoration: none !important;
+	& :hover {
+		background-color: #f73c37 !important;
+	}
+	a {
+		color: white !important;
+		text-decoration: none !important;
+		padding: 15px 140px !important;
+	}
+}
+
+.profileViewMeetupRight li:first-child {
+	margin: 0 !important;
+}
+
+.profileReceivedCardRight li a h3, .profileReceivedCardRight b {
+	font-weight: 400 !important;
+}
+
+.profileSentOfferStatus {
+	margin: 0 !important;
+	margin-bottom: 10px !important;
+	font-size: 0.8rem !important;
+	font-style: italic !important;
+}
+
+#profileReceivedName {
+	margin: 8px 0 15px 0 !important;
+}
+
+.profileReceivedPriceOriginal {
+	font-size: 0.8rem;
+	vertical-align: middle;
+	margin-left: 6px;
+}
+
+.profileReceivedPrice b, .profileReceivedPrice span {
+	vertical-align: middle !important;
+}
+
+.modReceivedOffersTrigger {
+	padding: 10px 18px !important;
+	background-color: #00bfff !important;
+	color: #fff !important;
+	font-family: $font-norm;
+	margin-left: 2px;
+	border-radius: 4px;
+}
+
+.profileReceivedOffersLi:hover {
+	background-color: #d3d3d3 !important;
+}
+
+.profileReceivedOffersH2 {
+	width: 76%;
+	margin: 40px auto 30px auto !important;
+	a {
+		color:#00bfff !important;
+	}
+}
+
+.profileReceivedOffersLi {
+	border-bottom: 1px solid #d3d3d3;
+	padding: 20px 0;
+	width: 75%;
+	margin: 0 auto !important;
+	font-size: 0.9rem;
+}
+
+.profileReceivedOffersLi > a {
+	font-family: 'Droid Sans', sans-serif !important;
+}
+
+.profileReceivedOffersLi a ul li {
+	display: inline-block;
+}
+
+.profileReceivedOffersInfoImg {
+	margin-left: 10px;
+	img {
+		height: 30px !important;
+		width: 30px !important;
+		border-radius: 50% !important;
+		vertical-align: middle !important;
+		margin-right: 10px;
+	}
+}
+
+.profileReceivedOffersInfoPrice {
+	color: #404040 !important;
+}
+
+.profileReceivedOffersInfoTime {
+	font-size: 0.85rem !important;
+	font-style: italic !important;
+	color: #6c54b3 !important;
+	float: right !important;
+	margin-top: 3px !important;
+	margin-right: 10px;
+}
+
+.profileReceivedOffersInfoLocation {
+	color: #404040 !important;
+	margin: 0 10px !important;
+	float: right !important;
+	margin-top: 3px !important;
+}
+
+#profileReceivedDecline {
+	margin: 0 0 0 10px !important;
+}
+
+#profileReceivedButtons {
+	margin: 0 !important;
+	margin-top: 20px !important;
+}
+
+#profileReceivedButtonsUl li {
+	width: 45%;
+	background-color: #f8504b;
+	display: inline-block;
+	padding:15px 0;
+	border-radius: 4px;
+	text-align: center;
+}
+
+#profileReceivedButtonsUl li:hover {
+	background-color: #f73c37;
+}
+
+#profileReceivedButtons li a {
+	color: white !important;
+	text-decoration: none;
+	padding: 15px 52px;
+}
+
+#profileReceivedAccept, #profileReceivedAcceptBtn {
+	background-color: #49e20e !important;
+	margin-right: 10px;
+}
+
+#profileReceivedAccept:hover, #profileReceivedAcceptBtn:hover {
+	background-color: #3BCE02 !important;
+}
+
+.receivedGoBack {
+	background-color: #00bfff !important;
+	margin-right: 10px !important;
+	& :hover {
+		background-color: #04b2ec !important;
+	}
+}
+
+#receivedContinue {
+	font-size: 1.7rem;
+	margin-top: 35% !important;
+	margin-left: 30% !important;
+}
+
+#receivedContinueBtn {
+	margin-left: 48% !important;
+	width: 100%;
+	ul li a {
+		color: white !important;
+	}
+	ul li a:hover {
+		text-decoration: none !important;
+	}
+}
+
+#profileHistoryInitialFeedback button {
+	width: 100% !important;
+	background-color: #f8504b !important;
+	padding: 15px 0 !important;
+	text-align: center !important;
+	border-radius: 4px !important;
+	color: #fff !important;
+	text-decoration: none !important;
+	&:hover {
+		background-color: #f73c37 !important;
+	}
+}
+
+#profileHistoryView {
+	margin-bottom: 8px;
+	margin-top: 23px !important;
+}
+
+#profileListingManagerButtonsUl {
+	a:hover {
+		text-decoration: none !important;
+	}
+	& > li {
+		display: inline-block;
+		margin: 0;
+	}
+	& > li:last-child {
+	vertical-align: top !important;
+	}
+	& > li:last-child button {
+		padding: 17px 40px 16px 40px !important;
+	}
+	& > li > ul > li > a {
+		color: #fff !important;
+		padding: 17px 40px 14px 40px !important;
+	}
+	& > li > ul > li > ul > li a {
+		color: #404040 !important;
+	}
+}
+
+.modEditListingTrigger,
+.modReportTrigger {
+	background-color: #fff !important;
+	width: 100% !important;
+	text-align: left !important;
+	padding: 0 !important;
+}
+
+.modEditListingDiv {
+	width: 90%;
+	margin: 40px auto 10px auto;
+	h3 {
+		font-weight: 400 !important;
+	}
+	&  > ul > li {
+		margin: 10px 0 !important;
+		display: inline-block !important;
+	}
+	br {
+		margin: 15px 0;
+	}
+	&  > ul > li > div {
+		margin-top: 5px;
+	}
+}
+
+.headerDropDownAddListing {
+	float: left !important;
+	padding: 0 !important;
+	width: 91% !important;
+	& ::before {
+		margin: -32px 8px 0 !important;
+	}
+}
+
+//////////////    Image Upload      /////////////////
+
+.uploadimg {
+    height: 161px;
+    width: 161px;
+}
+
+.imageupload {
+	color: white;
+	margin-left: 18px;
+	outline: none !important;
+	&::-webkit-file-upload-button {
+		visibility: hidden !important;
+		vertical-align: middle;
+	}
+	&::before {
+		content: 'Select Images';
+		display: inline-block;
+		background: #f8504b !important;
+		border-radius: 3px;
+		border: none;
+		padding: 5px 14px;
+		vertical-align: middle !important;
+		outline: none;
+		white-space: nowrap;
+		-webkit-user-select: none;
+		cursor: pointer;
+		text-shadow: none;
+		font-weight: 400;
+		font-size: 10pt;
+		color: #fff;
+		margin-right: 5px !important;
+	}
+	&:hover::before {
+		background: #f73c37 !important;
+	}
+}
+
+//////////////////////////////////////////////////////
+
+.modAddListingPageFourUl li {
+	margin: 30px 0 !important;
+}
+
+.modAddListingPageFourUl li > label {
+	font-size: 1.1rem;
+	color: #999 !important;
+}
+
+.modAddListingPageFourUl li > div, .modAddListingPageFourUl li input {
+	margin-left: 50px;
+}
+
+.modAddListingPageFourUl li:first-child > label {
+	margin-right: 9px;
+}
+
+.modAddListingPageFourUl li:nth-child(2) > label {
+	margin-right: 30px;
+}
+
+.modAddListingPageFourUl li:nth-child(4) > label {
+	margin-right: 46px;
+}
+
+.modAddListingPageFourUl li:last-child > label {
+	margin-right: 35px;
+}
+
+.modAddListingPageFourUl li > label, .modAddListingPageFourUl li > div {
+	display: inline-block !important;
+}
+
+.modAddListingPageFourUl li > div {
+	vertical-align: middle;
+}
+
+.capacity-select {
+	margin-left: 60px !important;
+}
+
+/* Hide Colors */
+.sp-palette-row-0 span:nth-child(2), .sp-palette-row-0 span:nth-child(4), .sp-palette-row-0 span:nth-child(5),
+.sp-palette-row-1 > span:first-child, .sp-palette-row-1 span:nth-child(7) {
+	display: none !important;
+}
+
+.froala-view {
+	height:180px !important;
+}
+
+.sp-palette, .sp-thumb-dark, .sp-thumb-dark.sp-thumb-active, .sp-thumb-inner, .sp-thumb-active {
+	background-image: none !important;
+}
+
+.sp-palette > div {
+	display: inline-block;
+}
+
+.sp-thumb-el {
+	width: 22px !important;
+	height:22px !important
+}
+
+.sp-container {
+	border: 1px solid #404040 !important;
+	top: 521.797px !important;
+}
+
+.sp-replacer {
+	border: 1px solid #404040 !important;
+}
+
+div[class="sp-replacer sp-light full-spectrum sp-active"] {
+	border-bottom: none !important;
+}
+
+.sp-preview {
+	margin-right: 0 !important;
+	border: 1px solid #999 !important;
+}
+
+.sp-thumb-el.sp-thumb-active {
+	border-color: #999 !important;
+}
+
+.modFeedbackInitialPageOne, .modFeedbackInitialPageThree {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.modFeedbackInitialPageOne h2, .modFeedbackInitialPageThree h2 {
+	font-size: 2.4rem !important;
+}
+
+.modFeedbackInitialPageOneUl li, .modFeedbackInitialPageThreeUl li {
+	display: inline-block;
+}
+
+.modFeedbackInitialPageOneUl li button, .modFeedbackInitialPageThreeUl li button {
+	background-color: #f8504b !important;
+	color: #fff !important;
+	padding:20px 40px !important;
+	margin: 20px 10px 0px 10px;
+	font-size: 1.1rem;
+	border-radius: 4px;
+}
+
+.modFeedbackInitialPageOneItem > li {
+	display:inline-block;
+}
+
+.modFeedbackInitialPageOneItemLeft {
+	width: 40% !important;
+	text-align: right !important;
+	margin-right: 10px !important;
+}
+
+.modFeedbackInitialPageOneItemLeft ul li img {
+	width: 180px !important;
+	height: 180px !important;
+	border-radius: 6px;
+}
+
+.modFeedbackInitialPageSix ul li, .modFeedbackInitialPageTwo ul li {
+	list-style-type:  initial;
+	margin-bottom: 10px;
+}
+
+.managerOfferUnsave {
+	margin-right: 15px !important;
+	margin-top: 23px !important;
+	margin-bottom: 8px !important;
+	a {
+		width: 100% !important;
+	}
+}
+
+.modFeedbackPageOne {
+	margin-top: 50px !important;
+	padding: 10px 40px !important;
+}
+
+.modFeedbackPageOne h4 {
+	font-size: 2rem !important;
+	color: #00bfff !important;
+	font-weight: 400 !important;
+	margin-bottom: 10px !important;
+}
+
+.modFeedbackPageOne ul > li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.modFeedbackPageOne ul > li:last-child {
+	margin-left: 50px;
+}
+
+.modFeedbackPageOne input[type="radio"] + label, .modFeedbackPageTwo input[type="radio"] + label {
+	font-size: 20px !important;
+}
+
+.modFeedbackPageTwo, .modReportPageOne, .modReportPageThree {
+	margin-top: 25px !important;
+	padding: 10px 40px !important;
+}
+
+.modReportPageTwo {
+	padding: 10px 40px !important;
+	margin-top: 15px;
+}
+
+.modFeedbackPageTwo h2 {
+	color: $color-spaceblue !important;
+	font-size: 2rem !important;
+	font-weight: 400 !important;
+	margin: 20px 0 !important;
+}
+
+.modFeedbackPageTwo1 ul {
+	text-align: center;
+}
+
+.modFeedbackPageTwo1 ul li {
+	display: inline-block;
+	margin-left: 20px;
+	padding: 12px 18px;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.modFeedbackPageTwo1 ul li label {
+	margin-left: 10px;
+	font-size: 16px !important;
+}
+
+.modFeedbackPageTwo1 ul li:first-child {
+	background-color: #396 !important;
+	margin-left: 0 !important;
+}
+
+.modFeedbackPageTwo1 ul li:nth-child(2) {
+	background-color: #989898 !important;
+}
+
+.modFeedbackPageTwo1 ul li:last-child {
+	background-color: tomato !important;
+}
+
+.modFeedbackPageTwo2 {
+	margin-top:43px;
+}
+
+.modFeedbackPageTwo2 ul {
+	text-align: center;
+}
+
+.modFeedbackPageTwo2 ul li textarea {
+	width: 80%;
+	height: 100px;
+	border-radius: 4px;
+	padding: 10px 12px;
+	border: 1px solid #d3d3d3;
+}
+
+.modFeedbackInitial button[data-target="#feedbackBuyerUnsuccessfulModal"],
+.modFeedbackInitial button[data-target="#feedbackBuyerNeverModal"] {
+	padding: 11px 50px !important;
+	color: #fff !important;
+	background-color: #f8504b;
+	border: none;
+	border-radius: 4px !important;
+}
+
+.modFeedbackInitial button[data-target="#feedbackBuyerUnsuccessfulModal"]:hover,
+.modFeedbackInitial button[data-target="#feedbackBuyerNeverModal"]:hover {
+	background-color: #f73c37 !important;
+}
+
+.modReportTrigger {
+	background-color: #fff !important;
+	color: #404040 !important;
+}
+
+.modReportTrigger:hover {
+	background-color: #d3d3d3 !important;
+}
+
+.modReportWarning {
+	margin-top: 60px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+	width: 80%;
+}
+
+.modReportWarning img {
+	border-radius: 50%;
+}
+
+.modReportWarning li:first-child, .modReportWarning li:last-child {
+	vertical-align: middle !important;
+}
+
+.modReportWarning li:last-child {
+	margin-left: 5px !important;
+}
+
+.modReportPageTwo ul li {
+	font-size: 1.2rem;
+	margin: 10px 0;
+	padding: 5px 0;
+}
+
+.modReportPageTwo ul li:last-child {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.modReportPageTwo ul li input {
+	margin-right: 10px;
+	outline: none !important;
+}
+
+.modReportPageThree textarea {
+	width: 100%;
+	height: 280px;
+}
+
+////////////////// Join ///////////////////
+
+.modWrapper {
+	h1 {
+		font-size: 1.5rem;
+	    font-weight: 400;
+	    margin-bottom: 0;
+	    margin-top: 0;
+	}
+	h1 i {
+		margin-right: 20px;
+		vertical-align: middle !important;
+		padding: 10px !important;
+		background-color: $color-spacered !important;
+		color: white !important;
+	}
+	ul li {
+		line-height: 2;
+	}
+}
+
+.modJoinOnly {
+	color: blue;
+	font-size: 1rem !important;
+    font-weight: bold;
+}
+
+/////////////////////////////////////////
+
+.modEditListingDiv {
+	h2 {
+    	font-weight: 400 !important;
+    	font-size: 2rem !important;
+	}
+	& > ul > li {
+    	font-size: 1.1rem !important;
+	}
+	ul li:nth-child(2) {
+    	margin-left: 25px !important;
+	}
+	li div {
+    	margin-top: 5px !important;
+	}
+}
+
+.modEditListingDiv ul li:nth-child(5),
+.modEditListingDiv ul li:nth-child(8) {
+    margin-left: 35px !important;
+}
+
+.modEditListingDiv ul li:nth-child(4), .modEditListingDiv ul li:nth-child(5) {
+    margin-top: 30px !important;
+}
+
+.modProfileActiveBtn {
+	margin: 20px 0 !important;
+	color: white !important;
+	button {
+		padding: 15px !important;
+		width: 75% !important;
+		color: white !important;
+		background-color: $color-spacered !important;
+		border-radius: 4px;
+	}
+	button:hover {
+		background-color: #f73c37 !important;
+	}
+	& :first-child {
+		margin-top: 40px !important;
+	}
+}
+
+.modActiveCreator {
+	color: $color-spaceblue !important;
+}
+
+.modActiveDirWrap {
+	text-align: center;
+	h3 {
+		color: $color-spaceblue;
+		font-weight: 400;
+	}
+}
+
+.modEditListingBody {
+    overflow: scroll !important;
+}
+
+.modReportTrigger {
+    background-color: #E87600 !important;
+    display: initial !important;
+}
+
+.modActiveDirMaps img {
+	width: 80% !important;
+	height: 320px !important;
+}
+
+.modProfileActiveBtnDir {
+	float: right !important;
+	width: 40% !important;
+	margin-top: 0 !important;
+	button {
+		margin-right: 200px;
+	}
+}
+
+.editListTrade {
+	margin-top: 30px !important;
+}
+
+.editListRadio h2 {
+	font-size: 1.8rem !important;
+}
+
+.modOfferRequestPageOneUl li h2 {
+	width: 100% !important;
+}
+
+.joinAgreeSmall {
+	margin: 0px !important;
+	padding: 0 !important;
+	font-size: 0.75rem !important;
+	color: #444 !important;
+	margin-top: 15px !important;
+	a {
+		color: #6c54b3 !important;
+	}
+	a:hover {
+		text-decoration: underline !important;
+	}
+}
+
+.reportMain,
+.reportMain div,
+.reportText {
+    margin-left: 1rem;
+}
+
+.reportName {
+    margin-left: 20px;
+    ul li a p {
+        font-size: 1.4rem;
+        padding: 2px;
+        margin: 0 10px;
+    }
+}
+
+.reportName ul li,
+.reportCheck ul {
+    display: inline-block;
+}
+
+.reportListingImg img {
+    height: 6rem;
+    width: 9rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
+
+.reportCheck {
+	p {
+    	margin: 35px 0 2px 20px;
+	}
+	ul li {
+    margin: 2px 20px 25px 20px;
+    text-align: left;
+	    input {
+	        vertical-align: middle;
+	        margin-right: 5px;
+	    }
+	}
+}
+
+#datepicker {
+    color: black !important;
+}
+
+.reportText p {
+    margin-left: 20px;
+}
+
+.reportUserImg img {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
+
+.offerRequestDiv {
+    margin-bottom: 10px !important;
+    &  > div {
+    	display: inline-block;
+	}
+}
+
+.offerRequestRight {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.offerRequestLeft {
+    width: 40%;
+    vertical-align: top;
+}
+
+.offerRequestImg {
+    width: 100%;
+}
+
+.offerRequestOfferPrice {
+    margin-left: 5%;
+}
+
+.offerRequestDate ul {
+    margin: 10px 0 0 0;
+    li h4 {
+    	margin: 0 0 5px 0;
+	}
+}
+
+.offerRequestLocation {
+	ul {
+    	margin: 10px 0 0 0;
+	}
+	h4 {
+    	margin: 0px;
+	}
+	ul li {
+    	display: inline-block !important;
+	}
+	input {
+    	margin: 10px 0 0 0 !important;
+	}
+}
+
+.offerAcceptButton input:hover {
+    background-color: #6DAB59;
+}
+
+// Image
+
+.modImageDialog {
+	margin: 0px;
+	width: 80%;
+}

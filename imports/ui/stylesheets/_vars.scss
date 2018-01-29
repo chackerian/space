@@ -1,0 +1,154 @@
+// Theme
+$color-spacered:    		#f8504b;
+$color-spaceblue:   		#00bfff;
+$color-spacegreen:  		#75D855;
+$color-green1:          #5FCF80;
+$color-green2:          #6DAB59;
+
+$color-spacegrey:   		#404040;
+$color-subtlegrey: 		  rgba(211, 211, 211, 0.31);
+$color-lightred:        #ee4641;
+$color-divider: 			  #d3d3d3;
+$color-orange:          #ff5700;
+$color-blue:            #006eff;
+$color-lightblue:       #34dddd;
+$color-cardinal:    		#C41E3A;
+$color-burgundy:    		#900020;
+$color-banana:      		#ffff00;
+$color-royal:       		#523f8c;
+$color-blue:        		#0266C8;
+$color-blue2:       		#0295ff;
+$color-venetian-red:		#C80815;
+$color-lightgrey:   		#999;
+$color-purple:      		#6c54b3;
+$color-platinum:    		#E5E4E2;
+$color-hashtag:         #40e0d0;
+$color-blueglue:        #0800ff;
+$color-orangeporridge:  #FFA500;
+$color-blueboo:         #4d90fe;
+$color-darkblue:        #3b5998;
+$color-limey:           #2dbb7b;
+$color-bluey:           #3c37c3;
+$color-charcoal:        #262626;
+$color-darker:          #171717;
+$color-ruddy:           #f73c37;
+$color-bluey:           #06C1FF;
+
+$color-money:           #339966;
+$color-gold:            #ffd700;
+
+// External
+$color-facebook:    						#46629E;
+$color-instagram:   						#125688;
+
+// Links
+$color-link:        						#0c65a5;
+$color-linkhover:   						#0890F2;
+$color-visited:     						#0c65a5;
+
+$shadow:                          1px 2px 6px black;
+
+/////////////////////////////////////////////////////
+// Font Stacks
+/////////////////////////////////////////////////////
+
+// Header
+$font-header:              'Droid Sans', sans-serif;
+
+// Text
+$font-norm:            'Helvetica Neue', sans-serif;
+$font-link:                    "Oswald", sans-serif;
+
+// Primary button font
+$font-secondary:               'Roboto', sans-serif;
+
+// Money
+$font-ternary:      'Just Another Hand', sans-serif;
+$font-text:                      'Abel', sans-serif;
+
+// Error
+$font-alfred:             'Baskerville', sans-serif;
+
+$enable-flex: true;
+$enable-gradients: true;
+$enable-shadows: true;
+
+$carousel-control-color: white !default;
+$carousel-control-width: 15% !default;
+$carousel-control-opacity: .5 !default;
+
+$carousel-control-prev-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$carousel-control-next-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$carousel-indicator-active-bg: black;
+$carousel-control-color: red;
+$carousel-indicator-width: 12px;
+$carousel-indicator-height: 12px;
+$carousel-indicator-spacer: 6px;
+
+$carousel-dots-width: 30px !default;
+$carousel-dots-height: 3px !default;
+$carousel-dots-spacer: 3px !default;
+$carousel-dots-active-bg: white !default;
+$carousel-control-icon-width: 20px !default;
+
+$carousel-caption-width: 70% !default;
+$carousel-caption-color: white !default;
+
+$carousel-control-icon-width: 20px !default;
+
+$carousel-transition: transform .6s ease !default;
+
+$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+
+$carousel-control-color:                      #fff;
+$carousel-control-width:                      15%;
+$carousel-control-opacity:                    .5;
+$carousel-control-font-size:                  20px;
+
+$carousel-indicator-active-bg:                #fff;
+$carousel-indicator-border-color:             #fff;
+
+$carousel-caption-color:                      #fff;
+
+/////////////////////////////////////////////////////
+// Alerts
+/////////////////////////////////////////////////////
+
+.s-alert-error {
+    font-family: $font-alfred !important;
+    text-align: center !important;
+    z-index: 10000000;
+}
+
+.s-alert-sucess {
+    font-family: $font-alfred !important;
+    text-align: center !important;
+    z-index: 10000000;
+}
+
+.s-alert-box p {
+    text-align: center;
+}
+
+/////////////////////////////////////////////////////
+
+// Custom
+.money {
+    color: $color-money !important;
+    font-weight: 400;
+    font-family: $font-secondary !important;
+}
+
+.black {
+    color: black;
+    text-shadow: none;
+}
+
+.right {
+    float: right !important;
+}
+
+.hidden {
+    display: none;
+}

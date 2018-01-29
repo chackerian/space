@@ -1,0 +1,48 @@
+.addListing {
+    color: $color-spacered !important;
+    i {
+        color: $color-spacered !important;
+        padding: 0 !important;
+        margin: 0 10px 0 0 !important;
+    }
+}
+
+.addListImg {
+    margin-top: 20px;
+    text-align: center;
+    li {
+        display: inline-block;
+        margin: 0 2px;
+    }
+    li img {
+        width: 100px;
+        height: 100px;
+    }
+    i {
+        vertical-align: middle;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
+}
+
+.addListTerms {
+    font-size: 0.8rem;
+}
+
+.listingPayment li {
+    display: inline-block;
+    margin: 0;
+    i {
+        font-size: 1.6rem;
+        color: gold !important;
+    }
+    i:hover {
+        color: gold !important;
+    }
+}
+
+.listingPayCash i {
+    margin-right: 5px;
+}

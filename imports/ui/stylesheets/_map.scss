@@ -1,0 +1,66 @@
+///////////////////////////////
+// Map
+////////////////////////////////
+
+.locate {
+    background: none !important;
+    width: 100%;
+    font-size: 1.6em;
+    z-index: 1000;
+    position: relative;
+}
+
+.mapRadius {
+    font-size: 1em;
+}
+
+.controls {
+    -moz-box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    height: 32px;
+    outline: none;
+}
+
+#pac-input {
+    background-color: white;
+    font-family: $font-secondary;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 3em 1em;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 250px;
+    height: 3em;
+    &:focus {
+        border-color: #4d90fe;
+    }
+}
+
+.pac-container {
+    font-family: 'Roboto';
+}
+
+.modLocationRadiusMaps {
+    height: 10em;
+}
+
+.mope {
+    display: none;
+}
+
+.offerRequestMaps {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.offerRequestMapsApi {
+    width: 100%;
+    height: 220px !important;
+}
+
+// .mapPageApi {
+//     height: 25em !important;
+// }

@@ -1,0 +1,227 @@
+button {
+    border: none;
+    font-family: $font-norm;
+    padding: 13px 18px;
+    color: white !important;
+    &:hover {
+        background-color: #f73c37;
+    }
+}
+
+.btn-default {
+    background-color: $color-spacered;
+    color: white !important;
+    padding: 12px 8px;
+    font-family: $font-norm !important;
+    border-radius: 0.3em;
+    &:hover {
+        background-color: #f73c37;
+    }
+}
+
+a[href] {
+    font-family: $font-link;
+}
+
+.link {
+    color: $color-link !important;
+    font-family: 'arial';
+    &:hover {
+        color: #0890F2 !important;
+        text-decoration: underline;
+    }
+}
+
+.modNotificationsTrigger {
+    background-color: #333 !important;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 0.7rem;
+    margin: 0 0 -5px -5px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.modOfferRequestTrigger {
+    padding: 15px 28px;
+    color: #fff;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    border-radius: 6px;
+    overflow: hidden;
+    & :hover {
+        background-color: #f73c37;
+    }
+}
+
+.modAddListingTrigger {
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #f8504b !important;
+    font-size: 0.8rem !important;
+    padding: 18px 50px 18px 0px !important;
+    width: 100% !important;
+    margin-left: -30px !important;
+    font-family: 'Droid Sans', sans-serif !important;
+    i {
+        color: #f8504b !important;
+        margin-right: 10px !important;
+        margin-left: -25px !important;
+    }
+}
+
+.reportBtn {
+    text-align: right;
+    margin: 5px 0 100px 0;
+    button {
+        padding: 15px 22px;
+        color: #fff ;
+        background-color: $color-spacered;
+        border: 1px solid $color-spacered;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        border-radius: 6px;
+        overflow: hidden;
+        font-size: 1.2rem !important;
+        float: right !important;
+    }
+    &:hover {
+        background-color: #f73c37;
+    }
+}
+
+.modalSubmitBtn {
+    input {
+        padding: 11px 50px !important;
+        color: #fff !important;
+        background-color: #04b2ec;
+        border: none;
+        border-radius: 4px !important;
+        font-size: 1.6em;
+    }
+    input:hover {
+        background-color: green;
+    }
+}
+
+.add {
+    margin-left: 40%;
+    background-color: $color-spacegreen;
+    border-color: black;
+    &:hover {
+      background-color: green;
+    }
+}
+
+.ph-button {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    transition: all 100ms ease-in-out 0s;
+    white-space: nowrap;
+    padding: 12px 17px 11px;
+}
+
+.modJoinFB-Btn {
+    margin-top: 20px;
+    background-color: #3A5795 !important;
+    border-radius: 4px;
+    color: white !important;
+    b {
+        font-weight: 400 !important;
+        font-size: 1rem !important;
+    }
+    i {
+        font-size: 1.4rem;
+        color: white !important;
+        vertical-align: middle !important;
+        padding-right: 6px;
+    }
+}
+
+.ActionButtons {
+    display: inline-block;
+    font-family: $font-norm;
+    float: right;
+    li {
+        display: inline-block;
+        margin: initial;
+        a {
+            color: white;
+            padding: 10px 25px;
+            margin: 0.5em;
+            border-radius: 6px;
+            box-shadow: 1px 1px 3px black;
+            overflow: hidden;
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+.modMultiBtn {
+    button {
+        margin-top: 1em;
+        outline: none;
+        margin: 1em;
+        float: right;
+        box-shadow: 1px 2px 1px black;
+    }
+}
+
+.profileUserButtons {
+    margin-top: 3em;
+}
+
+.profileSettingsButton {
+    width: 70%;
+    margin: 25px auto 100px auto !important
+    input {
+        font-size: 1rem;
+        padding: 13px 18px;
+        color: #fff !important;
+        background-color: $color-spacered;
+        border: 1px solid $color-spacered;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        border-radius: 6px;
+        overflow: hidden;
+        float: right;
+    }
+}
+
+.profileSettingsSubmit {
+    float: right !important;
+}
+
+.profileBtn:hover {
+    background-color: #ee4641 !important;
+}
+
+.profileChatBtn a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: $color-spacered;
+    border: 1px solid $color-spacered;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    border-radius: 6px;
+    overflow: hidden;
+    &:hover {
+        background-color: #f73c37;
+    }
+}
+
+.defaultProfileButton {
+    margin-top: 30px;
+    list-style: none !important;
+     a {
+        padding: 12px 12px;
+        font-size: 0.9rem;
+        color: white;
+        background-color: $color-spacered;
+        border-bottom: 2px solid $color-spacered;
+        border-radius: 4px;
+    }
+}

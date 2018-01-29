@@ -1,0 +1,45 @@
+i {
+    color: $color-spacegrey;
+
+    &:hover {
+        color: black !important;
+        text-shadow: none !important;
+        transition: 0.6s;
+    }
+    .fa.fa-arrow-right:hover {
+        color: $color-spaceblue !important;
+    }
+    .fa.fa-arrow-left:hover {
+        color: $color-spaceblue !important;
+    }
+}
+
+.fa-facebook {
+    color: white;
+    &:hover {
+    color: inherit !important;
+    }
+}
+
+.fa-plus-circle {
+    color: $color-spacered !important
+    &:hover {
+        color: $color-spacered !important;
+    };
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.fa.fa-home {
+    color: white;
+}
+
+.facebook {
+    background-color: $color-facebook;
+}
+
+.instagram {
+    background-color: $color-instagram;
+}

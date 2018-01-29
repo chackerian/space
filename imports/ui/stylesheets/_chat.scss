@@ -1,0 +1,139 @@
+.chatDiv {
+    margin-top: 0 !important;
+    & > ul {
+        display: inline-block !important;
+    }
+}
+
+.chatLeft {
+    width: 16% !important;
+    vertical-align: top !important;
+    margin-left: -17em;
+}
+
+.chatRight {
+    width: 60% !important;
+    margin-left: 25px !important;
+}
+
+.chatPeople {
+    border-right: 1px solid #A2A2A2;
+    height: 46.5rem !important;
+    & :hover {
+        overflow-y: scroll !important;
+    }
+}
+
+.usernameChat {
+    color: $color-blue2;
+}
+
+.chatPerson {
+    padding: 10px 0 10px 20px!important;
+    :first-child {
+        border-top: none !important;
+    }
+    li:nth-child(2) {
+        margin-left: 10px !important;
+    }
+    li:last-child {
+        margin-left: 5px !important;
+    }
+    & > ul > a > li {
+        display: inline-block !important;
+        vertical-align: middle !important;
+    }
+    & > ul > li > a > img {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 2px !important;
+    }
+    ul a li:nth-child(2) a {
+        font-style: normal !important;
+    }
+    ul a li:nth-child(2) a:hover {
+        color: $color-spacegrey !important;
+        text-decoration: none !important;
+    }
+    &:hover {
+        background-color: #d3d3d3 !important;
+    }
+}
+
+.chatUserSent {
+    margin: 18px 5px !important;
+    & > li {
+        display: inline-block !important;
+        vertical-align: middle !important;
+
+        & > a > img {
+            width: 32px !important;
+            width: 32px !important;
+            vertical-align: top !important;
+        }
+        &:first-child {
+            vertical-align: top !important;
+        }
+        &:last-child {
+            margin-left: 6px !important;
+        }
+    }
+}
+
+.chatUserNameTime, .chatUserNameTime h4, .timestamp {
+    display: inline-block !important;
+}
+
+.timestamp {
+    margin-left: 230px !important;
+    font-size: 0.85rem !important;
+}
+
+.chatMessageTemp {
+    font-size: 0.9rem !important;
+    color: #333 !important;
+    line-height: 1.5 !important;
+}
+
+.chatText {
+    width: 95% !important;
+    height: 50px !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    border: 1px solid #A2A2A2 !important;
+    padding: 3px !important;
+}
+
+.chatBottomSection {
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #A2A2A2;
+    text-align: center !important;
+}
+
+.chatMessages {
+    height: 21rem !important;
+    overflow-y: scroll !important;
+}
+
+.chatSend {
+    margin-top: 8px !important;
+    text-align: right !important;
+    margin-right: 12px !important;
+    li {
+        display: inline-block !important;
+    }
+    li i {
+        color: #A2A2A2 !important;
+        margin-right: 5px !important;
+    }
+}
+
+.chatSendButton {
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    background: $color-spacered;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
