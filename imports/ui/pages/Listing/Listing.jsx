@@ -144,14 +144,13 @@ export default class ListingItem extends Component {
               </ul>
             </div>
           </div>
-
           <Carousel />
 
           <MyMapComponent
             isMarkerShown
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaNzG0bIXNCHxpkVp-7AHMhRPzvoDy4uw&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div style={{ height: `60%` }} />}
-            containerElement={<div style={{ height: `350px`, width: `45%`, float: `right` }} />}
+            containerElement={<div style={{ height: `350px`, width: `44%`, float: `right` }} />}
             mapElement={<div style={{ height: `100%` }} />}
           />
 

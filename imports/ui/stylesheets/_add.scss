@@ -1,10 +1,8 @@
 .addListing {
-    color: $color-spacered !important;
-    i {
-        color: $color-spacered !important;
-        padding: 0 !important;
-        margin: 0 10px 0 0 !important;
-    }
+  color: white !important;
+  padding: 0.5em;
+  border-radius: 0.6em;
+  background: red;
 }
 
 .addListImg {
