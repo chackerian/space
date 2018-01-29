@@ -92,17 +92,13 @@ export default class Homepost extends Component {
                           <i className="fa fa-search"></i>
                       </a>
                   </li>
-                  <li className="headerDropDown navGlobal">
-                    <a className="addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}><li>Add Listing</li></a>
+                  <li className="headerAuth navGlobal">
+                    <a className="btn btn-primary addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}><li>Add Listing</li></a>
                   </li>
                   <li className="headerDropDown navNotifications clickDropper">
                       <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
                       <ul className="headerDropDownNav notifyDropdown">
-                          <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
-                          <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
-                          <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
-                          <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
-                          <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
+                          <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
                           <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
                       </ul>
                   </li>
