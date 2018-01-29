@@ -157,23 +157,14 @@ export default class ListingItem extends Component {
           <div className="desc">
             <div className="desc-box desc-box-details">
               <h4 className="box-title">Product Details</h4>
-              <div className="listingItemDetailLeft">
-                  <ul>
-                      <li className="listingItemBrand">
-                      Brand:
-                      <a href={`/search?q=${listing.brand}`} className="searchProperty">{listing.brand}</a></li>
-                      <li className="listingItemType">Type:<a href={`/search?q=${listing.type}`} className="searchProperty">
-                      {listing.type}</a></li>
-                      <li className="listingItemColor">Quantity:<span>1</span></li>
-                  </ul>
-              </div>
-              <div className="listingItemDetailRight">
-                  <ul>
-                    <li className="listingItemCat">Category:<span><a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a></span></li>
-                    <li className="listingItemCondition">Condition:<span>{listing.condition}</span></li>
-                    <li className="listingItemTrade">Trade Offers:<span>{listing.trade}</span></li>
-                  </ul>
-              </div>
+              <p className="desc-full">
+                Category:<a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a>
+                Brand:<a href={`/search?q=${listing.brand}`} className="searchProperty">{listing.brand}</a>
+                <br />
+                Type:<a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a>
+                Condition:<span>{listing.condition}</span>
+                Trade Offers:<span>{listing.trade}</span>
+              </p>
             </div>
             <div className="desc-box">
               <h4 className="box-title">Description</h4>
