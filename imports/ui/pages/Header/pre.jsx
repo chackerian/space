@@ -59,7 +59,7 @@ export default class Pre extends Component {
                   <li className="headerNotDrop headerHelp"><a href="/help">Help</a></li>
               </ul>
               <ul className="headerAuth">
-                  <li><a className="modJoinTrigger btn btn-primary">Join</a></li>
+                  <li><a className="btn btn-primary">Join</a></li>
                   <li><a className="login">Login</a></li>
               </ul>
           </div>
