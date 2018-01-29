@@ -3,8 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Listing, Offer } from '/imports/api/links/db.js';
 import GoogleAd from 'react-google-ad';
 
-// item.creator_username.split(" “)[1].charAt() + item.creator_username.split(" “)[0]
-
 var HomeCard = ({item}) => (
     <div className="grid-item">
       <li className="homeCardLi">
