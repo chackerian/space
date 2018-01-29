@@ -2,24 +2,6 @@
     Adds responsiveness to mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media (max-width: 1042px) {
-    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
-        margin-right: 2rem !important;
-    }
-
-    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
-        margin-right: 2rem !important;
-    }
-
-    .profileUserFeedbackViewStars input[type="radio"] + label {
-        font-size: 12px;
-    }
-
-    .profileUserFeedbackViewCriteria li ul li:first-child {
-        font-size: 1.1rem !important;
-    }
-}
-
 @media (max-width: 1000px) {
 
     .profileUserRight {
@@ -535,19 +517,6 @@
     .profileSettingsLi:nth-child(2) ul li:nth-child(2),
     .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
         width: 70% !important;
-    }
-
-    .profileSettingsLi h4 {
-        font-size: 0.9rem !important;
-    }
-
-    .profileSettingsLi input,
-    .profileSettingsLi textarea {
-        font-size: 0.85rem !important;
-    }
-
-    .profileSettingsLi textarea {
-        height: 60px !important;
     }
 
     .profileSettingsButton input {

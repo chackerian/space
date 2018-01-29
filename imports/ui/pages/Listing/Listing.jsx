@@ -180,7 +180,6 @@ export default class ListingItem extends Component {
               <h4 className="box-title">Description</h4>
               <p className="desc-full">{listing.description}</p>
             </div>
-
           </div>
 
           <div className="guardian">
