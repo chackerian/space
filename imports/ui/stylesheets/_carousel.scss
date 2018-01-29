@@ -1,8 +1,16 @@
 // Wrapper for the slide container and indicators
 .carousel {
   background: #EEE;
-  width: 48%;
+  width: 27em;
   float: left;
+  box-shadow: 0px 2px 5px;
+  border-radius: 0.5em;
+}
+
+.carousel-cell-image {
+  border-radius: 0.5em;
+  width: 101%;
+  height: 101%;
 }
 
 .carousel-cell {
