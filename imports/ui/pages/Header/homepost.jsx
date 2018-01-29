@@ -76,17 +76,6 @@ export default class Homepost extends Component {
               </div>
           </div>
           <div className="rightNav">
-              <ul className="headerPostOptions headerCatDrop">
-                  <li className="headerDropDownShow headerCatDropLi">
-                      <span>Categories</span>
-                      <ul className="headerDropDownNav headerCatDropDown">
-                          <a href="/search?q=Apparel"><li>Apparel</li></a>
-                          <a href="/search?q=Electronics"><li>Electronics</li></a>
-                          <a href="/search?q=Shoes"><li>Shoes</li></a>
-                          <a href="/search?q=Other"><li>Other</li></a>
-                      </ul>
-                  </li>
-              </ul>
               <ul className="headerNameOptions">
                   <li>
                       <a href={`/profile/${profile}`}>
@@ -104,16 +93,7 @@ export default class Homepost extends Component {
                       </a>
                   </li>
                   <li className="headerDropDown navGlobal">
-                      <a data-toggle="tooltip" data-placement="bottom" onClick={this.navGlobal}>
-                          <i className="fa fa-bars" aria-hidden="true"></i>
-                      </a>
-                      <ul className="headerDropDownNav managerDropdown">
-                          <a className="addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}><li>Add Listing <i className="material-icons">add_circle</i></li></a>
-                          <a href={`/profile/${profile}/listings`}><li>Listings</li></a>
-                          <a href={`/profile/${profile}/active`}><li>Meetups</li></a>
-                          <a href={`/profile/${profile}/history`}><li>Past Meetups</li></a>
-                          <a href={`/profile/${profile}/saved`}><li>Saved</li></a>
-                      </ul>
+                    <a className="addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}><li>Add Listing</li></a>
                   </li>
                   <li className="headerDropDown navNotifications clickDropper">
                       <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
