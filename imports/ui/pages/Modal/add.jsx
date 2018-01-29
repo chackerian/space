@@ -391,13 +391,9 @@ export default class AddModal extends Component {
                                   <input type="radio" id="modAddListingCashRadio" name="addListingPayment" value="Cash" className="radioWrapElement" defaultChecked/>
                                   <label htmlFor="modAddListingCashRadio">Cash</label>
                               </li>
-                              <li className="modOfferRequestPaymentPaypal">
-                                  <input type="radio" id="modAddListingPaypalRadio" name="addListingPayment" value="Paypal" className="radioWrapElement"/>
-                                  <label htmlFor="modAddListingPaypalRadio">Paypal</label>
-                              </li>
-                              <li className="modOfferRequestPaymentPaypal">
-                                  <input type="radio" id="modAddListingBothRadio" name="addListingPayment" value="Both" className="radioWrapElement"/>
-                                  <label htmlFor="modAddListingBothRadio">Both</label>
+                              <li className="modOfferRequestPaymentOther">
+                                  <input type="radio" id="modAddListingOtherRadio" name="addListingPayment" value="Other" className="radioWrapElement"/>
+                                  <label htmlFor="modAddListingOtherRadio">Other</label>
                               </li>
                           </ul>
                       </li>

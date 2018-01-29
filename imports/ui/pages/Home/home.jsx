@@ -8,7 +8,6 @@ import GoogleAd from 'react-google-ad';
 var HomeCard = ({item}) => (
     <div className="grid-item">
       <li className="homeCardLi">
-        <p className="homeCardOfferReceived">{item.offers_received} Offers Received</p>
         <ul className="homeCardItem">
           <li><a href={`/listing/${item.urlKey}`}><img src={item.images[0]} className="homeCardImg"/></a></li>
           <li><a href={`/listing/${item.urlKey}`}><h4>{item.listing_title}</h4></a></li>

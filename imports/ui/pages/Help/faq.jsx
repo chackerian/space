@@ -7,8 +7,7 @@ export default class AboutHelp extends Component {
     return(
       <div className="faqdiv oneDiv">
         <HelpNav />
-        <span className="helpShow">Frequently Asked Questions</span>
-        <span className="helpHide">FAQs</span>
+        <h1 className="helpShow">Frequently Asked Questions</h1>
 
         <h1>How Does It Work?</h1>
 
