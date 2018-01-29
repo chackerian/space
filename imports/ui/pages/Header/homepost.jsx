@@ -15,20 +15,7 @@ export default class Homepost extends Component {
     }
   }
 
-  navGlobal() {
-    if ($(".navGeneral > .headerDropDownNav").is( ":visible" )) {
-      $(".navGeneral > .headerDropDownNav").toggle();
-    }
-    if ($(".navNotifications > .headerDropDownNav").is( ":visible" )) {
-      $(".navNotifications > .headerDropDownNav").toggle();
-    }
-    $(".navGlobal > .headerDropDownNav").toggle()
-  }
-
   navGeneral() {
-    if ($(".navGlobal > .headerDropDownNav").is( ":visible" )) {
-      $(".navGlobal > .headerDropDownNav").toggle();
-    }
     if ($(".navNotifications > .headerDropDownNav").is( ":visible" )) {
       $(".navNotifications > .headerDropDownNav").toggle();
     }
@@ -36,9 +23,6 @@ export default class Homepost extends Component {
   }
 
   navNotifications() {
-    if ($(".navGlobal > .headerDropDownNav").is( ":visible" )) {
-      $(".navGlobal > .headerDropDownNav").toggle();
-    }
     if ($(".navGeneral > .headerDropDownNav").is( ":visible" )) {
       $(".navGeneral > .headerDropDownNav").toggle();
     }
@@ -92,9 +76,9 @@ export default class Homepost extends Component {
                           <i className="fa fa-search"></i>
                       </a>
                   </li>
-                  <li className="headerAuth navGlobal">
-                    <a className="btn btn-primary addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}><li>Add Listing</li></a>
-                  </li>
+                  <ul className="headerAuth">
+                      <li><a className="btn btn-primary addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}>Add Listing</a></li>
+                  </ul>
                   <li className="headerDropDown navNotifications clickDropper">
                       <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
                       <ul className="headerDropDownNav notifyDropdown">

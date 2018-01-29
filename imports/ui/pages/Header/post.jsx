@@ -45,7 +45,7 @@ export default class Post extends Component {
                           <i className="fa fa-search"></i>
                       </a>
                   </li>
-                  <li className="headerDropDown navGlobal">
+                  <li className="headerDropDown">
                       <a data-toggle="tooltip" data-placement="bottom" title="Manager"><i className="fa fa-bars"></i></a>
                       <ul className="headerDropDownNav managerDropdown">
                           <a className="addListing" href="#"><li>Add Listing</li></a>

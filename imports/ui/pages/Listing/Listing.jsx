@@ -175,7 +175,7 @@ export default class ListingItem extends Component {
                   </ul>
               </div>
             </div>
-            <div className="desc-box listingItemDescription">
+            <div className="desc-box">
               <h4 className="box-title">Description</h4>
               <p className="desc-full">{listing.description}</p>
             </div>

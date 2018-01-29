@@ -549,35 +549,7 @@
     }
 }
 
-@media (max-width: 460px) {
-
-    .profileUserRating ul li i {
-        margin-left: 0px !important;
-    }
-
-    .profileUserRating ul li span {
-        font-size: 0.75rem !important;
-        margin-left: 10px !important;
-    }
-
-    .profileStars fieldset label[class="full"] {
-        width: 20px !important;
-    }
-
-    .profileStars input[type="radio"] + label {
-        font-size: 12px !important;
-    }
-
-    .profileUserName h1 {
-        font-size: 1.7rem !important;
-    }
-}
-
 @media (max-width: 450px) {
-
-    .navGlobal li ul {
-        margin-left: -80px !important;
-    }
 
     .logo {
         font-size: 3.5rem;
@@ -598,7 +570,6 @@
 }
 
 @media (max-width: 425px) {
-
     .footerItems li h4 a {
       font-size: 0.9em !important;
     }
