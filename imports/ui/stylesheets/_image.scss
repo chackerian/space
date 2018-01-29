@@ -4,8 +4,11 @@
 
 .listingItemUser {
     height: 125px;
-    text-align: center;
-    margin-top: 2em;
+    width: 22em;
+    margin: 0 auto;
+    padding: 0.7em;
+    background: white;
+    border-radius: 0.4em;
     a span {
         vertical-align: middle;
         margin-left: 4px;
