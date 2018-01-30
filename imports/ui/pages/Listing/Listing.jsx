@@ -63,7 +63,7 @@ export default class ListingItem extends Component {
     }
   }
 
-  editListing = () => {
+  edit = () => {
     if ($(".editListing").text() == "Edit" ) {
       $(".listingItemTitle").focus();
       $(".editListing").text("Save");
