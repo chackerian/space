@@ -261,10 +261,13 @@
 }
 
 .profileUserRight {
-    width: 58%;
-    vertical-align: top;
-    margin-top: 0rem !important;
-    font-size: 1.1rem !important;
+  width: 58%;
+  vertical-align: top;
+  margin-top: 0rem !important;
+  font-size: 1.1rem !important;
+  padding: 1em;
+  border-radius: 0.4em;
+  background: white;
 }
 
 .profileUserImage {
