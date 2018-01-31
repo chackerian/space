@@ -7,27 +7,7 @@
     .profileUserRight {
         float: right;
     }
-
-    .profileUser > div {
-        margin: 0 !important;
-    }
-
-    .profileUserRating ul li span {
-        font-size: 0.8rem !important;
-    }
-
-    .desc-box p {
-        padding: 5px 10px 7px 10px !important;
-    }
-
-    .profileUserFeedbackView {
-        margin: 2rem auto !important;
-    }
-
-    .profileDesc p {
-        font-size: 0.85rem !important;
-    }
-
+    
     .searchResultsCardSize,
     .searchResultsCardCondition, .searchResultsCardLocation {
         font-size: 1rem;
@@ -55,7 +35,7 @@
     }
 
     .search {
-        display: none
+      display: none
     }
 
     .carousel {

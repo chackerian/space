@@ -28,23 +28,21 @@ export default class Profile extends Component {
                   </ul>
               </div>
               <div className="profileUserRating">
-                  <ul className="profileUserRatingUl">
-                      <li className="profileStars">
-                          <span className="review-count">({prof.reviews_count} Reviews)</span>
-                      </li>
-                  </ul>
-                  <ul>
-                      <li>
-                          <a href={facebook} target="_blank">
-                              <i className="fa fa-facebook-square"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="mailto:{prof.services.facebook.email}" target="_blank">
-                              <i className="fa fa-envelope-o"></i>
-                          </a>
-                      </li>
-                  </ul>
+                <ul className="profileUserRatingUl">
+                  <li>
+                    <a href={facebook} target="_blank">
+                      <i className="fa fa-facebook-square"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:{prof.services.facebook.email}" target="_blank">
+                        <i className="fa fa-envelope-o"></i>
+                    </a>
+                  </li>
+                  <li className="profileStars">
+                      <span className="review-count">({prof.reviews_count} Reviews)</span>
+                  </li>
+                </ul>
               </div>
               <div className="profileUserInfo">
                   <ul className="profileUserArea">

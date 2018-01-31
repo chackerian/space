@@ -144,49 +144,50 @@ export default class ListingItem extends Component {
               </ul>
             </div>
           </div>
-          <Carousel />
-
-          <MyMapComponent
-            isMarkerShown
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaNzG0bIXNCHxpkVp-7AHMhRPzvoDy4uw&v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `60%` }} />}
-            containerElement={<div style={{ height: `350px`, width: `44%`, float: `right` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          />
-
-          <div className="desc">
-            <div className="desc-box desc-box-details">
-              <h4 className="box-title">Product Details</h4>
-              <p className="desc-full">
-                Category:<a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a>
-                Brand:<a href={`/search?q=${listing.brand}`} className="searchProperty">{listing.brand}</a>
-                <br />
-                Type:<a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a>
-                Condition:<span>{listing.condition}</span>
-                Trade Offers:<span>{listing.trade}</span>
-              </p>
+          <div className='topPage'>
+            <Carousel />
+            <MyMapComponent
+              isMarkerShown
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaNzG0bIXNCHxpkVp-7AHMhRPzvoDy4uw&v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `60%` }} />}
+              containerElement={<div style={{ height: `350px`, width: `44%`, float: `right` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
+          </div>
+          <div className='bottomPage'>
+            <div className="desc">
+              <div className="desc-box desc-box-details">
+                <h4 className="box-title">Product Details</h4>
+                <p className="desc-full">
+                  Category:<a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a>
+                  Brand:<a href={`/search?q=${listing.brand}`} className="searchProperty">{listing.brand}</a>
+                  <br />
+                  Type:<a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a>
+                  Condition:<span>{listing.condition}</span>
+                  Trade Offers:<span>{listing.trade}</span>
+                </p>
+              </div>
+              <div className="desc-box">
+                <h4 className="box-title">Description</h4>
+                <p className="desc-full">{listing.description}</p>
+              </div>
             </div>
-            <div className="desc-box">
-              <h4 className="box-title">Description</h4>
-              <p className="desc-full">{listing.description}</p>
+
+            <div className="guardian">
+              <div className="listingItemUser">
+                <ul className="listingItemUserImg">
+                    <li><a href={`/profile/${listing.creator_id}`}><img src={listing.creator_image}/></a></li>
+                </ul>
+                <ul className="listingItemUserInfo">
+                    <li className="listingItemUserName"><a href={`/profile/${listing.creator_id}`}>{listing.creator_username}</a></li>
+                    <li className="rating">
+                        <div className="rateit" data-rateit-value="{listing.totalrating}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+                    </li>
+                </ul>
+              </div>
+              <Social listing={listing} />
             </div>
           </div>
-
-          <div className="guardian">
-            <div className="listingItemUser">
-              <ul className="listingItemUserImg">
-                  <li><a href={`/profile/${listing.creator_id}`}><img src={listing.creator_image}/></a></li>
-              </ul>
-              <ul className="listingItemUserInfo">
-                  <li className="listingItemUserName"><a href={`/profile/${listing.creator_id}`}>{listing.creator_username}</a></li>
-                  <li className="rating">
-                      <div className="rateit" data-rateit-value="{listing.totalrating}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
-                  </li>
-              </ul>
-            </div>
-            <Social listing={listing} />
-          </div>
-
         </div>
       </div>
       )

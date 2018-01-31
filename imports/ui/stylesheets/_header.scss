@@ -350,10 +350,21 @@
     }
 }
 
-.headerNameOptions li a,
-.headerHomeButton li a {
+.headerHomeButton {
+    margin: 0;
+    a {
+        color: black !important;
+    }
+}
+
+.headerNameOptions li a {
     padding: 12px !important;
     border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+.headerHomeButton li a  {
+    padding: 12px !important;
     border-radius: 0.2em;
 }
 
@@ -397,13 +408,6 @@
 }
 
 /////////////////////////////////////////
-
-.headerHomeButton {
-    margin: 0;
-    a {
-        color: black !important;
-    }
-}
 
 .headerNameOptions li a {
     color: black !important;

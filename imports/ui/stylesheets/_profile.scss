@@ -1,9 +1,3 @@
-#starry::after {
-    color: gold !important;
-    content: 'star_outline' !important;
-    float: left;
-}
-
 .desc {
     float: left;
     width: 48%;
@@ -12,20 +6,20 @@
 .guardian {
     float: right;
     width: 48%;
+    padding-top: 3em;
+}
+
+.searchProperty {
+  font-family: $font-norm;
 }
 
 .offerDiv {
   display: inline-block;
-  width: 65%;
+  width: 14em;
 }
 
 .profileSettingsSubmit {
   background: $color-spacered;
-}
-
-.profileSettingsDiv {
-    margin: 5em;
-    padding-top: 5em;
 }
 
 .managerListingStatus {
@@ -84,11 +78,10 @@
 
 .desc-box {
     border: 1px solid $color-spacered;
-    border-bottom-left-radius: 4px;
     border-radius: 4px;
-    width: 100%;
     margin-top: 3em;
     box-shadow: 0px 1px 3px red;
+    width: 25em;
     background: white;
     p {
         width: 95%;
