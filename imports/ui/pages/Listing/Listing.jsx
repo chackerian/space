@@ -150,7 +150,7 @@ export default class ListingItem extends Component {
               isMarkerShown
               googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaNzG0bIXNCHxpkVp-7AHMhRPzvoDy4uw&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `60%` }} />}
-              containerElement={<div style={{ height: `350px`, width: `44%`, float: `right` }} />}
+              containerElement={<div style={{ height: `350px`, width: `25em`, float: `right`, boxShadow: `0px 2px 5px`, borderRadius: `0.5em` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
           </div>
@@ -159,11 +159,11 @@ export default class ListingItem extends Component {
               <div className="desc-box desc-box-details">
                 <h4 className="box-title">Product Details</h4>
                 <p className="desc-full">
-                  Category:<a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a>
-                  Brand:<a href={`/search?q=${listing.brand}`} className="searchProperty">{listing.brand}</a>
+                  <span className='cat'>Category:<a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a></span>
+                  <span className='brand'>Brand:<a href={`/search?q=${listing.brand}`} className="searchProperty">{listing.brand}</a></span>
                   <br />
-                  Type:<a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a>
-                  Condition:<span>{listing.condition}</span>
+                  <span className='type'>Type:<a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
+                  <span className='condition'>Condition:{listing.condition}</span>
                   Trade Offers:<span>{listing.trade}</span>
                 </p>
               </div>

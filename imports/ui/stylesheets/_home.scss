@@ -60,6 +60,7 @@
         font-family: "Oswald";
         font-size: 1rem !important;
         &:hover {
+            animation: 0.2s;
             text-decoration: underline;
         }
     }
