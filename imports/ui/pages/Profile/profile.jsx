@@ -9,15 +9,14 @@ export default class Profile extends Component {
   }
 
   profile() {
-    var prof = Meteor.users.find({_id: this.props.id}).fetch()[0]
-    console.log(this.props.id, prof)
+    var prof = Meteor.users.find({_id: this.props.id}).fetch()[0];
     var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
     var facebook = "https://www.facebook.com/" + prof.services.facebook.id
     return(
       <div className="profileUser oneDiv">
           <div className="profileUserLeft">
               <a href="settings">
-                <div className="profileUserImage"><img src={img} /></div>
+                <div className="profileUserImage"><img className='profilePic' src={img} /></div>
               </a>
           </div>
           <div className="profileUserRight">
@@ -51,7 +50,7 @@ export default class Profile extends Component {
               </div>
               <div className="profileUserAmount">
                   <ul>
-                      <li className="profileUserAmountBought">Meetups: {prof.eetups_count}</li>
+                      <li className="profileUserAmountBought">Meetups: {prof.meetups_count}</li>
                   </ul>
               </div>
           </div>
@@ -64,8 +63,6 @@ export default class Profile extends Component {
       about: $(".profileSettingsAboutInput").val(),
       email: $(".profileSettingsEmailInput").val()
     }
-
-    var photo = typeof Session.get("img1url") != "undefined" ? options.photo = Session.get("img1url") : options.photo = Meteor.user().profile.picturesm;
 
     Meteor.call("addProfileInfo", options);
     FlowRouter.go("/profile/" + Meteor.userId());
