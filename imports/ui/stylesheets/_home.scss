@@ -84,6 +84,13 @@
     }
 }
 
+.homeTitle {
+  padding-bottom: 1em;
+  a h4 {
+    color: $color-spacered !important;
+  }
+}
+
 .homeCardSize {
     font-size: 0.7rem !important;
     b {

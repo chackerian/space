@@ -157,14 +157,13 @@ export default class ListingItem extends Component {
           <div className='bottomPage'>
             <div className="desc">
               <div className="desc-box desc-box-details">
-                <h4 className="box-title">Product Details</h4>
+                <h4 className="box-title">Details</h4>
                 <p className="desc-full">
                   <span className='cat'>Category:<a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a></span>
-                  <span className='brand'>Brand:<a href={`/search?q=${listing.brand}`} className="searchProperty">{listing.brand}</a></span>
-                  <br />
                   <span className='type'>Type:<a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
+                  <br />
                   <span className='condition'>Condition:{listing.condition}</span>
-                  Trade Offers:<span>{listing.trade}</span>
+                  <span>Trade Offers:{listing.trade}</span>
                 </p>
               </div>
               <div className="desc-box">
@@ -174,6 +173,10 @@ export default class ListingItem extends Component {
             </div>
 
             <div className="guardian">
+              <div className="actions">
+                <a className='actionButton' href='save'>Save</a>
+                <a className='actionButton' href='report'>Report</a>
+              </div>
               <div className="listingItemUser">
                 <ul className="listingItemUserImg">
                     <li><a href={`/profile/${listing.creator_id}`}><img src={listing.creator_image}/></a></li>

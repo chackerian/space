@@ -14,8 +14,12 @@
 }
 
 .offerDiv {
-  display: inline-block;
-  width: 14em;
+  width: 50%;
+}
+
+.profilePic {
+  background-color: #fff !important;
+  border: 4px solid #fff !important;
 }
 
 .profileSettingsSubmit {
@@ -84,7 +88,7 @@
     width: 25em;
     background: white;
     p {
-        width: 95%;
+        width: 91%;
         padding: 10px 10px 13px 10px;
         margin: 5px;
     }
@@ -254,7 +258,7 @@
 }
 
 .profileUserRight {
-  width: 58%;
+  width: 20em;
   vertical-align: top;
   margin-top: 0rem !important;
   font-size: 1.1rem !important;

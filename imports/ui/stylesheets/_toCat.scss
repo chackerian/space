@@ -73,11 +73,6 @@ ul {
     padding: 0;
 }
 
-.profilepic {
-  background-color: #fff;
-  border: 4px solid #fff;
-}
-
 fieldset,
 label {
     margin: 0;
@@ -98,10 +93,6 @@ label {
     display: none;
 }
 
-.s-alert-close {
-    display: none;
-}
-
 .searchIcon {
   position: absolute;
   top: 1.1em;
@@ -113,13 +104,9 @@ label {
     display: block !important;
 }
 
-.fsp-picker {
-  z-index: 10000000000000;
-}
-
-.created {
-  color: black !important;
-  font-weight: 500;
+.actionButton {
+  border: 1px solid black;
+  padding: 1em 2em;
 }
 
 .uploadimages {

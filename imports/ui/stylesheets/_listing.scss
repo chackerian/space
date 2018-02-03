@@ -3,6 +3,10 @@
     width: 3.5em;
 }
 
+.actions {
+  margin: 0 auto;
+}
+
 .listingItemOptionsDrop {
     width: 100%;
     margin-top: 23px;
@@ -149,8 +153,9 @@
 
 .listingItemDiv {
   padding: 2em 4em;
-  margin: 8em 13em;
+  margin: 6em 13em;
   background: white;
+  border: 2px solid #404040;
   & > div {
       display: inline-block;
   }
@@ -273,7 +278,7 @@
 
 .listingItemTitle {
     font-size: 2em !important;
-    color: #404040;
+    color: $color-spacered;
     margin: 0;
 }
 

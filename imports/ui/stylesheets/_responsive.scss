@@ -2,28 +2,6 @@
     Adds responsiveness to mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media (max-width: 1000px) {
-
-    .profileUserRight {
-        float: right;
-    }
-    
-    .searchResultsCardSize,
-    .searchResultsCardCondition, .searchResultsCardLocation {
-        font-size: 1rem;
-    }
-
-    .managerOfferView {
-        margin-top: 10px !important;
-    }
-}
-
-@media (max-width: 975px) {
-    .footerLeft {
-        width: 90% !important;
-    }
-}
-
 @media (max-width: 895px) {
 
     .small-search {
@@ -74,37 +52,18 @@
         margin-bottom: 2em;
     }
 
+    .listingItemDiv {
+        padding: 2em 4em;
+        margin: 6em 2em;
+        background: white;
+    }
+
     .guardian {
         float: none;
         margin-top: 1em;
         width: 100% !important;
     }
 }
-
-@media (max-width: 850px) {
-
-    .searchResultsCardPrice {
-        margin: 6px 0 8px 0;
-    }
-
-    .searchResultsCardPrice span {
-        font-size: 0.9rem;
-    }
-
-    .searchResultsCardTitle h2 {
-        font-size: 1.3rem !important;
-    }
-
-    .searchResultsCardName p {
-        font-size: 0.8rem !important;
-    }
-
-    .searchResultsCardSize,
-    .searchResultsCardCondition, .searchResultsCardLocation {
-        font-size: 0.9rem !important;
-    }
-}
-
 
 @media (max-width: 800px) {
 
