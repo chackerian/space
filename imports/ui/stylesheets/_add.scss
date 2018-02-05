@@ -18,22 +18,6 @@
     }
 }
 
-.addListTerms {
-    font-size: 0.8rem;
-}
-
-.listingPayment li {
-    display: inline-block;
-    margin: 0;
-    i {
-        font-size: 1.6rem;
-        color: gold !important;
-    }
-    i:hover {
-        color: gold !important;
-    }
-}
-
-.listingPayCash i {
-    margin-right: 5px;
+.uploadimages {
+  background-color: $color-spacered;
 }

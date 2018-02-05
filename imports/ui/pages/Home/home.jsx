@@ -7,7 +7,7 @@ var HomeCard = ({item}) => (
   <div className="grid-item">
     <li className="homeCardLi">
       <ul className="homeCardItem">
-        <li><a href={`/listing/${item.urlKey}`}><img src={item.images[0]} className="homeCardImg"/></a></li>
+        <li><a className='imglink' href={`/listing/${item.urlKey}`}><img src={item.images[0]} className="homeCardImg"/></a></li>
       </ul>
       <ul className="homeCardDetails">
         <li className='homeTitle'><a href={`/listing/${item.urlKey}`}><h4>{item.listing_title}</h4></a></li>

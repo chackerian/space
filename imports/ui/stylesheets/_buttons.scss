@@ -142,25 +142,6 @@ a[href] {
     }
 }
 
-.ActionButtons {
-    display: inline-block;
-    font-family: $font-norm;
-    float: right;
-    li {
-        display: inline-block;
-        margin: initial;
-        a {
-            color: white;
-            padding: 10px 25px;
-            margin: 0.5em;
-            border-radius: 6px;
-            box-shadow: 1px 1px 3px black;
-            overflow: hidden;
-            transition: all 0.2s linear;
-        }
-    }
-}
-
 .modMultiBtn {
     button {
         margin-top: 1em;
@@ -193,10 +174,6 @@ a[href] {
 
 .profileSettingsSubmit {
     float: right !important;
-}
-
-.profileBtn:hover {
-    background-color: #ee4641 !important;
 }
 
 .profileChatBtn a {

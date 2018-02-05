@@ -24,10 +24,14 @@ export default class ListingItem extends Component {
 
   constructor(props) {
     super(props)
+    this.state = {
+      editing: false
+    }
   }
 
-  timestamp() {
-    var time = this.createdAt;
+  timestamp = () => {
+    var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
+    var time = listing.createdAt;
     var now = moment();
 
     // Convert to seconds
@@ -37,67 +41,67 @@ export default class ListingItem extends Component {
 
     var min = minute + " minutes ago"
     var hr = hour + " hours and "
-    var time = hr.concat(min);
+    var newtime = hr.concat(min);
 
-    return time
+    return newtime
   }
 
-  manage(props) {
+edit = () => {
+  $(".listingItemTitle").focus();
+  $(".editListing").text("Save");
+
+  var title = $(".listingItemTitle").text();
+  var price = $(".itemMoney").text().replace(/\$/g, '');
+  var desc = $(".desc-full").text();
+
+  $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' type='text' value='" + title + "'> </input>");
+  $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
+  $(".desc-full").replaceWith("<input class='descEdit editing' type='text' value='" + desc + "'> </input>");
+}
+
+save = () => {
+      sAlert.success("Saved", {position: "top"});
+      $(".editListing").text("Edit");
+
+      var title = $(".titleEdit").val().shorten(25);
+      var price = $(".moneyEdit").val().shorten(10);
+      var desc = $(".descEdit").val().shorten(50);
+
+      $(".titleEdit").replaceWith("<h1 class='listingItemTitle'>" + title + "</h1>");
+      $(".moneyEdit").replaceWith("<li class='money itemMoney'>$" + price + "</li>");
+      $(".descEdit").replaceWith("<p class='desc-full'>" + desc + "</p>");
+
+      var options = {
+        id: FlowRouter.current().params.id,
+        listing_title: title,
+        price: price,
+        description: desc
+      }
+
+      Meteor.call('updateListing', options)
+}
+
+  manage = () => {
+    var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
+    var isUser = Meteor.user();
+    var isCreator = listing.creator_id == Meteor.user()._id ? true : false;
     if (isCreator && isUser) {
       return (
-        <ul className="ActionButtons right">
-          <li><a onClick={this.editListing} className="modOfferRequestTrigger editListing btn btn-default">Edit</a></li>
-          <li><a href={`/profile/${listing.profile}/listings`} className="modViewOffers btn btn-default">Manage</a></li>
-        </ul>
+        <div className="actions">
+          <a className='actionButton editListing' href='edit' onClick={()=> this.edit()}>Edit</a>
+        </div>
       )
     }
-    else if (Meteor.user()) {
+    else if (isUser) {
       return (
-        <ul className="ActionButtons">
-          <li><a className="btn btn-default profileBtn" href={`${listing._id}/offer/`}>Offer</a></li>
-          <li><a className="btn btn-default profileBtn" href={`/chat/${listing.creator_id}`}>Chat</a></li>
-        </ul>
+        <div className="actions">
+          <a className='actionButton' href='chat'>Chat</a>
+          <a className='actionButton' href='save'>Save</a>
+          <a className='actionButton' href='report'>Report</a>
+        </div>
       )
-    } else {
-      return "ASD"
     }
   }
-
-  edit = () => {
-    if ($(".editListing").text() == "Edit" ) {
-      $(".listingItemTitle").focus();
-      $(".editListing").text("Save");
-
-      var title = $(".listingItemTitle").text();
-      var price = $(".itemMoney").text().replace(/\$/g, '');
-      var desc = $(".desc-full").text();
-
-      $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' type='text' value='" + title + "'> </input>");
-      $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
-      $(".desc-full").replaceWith("<input class='descEdit editing' type='text' value='" + desc + "'> </input>");
-
-    } else {
-        sAlert.success("Saved", {position: "top"});
-        $(".editListing").text("Edit");
-
-        var title = $(".titleEdit").val().shorten(25);
-        var price = $(".moneyEdit").val().shorten(10);
-        var desc = $(".descEdit").val().shorten(50);
-
-        $(".titleEdit").replaceWith("<h1 class='listingItemTitle'>" + title + "</h1>");
-        $(".moneyEdit").replaceWith("<li class='money itemMoney'>$" + price + "</li>");
-        $(".descEdit").replaceWith("<p class='desc-full'>" + desc + "</p>");
-
-        var options = {
-          id: FlowRouter.current().params.id,
-          listing_title: title,
-          price: price,
-          description: desc
-        }
-
-        Meteor.call('updateListing', options)
-      }
-    }
 
   imageModal() {
   	<div className="modJoin">
@@ -159,11 +163,11 @@ export default class ListingItem extends Component {
               <div className="desc-box desc-box-details">
                 <h4 className="box-title">Details</h4>
                 <p className="desc-full">
-                  <span className='cat'>Category:<a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a></span>
-                  <span className='type'>Type:<a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
+                  <span className='cat'>Category: <a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a></span>
+                  <span className='type right'>Type: <a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
                   <br />
-                  <span className='condition'>Condition:{listing.condition}</span>
-                  <span>Trade Offers:{listing.trade}</span>
+                  <span className='condition'>Condition: {listing.condition}</span>
+                  <span className="right">Trade Offers: {listing.trade}</span>
                 </p>
               </div>
               <div className="desc-box">
@@ -173,10 +177,7 @@ export default class ListingItem extends Component {
             </div>
 
             <div className="guardian">
-              <div className="actions">
-                <a className='actionButton' href='save'>Save</a>
-                <a className='actionButton' href='report'>Report</a>
-              </div>
+              { this.manage() }
               <div className="listingItemUser">
                 <ul className="listingItemUserImg">
                     <li><a href={`/profile/${listing.creator_id}`}><img src={listing.creator_image}/></a></li>

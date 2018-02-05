@@ -4,28 +4,20 @@
 }
 
 .actions {
-  margin: 0 auto;
+  margin: 1.5em 6em;
 }
 
-.listingItemOptionsDrop {
-    width: 100%;
-    margin-top: 23px;
-    ul li {
-        width: 100%;
-        padding: 20px 0;
-        background-color: orange;
-        text-align: center;
-        border-radius: 4px;
-    }
-    ul li a {
-        padding: 20px;
-        background-color: orange;
-        color: white;
-    }
-    ul li a i {
-        color: white !important;
-        margin-left: 10px;
-    }
+.right {
+  float: right !important;
+}
+
+.actionButton {
+  border: 1px solid black;
+  padding: 1em 2em;
+  &:hover {
+      color: $color-spacered;
+      border-color: $color-spacered;
+  }
 }
 
 .profileBtn {
@@ -35,68 +27,26 @@
     }
 }
 
-.lat,
-.lng {
-    display: none;
-}
-
-.click-nav {
-    display: inline-block !important;
-    ul .clicker {
-        position: relative;
-        background: orange;
-        color: white;
-        text-align: center;
-        padding: 20px 0;
+.listingItemUser {
+    height: 75px;
+    width: 16em;
+    margin: 0 auto;
+    padding: 0.7em;
+    background: white;
+    border-radius: 0.4em;
+    a span {
+        vertical-align: middle;
+        margin-left: 4px;
     }
-    .no-js ul {
-        display: none;
+    a img {
+        vertical-align: middle;
+        width: 65px;
+        height: 65px;
+        border-radius: 6px;
     }
-    ul {
-        position: relative;
-        font-weight: 400;
-        margin: 5px 0 0 0 !important;
-    }
-    ul li {
-        position: relative;
-        list-style: none;
-        cursor: pointer;
-    }
-    ul li a {
-        display: block;
-        padding: 15px;
-        background: #fff;
-        color: #333;
-        text-decoration: none;
-    }
-    ul li ul {
-        position: absolute;
-        left: 0;
-        right: 0;
-        border: 2px solid #f39d00;
-        margin: 0 !important;
-    }
-    ul .clicker i {
-        color: #fff !important;
-        margin: 0 0 -3px 8px;
-    }
-    img {
-        position: absolute;
-        top: 9px;
-        left: 12px;
-    }
-    .no-js:hover ul {
-        display: block;
-    }
-}
-
-.optionsItems {
-    margin: 0 !important;
-    li {
-        margin: 0 !important;
-    }
-    li a i {
-        margin-right: 12px;
+    & > ul {
+        display: inline-block;
+        margin: 0;
     }
 }
 
@@ -139,18 +89,6 @@
     background: white;
 }
 
-.listingItemLocationString {
-    margin-top: 18px;
-    padding: 10px 0px 10px 0px;
-    background-color: $color-spacered;
-    border-radius: 4px;
-}
-
-.listingItemLocationString p {
-    color: #fff !important;
-    text-align: center;
-}
-
 .listingItemDiv {
   padding: 2em 4em;
   margin: 6em 13em;
@@ -188,15 +126,6 @@
     }
 }
 
-.listingItemBrand,
-.listingItemColor,
-.listingItemSize,
-.listingItemCondition,
-.listingItemQuantity,
-.listingItemTrade {
-    font-family: $font-header !important;
-}
-
 .listingItemLeft {
     width: 100%;
 }
@@ -226,50 +155,9 @@
     float: right;
 }
 
-.listingItemDetailLeft ul li:nth-child(2),
-.listingItemDetailLeft ul li:nth-child(3),
-.listingItemDetailRight ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(3) {
-    margin-top: 18px;
-    margin-bottom: 18px;
-}
-
-.listingItemSize a {
-    margin-left: 1.7rem !important;
-}
-
-.listingItemCondition a {
-    margin-left: 2.4rem !important;
-}
-
-.listingItemQuantity a {
-    margin-left: 2.9rem !important;
-}
-
 .listingItemDesc {
     margin: 50px 0;
     width: 75%;
-}
-
-.listingMapsCanvas {
-    height: 500px !important;
-}
-
-.listingItemOptions {
-    margin-top: 25px;
-    margin-bottom: 30px;
-    ul {
-        text-align: right !important;
-    }
-    ul li {
-        display: inline-block;
-    }
-}
-
-.listingItemOptionsLeft {
-    float: left !important;
-    margin: 0;
-    vertical-align: middle;
-    display: block;
 }
 
 .listingItemTrades {
@@ -277,56 +165,25 @@
 }
 
 .listingItemTitle {
-    font-size: 2em !important;
+    font-size: 3.4em !important;
     color: $color-spacered;
     margin: 0;
-}
-
-.listingItemBrand,
-.listingItemColor,
-.listingItemSize,
-.listingItemCondition,
-.listingItemQuantity,
-.listingItemTrades {
-    // width: 50% !important;
-}
-
-.listingItemBrand a, .listingItemBrand span, .listingItemColor span, .listingItemSize span,
-.listingItemCondition span, .listingItemQuantity span, .listingItemTrades span {
-    // margin-left: 10% !important;
-}
-
-.listingItemBrand a, .listingItemColor span {
-    margin-left: 5px !important;
-}
-
-.listingItemSize span {
-    margin-left: 5px !important;
-}
-
-.listingItemType a {
-    margin-left: 5px !important;
-}
-
-.listingItemTrade span {
-    margin-left: 5px !important;
-}
-
-.listingItemQuantity span {
-    margin-left: 5px !important;
-}
-
-.listingItemCondition span {
-    margin-left: 5px !important;
-}
-
-.listingItemCat span {
-    margin-left: 5px !important;
 }
 
 .listingPayment {
     display: block !important;
     margin: -75px -100px 0 0;
+    li {
+       display: inline-block;
+       margin: 0;
+       i {
+           font-size: 1.6rem;
+           color: gold !important;
+       }
+       i:hover {
+           color: gold !important;
+       }
+   }
 }
 
 .listingItemShare {
@@ -334,18 +191,6 @@
     text-align: center;
     a {
         padding: 0.5em 0.1em;
-    }
-}
-
-.itemAfterBanner {
-    background-color: $color-purple;
-    padding: 10px;
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 25px;
-    b {
-        color: #fff;
-        font-weight: 700;
     }
 }
 

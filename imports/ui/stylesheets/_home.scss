@@ -12,6 +12,10 @@
   padding-top: 3em;
 }
 
+.imglink {
+  background: white;
+}
+
 .homeCardLi {
     margin: 10px 8px;
     width: 13em;
@@ -101,15 +105,4 @@
 .homePrice {
     text-align: left !important;
     font-size: 0.8em !important;
-}
-
-.homeCardOfferReceived {
-    text-align: right;
-    margin: 0 5px 5px 0px;
-    font-size: 0.6rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    height: 15px;
-    vertical-align: top !important;
-    color: $color-purple !important;
 }
