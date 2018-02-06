@@ -67,9 +67,6 @@ export default class Homepost extends Component {
                       </a>
                   </li>
               </ul>
-              <ul className="headerHomeButton">
-                  <li><a href="/">Home</a></li>
-              </ul>
               <ul className="headerPostOptions clickDropper">
                   <li className="headerDropDown">
                       <a className="small-search" data-toggle="tooltip" data-placement="bottom">

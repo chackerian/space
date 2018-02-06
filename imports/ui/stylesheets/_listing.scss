@@ -203,11 +203,10 @@
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
     border-radius: 6px;
     overflow: hidden;
-}
-
-.listingItemOptions ul li a i {
-    margin-left: 5px;
-    color: #fff;
+    i {
+        margin-left: 5px;
+        color: #fff;
+    }
 }
 
 .listingItemOptionsDropDown {
@@ -218,14 +217,13 @@
 
 .editing {
     border: 1px solid black;
+    padding: 1em;
 }
 
 .titleEdit {
     font-size: 3.4em !important;
-    color: $color-spaceblue !important;
     font-family: "Oswald", sans-serif;
     font-weight: bold;
-    width: 85% !important;
 }
 
 .descEdit {
