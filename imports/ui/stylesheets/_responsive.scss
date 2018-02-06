@@ -2,6 +2,40 @@
     Adds responsiveness to mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+@media (max-width: 1350px) {
+  .desc {
+      width: 100% !important;
+  }
+
+  .carousel {
+    width: 100% !important;
+  }
+
+  .leftNav {
+      width: 40% !important;
+  }
+
+  .profileCardLi {
+      width: 315px !important;
+  }
+
+  .desc-box-listing {
+      margin-bottom: 2em;
+  }
+
+  .listingItemDiv {
+      padding: 2em 4em;
+      margin: 6em 2em;
+      background: white;
+  }
+
+  .guardian {
+      float: none;
+      margin-top: 1em;
+      width: 100% !important;
+  }
+}
+
 @media (max-width: 895px) {
 
     .small-search {
@@ -16,9 +50,6 @@
       display: none
     }
 
-    .carousel {
-      width: 100% !important;
-    }
 
     .headerCatDrop {
         display: none !important;
@@ -30,38 +61,6 @@
 
     .headerNameOptions {
         display: none !important;
-    }
-
-    .headerHomeButton {
-        display: none !important;
-    }
-
-    .desc {
-        width: 100% !important;
-    }
-
-    .leftNav {
-        width: 40% !important;
-    }
-
-    .profileCardLi {
-        width: 315px !important;
-    }
-
-    .desc-box-listing {
-        margin-bottom: 2em;
-    }
-
-    .listingItemDiv {
-        padding: 2em 4em;
-        margin: 6em 2em;
-        background: white;
-    }
-
-    .guardian {
-        float: none;
-        margin-top: 1em;
-        width: 100% !important;
     }
 }
 
@@ -127,14 +126,11 @@
     }
 }
 
-@media (max-width: 776px) {
-
-    .profileCardLi {
-        width: 42% !important;
-    }
-}
-
 @media (max-width: 775px) {
+
+  .profileCardLi {
+      width: 42% !important;
+  }
 
     .footerLeft > ul:first-child {
         width: 80%;
@@ -258,30 +254,6 @@
     }
 }
 
-@media (max-width: 630px) {
-    .headerSearchNavField {
-        display: none !important;
-    }
-}
-
-@media (max-width: 606px) {
-    .profileUserFeedbackViewCriteria li ul li:first-child {
-        font-size: 0.9rem !important;
-    }
-
-    .profileUserFeedbackViewStars input[type="radio"] + label {
-        font-size: 11px;
-    }
-
-    .profileUserFeedbackViewCriteria, .profileUserFeedbackViewResponse {
-        width: 95% !important;
-    }
-
-    .profileUserFeedbackViewStars {
-        height: 24px !important;
-    }
-}
-
 @media (max-width: 600px) {
 
     // Hides
@@ -332,58 +304,11 @@
 
 }
 
-@media (max-width: 589px) {
+@media (max-width: 509px) {
 
-    .profileUserRating ul li i {
-        margin-left: 5px !important;
-    }
-}
-
-@media (max-width: 583px) {
-    .profileCardLi {
-        width: 315px !important;
-    }
-
-    .profileCardInfo li:first-child {
-    margin-bottom: 12px !important;
-    }
-
-    .profileCardItem {
-    font-size: 0.9rem !important;
-    margin-bottom: 5px !important;
-    }
-
-    .managerOfferView {
-    margin-top: 22px !important;
-    }
-}
-
-@media (max-width: 561px) {
-    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
-        margin-right: 0.5rem !important;
-    }
-
-    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
-        margin-right: 0.5rem !important;
-    }
-}
-
-@media (max-width: 551px) {
-    .profileUserFeedbackViewStars input[type="radio"] + label {
-        font-size: 10px !important;
-    }
-    .profileUserFeedbackViewStars fieldset label[class="full"] {
-        width: 16px !important;
-    }
-}
-
-@media (max-width: 530px) {
     .profileUserLeft {
         margin-left: 2% !important;
     }
-}
-
-@media (max-width: 509px) {
 
     .clickDropper {
         li ul li a {
@@ -506,9 +431,6 @@
         font-size: 1.4rem !important;
     }
 
-}
-
-@media (max-width: 425px) {
     .footerItems li h4 a {
       font-size: 0.9em !important;
     }
@@ -535,19 +457,5 @@
 
     .profileUserName h1 {
         font-size: 1.6rem !important;
-    }
-}
-
-@media (max-width: 403px) {
-    .profileUserRating ul li span {
-        margin-left: 5px !important;
-    }
-
-    .profileUserFeedbackView {
-        margin: 0rem auto !important;
-    }
-
-    .profileUserFeedbackViewResponse li b {
-        font-size: 0.88rem !important;
     }
 }

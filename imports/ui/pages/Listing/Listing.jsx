@@ -171,7 +171,7 @@ save = () => {
               isMarkerShown
               googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaNzG0bIXNCHxpkVp-7AHMhRPzvoDy4uw&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `60%` }} />}
-              containerElement={<div style={{ height: `350px`, width: `25em`, float: `right`, boxShadow: `0px 2px 5px`, borderRadius: `0.5em` }} />}
+              containerElement={<div style={{ height: `350px`, width: `50%`, float: `right`, boxShadow: `0px 2px 5px`, borderRadius: `0.5em` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
           </div>
