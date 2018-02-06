@@ -146,8 +146,6 @@ profile.route('/:id/settings', {
   }
 });
 
-// report
-
 // ProfileActive
 profile.route('/:id/active', {
   name: 'adsfd',

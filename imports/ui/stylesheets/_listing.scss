@@ -14,6 +14,7 @@
 .actionButton {
   border: 1px solid black;
   padding: 1em 2em;
+  margin: 0 0.4em;
   &:hover {
       color: $color-spacered;
       border-color: $color-spacered;

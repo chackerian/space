@@ -47,7 +47,6 @@ export default class ListingItem extends Component {
   }
 
 edit = () => {
-  $(".listingItemTitle").focus();
   $(".editListing").text("Save");
 
   var title = $(".listingItemTitle").text();
@@ -55,6 +54,8 @@ edit = () => {
   var desc = $(".desc-full").text();
 
   $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' type='text' value='" + title + "'> </input>");
+  $(".listingItemTitle").focus();
+
   $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
   $(".desc-full").replaceWith("<input class='descEdit editing' type='text' value='" + desc + "'> </input>");
 }
@@ -84,7 +85,14 @@ save = () => {
   manage = () => {
     var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
     var isUser = Meteor.user();
-    var isCreator = listing.creator_id == Meteor.user()._id ? true : false;
+
+    try {
+      var isCreator = listing.creator_id == Meteor.user()._id ? true : false;
+    }
+    catch (error) {
+      console.log(error)
+    }
+
     if (isCreator && isUser) {
       return (
         <div className="actions">
@@ -99,6 +107,15 @@ save = () => {
           <a className='actionButton' href='save'>Save</a>
           <a className='actionButton' href='report'>Report</a>
         </div>
+      )
+    }
+    else {
+      return (
+      <div className="actions">
+        <a className='actionButton' href='chat'>Chat</a>
+        <a className='actionButton' href='save'>Save</a>
+        <a className='actionButton' href='report'>Report</a>
+      </div>
       )
     }
   }

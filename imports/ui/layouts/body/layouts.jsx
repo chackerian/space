@@ -9,7 +9,6 @@ import Modal from '../../pages/Modal/modal.jsx';
 import Alert from '../../pages/Solo/salert.jsx';
 import Header from '../../pages/Header/header.jsx';
 import Footer from '../../pages/Footer/Footer.jsx';
-// import Spinner from '../../pages/Solo/Spinner.jsx';
 
 HeaderContainer = withTracker(({ urlKey }) => {
   const list = Meteor.user();
@@ -52,7 +51,7 @@ export default class MainLayout extends Component {
       this.setState({
         log: true
       });
-      
+
       setTimeout(function(){ Meteor.call('updateUserCreation', Meteor.user()._id) }, 3000);
     }
 
