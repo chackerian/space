@@ -124,6 +124,7 @@ export default class AddModal extends Component {
   }
 
   render() {
+    $("body").css("overflow", "hidden")
     if(this.state.modaltab == 1) {
       return(
           <div className="modAddListingDialog modal-dialog">

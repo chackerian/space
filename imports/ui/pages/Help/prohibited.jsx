@@ -33,33 +33,6 @@ export default class AboutTerms extends Component {
           <li>any good, service, or content that violates the law or legal rights of others</li>
         </ol>
 
-        ## Reporting
-
-        ### Reasons For Reporting a Listing
-
-        It contains content described on the <a className="link" href="/help/prohibited">Prohibited Items</a> page.
-
-        ### How To Report a Listing
-
-        1. Go to the listing page and click the **options** dropdown in the bottom right corner.
-
-        2. Click the **report** button in the dropdown.
-
-        3. Answer the prompted questions on the **report listing** form.
-
-        ### Reasons For Reporting a User
-
-        1. User has scammed or not acted properly during a meetup.
-
-        2. User flaked, they never showed up.
-
-        ### How To Report a User
-
-        First of all, if you have sucesfully scheduled a meetup with a user, you will have the ability to report them directly when filling out feedback.
-
-        1. Go to the user's profile page and click the report button next to chat.
-
-        2. Answer the prompted questions on the **report listing** form.
       </div>
     )
   }

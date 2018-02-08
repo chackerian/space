@@ -64,8 +64,6 @@ export default class Footer extends Component {
                 <li><h4><a href="/help/contact">Contact</a></h4></li>
               </div>
             </ul>
-            <ul className="footerItems footerPreDivide">
-            </ul>
             <ul className="footerbottom">
               <li className="footerCopy">&copy; 2018 SpaceTrades Inc</li>
               <li className="footerSocial">

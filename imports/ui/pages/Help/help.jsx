@@ -12,7 +12,7 @@ export default class Help extends Component {
       return(
         <div className="helpDiv oneDiv">
             <HelpNav />
-            <h2 className="helpIntro helpShow">Welcome to the Help Center</h2>
+            <h2 className="helpShow">Welcome to the Help Center</h2>
             <p className="helpPagesPar">Here you can find answers to common questions, review vital safety principles, check the privacy and terms policy and contact us</p>
 
             <ul className="helpImgUl">
@@ -38,7 +38,7 @@ export default class Help extends Component {
                     <li>
                         <ul>
                             <li><h3>Terms and Conditions</h3></li>
-                            <li>To use our service, you agree to certain <a href="/help/terms">Terms &amp; Conditions</a>.</li>
+                            <li>To use the site, you agree to certain <a href="/help/terms">Terms &amp; Conditions</a>.</li>
                         </ul>
                     </li>
                 </ul>

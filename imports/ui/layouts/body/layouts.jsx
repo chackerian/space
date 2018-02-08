@@ -28,6 +28,11 @@ export default class MainLayout extends Component {
   }
 
   onChangeModal(status, modal='join') {
+
+    if (status == "off") {
+      $("body").css("overflow", "auto")
+    }
+
     this.setState({
       status: status,
       modal: modal

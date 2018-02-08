@@ -42,6 +42,11 @@
         width: 100%;
         margin: 3rem 0 1rem 0;
     }
+    ul li {
+        display: inline-block;
+        margin: 0 1%;
+    }
+
 }
 
 .helpwel {
@@ -51,12 +56,6 @@
 .helpPagesPar {
     margin-right: 15%;
     margin-left: 15%;
-}
-
-.helpAboutUl li ul li,
-.helpDiv ul li {
-    display: inline-block;
-    margin: 0 2%;
 }
 
 .helpAboutUl li ul li img {
@@ -78,6 +77,9 @@
       width: 28%;
       display: inline-block;
       vertical-align: top !important;
+      border-radius: 0.5em;
+      padding: 1em;
+      background: white;
   }
   li ul li h3 {
       margin: 5px 0 4px 0;

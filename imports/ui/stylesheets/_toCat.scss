@@ -82,6 +82,7 @@ label {
 .oneDiv {
     font-family: $font-norm !important;
     margin: 2em;
+    min-height: 35em;
 }
 
 ::selection {
@@ -102,6 +103,10 @@ label {
 .active,
 .in {
     display: block !important;
+}
+
+.helpShow {
+  margin-top: 2em;
 }
 
 #target {

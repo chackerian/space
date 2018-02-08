@@ -35,21 +35,7 @@ export default class AboutHelp extends Component {
 
         <h1>Can I create an account without Facebook?</h1>
 
-        No. SpaceTrades currently requires all users to sign up through Facebook. This helps maintain user accountability.
-
-        <h1>Can I suggest something for the site or just give feedback?</h1>
-
-        Yes of course. <a className="link" href='/help/contact'>Contact Us</a>
-
-        <h1>How do I use the message system?</h1>
-
-        <h2>1.</h2>If you are a Buyer, On the listing page of the item you are interested in, click the chat button and message the user in the tab that pops up.
-
-        <h2>2.</h2>If you are a Seller If you are the one who is listing an item Check the Other folder in your Facebook. This can be accesed through the mail button on the top right corner of the navigation bar.
-
-        <h1>I had issues during a meetup, what should I do now?</h1>
-
-        Make sure to fill out the Post Meetup Feedback form completely and accurately. We will help from there on.
+        No. SpaceTrades currently requires all users to sign up through Facebook. This helps maintain user accountability
 
         <h1>Safety Information</h1>
 

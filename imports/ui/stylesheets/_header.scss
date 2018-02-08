@@ -6,7 +6,7 @@
 
 .rightNav {
     float: right;
-    margin-right: 2em;
+    margin-right: 12em;
     height: inherit;
     display: inline-block;
 }
@@ -160,7 +160,7 @@
       color: #404040;
       margin: -30px 15px -4px 0;
       font-size: 1.3rem;
-      left: 6.6em !important;
+      left: 12.3em !important;
       pointer-events: none;
       content: '';
       display: block;
@@ -174,22 +174,18 @@
     }
 }
 
-.headerCatDropLi ul {
-  margin: 0.7em 0px 0px -4.55em !important;
-}
-
 .headerDropDown {
     position: relative;
     ul {
         display: none;
         position: absolute;
-        margin: 1.6em -1px 0px -10.2em !important;
+        margin: 1.6em -1px 0px -19.2em !important;
         border: 3px solid $color-spacegrey;
         animation: 0.5s pulse;
         padding: 0;
         background-color: white !important;
         font-size: 0.8rem;
-        width: 25vw;
+        width: 21vw;
         z-index: 3;
 
         li {
@@ -197,6 +193,7 @@
             color: black;
             text-align: left !important;
             font-size: 1rem !important;
+            display: flex;
 
             a {
                 color: black;
@@ -264,10 +261,6 @@
         color: red !important;
     }
   }
-}
-
-.navGeneral a li {
-  border-bottom: 4px solid #404040 !important;
 }
 
 .notifLi {
