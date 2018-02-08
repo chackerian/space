@@ -7,8 +7,7 @@ export default class HelpNav extends Component {
       <div className="helpcenternav">
           <nav className="helpnav">
               <ul className="helpiteml">
-                  <li><a href="/help" className="helpitem">Help</a></li>
-                  <li><a href="/help/about" className="helpitem">About</a></li>
+                  <li><a href="/help" className="helpitem">Home</a></li>
                   <li><a href="/help/faq" className="helpitem">FAQ</a></li>
                   <li><a href="/help/safety" className="helpitem">Safety</a></li>
                   <li><a href="/help/prohibited" className="helpitem">Prohibited</a></li>

@@ -313,6 +313,7 @@
     margin: 1em 0px 0px 0px;
     li {
         display: inline-block;
+        float: right;
     }
     li span {
         margin-left: 5px;
@@ -326,11 +327,6 @@
         font-size: 1.3rem;
         color: #3b5998 !important;
     }
-}
-
-.devsite-rating-stars {
-    display: inline;
-    letter-spacing: -1em;
 }
 
 .reviews-count {

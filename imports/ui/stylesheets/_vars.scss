@@ -38,15 +38,15 @@ $color-money:           #339966;
 $color-gold:            #ffd700;
 
 // External
-$color-facebook:    						#46629E;
-$color-instagram:   						#125688;
+$color-facebook:    		#46629E;
+$color-instagram:   		#125688;
 
 // Links
-$color-link:        						#0c65a5;
-$color-linkhover:   						#0890F2;
-$color-visited:     						#0c65a5;
+$color-link:        		#07C;
+$color-linkhover:   		#0890F2;
+$color-visited:     		#0c65a5;
 
-$shadow:                          1px 2px 6px black;
+$shadow:                1px 2px 6px black;
 
 /////////////////////////////////////////////////////
 // Font Stacks
@@ -110,45 +110,3 @@ $carousel-indicator-active-bg:                #fff;
 $carousel-indicator-border-color:             #fff;
 
 $carousel-caption-color:                      #fff;
-
-/////////////////////////////////////////////////////
-// Alerts
-/////////////////////////////////////////////////////
-
-.s-alert-error {
-    font-family: $font-alfred !important;
-    text-align: center !important;
-    z-index: 10000000;
-}
-
-.s-alert-sucess {
-    font-family: $font-alfred !important;
-    text-align: center !important;
-    z-index: 10000000;
-}
-
-.s-alert-box p {
-    text-align: center;
-}
-
-/////////////////////////////////////////////////////
-
-// Custom
-.money {
-    color: $color-money !important;
-    font-weight: 400;
-    font-family: 'Open Sans' !important;
-}
-
-.black {
-    color: black;
-    text-shadow: none;
-}
-
-.right {
-    float: right !important;
-}
-
-.hidden {
-    display: none;
-}

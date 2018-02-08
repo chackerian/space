@@ -18,7 +18,6 @@ export default class Footer extends Component {
             <ul className="footerItems">
               <div className='leftInnerFooter'>
                 <li><h3><a href="/">SpaceTrades</a></h3></li>
-                <li><h4><a href="/help/about">About</a></h4></li>
                 <li><h4><a href="/help">Help</a></h4></li>
                 <li><h4><a href="/help/faq">FAQ</a></h4></li>
                 <li><h4><a href="/help/terms">Terms</a></h4></li>
@@ -26,7 +25,6 @@ export default class Footer extends Component {
               <div className='rightInnerFooter'>
                 <li><h4><a href="/help/safety">Safety</a></h4></li>
                 <li><h4><a href="/help/prohibited">Prohibited</a></h4></li>
-                <li><h4><a href="/help/report">Report</a></h4></li>
                 <li><h4><a href="/help/contact">Contact</a></h4></li>
               </div>
             </ul>
@@ -52,7 +50,6 @@ export default class Footer extends Component {
             <ul className="footerItems">
               <div className='leftInnerFooter'>
                 <li><h3><a href="/">SpaceTrades</a></h3></li>
-                <li><h4><a href="/help/about">About</a></h4></li>
                 <li><h4><a href="/help">Help</a></h4></li>
                 <li><h4><a href="/help/faq">FAQ</a></h4></li>
                 <li><h4><a href="/help/terms">Terms</a></h4></li>
@@ -60,7 +57,6 @@ export default class Footer extends Component {
               <div className='rightInnerFooter'>
                 <li><h4><a href="/help/safety">Safety</a></h4></li>
                 <li><h4><a href="/help/prohibited">Prohibited</a></h4></li>
-                <li><h4><a href="/help/report">Report</a></h4></li>
                 <li><h4><a href="/help/contact">Contact</a></h4></li>
               </div>
             </ul>

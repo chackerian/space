@@ -38,9 +38,6 @@ export default class Profile extends Component {
                         <i className="fa fa-envelope-o"></i>
                     </a>
                   </li>
-                  <li className="profileStars">
-                      <span className="review-count">({prof.reviews_count} Reviews)</span>
-                  </li>
                 </ul>
               </div>
               <div className="profileUserInfo">
@@ -53,6 +50,9 @@ export default class Profile extends Component {
                       <li className="profileUserAmountBought">Meetups: {prof.meetups_count}</li>
                   </ul>
               </div>
+              <li className="profileStars">
+                  <span className="review-count">({prof.reviews_count} Reviews)</span>
+              </li>
           </div>
       </div>
     )

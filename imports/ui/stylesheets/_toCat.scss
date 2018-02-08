@@ -79,6 +79,43 @@ label {
     padding: 0;
 }
 
+/////////////////////////////////////////////////////
+// Alerts
+/////////////////////////////////////////////////////
+
+.s-alert-error {
+    font-family: $font-alfred !important;
+    text-align: center !important;
+    z-index: 10000000;
+}
+
+.s-alert-sucess {
+    font-family: $font-alfred !important;
+    text-align: center !important;
+    z-index: 10000000;
+}
+
+.s-alert-box p {
+    text-align: center;
+}
+
+/////////////////////////////////////////////////////
+
+// Custom
+.money {
+    color: $color-money !important;
+    font-weight: 400;
+    font-family: 'Open Sans' !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.hidden {
+    display: none;
+}
+
 .oneDiv {
     font-family: $font-norm !important;
     margin: 2em;
@@ -96,6 +133,7 @@ label {
 
 .searchIcon {
   position: absolute;
+  color: $color-lightgrey;
   top: 1.1em;
   left: 6.5em;
 }
