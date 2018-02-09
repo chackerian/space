@@ -272,10 +272,6 @@
 
 @media (max-width: 509px) {
 
-    .profileUserLeft {
-        margin-left: 2% !important;
-    }
-
     .clickDropper {
         li ul li a {
             padding: 15px 0px 15px 0px !important;
@@ -294,7 +290,7 @@
         width: 75% !important;
         text-align: center;
         float: none;
-        margin-right: 0 !important;
+        margin-right: 0 !important ;
     }
 
     .headerDropDown ul {
@@ -314,29 +310,12 @@
         content: "ST";
     }
 
-    .contactname input, .contactsubject input,
-    .contactemail input, .contacttext textarea {
-        width: 80% !important;
-    }
-
     .contactSend {
         width: 93% !important;
     }
 
     .homeCardLi {
       width: 150px;
-    }
-
-    .profileSettingsPhoto {
-        li input {
-            font-size: 0.9rem !important;
-            width: 175px !important;
-            margin-left: 10px !important;
-        }
-        li img {
-            width: 80px !important;
-            height: 80px !important;
-        }
     }
 
     .profileSettingsButton input {
