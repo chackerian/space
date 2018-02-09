@@ -8,7 +8,7 @@ export default class AboutTerms extends Component {
       <div className="prohibiteddiv oneDiv">
         <HelpNav />
         <h2> Prohibited Items</h2>
-        <ol>
+        <ol className='prohib'>
           <li>weapons; firearms/guns and components; BB/pellet, stun, and spear guns; etc</li>
           <li>ammunition, clips, cartridges, reloading materials, gunpowder, fireworks, explosives</li>
           <li>recalled items; hazardous materials; body parts/fluids; unsanitized bedding/clothing</li>

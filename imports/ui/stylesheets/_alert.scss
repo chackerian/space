@@ -1,3 +1,25 @@
+/////////////////////////////////////////////////////
+// Alerts
+/////////////////////////////////////////////////////
+
+.s-alert-error {
+    font-family: $font-alfred !important;
+    text-align: center !important;
+    z-index: 10000000;
+		background: #E74C3C;
+		color: #fff;
+}
+
+.s-alert-sucess {
+    font-family: $font-alfred !important;
+    text-align: center !important;
+    z-index: 10000000;
+}
+
+.s-alert-box p {
+    text-align: center;
+}
+
 .s-alert-box,
 .s-alert-box * {
 	box-sizing: border-box;
@@ -114,14 +136,6 @@
 
 .s-alert-success {
     background: #27AE60;
-    color: #fff;
-}
-.s-alert-warning {
-    background: #F1C40F;
-    color: #fff;
-}
-.s-alert-error {
-    background: #E74C3C;
     color: #fff;
 }
 
