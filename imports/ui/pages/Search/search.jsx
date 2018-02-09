@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import tinify from 'tinify'
-
-// tinify.key = "4P3Rx8J8Pl4coIGRwFO8RCnIaeGMRXAz";
 
 keyPress = {
     nav: function(elem) {
@@ -187,24 +184,3 @@ keyPress.home("search");
 // 	delay: 200,
 // 	source: tags
 // });
-
-
-if ( Meteor.isClient) {
-	Template.searchpage.helpers({
-		getListings: function() {
-			var query = ListingSearch.getData({
-				sort: {
-					isoScore: -1
-				}
-			});
-
-			return query
-		},
-		search: function() {
-			return Session.get("search");
-		},
-		urlsearch: function(){
-			return Session.get('query').q;
-		}
-	});
-}

@@ -8,17 +8,6 @@ button {
     }
 }
 
-.btn-default {
-    background-color: $color-spacered;
-    color: white !important;
-    padding: 12px 8px;
-    font-family: $font-norm !important;
-    border-radius: 0.3em;
-    &:hover {
-        background-color: #f73c37;
-    }
-}
-
 a[href] {
     font-family: $font-link;
 }
@@ -32,63 +21,14 @@ a[href] {
     }
 }
 
-.modNotificationsTrigger {
-    background-color: #333 !important;
-    padding: 10px 0;
-    width: 100%;
-    font-size: 0.7rem;
-    margin: 0 0 -5px -5px;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.modOfferRequestTrigger {
-    padding: 15px 28px;
-    color: #fff;
-    background-color: #f8504b;
-    border: 1px solid #f8504b;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    border-radius: 6px;
-    overflow: hidden;
-    & :hover {
-        background-color: #f73c37;
-    }
-}
-
-.modAddListingTrigger {
-    background-color: rgba(255, 255, 255, 0) !important;
-    color: #f8504b !important;
-    font-size: 0.8rem !important;
-    padding: 18px 50px 18px 0px !important;
-    width: 100% !important;
-    margin-left: -30px !important;
-    font-family: 'Droid Sans', sans-serif !important;
-    i {
-        color: #f8504b !important;
-        margin-right: 10px !important;
-        margin-left: -25px !important;
-    }
-}
-
-.reportBtn {
-    text-align: right;
-    margin: 5px 0 100px 0;
-    button {
-        padding: 15px 22px;
-        color: #fff ;
-        background-color: $color-spacered;
-        border: 1px solid $color-spacered;
-        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        border-radius: 6px;
-        overflow: hidden;
-        font-size: 1.2rem !important;
-        float: right !important;
-    }
-    &:hover {
-        background-color: #f73c37;
-    }
+.actionButton {
+  border: 1px solid black;
+  padding: 1em 2em;
+  margin: 0 0.4em;
+  &:hover {
+      color: $color-spacered;
+      border-color: $color-spacered;
+  }
 }
 
 .modalSubmitBtn {
@@ -152,42 +92,8 @@ a[href] {
     }
 }
 
-.profileUserButtons {
-    margin-top: 3em;
-}
-
-.profileSettingsButton {
-    width: 70%;
-    margin: 25px auto 100px auto !important
-    input {
-        font-size: 1rem;
-        padding: 13px 18px;
-        color: #fff !important;
-        background-color: $color-spacered;
-        border: 1px solid $color-spacered;
-        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        border-radius: 6px;
-        overflow: hidden;
-        float: right;
-    }
-}
-
 .profileSettingsSubmit {
     float: right !important;
-}
-
-.profileChatBtn a {
-    font-size: 1.2rem;
-    padding: 15px 22px;
-    color: #fff !important;
-    background-color: $color-spacered;
-    border: 1px solid $color-spacered;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    border-radius: 6px;
-    overflow: hidden;
-    &:hover {
-        background-color: #f73c37;
-    }
 }
 
 .defaultProfileButton {

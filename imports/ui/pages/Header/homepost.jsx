@@ -15,6 +15,15 @@ export default class Homepost extends Component {
     }
   }
 
+  clearToggle() {
+    if ($(".navNotifications > .headerDropDownNav").is( ":visible" )) {
+      $(".navNotifications > .headerDropDownNav").toggle();
+    }
+    if ($(".navGeneral > .headerDropDownNav").is( ":visible" )) {
+      $(".navGeneral > .headerDropDownNav").toggle();
+    }
+  }
+
   navGeneral() {
     if ($(".navNotifications > .headerDropDownNav").is( ":visible" )) {
       $(".navNotifications > .headerDropDownNav").toggle();
@@ -31,6 +40,7 @@ export default class Homepost extends Component {
   }
 
   componentDidMount() {
+    this.clearToggle();
     $(".search").keypress(function(e) {
       var key = e.key
       if (key == "Enter") {
@@ -44,7 +54,7 @@ export default class Homepost extends Component {
   }
 
   render() {
-    let profile = Meteor.user()._id
+    let profile = Meteor.user()._id;
     return (
       <nav className="headerNav">
           <div className="leftNav">

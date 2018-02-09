@@ -1,4 +1,3 @@
-import './fixtures.js';
 import './register-api.js';
 import { ServiceConfiguration } from 'meteor/service-configuration';
 import { Listing, Notification, Message, Offer, Feedback, Report, Saves } from '/imports/api/links/db.js';

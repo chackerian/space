@@ -35,24 +35,6 @@
     list-style: none;
 }
 
-.helpDiv {
-    padding: 1em 1em;
-    text-align: center;
-    ul li img {
-        width: 100%;
-        margin: 3rem 0 1rem 0;
-    }
-    ul li {
-        display: inline-block;
-        margin: 0 1%;
-    }
-
-}
-
-.helpwel {
-    font-weight: bold;
-}
-
 .helpPagesPar {
     margin-right: 15%;
     margin-left: 15%;
@@ -79,6 +61,7 @@
       vertical-align: top !important;
       border-radius: 0.5em;
       padding: 1em;
+      margin: 1em;
       background: white;
   }
   li ul li h3 {
@@ -87,16 +70,10 @@
   li ul li p {
       margin: 0 0 2px 0;
   }
-  li ul li:last-child {
-      margin-top: 5px;
-      list-style-type: circle;
-      line-height: 1.5;
-  }
 }
 
 .faq ul {
     padding: 0;
-
     li ul li p {
         width: 70%;
     }
@@ -104,13 +81,6 @@
 
 .faqsec {
     margin-left: 1rem;
-}
-
-.faqheading {
-    margin: 0;
-    margin-bottom: 2px;
-    margin-top: 1.5rem;
-    margin-left: 3rem;
 }
 
 .faqinfo {
@@ -174,10 +144,6 @@
     }
 }
 
-.helpcenternav {
-    margin-top: 2em;
-}
-
 .helpnav ul li {
     display: inline-block;
     font-size: 1rem;
@@ -229,13 +195,6 @@
 
 .faqSec {
     margin-left: 1rem;
-}
-
-.faqHeading {
-    margin: 0;
-    margin-bottom: 2px;
-    margin-top: 1.5rem;
-    margin-left: 3rem;
 }
 
 .contacttext textarea {

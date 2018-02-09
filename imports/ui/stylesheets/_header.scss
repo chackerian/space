@@ -31,17 +31,7 @@
     }
 }
 
-.headerNavLogo {
-    margin: 0;
-    margin-left: 20px;
-    margin-right: 10px;
-    font-size: 1.3rem !important;
-    font-weight: 700;
-    color: $color-spacegrey !important;
-}
-
 // Nav
-
 .headerAuth {
     li a {
         color: #fff !important;
@@ -52,14 +42,6 @@
     li a:hover {
         color: white;
         background: $color-spacegrey;
-    }
-}
-
-.headerCompass {
-    font-size: 0.8rem;
-    vertical-align: middle;
-    i {
-        vertical-align: middle !important;
     }
 }
 
@@ -78,77 +60,14 @@
 
 #radiusLogo {
     font-size: 1.4rem !important;
-}
-
-.headerSearchNav {
-    outline: none !important;
-    background-color: $color-spacered;
-    margin-top: 5px;
-    border-bottom: 2px solid $color-spacegrey !important;
-    padding-bottom: 5px;
-    font-family: $font-header !important;
-    ::-webkit-input-placeholder {
-        color: #333 !important;
-    }
-    ::-moz-placeholder {
-        color: #333 !important;
-    }
-    :-mozplaceholder {
-        color: #333 !important;
-    }
-    :-ms-input-placeholder {
-        color: #333 !important;
+    &:hover {
+      text-shadow: 0px 1px;
+      animation: 2s;
     }
 }
 
 .searchIcon {
-  color: #333;
-}
-
-.headerSearchNavField {
-    color: black;
-    float: right;
-    font-weight: 400;
-    font-size: 0.9rem !important;
-    i {
-        color: $color-spacegrey !important;
-        margin-right: -5px;
-        border-bottom: 2px solid $color-spacegrey;
-        padding: 0 5px 6px 0;
-    }
-}
-
-.headerRadius {
-    width: 150px;
-    margin-left: 10px;
-    padding: 8px 2px;
-    color: white !important;
-    background-color: #f73c37;
-    text-align: center;
-    input {
-        width: 16px;
-        display: inline-block;
-        text-align: center;
-        outline: none !important;
-        background-color: $color-ruddy;
-        color: white;
-        margin-left: -4px;
-        border: 1px solid $color-ruddy;
-        -webkit-appearance: none !important;
-        -moz-appearance: none !important;
-        font-family: $font-header;
-        &:focus {
-          outline: none !important;
-          -webkit-appearance: none !important;
-          -moz-appearance: none !important;
-          appearance: none !important;
-        }
-    }
-    span {
-        display: inline-block;
-        margin-left: 0;
-        padding-right: 4px;
-    }
+  color: $color-lightgrey;
 }
 
 .clickDropper {
@@ -203,51 +122,6 @@
             }
         }
 
-    }
-}
-
-.headerDropDownShow {
-    padding: 12px;
-    &:hover {
-        background-color: $color-spacegrey !important;
-        color: white !important;
-    }
-    &:hover > .headerDropDownNav {
-        display: grid;
-        position: absolute;
-        z-index: 2;
-    }
-    span {
-        font-size: 0.8rem !important;
-    }
-    ul {
-      position: absolute;
-      display: none;
-      border: 6px solid #404040;
-      padding: 0;
-      background-color: white !important;
-      font-size: 0.8rem;
-      margin: 0.7em 0px 0px -5.9em;
-      z-index: 3;
-
-      li {
-          padding: 18px 50px 18px 20px;
-          color: black;
-          text-align: left !important;
-          width: 50px;
-          font-size: 1rem !important;
-
-          a {
-              color: black;
-              margin: 0 !important;
-              padding: 0;
-              padding:15px 80px 15px 15px !important;
-          }
-      }
-
-      li:last-child {
-          border-bottom: none !important;
-      }
     }
 }
 

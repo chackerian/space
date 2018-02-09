@@ -11,16 +11,6 @@
   float: right !important;
 }
 
-.actionButton {
-  border: 1px solid black;
-  padding: 1em 2em;
-  margin: 0 0.4em;
-  &:hover {
-      color: $color-spacered;
-      border-color: $color-spacered;
-  }
-}
-
 .listingItemUser {
     height: 75px;
     width: 16em;
@@ -187,30 +177,11 @@
     }
 }
 
-.listingItemOptions ul li a {
-    font-size: 1.2rem;
-    padding: 15px 22px;
-    color: #fff ;
-    background-color: orange;
-    border: 1px solid orange;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    border-radius: 6px;
-    overflow: hidden;
-    i {
-        margin-left: 5px;
-        color: #fff;
-    }
-}
-
-.listingItemOptionsDropDown {
-    font-family: $font-secondary;
-}
-
 // Edits
 
 .editing {
     border: 1px solid black;
-    padding: 1em;
+    padding: 0.1em;
 }
 
 .titleEdit {
@@ -220,5 +191,7 @@
 }
 
 .descEdit {
-    width: 50% !important
+    width: 50% !important;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
 }

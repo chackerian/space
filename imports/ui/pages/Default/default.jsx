@@ -30,10 +30,6 @@ export default class Modal extends Component {
     )
   }
 
-// <div className="defaultProfileDiv oneDiv">
-//   <h2><i className="fa fa-shield"></i>User hasn't created any listings</h2>
-//   <li className="defaultProfileButton"><a href="/">Home</a></li>
-// </div>
 //
 // <div class="defaultProfileDiv oneDiv">
 //   <h3>You Currently Have No Saved Items</h3>
@@ -51,12 +47,6 @@ export default class Modal extends Component {
 //   <h3>You Currently Have No Pending Offers</h3>
 //   <p>As soon as you send an offer, it will be displayed here</p>
 //   <p>Want to know more about this page?</p>
-//   <li class="defaultProfileButton"><a href="/help">Find Out More</a></li>
-// </div>
-//
-// <div class="defaultProfileDiv oneDiv">
-//   <h3>You Haven't Received Any Offers Yet</h3>
-//   <p>You reveive an offer when someone fills out the offer form on the item page of your listing. If your expecting an offer, contact the buyer.</p>
 //   <li class="defaultProfileButton"><a href="/help">Find Out More</a></li>
 // </div>
 //

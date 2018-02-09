@@ -11,15 +11,6 @@ String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
 };
 
-const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-    <GoogleMap
-      defaultZoom={8}
-      className="googleMap"
-      defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-      {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
-    </GoogleMap>
-))
-
 export default class ListingItem extends Component {
 
   constructor(props) {
@@ -29,38 +20,21 @@ export default class ListingItem extends Component {
     }
   }
 
-  timestamp = () => {
-    var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
-    var time = listing.createdAt;
-    var now = moment();
+  edit = () => {
+    $(".editListing").text("Save");
 
-    // Convert to seconds
-    var diff = now.diff(time) / 1000 / 60;
-    var hour = Math.floor(diff / 60);
-    var minute = Math.floor(diff % 60);
+    var title = $(".listingItemTitle").text();
+    var price = $(".itemMoney").text().replace(/\$/g, '');
+    var desc = $(".desc-full").text();
 
-    var min = minute + " minutes ago"
-    var hr = hour + " hours and "
-    var newtime = hr.concat(min);
+    $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' type='text' value='" + title + "'> </input>");
+    $(".listingItemTitle").focus();
 
-    return newtime
+    $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
+    $(".desc-full").replaceWith("<input class='descEdit editing' type='text' value='" + desc + "'> </input>");
   }
 
-edit = () => {
-  $(".editListing").text("Save");
-
-  var title = $(".listingItemTitle").text();
-  var price = $(".itemMoney").text().replace(/\$/g, '');
-  var desc = $(".desc-full").text();
-
-  $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' type='text' value='" + title + "'> </input>");
-  $(".listingItemTitle").focus();
-
-  $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
-  $(".desc-full").replaceWith("<input class='descEdit editing' type='text' value='" + desc + "'> </input>");
-}
-
-save = () => {
+  save = () => {
       sAlert.success("Saved", {position: "top"});
       $(".editListing").text("Edit");
 
@@ -80,7 +54,7 @@ save = () => {
       }
 
       Meteor.call('updateListing', options)
-}
+  }
 
   manage = () => {
     var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
@@ -137,12 +111,9 @@ save = () => {
 
   render() {
     var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
-    var createdAt = moment(this.createdAt).format("dddd, MMM DD");
-    var offers = function() {
-        return Offer.find({
-          listingId: this._id
-        }).count();
-    }
+    var createdAt = moment(this.createdAt).format("dddd, MMMMMMMM D");
+    var now = moment();
+
     if (listing) {
       return (
         <div className="listingItemDiv oneDiv">
@@ -167,13 +138,7 @@ save = () => {
           </div>
           <div className='topPage'>
             <Carousel />
-            <MyMapComponent
-              isMarkerShown
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaNzG0bIXNCHxpkVp-7AHMhRPzvoDy4uw&v=3.exp&libraries=geometry,drawing,places"
-              loadingElement={<div style={{ height: `60%` }} />}
-              containerElement={<div style={{ height: `350px`, width: `50%`, float: `right`, boxShadow: `0px 2px 5px`, borderRadius: `0.5em` }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
+            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=350x350&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
           </div>
           <div className='bottomPage'>
             <div className="desc">
@@ -189,7 +154,7 @@ save = () => {
               </div>
               <div className="desc-box">
                 <h4 className="box-title">Description</h4>
-                <p className="desc-full">{listing.description}</p>
+                <p className="desc-full description">{listing.description}</p>
               </div>
             </div>
 

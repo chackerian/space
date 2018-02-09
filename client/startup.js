@@ -5,39 +5,6 @@ if (Meteor.isClient) {
 
 	Meteor.startup(function() {
 
-      // GoogleMaps.load({
-      //    v: '3',
-      //    key: 'AIzaSyAi0bRmwNIWv24KjjeiG0DlcU-jFLPJ9FQ',
-      //    libraries: 'geometry,places'
-      //  });
-
-      // sAlert
-      sAlert.config({
-         effect: 'slide',
-         beep: true
-      });
-
-     /*
-      * @summary Save Location
-      * @locus Client
-      *
-      */
-      const setLocate = function() {
-      	var userId = Meteor.userId();
-      	var response = Session.get("response");
-      	var locator = Session.get("locator");
-
-      	var options = {
-      		userId: userId,
-      		response: response,
-      		locator: locator
-      	}
-
-      	Meteor.setTimeout(function() {
-      		Meteor.call('saveLocation', options);
-      	}, 2000);
-      }
-
      /*
       * @summary Initial locator
       * @locus Client

@@ -35,7 +35,6 @@ ListPageContainer = withTracker(({  }) => {
 
 HomeContainer = withTracker(({ urlKey }) => {
   const list = Listing.find().fetch();
-  console.log(list);
   return {
     list
   };

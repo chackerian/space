@@ -10,7 +10,7 @@ export default class Help extends Component {
 
     center() {
       return(
-        <div className="helpDiv oneDiv">
+        <div className="oneDiv">
             <HelpNav />
             <h2 className="helpShow">Welcome to the Help Center</h2>
             SpaceTrades helps people organize meetups for buying and selling items locally, whether you are looking to trade your products for others or just sell them.
@@ -27,19 +27,19 @@ export default class Help extends Component {
                     <li>
                         <ul>
                             <li><h3>Get Answers</h3></li>
-                            <li>If you have any questions, look over the <a href="/help/faq">FAQ</a>.</li>
+                            <li>If you have any questions, look over the <a className='link' href="/help/faq">FAQ</a>.</li>
                         </ul>
                     </li>
                     <li>
                         <ul>
                             <li><h3>Contact us</h3></li>
-                            <li> If you would like to get in contact with</li>
+                            <li>If you would like to get in touch with us for any reason.</li>
                         </ul>
                     </li>
                     <li>
                         <ul>
                             <li><h3>Terms and Conditions</h3></li>
-                            <li>To use the site, you agree to certain <a href="/help/terms">Terms &amp; Conditions</a>.</li>
+                            <li>To use the site, you agree to certain <a className='link' href="/help/terms">Terms &amp; Conditions</a>.</li>
                         </ul>
                     </li>
                 </ul>
