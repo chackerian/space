@@ -111,8 +111,7 @@ export default class ListingItem extends Component {
 
   render() {
     var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
-    var createdAt = moment(this.createdAt).format("dddd, MMMM D");
-    var now = moment();
+    var createdAt = moment(listing.createdAt).format("dddd, MMMM D");
 
     if (listing) {
       return (
@@ -126,7 +125,7 @@ export default class ListingItem extends Component {
           <div class="row">
             <div className="offerDiv">
               <p className="listingItemOffersReceived">
-                <span className='created'>Created:</span> {createdAt}th
+                {createdAt}th
               </p>
             </div>
 

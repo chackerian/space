@@ -50,26 +50,12 @@ export default class Profile extends Component {
                       <li className="profileUserAmountBought">Meetups: {prof.meetups_count}</li>
                   </ul>
               </div>
-              <div className="actions">
-                <a className='actionButton editListing' href='edit'>Edit</a>
-              </div>
+          </div>
+          <div className="actions">
+            <a className='actionButton editListing' href='edit'>Edit</a>
           </div>
       </div>
     )
-  }
-
-  profileSettings() {
-    var options = {
-      email: $(".profileSettingsEmailInput").val()
-    }
-
-    Meteor.call("addProfileInfo", options);
-    FlowRouter.go("/profile/" + Meteor.userId());
-
-    $(".profileUserRight").animate("fadeInUp");
-    $(".profileUserImage").animate("fadeInLeft");
-
-    sAlert.success('Saved', {position: 'top'});
   }
 
   render() {

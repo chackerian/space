@@ -97,7 +97,6 @@ export default class Homepost extends Component {
                       <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons">more_vert</i></a>
                       <ul className="headerDropDownNav">
                           <a href="/help"><li>Help Center</li></a>
-                          <a href={`/profile/${profile}/settings`}><li>Profile Settings</li></a>
                           <a href="#" className="logout" onClick={() => this.props.logout()}><li>Logout</li></a>
                       </ul>
                   </li>
