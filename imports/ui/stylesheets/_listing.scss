@@ -82,7 +82,7 @@
 }
 
 .listingItemDiv {
-  padding: 2em 4em;
+  padding: 2em 2em;
   margin: 6em 13em;
   background: white;
   border: 2px solid #404040;
@@ -141,6 +141,10 @@
     float: left;
 }
 
+.locoplace {
+  display: inline-block !important;
+}
+
 .listingItemDetailRight {
     width: 45%;
     float: right;
@@ -156,7 +160,7 @@
 }
 
 .listingItemTitle {
-    font-size: 3.4em !important;
+    font-size: 2.4em !important;
     color: $color-spacered;
     margin: 0;
 }

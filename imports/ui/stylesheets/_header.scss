@@ -61,7 +61,7 @@
 #radiusLogo {
     font-size: 1.4rem !important;
     &:hover {
-      text-shadow: 0px 1px;
+      font-weight: bold;
       animation: 2s;
     }
 }
@@ -100,6 +100,7 @@
         position: absolute;
         margin: 1.6em -1px 0px -19.2em !important;
         border: 3px solid $color-spacegrey;
+        border-radius: 0.3em;
         animation: 0.5s pulse;
         padding: 0;
         background-color: white !important;
@@ -108,14 +109,12 @@
         z-index: 3;
 
         li {
-            padding: 18px 50px 18px 20px;
-            color: black;
+            padding: 15px 50px 15px 15px;
             text-align: left !important;
             font-size: 1rem !important;
             display: flex;
 
             a {
-                color: black;
                 margin: 0 !important;
                 padding: 0;
                 padding: 15px 80px 15px 15px !important;
@@ -128,11 +127,12 @@
 .headerDropDownNav {
   box-shadow: 0px 2px 5px;
   a li {
-    border-bottom: 4px solid #404040 !important;
+    border-bottom: 2px solid #404040 !important;
     &:hover {
         text-decoration: underline;
+        background: $color-spacered;
         transition: 0.2s;
-        color: red !important;
+        color: white !important;
     }
   }
 }
@@ -145,10 +145,6 @@
     ul > li {
         display: inline-block;
     }
-}
-
-.headerNotDrop {
-    margin: 5px !important;
 }
 
 .headerCatDrop {
@@ -168,10 +164,6 @@
     ul {
       margin: 0.9em -1px 0px -14em !important;
     }
-}
-
-.headerNotDrop a {
-    font-size: 0.9rem !important;
 }
 
 .modTriggerJoin {
@@ -269,11 +261,6 @@
     margin-top: -5px;
 }
 
-.notificationHighlight {
-    color: deepskyblue;
-    text-shadow: 1px 1px black;
-}
-
 /////////////////////////////////////////
 
 .headerNameOptions li a {
@@ -284,14 +271,4 @@
     margin-left: 22px;
     margin-right: 22px;
     font-weight: 400;
-     a {
-        font-size: 1.3rem !important;
-        color: $color-spacegrey !important;
-    }
-}
-
-.headerNotDrop a {
-    color: $color-spacegrey !important;
-    padding: 12px !important;
-    font-size: 0.8rem !important;
 }

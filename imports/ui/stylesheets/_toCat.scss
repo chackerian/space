@@ -26,8 +26,8 @@ p {
 }
 
 img {
-  border: 0;
   width: 100%;
+  height: 100%;
 }
 
 a {
@@ -103,7 +103,7 @@ label {
 
 .oneDiv {
     font-family: $font-norm !important;
-    margin: 7em;
+    margin: 2em 1em;
     min-height: 35em;
 }
 

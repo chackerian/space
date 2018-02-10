@@ -8,20 +8,17 @@ export default class AboutHelp extends Component {
       <div className="faqdiv oneDiv">
         <HelpNav />
 
-        <h1>How Does It Work?</h1>
+        <h2>How Does It Work?</h2>
 
-        <h2>1.Initial Stage</h2>
+        Create a listing, wait for messages from other users, organize a meetup.
 
-        Create a listing
-
-        <h1>Do I need to provide a credit card, paypal account...etc?</h1>
+        <h2>Do I need to provide a credit card, paypal account...etc?</h2>
 
         No. SpaceTrades may include online payment systems in the future but currently it is strictly cash only at the meetup. This keeps things safer for both people meeting up.
 
-        <h1>Can I create an account without Facebook?</h1>
+        <h2>Can I create an account without Facebook?</h2>
 
         No. SpaceTrades currently requires all users to sign up through Facebook. This helps maintain user accountability
-
       </div>
     )
   }

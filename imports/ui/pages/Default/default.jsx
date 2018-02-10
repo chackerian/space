@@ -32,32 +32,6 @@ export default class Modal extends Component {
 
 //
 // <div class="defaultProfileDiv oneDiv">
-//   <h3>You Currently Have No Saved Items</h3>
-//   <p>To save an item, go to the page of the item you want to save, and click the <b>"Save"</b> button under <b>"Options"</b>.</p>
-// </div>
-//
-// <div class="defaultProfileDiv oneDiv">
-//   <h3>You Currently Have No Created Listings</h3>
-//   <p>You can create a listing here: <a href="/add" class="link"> Add Listing</a></p>
-//   <p>Want to know more about this page?</p>
-//   <li class="defaultProfileButton"><a href="/help">Find Out More</a></li>
-// </div>
-//
-// <div class="defaultProfileDiv oneDiv">
-//   <h3>You Currently Have No Pending Offers</h3>
-//   <p>As soon as you send an offer, it will be displayed here</p>
-//   <p>Want to know more about this page?</p>
-//   <li class="defaultProfileButton"><a href="/help">Find Out More</a></li>
-// </div>
-//
-// <div class="defaultProfileDiv oneDiv">
-//   <h3>You Currently Have No Meetup History</h3>
-//   <p>When you complete a meetup it will be displayed here.</p>
-//   <p>Want to know more about this page?</p>
-//   <li class="defaultProfileButton"><a href="/help">Find Out More</a></li>
-// </div>
-//
-// <div class="defaultProfileDiv oneDiv">
 //   <h3>You Currently Have No Active Meetups</h3>
 //   <p>When you accept an offer or your offer gets accepted it will start an active meetup. </p>
 //   <p>The meetup information will be displayed here.</p>

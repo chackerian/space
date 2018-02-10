@@ -42,7 +42,7 @@ export default class Profile extends Component {
               </div>
               <div className="profileUserInfo">
                   <ul className="profileUserArea">
-                      <i className="fa fa-compass"></i><li>{prof.locationPartial='new york'}</li>
+                      <i className="fa fa-compass"></i><li className='locoplace'>{prof.locationPartial='new york'}</li>
                   </ul>
               </div>
               <div className="profileUserAmount">
@@ -50,9 +50,9 @@ export default class Profile extends Component {
                       <li className="profileUserAmountBought">Meetups: {prof.meetups_count}</li>
                   </ul>
               </div>
-              <li className="profileStars">
-                  <span className="review-count">({prof.reviews_count} Reviews)</span>
-              </li>
+              <div className="actions">
+                <a className='actionButton editListing' href='edit'>Edit</a>
+              </div>
           </div>
       </div>
     )
@@ -60,7 +60,6 @@ export default class Profile extends Component {
 
   profileSettings() {
     var options = {
-      about: $(".profileSettingsAboutInput").val(),
       email: $(".profileSettingsEmailInput").val()
     }
 

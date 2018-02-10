@@ -19,8 +19,17 @@
       width: 315px !important;
   }
 
+  .carousel-cell-image {
+    width: auto !important;
+  }
+
   .desc-box-listing {
       margin-bottom: 2em;
+  }
+
+  .placeLocation {
+    width: 17em !important;
+    margin-top: 2em !important;
   }
 
   .listingItemDiv {
@@ -272,16 +281,6 @@
 
 @media (max-width: 509px) {
 
-    .clickDropper {
-        li ul li a {
-            padding: 15px 0px 15px 0px !important;
-            font-size: 0.8rem !important;
-        }
-        & > li > ul > a:first-child::before {
-          left: 8.1em !important;
-        }
-    }
-
     .leftNav {
         width: 15% !important;
     }
@@ -293,12 +292,8 @@
         margin-right: 0 !important ;
     }
 
-    .headerDropDown ul {
-      margin: 1.6em -1px 0px -13em !important;
-      width: 30em;
-      li {
-        width: 19.8em;
-      }
+    .profileUser > div {
+      margin: 0 !important;
     }
 
     // logo change
@@ -318,10 +313,6 @@
       width: 150px;
     }
 
-    .profileSettingsButton input {
-        font-size: 0.9rem !important;
-    }
-
     .profileDesc p {
         font-size: 0.8rem !important;
     }
@@ -330,13 +321,13 @@
         width: 150px !important;
     }
 
-    .profileUserCardsUl li:nth-child(3), .profileUserCardsUl li:nth-child(4) {
-        display: none !important;
-    }
-
     .footerDivide {
         width: 90% !important;
         margin: 20px auto !important;
+    }
+
+    .desc-box {
+      width: 17em !important;
     }
 
     .footerLeft > ul:first-child {
@@ -348,6 +339,10 @@
 
     .logo {
         font-size: 3.5rem;
+    }
+
+    .placeLocation {
+        width: 20em;
     }
 
     .search {
@@ -365,12 +360,13 @@
     .footerItems li h4 a {
       font-size: 0.9em !important;
     }
-}
-
-@media (max-width: 415px) {
 
     .homeCardImg {
       max-height: 7em !important;
+    }
+
+    .headerDropDown ul {
+      width: 71vw;
     }
 
     .profileUserName h1 {

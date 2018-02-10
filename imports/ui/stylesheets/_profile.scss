@@ -14,7 +14,7 @@
 }
 
 .offerDiv {
-  width: 50%;
+  width: 75%;
 }
 
 .profilePic {
@@ -26,40 +26,12 @@
   background: $color-spacered;
 }
 
-.managerListingStatus {
-    color: $color-purple;
-}
-
 .managerReceivedOffers {
     display: inline-block;
 }
 
 .managerOfferStatus {
     color: $color-purple !important;
-}
-
-.managerOfferImage {
-    width: 49% !important;
-    margin-right: 2%;
-    li a img {
-        width: 100% !important;
-        height: 150px !important;
-    }
-}
-
-.managerOfferView {
-    margin-top: 16px !important;
-    margin-bottom: 8px !important;
-    text-align: right;
-    a {
-        font-size: 0.9rem;
-        font-weight: 400;
-        padding: 10px 8px !important;
-        color: #fff !important;
-        background-color: $color-spacered !important;
-        border: none !important;
-        border-radius: 4px !important;
-    }
 }
 
 .profile-link {
@@ -158,11 +130,10 @@
 .profileUser {
   margin: 8em 1em 3em 2em;
   min-height: 50em;
-}
-
-.profileUser > div {
-    display: inline-block;
-    margin: 1em 3em;
+  & > div {
+     display: inline-block;
+     margin: 1em 3em;
+ }
 }
 
 .profileUserLeft {
@@ -173,9 +144,9 @@
 }
 
 .profileUserRight {
-  width: 20em;
+  width: 17em;
   vertical-align: top;
-  margin-top: 0rem !important;
+  margin: 0rem 4rem !important;
   font-size: 1.1rem !important;
   padding: 1em;
   border-radius: 0.4em;
@@ -192,15 +163,6 @@
         opacity: 0.9;
         cursor: pointer;
         box-shadow: 0px 5px 1px;
-    }
-}
-
-.profileUserGraph {
-    margin-top: 2rem;
-    text-align: center !important;
-    canvas {
-        max-width: 80% !important;
-        height: 170px !important;
     }
 }
 
