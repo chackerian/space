@@ -14,14 +14,17 @@ import MainLayout from '../../ui/layouts/body/layouts.jsx';
 
 import Home from '../../ui/pages/Home/home.jsx';
 import ListingItem from '../../ui/pages/Listing/Listing.jsx';
+
 import Profile from '../../ui/pages/Profile/profile.jsx';
+
+// Help Center
 import Help from '../../ui/pages/Help/help.jsx';
 import FAQ from '../../ui/pages/Help/faq.jsx';
 import Contact from '../../ui/pages/Help/contact.jsx';
-// import Safety from '../../ui/pages/Help/safety.jsx';
+import Safety from '../../ui/pages/Help/safety.jsx';
 import Terms from '../../ui/pages/Help/terms.jsx';
 import Prohibited from '../../ui/pages/Help/prohibited.jsx';
-import Default from '../../ui/pages/Default/default.jsx';
+
 import Chat from '../../ui/pages/Chat/Chat.jsx';
 
 //////////////////////////////////////////////
@@ -75,10 +78,6 @@ FlowRouter.route('/add', {
     mount(MainLayout, {
       content: <Home />
     })
-    this.setState({
-      status: "on",
-      modal: "add"
-    });
   }
 });
 
@@ -173,24 +172,6 @@ profile.route('/:id/listings', {
   }
 });
 
-profile.route('/:id/history', {
-  name: 'listingdds',
-  action() {
-    mount(MainLayout, {
-      content: <ProfileHistory />
-    })
-  }
-});
-
-profile.route('/:id/offers', {
-  name: 'offers',
-  action() {
-    mount(MainLayout, {
-      content: <ProfileManagerOffers />
-    })
-  }
-})
-
 var help = FlowRouter.group({
   prefix: "/help",
   name: "help"
@@ -200,15 +181,6 @@ help.route('/', {
   action() {
     mount(MainLayout, {
       content: <Help />
-    })
-  }
-});
-
-help.route('/about', {
-  name: 'about',
-  action() {
-    mount(MainLayout, {
-      content: <About />
     })
   }
 });
@@ -249,23 +221,6 @@ help.route('/terms', {
   }
 });
 
-help.route('/premium', {
-  name: 'premium',
-  action() {
-    mount(MainLayout, {
-      content: <Premium />
-    })
-  }
-});
-
-help.route('/advertise', {
-  name: 'advertise',
-  action() {
-    mount(MainLayout, {
-      content: <Help />
-    })
-  }
-});
 
 help.route('/contact', {
   name: 'contact',

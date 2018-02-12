@@ -12,6 +12,10 @@ export default class Profile extends Component {
     var prof = Meteor.users.find({_id: this.props.id}).fetch()[0];
     var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
     var facebook = "https://www.facebook.com/" + prof.services.facebook.id
+
+    var city = JSON.parse(Meteor.user().profile.location).city
+    var state = JSON.parse(Meteor.user().profile.location).region_name
+
     return(
       <div className="profileUser oneDiv">
           <div className="profileUserLeft">
@@ -42,12 +46,12 @@ export default class Profile extends Component {
               </div>
               <div className="profileUserInfo">
                   <ul className="profileUserArea">
-                      <i className="fa fa-compass"></i><li className='locoplace'>{prof.locationPartial='new york'}</li>
+                      <i className="fa fa-compass"></i><li className='locoplace'>{city}, {state}</li>
                   </ul>
               </div>
               <div className="profileUserAmount">
                   <ul>
-                      <li className="profileUserAmountBought">Meetups: {prof.meetups_count}</li>
+                      <li className="profileUserAmountBought">Meetups: {prof.profile.meetups_count}</li>
                   </ul>
               </div>
           </div>

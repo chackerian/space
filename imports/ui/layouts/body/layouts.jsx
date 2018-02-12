@@ -57,7 +57,16 @@ export default class MainLayout extends Component {
         log: true
       });
 
-      setTimeout(function(){ Meteor.call('updateUserCreation', Meteor.user()._id) }, 3000);
+      setTimeout(function(){
+        $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+            var options = {
+              id: Meteor.user()._id,
+              location: JSON.stringify(data, null, 2)
+            }
+            console.log(options)
+            Meteor.call('updateUserCreation', options)
+        });
+      }, 3000);
     }
 
     // FB.login();

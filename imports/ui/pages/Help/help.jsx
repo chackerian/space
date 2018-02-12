@@ -13,7 +13,7 @@ export default class Help extends Component {
         <div className="oneDiv">
             <HelpNav />
             <h2 className="helpShow">Welcome to the Help Center</h2>
-            <p className="helpPagesPar">SpaceTrades helps people organize meetups for buying and selling items locally, whether you are looking to trade your products for others or just sell them. Here you can find answers to common questions, review vital safety principles, check the privacy and terms policy and contact us</p>
+            <p className="helpPagesPar">SpaceTrades helps people organize meetups for buying and selling items locally, whether you are looking to trade your products for others or just sell them. Here you can find answers to common questions, review vital safety tips, check the privacy and terms policy and contact us.</p>
 
             <ul className="helpImgUl">
                 <li><div className="aboutImg"></div></li>

@@ -16,7 +16,7 @@ reportListing = (props) => {
                     <ul>
                     {#each listing}
                       <li><b>{listing_title}</b></li>
-                      <li>Sold By <a href="#">{username}</a></li>
+                      <li><a href="#">{username}</a></li>
                       {/each}
                     </ul>
                   </li>

@@ -11,15 +11,16 @@ Meteor.methods({
       text: text
     });
   },
- updateUserCreation: function(id) {
+ updateUserCreation: function(options) {
    Meteor.users.update({
-     _id: id
+     _id: options.id
    }, {
      $set: {
        'profile.reviews_count': 0,
        'profile.amount_bought': 0,
        'profile.amount_sold': 0,
        'profile.meetups_count': 0,
+       'profile.location': options.location,
        'profile.picturelrg': "http://graph.facebook.com/" + Meteor.user().services.facebook.id + "/picture/?type=large",
        'profile.picturesm': "http://graph.facebook.com/" + Meteor.user().services.facebook.id + "/picture/?type=small"
      }
@@ -42,7 +43,6 @@ Meteor.methods({
       category: options.category,
       type: options.type,
       brandReal: options.brand,
-      quantity: 1,
       // Payment
       price: options.price,
       payment: options.payment,
@@ -200,38 +200,10 @@ Meteor.methods({
    * @summary Unsave A Listing
    * @locus Server
    */
-   actionUnsave: function(optionsA) {
+   unsaveListing: function(optionsA) {
     Saves.remove({
       _id: optionsA._id
     })
-  },
-  /*
-   * @summary Add offer
-   * @locus Server
-   */
-   addOffer: function(options) {
-    Offer.insert({
-      createdAt: new Date(),
-      listing_title: options.listing_title,
-      meetupTime: options.meetupTime,
-      img: options.img,
-      price: options.price,
-      offerprice: options.offerprice,
-      date: options.date,
-      location: options.location,
-      listingId: options.listingId,
-      lat: options.lat,
-      lng: options.lng,
-      creator_id: options.creator_id,
-      creator_name: options.creator_name,
-      seller_name: options.seller_name,
-      creator_image: options.creator_image,
-      listing_creator_id: options.listing_creator_id,
-      payment: options.payment,
-      status: options.status
-    });
-
-    Meteor.call('pulseNotify', options);
   },
   /*
    * @summary Edit listing
@@ -276,87 +248,12 @@ Meteor.methods({
     });
   },
   /*
-   * @summary Send reminder notification
-   * @locus Server
-   */
-   reminderNotify: function(reminderOptions) {
-
-    Meteor.setTimeout(function() {
-
-      Notification.insert({
-        createdAt: new Date(),
-        action: reminderOptions.action,
-        listing_title: reminderOptions.listing_title,
-        offer_price: reminderOptions.offerprice,
-        creator_id: reminderOptions.creator_id,
-        creator_name: reminderOptions.creator_name,
-        listingId: reminderOptions.listingId,
-        destination: reminderOptions.destination,
-        notifyType: "reminder",
-        listing_creator_id: reminderOptions.listing_creator_id
-      });
-
-    }, reminderOptions.delay);
-  },
-  /*
    * @summary Send feedback notification and Transfer
    * @locus Server
    */
-
-  /*
-   * @summary Accept Offer
-   * @locus Server
-   */
-   acceptOffer: function(options) {
-    Offer.update({
-      _id: options.offer_id
-    }, {
-      $set: {
-        status: "Accepted"
-      }
-    });
-    Listing.update({
-      _id: options.listingId
-    }, {
-      $set: {
-        status: "Accepted",
-        offerAccepted: options.offer_id,
-        offer_creator: options.offer_creator,
-        offer_creator_name: options.offer_creator_name,
-        offerprice: options.offerprice,
-        date: options.date,
-        location: options.location,
-        offerlat: options.lat,
-        offerlat: options.lng,
-        meetup_time: options.time
-      }
-    });
-  },
-  /*
-   * @summary Decline Offer
-   * @locus Server
-   */
-   declineOffer: function(options) {
-    Offer.update({
-      _id: options.id
-    }, {
-      $set: {
-        status: "Declined"
-      }
-    });
-  },
   deleteAccount: function(option) {
     Meteor.users.remove({
       _id: option
-    });
-  },
-  /*
-   * @summary Cancel Offer
-   * @locus Server
-   */
-   cancelOffer: function(options) {
-    Offer.remove({
-      _id: options.id
     });
   },
   /*

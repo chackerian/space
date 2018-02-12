@@ -70,7 +70,7 @@ export default class ListingItem extends Component {
     if (isCreator && isUser) {
       return (
         <div className="actions">
-          <a className='actionButton editListing' href='edit' onClick={()=> this.edit()}>Edit</a>
+          <a className='actionButton editListing' href='edit' onClick={() => this.edit()}>Edit</a>
         </div>
       )
     }
@@ -78,8 +78,8 @@ export default class ListingItem extends Component {
       return (
         <div className="actions">
           <a className='actionButton' href='chat'>Chat</a>
-          <a className='actionButton' href='save'>Save</a>
-          <a className='actionButton' href='report'>Report</a>
+          <a className='actionButton' onClick={() => saveListing()}>Save</a>
+          <a className='actionButton' onClick={() => reportListing()}>Report</a>
         </div>
       )
     }
@@ -148,7 +148,7 @@ export default class ListingItem extends Component {
                   <span className='type right'>Type: <a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
                   <br />
                   <span className='condition'>Condition: {listing.condition}</span>
-                  <span className="right">Trade Offers: {listing.trade}</span>
+                  <span className="right">Trades: {listing.trade}</span>
                 </p>
               </div>
               <div className="desc-box">

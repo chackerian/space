@@ -18,7 +18,7 @@ export default class AboutHelp extends Component {
 
         <h2>Can I create an account without Facebook?</h2>
 
-        No. SpaceTrades currently requires all users to sign up through Facebook. This helps maintain user accountability
+        No. SpaceTrades currently requires all users to sign up through Facebook. This helps maintain user accountability.
       </div>
     )
   }

@@ -11,6 +11,7 @@ export default class Modal extends Component {
     if (this.props.status == "on") {
       $(".modal-backdrop").remove()
       $("body").append("<div class='modal-backdrop'></div>");
+      $("body").css("overflow", "hidden")
       if (this.props.modal == "add") {
         return <AddModal onChangeModal={this.props.onChangeModal} />
       }
@@ -20,6 +21,7 @@ export default class Modal extends Component {
     }
     else {
       $(".modal-backdrop").remove()
+      $("body").css("overflow", "none")
       return null
     }
   }

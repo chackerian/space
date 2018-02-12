@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import HelpNav from './nav.jsx';
 
-export default class AboutTerms extends Component {
+export default class Safety extends Component {
 
   render() {
     return(

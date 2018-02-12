@@ -124,7 +124,6 @@ export default class AddModal extends Component {
   }
 
   render() {
-    $("body").css("overflow", "hidden")
     if(this.state.modaltab == 1) {
       return(
           <div className="modAddListingDialog modal-dialog">
@@ -194,20 +193,6 @@ export default class AddModal extends Component {
         </div>
         )
       }
-
-  const options = {
-    accept: 'image/*',
-    maxFiles: 4
-  };
-
-  onSuccess = (result) => {
-    var images = [];
-    var files = result.filesUploaded
-    files.map(x => {
-      images.push(x.url)
-    })
-    Session.set('images', images)
-  }
 
   if(this.state.modaltab == 3) {
 

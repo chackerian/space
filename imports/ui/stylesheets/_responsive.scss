@@ -11,6 +11,10 @@
     width: 100% !important;
   }
 
+  .carousel-cell-image {
+    width: auto;
+  }
+
   .leftNav {
       width: 40% !important;
   }
@@ -252,6 +256,10 @@
         float: left;
     }
 
+    .actions {
+      margin: 1.5em -1em;
+    }
+
     .profileCardLi {
         margin: 6px 5px !important;
     }
@@ -297,10 +305,6 @@
         content: "ST";
     }
 
-    .contactSend {
-        width: 93% !important;
-    }
-
     .homeCardLi {
       width: 150px;
     }
@@ -319,7 +323,7 @@
     }
 
     .desc-box {
-      width: 17em !important;
+      width: 19em !important;
     }
 
     .footerLeft > ul:first-child {
