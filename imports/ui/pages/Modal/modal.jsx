@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 
 import AddModal from './add.jsx';
 import JoinModal from './join.jsx';
-import OfferModal from './offer.jsx';
 
 export default class Modal extends Component {
 

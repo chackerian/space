@@ -93,35 +93,6 @@
     }
 }
 
-.headerDropDown {
-    position: relative;
-    ul {
-        display: none;
-        position: absolute;
-        margin: 1.6em -1px 0px -19.2em !important;
-        border: 3px solid $color-spacegrey;
-        border-radius: 0.3em;
-        animation: 0.5s pulse;
-        padding: 0;
-        background-color: white !important;
-        font-size: 0.8rem;
-        width: 21vw;
-        z-index: 3;
-
-        li {
-            padding: 15px 50px 15px 15px;
-            display: flex;
-
-            a {
-                margin: 0 !important;
-                padding: 0;
-                padding: 15px 80px 15px 15px !important;
-            }
-        }
-
-    }
-}
-
 .headerDropDownNav {
   box-shadow: 0px 2px 5px;
   a li {

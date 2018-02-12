@@ -326,6 +326,10 @@
       width: 19em !important;
     }
 
+    .actions {
+      margin: 0 !important;
+    }
+
     .footerLeft > ul:first-child {
         width: 90% !important;
     }
@@ -359,10 +363,6 @@
 
     .homeCardImg {
       max-height: 7em !important;
-    }
-
-    .headerDropDown ul {
-      width: 71vw;
     }
 
     .profileUserName h1 {
