@@ -6,9 +6,16 @@
 
 .rightNav {
     float: right;
-    margin-right: 12em;
+    margin-right: 9em;
     height: inherit;
     display: inline-block;
+}
+
+.searchIcon {
+  position: absolute;
+  color: $color-lightgrey;
+  top: 1.1em;
+  left: 6.5em;
 }
 
 .headerNav {
@@ -58,6 +65,41 @@
     }
 }
 
+.headerDropDown {
+    position: relative;
+    ul {
+        display: none;
+        position: absolute;
+        margin: 1.6em -1px 0px -19.2em !important;
+        border: 3px solid $color-spacegrey;
+        border-radius: 0.3em;
+        animation: 0.5s pulse;
+        padding: 0;
+        background-color: white !important;
+        font-size: 0.8rem;
+        width: 21vw;
+        z-index: 3;
+
+        li {
+            padding: 15px 50px 15px 15px;
+            display: flex;
+
+            a {
+                margin: 0 !important;
+                padding: 0;
+                padding: 15px 80px 15px 15px !important;
+            }
+        }
+
+    }
+}
+
+.navNotifications {
+  ul {
+    margin: 1.6em -1px 0px -15.5em !important;
+  }
+}
+
 #radiusLogo {
     font-size: 1.4rem !important;
     &:hover {
@@ -75,11 +117,27 @@
       padding: 15px 0px 15px 0px !important;
       font-size: 0.8rem !important;
     }
-    & > li > ul > a:first-child::before {
+    & > .navNotifications > ul > a:first-child::before {
       color: #404040;
       margin: -30px 15px -4px 0;
       font-size: 1.3rem;
-      left: 12.3em !important;
+      left: 10.05em !important;
+      pointer-events: none;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 11.5px solid transparent;
+      border-right: 11.5px solid transparent;
+      border-bottom: 11px solid #404040;
+      margin-top: -13px;
+    }
+    & > .navGeneral > ul > a:first-child::before {
+      color: #404040;
+      margin: -30px 15px -4px 0;
+      font-size: 1.3rem;
+      left: 12.25em !important;
       pointer-events: none;
       content: '';
       display: block;

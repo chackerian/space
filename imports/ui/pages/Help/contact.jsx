@@ -7,26 +7,29 @@ export default class Help extends Component {
 
   render() {
     return(
-      <div className="contactdiv">
+      <div className="oneDiv">
           <HelpNav />
-          <h2>Contact Us</h2>
-          <p>Interested in getting in touch with us. <br /></p>
-          <h3>Email</h3>
-          <form className="contactform">
-            <p className="contactsubject">
-                <input type="text" name="contactsubject" id="contactSubject" placeholder="Subject" />
-            </p>
-            <p className="contacttext">
-                <textarea name="message" placeholder="Message" className="message"></textarea>
-            </p>
-            <p className="contactSend">
-                <input type="submit" className="contactButton" value="Send" />
-            </p>
-          </form>
-
-          <h3>Phone</h3>
-          <div className="phoneNumber">
-              Call <a href="tel:7182859432" className="phone">718-285-9432</a>
+            <div className='email'>
+              <h2>Contact Us</h2>
+              <p>Interested in getting in touch with us. <br /></p>
+              <h3>Email</h3>
+              <form className="contactform">
+                <p className="contactsubject">
+                    <input type="text" name="contactsubject" id="contactSubject" placeholder="Subject" />
+                </p>
+                <p className="contacttext">
+                    <textarea name="message" placeholder="Message" className="message"></textarea>
+                </p>
+                <p className="contactSend">
+                    <input type="submit" className="contactButton" value="Send" />
+                </p>
+              </form>
+            </div>
+            <div className='phone'>
+              <h3>Phone</h3>
+              <div className="phoneNumber">
+                  Call <a href="tel:7182859432" className="phone">718-285-9432</a>
+              </div>
           </div>
       </div>
     )

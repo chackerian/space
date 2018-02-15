@@ -3,9 +3,6 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 @media (max-width: 1350px) {
-  .desc {
-      width: 100% !important;
-  }
 
   .carousel {
     width: 100% !important;
@@ -15,41 +12,23 @@
     width: auto;
   }
 
-  .leftNav {
-      width: 40% !important;
-  }
-
-  .profileCardLi {
-      width: 315px !important;
-  }
-
-  .desc-box-listing {
-      margin-bottom: 2em;
-  }
-
   .placeLocation {
     width: 18.5em !important;
     margin-top: 2em !important;
   }
 
   .listingItemDiv {
-      padding: 2em 4em;
-      margin: 6em 1em !important;
-      background: white;
-      padding: 2em 1em;
-  }
-
-  .guardian {
-      float: none;
-      margin-top: 1em;
-      width: 100% !important;
+    padding: 2em 4em;
+    margin: 4em 0em !important;
+    background: white;
+    padding: 2em 1em;
   }
 
 }
 @media (max-width: 895px) {
 
     .small-search {
-        display: inline-block !important;
+      display: inline-block !important;
     }
 
     .searchIcon {
@@ -61,22 +40,29 @@
     }
 
     .headerCatDrop {
-        display: none !important;
+      display: none !important;
     }
 
     .headerCat {
-        display: none !important
+      display: none !important
     }
 
     .headerNameOptions {
-        display: none !important;
+      display: none !important;
     }
 }
 
 @media (max-width: 800px) {
 
-    .helpImgUl > li > img {
-        margin: 1rem 0 !important;
+    .leftNav {
+        width: 15% !important;
+    }
+
+    .rightNav {
+        width: 75% !important;
+        text-align: center;
+        float: none;
+        margin-right: 0 !important ;
     }
 
     .profileUserImage {
@@ -89,34 +75,23 @@
         margin-left: 0 !important;
     }
 
-    .searchResultsCards {
-        margin-top: 0px !important;
-        float: none !important;
-        margin-top: 0 !important;
-        width: 95.5%;
-    }
-
-    .searchResultsCardLi {
-        width: 93% !important;
-        margin: 10px auto !important;
-    }
-
-    .searchResultsCardPrice {
-        margin: 8px 0 10px 0 !important;
-        font-size: 1rem !important;
-    }
-
-    .headerCatDropLi {
-        padding: 12px 10px !important;
-    }
-
-    .headerNameOptions li a,
-    .headerHomeButton li a {
-        padding: 12px 10px !important;
-    }
 }
 
 @media (max-width: 750px) {
+
+    .guardian {
+        float: none;
+        margin-top: 1em;
+        width: 100% !important;
+    }
+
+    .leftNav {
+        width: 40% !important;
+    }
+
+    .desc {
+        width: 100% !important;
+    }
 
     .profileCardLi {
         width: 42% !important;
@@ -144,16 +119,6 @@
         margin-top: 15px !important;
     }
 
-    .profileUserFeedbackViewResponse,
-    .profileUserFeedbackViewCriteria {
-        width: 90% !important;
-    }
-
-    .profileCardInfo li:first-child {
-        font-size: 1rem !important;
-        margin-bottom: 8px !important;
-    }
-
     .profileCardItem {
         margin-bottom: 2px !important;
         font-size: 0.8rem !important;
@@ -162,23 +127,6 @@
     .managerOfferView button {
         font-size: 0.8rem !important;
         padding: 8px 6px !important;
-    }
-
-    .searchResultsCardPrice {
-        margin: 6px 0 !important;
-        span {
-            font-size: 0.9rem;
-        }
-    }
-
-    .searchResultsCardName p {
-        font-size: 0.8rem !important;
-    }
-
-    .searchResultsCardSize,
-    .searchResultsCardCondition, .searchResultsCardLocation {
-        font-size: 0.9rem !important;
-        margin: 4px 0 !important;
     }
 
     .footerbottom > li {
@@ -211,27 +159,6 @@
         margin-bottom: 4px !important;
     }
 
-    .managerOfferView {
-        margin-top: 4px !important;
-    }
-
-    .profileUserCardsUl li {
-        width: 22%;
-    }
-
-    .profileSettingsUl {
-        width: 95% !important;
-        margin: auto !important;
-    }
-
-    .profileSettingsButton {
-        width: 95% !important;
-    }
-
-    .profileSettingsLi ul li h4 {
-        margin-right: 20px;
-    }
-
     .headerPostOptions li a i {
         font-size: 1.5rem !important;
     }
@@ -239,21 +166,12 @@
 
 @media (max-width: 600px) {
 
-    // Hides
-    .headerCatDrop {
-        display: none !important;
-    }
-
     .headerNameOptions {
         display: none !important;
     }
 
     .headerHomeButton {
         display: none !important;
-    }
-
-    .headerSearch {
-        float: left;
     }
 
     .actions {
@@ -281,17 +199,6 @@
 
 @media (max-width: 509px) {
 
-    .leftNav {
-        width: 15% !important;
-    }
-
-    .rightNav {
-        width: 75% !important;
-        text-align: center;
-        float: none;
-        margin-right: 0 !important ;
-    }
-
     .profileUser > div {
       margin: 0 !important;
     }
@@ -311,10 +218,6 @@
 
     .profileDesc p {
         font-size: 0.8rem !important;
-    }
-
-    .profileUserCardsUl li {
-        width: 150px !important;
     }
 
     .footerDivide {
@@ -341,8 +244,25 @@
         font-size: 3.5rem;
     }
 
+    .grid-item {
+      width: 160px;
+    }
+
     .placeLocation {
-        width: 20em;
+      width: 19.5em !important;
+      float: left !important;
+    }
+
+    .carousel-cell-image {
+      width: 100%;
+    }
+
+    .headerDropDown ul {
+      width: 75vw;
+    }
+
+    .placeLocation {
+      height: 250px;
     }
 
     .search {
@@ -350,11 +270,11 @@
     }
 
     .homeCardLi {
-        width: 150px;
+      width: 150px;
     }
 
     .profileUserInfo ul li a {
-        font-size: 1.4rem !important;
+      font-size: 1.4rem !important;
     }
 
     .footerItems li h4 a {
@@ -365,7 +285,11 @@
       max-height: 7em !important;
     }
 
+    .profileUserRight {
+      width: 17em;
+    }
+
     .profileUserName h1 {
-        font-size: 1.6rem !important;
+      font-size: 1.6rem !important;
     }
 }

@@ -5,7 +5,6 @@ import Carousel from './carousel.jsx';
 import { Listing, Offer } from '/imports/api/links/db.js';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { withTracker } from 'meteor/react-meteor-data';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
@@ -31,7 +30,7 @@ export default class ListingItem extends Component {
     $(".listingItemTitle").focus();
 
     $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
-    $(".desc-full").replaceWith("<input class='descEdit editing' type='text' value='" + desc + "'> </input>");
+    $(".desc-full").replaceWith("<div contenteditable='true' class='descEdit editing'> </div>");
   }
 
   save = () => {
@@ -70,7 +69,7 @@ export default class ListingItem extends Component {
     if (isCreator && isUser) {
       return (
         <div className="actions">
-          <a className='actionButton editListing' href='edit' onClick={() => this.edit()}>Edit</a>
+          <a className='actionButton editListing' href='#' onClick={() => this.edit()}>Edit</a>
         </div>
       )
     }
@@ -87,8 +86,8 @@ export default class ListingItem extends Component {
       return (
       <div className="actions">
         <a className='actionButton' href='chat'>Chat</a>
-        <a className='actionButton' href='save'>Save</a>
-        <a className='actionButton' href='report'>Report</a>
+        <a className='actionButton'>Save</a>
+        <a className='actionButton'>Report</a>
       </div>
       )
     }

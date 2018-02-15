@@ -84,18 +84,9 @@ input {
 /////////////////////////////////////////////////////
 
 // Custom
-.money {
-    color: $color-money !important;
-    font-weight: 400;
-    font-family: 'Open Sans' !important;
-}
 
 .right {
     float: right !important;
-}
-
-.hidden {
-    display: none;
 }
 
 .oneDiv {
@@ -106,36 +97,4 @@ input {
 
 ::selection {
     background-color: rgba(255, 255, 0, 0.67);
-}
-
-.tab-pane,
-.fade {
-    display: none;
-}
-
-.searchIcon {
-  position: absolute;
-  color: $color-lightgrey;
-  top: 1.1em;
-  left: 6.5em;
-}
-
-.active,
-.in {
-    display: block !important;
-}
-
-.helpShow {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.contactdiv {
-  margin: 4em;
-  min-height: 15em;
-}
-
-.map {
-  float: right !important;
-  width: 50% !important;
 }

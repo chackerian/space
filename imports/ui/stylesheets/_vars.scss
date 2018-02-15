@@ -63,11 +63,16 @@ $font-link:                    "Oswald", sans-serif;
 $font-secondary:               'Roboto', sans-serif;
 
 // Money
-$font-ternary:      'Just Another Hand', sans-serif;
 $font-text:                      'Abel', sans-serif;
 
 // Error
 $font-alfred:             'Baskerville', sans-serif;
+
+.money {
+    color: $color-money !important;
+    font-weight: 400;
+    font-family: 'Open Sans' !important;
+}
 
 $enable-flex: true;
 $enable-gradients: true;

@@ -41,13 +41,14 @@
 	max-height: 500px;
 	overflow-y: scroll !important;
 	overflow-x: hidden;
-	padding: 40px !important;
+	padding: 25px !important;
 	img {
     	height: 30em;
 	}
 }
 
 .modalNext {
+	float: right !important;
 	background-color: #04b2ec !important;
 	&:hover {
 		background-color: #06C1FF !important;
@@ -55,7 +56,8 @@
 }
 
 .modalBack,
-.modalExit  {
+.modalExit {
+	float: left !important;
 	background-color: #999 !important;
 	margin-right: 10px;
 	&:hover {
@@ -678,9 +680,9 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	font-size: 1.8rem !important;
 }
 
-.modOfferRequestPageOneUl li h2 {
-	width: 100% !important;
-}
+// .modOfferRequestPageOneUl li h2 {
+// 	width: 100% !important;
+// }
 
 .joinAgreeSmall {
 	margin: 0px !important;

@@ -86,14 +86,14 @@ export default class Homepost extends Component {
                   <ul className="headerAuth">
                       <li><a className="btn btn-primary addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}>Add Listing</a></li>
                   </ul>
-                  <li className="headerDropDown navNotifications clickDropper">
+                  <li className="headerDropDown navNotifications">
                       <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
                       <ul className="headerDropDownNav notifyDropdown">
                           <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
                           <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
                       </ul>
                   </li>
-                  <li className="headerDropDown navGeneral clickDropper">
+                  <li className="headerDropDown navGeneral">
                       <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons">more_vert</i></a>
                       <ul className="headerDropDownNav">
                           <a href="/help"><li>Help Center</li></a>

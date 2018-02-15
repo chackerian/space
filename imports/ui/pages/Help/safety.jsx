@@ -8,8 +8,6 @@ export default class Safety extends Component {
       <div className="prohibiteddiv oneDiv">
         <HelpNav />
 
-          <h1>Safety Information</h1>
-
           <h2>Don't Reveal Sensitive Personal Information</h2>
 
           Never reveal information that is unrelated to the meetup that the other party doesn't need to know.

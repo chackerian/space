@@ -50,10 +50,11 @@ export default class Home extends Component {
   }
 
   render() {
+    $('.grid').masonry()
     return (
       <div className="homeCard">
         <ul className="homeCardUl">
-          <div className="grid" data-isotope='{ "itemSelector": ".grid-item", "masonry": { "columnWidth": 150 } }'>
+          <div className="grid" data-isotope='{ "itemSelector": ".grid-item", "masonry": { "columnWidth": 200 } }'>
             { this.cards() }
           </div>
         </ul>

@@ -16,22 +16,16 @@
     display: none;
 }
 
+.helpcenternav {
+  border-bottom: 1px solid black;
+}
+
+.email {
+  width: 51%;
+  float: left;
+}
+
 // Help
-
-
-.prohib {
-  padding: 3em 4em;
-  background: white;
-  border-radius: 0.3em;
-}
-
-.helplogo {
-    font-weight: 400 !important;
-}
-
-.helplogol {
-    list-style: none;
-}
 
 .helpPagesPar {
     margin-right: 15%;
@@ -112,12 +106,12 @@
      padding-left: 5px;
  }
 
-.phoneNumber {
-    width: 200px;
+.phone {
+    float: right;
 }
 
-.phone {
-    color: $color-spaceblue;
+.phoneNumber {
+    width: 200px;
 }
 
 .helpiteml {
@@ -156,6 +150,10 @@
     color: white !important;
 }
 
+.fa-compass {
+    margin-right: 1em;
+}
+
 .faqdiv {
     ul {
         padding: 0;
@@ -172,16 +170,9 @@
     }
 }
 
-.helpDiv a:hover, .aboutDiv a:hover, .faqdiv a:hover, .safetydiv a:hover, .reportdiv a:hover,
-.prohibiteddiv a:hover, .termsDiv a:hover {
-    color: #0890F2 !important;
-    text-decoration: underline;
-}
-
-.faqdiv ol,
-.safetydiv ol,
-.reportdiv ol {
-    margin-left: 30px;
+.helpShow {
+  margin-top: 2em;
+  text-align: center;
 }
 
 .faqSec {

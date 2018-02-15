@@ -4,11 +4,16 @@
 }
 
 .actions {
-  margin: 1.5em 6em;
+  float: right;
 }
 
 .right {
   float: right !important;
+}
+
+.map {
+  float: right !important;
+  width: 50% !important;
 }
 
 .listingItemUser {
@@ -163,6 +168,7 @@
     font-size: 2.4em !important;
     font-family: 'system-ui';
     color: $color-spacered;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -202,7 +208,7 @@
 }
 
 .descEdit {
-    width: 50% !important;
-    padding: 5px 10px 5px 10px;
+    width: 23em !important;
+    padding: 5px 10px 25px 10px;
     margin: 5px;
 }

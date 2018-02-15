@@ -107,7 +107,7 @@ export default class AddModal extends Component {
       offers_received: 0,
       images: Session.get('images')
     }
-    console.log(options)
+
     function addListingValidate() {
       for (var x in options) {
         if (options[x].length > 0) {
@@ -130,18 +130,18 @@ export default class AddModal extends Component {
             <div className="modAddListingContent modal-content">
               <div className="modAddListingDiv modal-body step-1">
                 <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}><i className="material-icons">close</i></a></div>
-                  <div className="modAddListingPage">
-                    <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
-                      <li className="modOfferRequestOfferWrap">
-                        <h3 className="listing_title">What Are You Selling?</h3>
-                        <input type="text" className="listtitle" placeholder="Listing Title..." maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
-                      </li>
-                      <li className="modOfferRequestOfferWrap">
-                        <h3 className="price">At What Price?</h3>
-                        <input type="text" className="listprice" placeholder="Price..." maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
-                      </li>
-                    </ul>
-                  </div>
+                <div className="modAddListingPage">
+                  <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
+                    <li className="modOfferRequestOfferWrap">
+                      <h3 className="listing_title">What Are You Selling?</h3>
+                      <input type="text" className="listtitle" placeholder="Listing Title..." maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
+                    </li>
+                    <li className="modOfferRequestOfferWrap">
+                      <h3 className="price">At What Price?</h3>
+                      <input type="text" className="listprice" placeholder="Price..." maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
+                    </li>
+                  </ul>
+                </div>
                 <div className="modMultiBtn modMultiBtnSingle">
                     <button type="button" className="btn btn-primary modalNext" data-step="1" onClick={(event) => this.nextPage(event)}>Next</button>
                 </div>
@@ -196,6 +196,20 @@ export default class AddModal extends Component {
 
   if(this.state.modaltab == 3) {
 
+    const options = {
+      accept: 'image/*',
+      maxFiles: 4
+    };
+
+    onSuccess = (result) => {
+      var images = [];
+      var files = result.filesUploaded
+      files.map(x => {
+        images.push(x.url)
+      })
+      Session.set('images', images)
+    }
+
     return(
       <div className="modAddListingDialog modal-dialog">
         <div className="modAddListingContent modal-content">
@@ -231,22 +245,6 @@ export default class AddModal extends Component {
             <div className="modAddListingPage">
             <h3>Provide Details</h3>
             <ul className="modAddListingPageFourUl">
-                <li><label>Quantity</label>
-                  <div className="styled-select">
-                      <select className="listquantity" value={this.state.quantity} onChange={(event) => this.selectQuantityChange(event)}>
-                          <option value="1">1</option>option>
-                          <option value="2">2</option>option>
-                          <option value="3">3</option>option>
-                          <option value="4">4</option>option>
-                          <option value="5">5</option>option>
-                          <option value="6">6</option>option>
-                          <option value="7">7</option>option>
-                          <option value="8">8</option>option>
-                          <option value="9">9</option>option>
-                          <option value="10">10+</option>option>
-                      </select>
-                  </div>
-                </li>
                 <li><label>Brand</label>
                     <div className="styled-select">
                         <select className="listbrand" value={this.state.brandReal} onChange={(event) => this.selectBrandChange(event)}>

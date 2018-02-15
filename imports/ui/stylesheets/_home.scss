@@ -1,4 +1,5 @@
 .grid-item {
+    width: 250px;
     float: left;
 }
 
@@ -51,7 +52,7 @@
 .homeCardItem {
     max-height: 18em !important;
     img {
-      max-height: 23em !important;
+      max-height: 15em !important;
     }
     li a h4 {
         color: #404040;
@@ -93,7 +94,6 @@
   a h4 {
     color: $color-spacered !important;
     font-family: 'system-ui';
-    font-weight: 600;
   }
 }
 

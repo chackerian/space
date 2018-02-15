@@ -7,7 +7,6 @@ Meteor.subscribe('offerShow');
 Meteor.subscribe('messageShow');
 Meteor.subscribe('listingUser');
 Meteor.subscribe('listingId');
-Meteor.subscribe('feedbackShow');
 Meteor.subscribe('offerId');
 Meteor.subscribe('imagesShow');
 Meteor.subscribe('userShow');
