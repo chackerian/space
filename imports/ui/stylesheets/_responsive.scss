@@ -28,18 +28,9 @@
 }
 @media (max-width: 895px) {
 
-    .leftNav {
-        width: 25% !important;
-    }
-
-    .rightNav {
-        float: right;
-        margin-right: 1.5em;
-    }
-
     .profileUserImage {
-        height: 125px !important;
-        width: 125px !important;
+      height: 125px !important;
+      width: 125px !important;
     }
 
     .small-search {
@@ -79,6 +70,10 @@
         width: 100% !important;
     }
 
+    .leftNav {
+      width: 60%;
+    }
+
     .desc {
         width: 100% !important;
     }
@@ -95,10 +90,6 @@
 
     .footerHide {
         display: inline-block !important;
-    }
-
-    .footerShow {
-        display: none !important;
     }
 
     .footerbottom > li {

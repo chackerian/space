@@ -128,6 +128,7 @@ var profile = FlowRouter.group({
 profile.route('/:id', {
   name: 'profiles',
   action(params) {
+    window.scrollTo(0, 0);
     const id_user = params.id
     mount(MainLayout, {
       content: <ProfileContainer id={id_user} />

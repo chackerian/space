@@ -118,7 +118,6 @@ export default class AddModal extends Component {
 
     if (addListingValidate()) {
       Meteor.call('addListing', options);
-      Meteor.call('pulseNotify')
     }
 
   }
