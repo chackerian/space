@@ -22,7 +22,7 @@ import Help from '../../ui/pages/Help/help.jsx';
 import FAQ from '../../ui/pages/Help/faq.jsx';
 import Contact from '../../ui/pages/Help/contact.jsx';
 import Safety from '../../ui/pages/Help/safety.jsx';
-import Terms from '../../ui/pages/Help/terms.jsx';
+import AboutTerms from '../../ui/pages/Help/terms.jsx';
 import Prohibited from '../../ui/pages/Help/prohibited.jsx';
 
 import SearchPage from '../../ui/pages/Search/search.jsx';

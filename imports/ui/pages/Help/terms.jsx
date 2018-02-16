@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import HelpNav from './nav.jsx';
 
 export default class AboutTerms extends Component {

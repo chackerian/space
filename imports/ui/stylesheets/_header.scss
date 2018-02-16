@@ -150,6 +150,7 @@
   a li {
     border-bottom: 2px solid $color-spacegrey !important;
     font-family: 'system-ui';
+    font-weight: bold;
     &:hover {
         background: $color-spacered;
         transition: 0.2s;

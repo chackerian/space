@@ -49,9 +49,6 @@ export default class Homepost extends Component {
       }
     });
   }
-  //
-  // <li class="notifMessage"><p class="notifMessageP"><a href="#">Jacob</a> sent you an offer of <span class="money">$250</span> for <a href="#">Nike Air Max Retro</a></p></li>
-  // <li class="notifDate"><p>Yesterday at 3:40pm</p></li>
 
   render() {
     let profile = Meteor.user()._id;
