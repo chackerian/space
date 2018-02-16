@@ -25,6 +25,8 @@ import Safety from '../../ui/pages/Help/safety.jsx';
 import Terms from '../../ui/pages/Help/terms.jsx';
 import Prohibited from '../../ui/pages/Help/prohibited.jsx';
 
+import SearchPage from '../../ui/pages/Search/search.jsx';
+
 import Chat from '../../ui/pages/Chat/Chat.jsx';
 
 //////////////////////////////////////////////
@@ -65,10 +67,9 @@ FlowRouter.route('/search', {
   name: 'search',
   action() {
     mount(MainLayout, {
-      content: <searchpage />
+      content: <SearchPage />
     })
     Session.set('search', FlowRouter.getQueryParam("q"))
-    ListingSearch.search(Session.get('search'))
   }
 });
 

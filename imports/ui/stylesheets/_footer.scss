@@ -1,6 +1,6 @@
 footer {
     text-align: center;
-    color: #404040;
+    color: $color-spacegrey;
     width: 100%;
     position: inherit;
     bottom: 0px;
@@ -14,8 +14,8 @@ footer {
 }
 
 .footerPreDivide {
-    border-top: 1px solid #404040;
-    border-bottom: 1px solid #404040;
+    border-top: 1px solid $color-spacegrey;
+    border-bottom: 1px solid $color-spacegrey;
     padding-top: 2.3em;
 }
 

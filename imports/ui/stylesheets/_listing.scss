@@ -18,8 +18,7 @@
 
 .listingItemUser {
     height: 75px;
-    width: 16em;
-    margin: 0 auto;
+    width: 18em;
     padding: 0.7em;
     background: white;
     border-radius: 0.4em;
@@ -90,7 +89,7 @@
   padding: 2em 2em;
   margin: 6em 13em;
   background: white;
-  border: 2px solid #404040;
+  border: 2px solid $color-spacegrey;
   & > div {
       display: inline-block;
   }

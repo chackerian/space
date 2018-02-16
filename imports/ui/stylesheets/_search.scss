@@ -1,7 +1,9 @@
 .search {
-    height: 42px;
-    width: 35%;
+    height: 35px;
+    width: 9em;
+    border-radius: 3px;
     color: $color-charcoal;
+    font-size: 0.9em;
     padding-left: 37px;
     outline: none;
 }
@@ -36,33 +38,6 @@
 
 .searchRefineCategories {
     margin: 16px auto;
-}
-
-.searchRefineTitle {
-    font-size: 1.1rem;
-    text-decoration: underline;
-    margin-bottom: 5px !important;
-}
-
-.searchRefineSize li,
-.searchRefinePrice li {
-    display: inline-block;
-}
-
-.searchRefineDash {
-    margin: 0 5px;
-}
-
-.searchRefinePrice li input {
-    width: 45px;
-    margin-left: 5px;
-    height: 20px !important;
-}
-
-.searchRefineTrades li input {
-    vertical-align: middle !important;
-    margin-bottom: 2px;
-    margin-right: 3px;
 }
 
 .search-wrapper {

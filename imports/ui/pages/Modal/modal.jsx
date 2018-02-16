@@ -3,6 +3,8 @@ import { Meteor } from 'meteor/meteor';
 
 import AddModal from './add.jsx';
 import JoinModal from './join.jsx';
+import ReportUser from './reportUser.jsx';
+import ReportListing from './reportListing.jsx';
 
 export default class Modal extends Component {
 
@@ -17,6 +19,13 @@ export default class Modal extends Component {
       if (this.props.modal == "join") {
         return <JoinModal login={this.props.login} onChangeModal={this.props.onChangeModal} />
       }
+      if (this.props.modal == "reportUser") {
+        return <JoinModal login={this.props.login} onChangeModal={this.props.onChangeModal} />
+      }
+      if (this.props.modal == "reportListing") {
+        return <JoinModal login={this.props.login} onChangeModal={this.props.onChangeModal} />
+      }
+
     }
     else {
       $(".modal-backdrop").remove()

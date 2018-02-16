@@ -18,7 +18,7 @@ export default class Homepre extends Component {
                   </li>
               </ul>
               <div className="searchBox">
-                <i className="material-icons searchIcon">search</i><input type="text" id="search" className="search" placeholder="Name, Category" />
+                <input type="text" id="search" className="search" placeholder="Name, Category" /><i className="material-icons searchIcon">search</i>
               </div>
           </div>
           <div className="rightNav">

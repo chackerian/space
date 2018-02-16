@@ -45,18 +45,19 @@ export default class Homepost extends Component {
       var key = e.key
       if (key == "Enter") {
         var search = $(".search").val();
-        var options = {
-          search: search
-        }
         FlowRouter.go("/search?q="+search)
       }
     });
   }
+  //
+  // <li class="notifMessage"><p class="notifMessageP"><a href="#">Jacob</a> sent you an offer of <span class="money">$250</span> for <a href="#">Nike Air Max Retro</a></p></li>
+  // <li class="notifDate"><p>Yesterday at 3:40pm</p></li>
 
   render() {
     let profile = Meteor.user()._id;
     return (
       <nav className="headerNav">
+        <div className="wholeNav">
           <div className="leftNav">
               <ul className="headerSearch">
                   <li className="headerSearchRadiusLogo"><a href="/" id="radiusLogo">
@@ -66,7 +67,7 @@ export default class Homepost extends Component {
                   </a>
               </ul>
               <div className="searchBox">
-                <i className="material-icons searchIcon">search</i><input type="text" id="search" className="search" placeholder="Name, Category" />
+                <input type="text" id="search" className="search" placeholder="Search" /> <span><i className="material-icons searchIcon">search</i></span>
               </div>
           </div>
           <div className="rightNav">
@@ -101,6 +102,7 @@ export default class Homepost extends Component {
                       </ul>
                   </li>
               </ul>
+          </div>
         </div>
       </nav>
     )

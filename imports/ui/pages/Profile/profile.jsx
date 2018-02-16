@@ -50,9 +50,9 @@ export default class Profile extends Component {
                   </ul>
               </div>
               <div className="profileUserAmount">
-                  <ul>
-                      <li className="profileUserAmountBought">Meetups: {prof.profile.meetups_count}</li>
-                  </ul>
+                <ul>
+                    <li className="profileUserAmountBought">Meetups: {prof.profile.meetups_count}</li>
+                </ul>
               </div>
               <div class="rating">
                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>

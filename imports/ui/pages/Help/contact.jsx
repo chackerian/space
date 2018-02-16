@@ -21,7 +21,7 @@ export default class Help extends Component {
                     <textarea name="message" placeholder="Message" className="message"></textarea>
                 </p>
                 <p className="contactSend">
-                    <input type="submit" className="contactButton" value="Send" />
+                    <a class="actionButton" href="#">Send</a>
                 </p>
               </form>
             </div>

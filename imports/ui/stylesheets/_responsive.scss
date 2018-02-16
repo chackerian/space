@@ -14,6 +14,7 @@
 
   .placeLocation {
     width: 18.5em !important;
+    height: 250px;
     margin-top: 2em !important;
   }
 
@@ -26,6 +27,20 @@
 
 }
 @media (max-width: 895px) {
+
+    .leftNav {
+        width: 25% !important;
+    }
+
+    .rightNav {
+        float: right;
+        margin-right: 1.5em;
+    }
+
+    .profileUserImage {
+        height: 125px !important;
+        width: 125px !important;
+    }
 
     .small-search {
       display: inline-block !important;
@@ -47,34 +62,13 @@
       display: none !important
     }
 
+    .placeLocation {
+      display: none;
+    }
+
     .headerNameOptions {
       display: none !important;
     }
-}
-
-@media (max-width: 800px) {
-
-    .leftNav {
-        width: 15% !important;
-    }
-
-    .rightNav {
-        width: 75% !important;
-        text-align: center;
-        float: none;
-        margin-right: 0 !important ;
-    }
-
-    .profileUserImage {
-        height: 125px !important;
-        width: 125px !important;
-    }
-
-    .helpPagesPar {
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-    }
-
 }
 
 @media (max-width: 750px) {
@@ -85,16 +79,8 @@
         width: 100% !important;
     }
 
-    .leftNav {
-        width: 40% !important;
-    }
-
     .desc {
         width: 100% !important;
-    }
-
-    .profileCardLi {
-        width: 42% !important;
     }
 
     .footerLeft > ul:first-child {
@@ -115,20 +101,6 @@
         display: none !important;
     }
 
-    .managerOfferView {
-        margin-top: 15px !important;
-    }
-
-    .profileCardItem {
-        margin-bottom: 2px !important;
-        font-size: 0.8rem !important;
-    }
-
-    .managerOfferView button {
-        font-size: 0.8rem !important;
-        padding: 8px 6px !important;
-    }
-
     .footerbottom > li {
         display: block !important;
     }
@@ -144,19 +116,6 @@
         li:nth-child(5) {
             margin-top: 20px !important;
         }
-    }
-
-    .footerLeft > ul:first-child > li:nth-child(1) {
-        margin-bottom: 20px !important;
-        display: block !important;
-    }
-
-    .footerLeft > ul:first-child > li:nth-child(1) h3 {
-        margin-right: 0 !important;
-    }
-
-    .profileCardInfo li:first-child {
-        margin-bottom: 4px !important;
     }
 
     .headerPostOptions li a i {
@@ -176,10 +135,7 @@
 
     .actions {
       margin: 1.5em -1em;
-    }
-
-    .profileCardLi {
-        margin: 6px 5px !important;
+      float: none;
     }
 
     .box-title {
@@ -257,16 +213,12 @@
       width: 100%;
     }
 
-    .headerDropDown ul {
-      width: 75vw;
-    }
-
     .placeLocation {
       height: 250px;
     }
 
     .search {
-        width: 60%;
+      width: 60%;
     }
 
     .homeCardLi {
@@ -279,10 +231,6 @@
 
     .footerItems li h4 a {
       font-size: 0.9em !important;
-    }
-
-    .homeCardImg {
-      max-height: 7em !important;
     }
 
     .profileUserRight {

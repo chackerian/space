@@ -5,8 +5,8 @@ import { Meteor } from 'meteor/meteor';
 export default class JoinModal extends Component {
   render() {
     return(
-      <div className="modJoin" id="JoinModal">
-        <div className="modJoinDialog modal-dialog" role="document">
+      <div className="modJoin">
+        <div className="modJoinDialog modal-dialog">
           <div className="modJoinContent modal-content">
             <div className="modJoinBody modal-body">
               <div className="modWrapper">

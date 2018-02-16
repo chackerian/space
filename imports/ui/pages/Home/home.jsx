@@ -34,10 +34,6 @@ export default class Home extends Component {
     super(props)
   }
 
-  listerino = () => {
-    this.setState({listings: "a"})
-  }
-
   cards() {
     let clint = Listing.find({ status: "Pending" }).fetch();
     return(
@@ -50,7 +46,9 @@ export default class Home extends Component {
   }
 
   render() {
-    $('.grid').masonry()
+    setTimeout(function(){
+      $('.grid').masonry()
+    }, 1000)
     return (
       <div className="homeCard">
         <ul className="homeCardUl">

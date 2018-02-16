@@ -1,21 +1,12 @@
 .leftNav {
-    float: left;
-    width: 50%;
-    height: inherit;
-}
-
-.rightNav {
-    float: right;
-    margin-right: 9em;
-    height: inherit;
-    display: inline-block;
+    width: 65%;
 }
 
 .searchIcon {
-  position: absolute;
-  color: $color-lightgrey;
-  top: 1.1em;
-  left: 6.5em;
+  position: relative;
+  top: 0.2em;
+  font-size: 1em;
+  left: -10em;
 }
 
 .headerNav {
@@ -36,6 +27,14 @@
     ul li {
         display: inline-block;
     }
+}
+
+.wholeNav {
+  max-width: 1010px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
 
 // Nav
@@ -77,7 +76,7 @@
         padding: 0;
         background-color: white !important;
         font-size: 0.8rem;
-        width: 21vw;
+        width: 23em;
         z-index: 3;
 
         li {
@@ -86,7 +85,6 @@
 
             a {
                 margin: 0 !important;
-                padding: 0;
                 padding: 15px 80px 15px 15px !important;
             }
         }
@@ -108,17 +106,13 @@
     }
 }
 
-.searchIcon {
-  color: $color-lightgrey;
-}
-
 .clickDropper {
     li ul li a {
       padding: 15px 0px 15px 0px !important;
       font-size: 0.8rem !important;
     }
     & > .navNotifications > ul > a:first-child::before {
-      color: #404040;
+      color: $color-spacegrey;
       margin: -30px 15px -4px 0;
       font-size: 1.3rem;
       left: 10.05em !important;
@@ -130,11 +124,11 @@
       height: 0;
       border-left: 11.5px solid transparent;
       border-right: 11.5px solid transparent;
-      border-bottom: 11px solid #404040;
+      border-bottom: 11px solid $color-spacegrey;
       margin-top: -13px;
     }
     & > .navGeneral > ul > a:first-child::before {
-      color: #404040;
+      color: $color-spacegrey;
       margin: -30px 15px -4px 0;
       font-size: 1.3rem;
       left: 12.25em !important;
@@ -146,7 +140,7 @@
       height: 0;
       border-left: 11.5px solid transparent;
       border-right: 11.5px solid transparent;
-      border-bottom: 11px solid #404040;
+      border-bottom: 11px solid $color-spacegrey;
       margin-top: -13px;
     }
 }
@@ -154,9 +148,9 @@
 .headerDropDownNav {
   box-shadow: 0px 2px 5px;
   a li {
-    border-bottom: 2px solid #404040 !important;
+    border-bottom: 2px solid $color-spacegrey !important;
+    font-family: 'system-ui';
     &:hover {
-        text-decoration: underline;
         background: $color-spacered;
         transition: 0.2s;
         color: white !important;
@@ -171,18 +165,6 @@
     border-bottom: 1px solid #d3d3d7;
     ul > li {
         display: inline-block;
-    }
-}
-
-.headerCatDrop {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 1px solid $color-spacegrey !important;
-    font-size: 0.9rem !important;
-    &:hover {
-        cursor: pointer;
-        background-color: $color-spacegrey !important;
-        color: white !important;
     }
 }
 
@@ -223,15 +205,8 @@
     li {
         margin: 0 2px;
     }
-    li img {
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        vertical-align: middle;
-        margin-right: 3px;
-    }
     li a {
-        padding: 12px !important;
+        padding: 11px !important;
         border: 1px solid black;
     }
 }
