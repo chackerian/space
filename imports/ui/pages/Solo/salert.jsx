@@ -16,10 +16,10 @@ export default class Alert extends Component {
     if (this.props.status == "on") {
       return(
       <div className="s-alert-box s-alert-success s-alert-top s-alert-show" style={{top: 0 + 'px'}}>
-          <div className="s-alert-box-inner">
-              <p>{message="ASD"}</p>
-          </div>
-          <span className="s-alert-close" onClick={this.closeModal}></span>
+        <div className="s-alert-box-inner">
+            <p>{message="ASD"}</p>
+        </div>
+        <span className="s-alert-close" onClick={this.closeModal}></span>
       </div>
       )
     } else {

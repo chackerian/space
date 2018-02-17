@@ -2,12 +2,6 @@ import { ReactiveVar } from 'meteor/reactive-var'
 
 if (Meteor.isClient) {
 
-  function showPosition(position) {
-    var lat = position.coords.latitude;
-    var lng = position.coords.longitude;
-    console.log(lat, lng)
-  }
-
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -25,7 +19,5 @@ if (Meteor.isClient) {
   };
 
   var fields = ['listing_title', 'description'];
-
-  ListingSearch = new SearchSource('listing', fields, options);
 
 }

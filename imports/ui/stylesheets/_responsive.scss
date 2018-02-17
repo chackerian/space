@@ -20,13 +20,13 @@
 
   .listingItemDiv {
     padding: 2em 4em;
-    margin: 4em 0em !important;
+    margin: 3em 0em !important;
     background: white;
     padding: 2em 1em;
   }
 
 }
-@media (max-width: 895px) {
+@media (max-width: 900px) {
 
     .profileUserImage {
       height: 125px !important;
@@ -70,22 +70,8 @@
         width: 100% !important;
     }
 
-    .leftNav {
-      width: 60%;
-    }
-
     .desc {
         width: 100% !important;
-    }
-
-    .footerLeft > ul:first-child {
-        width: 80%;
-        margin: 20px auto !important;
-    }
-
-    .footerLeft ul:first-child li:nth-child(8),
-    .footerLeft ul:first-child li:nth-child(9)  {
-        margin-top: 20px !important;
     }
 
     .footerHide {
@@ -112,6 +98,17 @@
     .headerPostOptions li a i {
         font-size: 1.5rem !important;
     }
+}
+
+
+@media (max-width: 650px) {
+
+  .leftNav {
+    width: 34%;
+    height: 3.5em;
+    padding-top: 0.5em;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -144,7 +141,11 @@
 
 }
 
-@media (max-width: 509px) {
+@media (max-width: 500px) {
+
+    .grid-item {
+      width: 160px;
+    }
 
     .profileUser > div {
       margin: 0 !important;
@@ -188,28 +189,17 @@
 @media (max-width: 450px) {
 
     .logo {
-        font-size: 3.5rem;
-    }
-
-    .grid-item {
-      width: 160px;
+      font-size: 3.5rem;
     }
 
     .placeLocation {
       width: 19.5em !important;
+      height: 250px;
       float: left !important;
     }
 
     .carousel-cell-image {
       width: 100%;
-    }
-
-    .placeLocation {
-      height: 250px;
-    }
-
-    .search {
-      width: 60%;
     }
 
     .homeCardLi {

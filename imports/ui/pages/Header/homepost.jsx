@@ -56,49 +56,50 @@ export default class Homepost extends Component {
       <nav className="headerNav">
         <div className="wholeNav">
           <div className="leftNav">
-              <ul className="headerSearch">
-                  <li className="headerSearchRadiusLogo"><a href="/" id="radiusLogo">
-                  <span>SpaceTrades</span></a></li>
-                  <a className="modLocationRadiusTrigger btn btn-primary" href={`/profile/${this.profile}/settings`}>
-                  <li className="headerLocation">{this.locationFull}</li>
-                  </a>
-              </ul>
-              <div className="searchBox">
-                <input type="text" id="search" className="search" placeholder="Search" /> <span><i className="material-icons searchIcon">search</i></span>
-              </div>
+            <ul className="headerSearch">
+              <li className="headerSearchRadiusLogo"><a href="/" id="radiusLogo">
+              <span>SpaceTrades</span></a></li>
+              <a className="modLocationRadiusTrigger btn btn-primary" href={`/profile/${this.profile}/settings`}>
+              <li className="headerLocation">{this.locationFull}</li>
+              </a>
+            </ul>
+            <div className="searchBox">
+              <input type="text" id="search" className="search" placeholder="Search" /> <i className="material-icons searchIcon">search</i>
+            </div>
           </div>
           <div className="rightNav">
-              <ul className="headerNameOptions">
-                  <li>
-                      <a href={`/profile/${profile}`}>
-                          <span className="headerUsername">{this.currentUsername()}</span>
-                      </a>
-                  </li>
+            <ul className="headerNameOptions">
+              <li>
+                <a href={`/profile/${profile}`}>
+                  <span className="headerUsername">{this.currentUsername()}</span>
+                </a>
+              </li>
+            </ul>
+            <ul className="headerPostOptions clickDropper">
+              <li className="headerDropDown">
+                <a className="small-search" data-toggle="tooltip" data-placement="bottom">
+                  <i className="fa fa-search"></i>
+                </a>
+              </li>
+              <ul className="headerAuth">
+                  <li><a className="btn btn-primary addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}>Add Listing</a></li>
               </ul>
-              <ul className="headerPostOptions clickDropper">
-                  <li className="headerDropDown">
-                      <a className="small-search" data-toggle="tooltip" data-placement="bottom">
-                          <i className="fa fa-search"></i>
-                      </a>
-                  </li>
-                  <ul className="headerAuth">
-                      <li><a className="btn btn-primary addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}>Add Listing</a></li>
-                  </ul>
-                  <li className="headerDropDown navNotifications">
-                      <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
-                      <ul className="headerDropDownNav notifyDropdown">
-                          <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
-                          <a href={`/profile/${profile}/listings`}><li>You created a Listing</li></a>
-                      </ul>
-                  </li>
-                  <li className="headerDropDown navGeneral">
-                      <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons">more_vert</i></a>
-                      <ul className="headerDropDownNav">
-                          <a href="/help"><li>Help Center</li></a>
-                          <a href="#" className="logout" onClick={() => this.props.logout()}><li>Logout</li></a>
-                      </ul>
-                  </li>
-              </ul>
+              <li className="headerDropDown navNotifications">
+                <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
+                <ul className="headerDropDownNav notifyDropdown">
+                  <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
+                </ul>
+              </li>
+              <li className="headerDropDown navGeneral">
+                <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons">more_vert</i></a>
+                <ul className="headerDropDownNav">
+                  <a href="/help"><li>Listings</li></a>
+                  <a href="/help"><li>Saved</li></a>
+                  <a href="/help"><li>Help Center</li></a>
+                  <a href="#" className="logout" onClick={() => this.props.logout()}><li>Logout</li></a>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>

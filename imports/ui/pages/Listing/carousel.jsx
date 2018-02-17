@@ -22,10 +22,10 @@ export default class Carousel extends Component {
     });
     return (
       <div className="carousel carousel-main" data-flickity>
-        <div className="carousel-cell"><img className="carousel-cell-image" data-flickity-lazyload={img[0]} /></div>
-        <div className="carousel-cell"><img className="carousel-cell-image" data-flickity-lazyload={img[1]} /></div>
-        <div className="carousel-cell"><img className="carousel-cell-image" data-flickity-lazyload={img[2]} /></div>
-        <div className="carousel-cell"><img className="carousel-cell-image" data-flickity-lazyload={img[3]} /></div>
+        <div className="carousel-cell"><span className="helper"></span><img className="carousel-cell-image" data-flickity-lazyload={img[0]} /></div>
+        <div className="carousel-cell"><span className="helper"></span><img className="carousel-cell-image" data-flickity-lazyload={img[1]} /></div>
+        <div className="carousel-cell"><span className="helper"></span><img className="carousel-cell-image" data-flickity-lazyload={img[2]} /></div>
+        <div className="carousel-cell"><span className="helper"></span><img className="carousel-cell-image" data-flickity-lazyload={img[3]} /></div>
       </div>
     )
   }

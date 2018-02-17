@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 
-export default class Modal extends Component {
+export default class Defaults extends Component {
 
   constructor(props) {
     super(props)
@@ -21,11 +21,6 @@ export default class Modal extends Component {
     return(
       <div className="defaultSearch">
         <h2>Your Search Did Not Return Results</h2>
-        <ul>
-          <li>Make Sure Words Are Spelled Correctly</li>
-          <li>Try Different Keywords</li>
-          <li>Try More General Words</li>
-        </ul>
       </div>
     )
   }

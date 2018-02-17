@@ -1,32 +1,34 @@
 .leftNav {
-    width: 65%;
+  width: 60%;
+  height: 3.5em;
+  padding-top: 0.5em;
 }
 
 .searchIcon {
   position: relative;
   top: 0.2em;
   font-size: 1em;
-  left: -10em;
+  left: -9.5em;
 }
 
 .headerNav {
-    background-color: $color-spacered;
-    width: 100%;
-    z-index: 100;
-    top: 0;
-    max-width: 1920px;
-    height: 75px;
-    position: fixed !important;
-    border-bottom: 2px solid $color-spacegrey;
-    a {
-        transition: none !important;
-    }
-    ul {
-        display: inline-block;
-    }
-    ul li {
-        display: inline-block;
-    }
+  background-color: $color-spacered;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  max-width: 1920px;
+  height: 60px;
+  position: fixed !important;
+  border-bottom: 2px solid $color-spacegrey;
+  a {
+      transition: none !important;
+  }
+  ul {
+      display: inline-block;
+  }
+  ul li {
+      display: inline-block;
+  }
 }
 
 .wholeNav {
@@ -40,10 +42,11 @@
 // Nav
 .headerAuth {
     li a {
-        color: #fff !important;
-        border: 1px solid #fff !important;
-        padding: 10px 14px;
-        margin: 0.5em;
+      color: white !important;
+      border: 1px solid white !important;
+      border-radius: 0.2em;
+      padding: 8px 15px;
+      margin: 0.5em;
     }
     li a:hover {
         color: white;
@@ -69,7 +72,7 @@
     ul {
         display: none;
         position: absolute;
-        margin: 1.6em -1px 0px -19.2em !important;
+        margin: 0.6em -1px 0px -19.16em !important;
         border: 3px solid $color-spacegrey;
         border-radius: 0.3em;
         animation: 0.5s pulse;
@@ -94,7 +97,7 @@
 
 .navNotifications {
   ul {
-    margin: 1.6em -1px 0px -15.5em !important;
+    margin: 0.6em -1px 0px -15.6em !important;
   }
 }
 
@@ -152,7 +155,7 @@
     font-family: 'system-ui';
     font-weight: bold;
     &:hover {
-        background: $color-spacered;
+        background: $color-charcoal;
         transition: 0.2s;
         color: white !important;
     }
@@ -201,17 +204,6 @@
     overflow-y: scroll !important;
 }
 
-.headerNameOptions {
-    margin: 0;
-    li {
-        margin: 0 2px;
-    }
-    li a {
-        padding: 11px !important;
-        border: 1px solid black;
-    }
-}
-
 .headerHomeButton {
     margin: 0;
     a {
@@ -220,58 +212,38 @@
 }
 
 .headerNameOptions li a {
-    padding: 12px !important;
-    border: 1px solid black;
-    border-radius: 0.2em;
+  padding: 8px !important;
+  border: 1px solid black;
+  color: black !important;
+  border-radius: 0.2em;
 }
 
 .headerHomeButton li a  {
-    padding: 12px !important;
-    border-radius: 0.2em;
+  padding: 12px !important;
+  border-radius: 0.2em;
 }
 
 .headerNameOptions li a:hover,
 .headerHomeButton li a:hover {
-    color: #fff !important;
-    background-color: $color-spacegrey !important;
+  color: #fff !important;
+  background-color: $color-spacegrey !important;
 }
 
 .headerPostOptions {
-    li a i {
-        font-size: 1.6rem;
-        padding: 6px;
-        margin-right: 5px;
-        margin-left: 5px;
-        vertical-align: middle;
-    }
+  li a i {
+    font-size: 1.6rem;
+    padding: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
 }
 
-/////////////////////////////////////////
-// Notifications
-/////////////////////////////////////////
-
-.notifInfo ul > li {
-    display: block;
-}
-
-.notifMessage p, .notifDate p {
-    margin: 0 5px;
-}
-
-.notifDate p {
-    font-size: 0.7rem;
-    color: #7b7b7b;
-    margin-top: -5px;
-}
-
-/////////////////////////////////////////
-
-.headerNameOptions li a {
-    color: black !important;
+.headerSearch {
+  margin: 0 !important;
 }
 
 .headerSearchRadiusLogo {
-    margin-left: 22px;
-    margin-right: 22px;
-    font-weight: 400;
+  margin-right: 22px;
+  margin-left: 22px;
 }

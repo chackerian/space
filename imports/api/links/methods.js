@@ -77,7 +77,6 @@ Meteor.methods({
       date: options.date,
       rater: options.rater,
       rater_id: options.rater_Id,
-      rated_id: options.rated_Id,
       rated: options.rated,
       friendly_rate: options.friendly_rate,
       efficiency_rate: options.efficiency_rate,
@@ -106,32 +105,6 @@ Meteor.methods({
         'profile.sell_describedratingArray': options.payment_rate,
       }
     });
-
-    // Ratings
-    var userObject = Meteor.users.findOne({
-      _id: options.rated_id
-    });
-
-    var friendlyTotal = userObject.profile.sell_friendlyratingArray;
-    var efficiencyTotal = userObject.profile.sell_efficiencyratingArray;
-    var negotiationTotal = userObject.profile.sell_negotiationratingArray;
-    var describedTotal = userObject.profile.sell_describedratingArray;
-
-    // Each Rating Sum
-    var sumFriendly = _.sum(friendlyTotal) / friendlyTotal.length;
-    sumFriendly = sumFriendly.starRound(0.5);
-
-    var sumEfficiency = _.sum(efficiencyTotal) / efficiencyTotal.length;
-    sumEfficiency = sumEfficiency.starRound(0.5);
-
-    var sumNegotiate = _.sum(negotiationTotal) / negotiationTotal.length;
-    sumNegotiate = sumNegotiate.starRound(0.5);
-
-    var sumDescribed = _.sum(describedTotal) / describedTotal.length;
-    sumDescribed = sumDescribed.starRound(0.5);
-
-    var sumSeller = (sumFriendly + sumEfficiency + sumNegotiate + sumDescribed) / 4;
-    sumSeller = sumSeller.starRound(0.5);
 
     Meteor.users.update({
       _id: options.rated_id

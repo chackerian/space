@@ -61,12 +61,6 @@ export default class AddModal extends Component {
     })
   }
 
-  selectQuantityChange(event) {
-    this.setState({
-      quantity: event.target.value
-    })
-  }
-
   selectBrandChange(event) {
     this.setState({
       brandReal: event.target.value
@@ -84,7 +78,6 @@ export default class AddModal extends Component {
     this.setState({
       [key]: event.target.value
     })
-    console.log(this.state)
   }
 
   createListing = (props) => {
@@ -96,7 +89,7 @@ export default class AddModal extends Component {
       creator_facebook_id: Meteor.user().services.facebook.id,
       creator_image: image,
       creator_username: Meteor.user().profile.name,
-      listing_title: titled,
+      listing_title: this.state.listing_title,
       urlKey: this.state.listing_title.replace(/ /g, '-'),
       category: this.state.category,
       type: this.state.type,
@@ -133,11 +126,11 @@ export default class AddModal extends Component {
                   <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
                     <li className="modOfferRequestOfferWrap">
                       <h3 className="listing_title">What Are You Selling?</h3>
-                      <input type="text" className="listtitle" placeholder="Listing Title..." maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
+                      <input type="text" className="listtitle" placeholder="Listing Title" maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
                     </li>
                     <li className="modOfferRequestOfferWrap">
                       <h3 className="price">At What Price?</h3>
-                      <input type="text" className="listprice" placeholder="Price..." maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
+                      <input type="text" className="listprice" placeholder="Price" maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
                     </li>
                   </ul>
                 </div>
@@ -404,11 +397,11 @@ export default class AddModal extends Component {
               <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}><i className="material-icons">close</i></a></div>
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>
-                <textarea className="listdescription" placeholder="Briefly explain any other information about the item..." data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
+                <textarea className="listdescription" placeholder="Briefly explain any other information about the item" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
               </div>
               <div className="modMultiBtn">
-                  <button type="button" className="add btn btn-primary modalSubmitBtn" data-step="6" onClick={this.createListing}>Create</button>
-                  <button type="button" className="btn btn-primary step step-6 modalBack" data-step="6" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="add btn btn-primary modalSubmitBtn" onClick={this.createListing}>Create</button>
+                  <button type="button" className="btn btn-primary step step-6 modalBack" onClick={(event) => this.backPage(event)}>Back</button>
               </div>
             </div>
           </div>

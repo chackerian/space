@@ -7,6 +7,16 @@ export default class Chat extends Component {
 		super(props)
 	}
 
+	sendMessage = () => {
+		var options = {
+			message: $(".chatText").val(),
+			sender: Meteor.userId(),
+			receiver: buyer,
+			conversation: id_sell,
+			timestamp : new Date()
+		};
+	}
+
 	render () {
 		return (
 			<div className="chatDiv">
@@ -66,64 +76,3 @@ export default class Chat extends Component {
 		}
 
 }
-
-//         if (Meteor.userId() == seller) {
-//
-//           var options = {
-//             message: $(".chatText").val(),
-//             sender: Meteor.userId(),
-//             receiver: buyer,
-//             conversation: id_sell,
-//             timestamp : new Date(),
-//             createdAt: new Date()
-//           };
-//
-//           // FORMAT time
-//           var time = moment(options.createdAt);
-//           time = time.format("h:mm, dddd MMM, DD");
-//           options.createdAt = time;
-//
-//           // Scroll Down
-//           $(".chatMessages").scrollTop($(".chatMessages")[0].scrollHeight);
-//
-//           Meteor.call('sendMessage', options);
-//
-//           // IF message is a divider - new message after other person talking or just new from the start
-//           // if ();
-//
-//           // Clears message input
-//           $(".chatText").val('');
-//
-//         } else {
-//           // First Message
-//           var options = {
-//             message: $(".chatText").val(),
-//             sender: Meteor.userId(),
-//             receiver: id,
-//             conversation: id_sell,
-//             timestamp : new Date(),
-//             createdAt: new Date()
-//           };
-//
-//           // FORMAT time
-//           var time = moment(options.createdAt);
-//           time = time.format("h:mm, dddd MMM, DD");
-//           options.createdAt = time;
-//
-//           Meteor.call('sendMessage', options);
-//
-//           // Scroll Down
-//           $(".chatMessages").scrollTop($(".chatMessages")[0].scrollHeight);
-//
-//           // IF message is a divider - new message after other person talking or just new from the start
-//           // if ();
-//
-//           // RESET
-//           $(".chatText").val('');
-//         }
-//       }
-//     }
-//   });
-//
-// }
-//

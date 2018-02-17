@@ -3,17 +3,12 @@
 	clear: both;
 	color: #999 !important;
 	display: inline-block;
-}
-
-.radioWrap ul li label {
-	width: 130px;
-	border-radius: 3px;
-	border: 1px solid #D1D3D4;
-	font-size: 1.1rem !important;
-}
-
-.radioWrap ul li input.radioWrapElement:empty {
-	margin-left: -2000px;
+	label {
+		width: 130px;
+		border-radius: 3px;
+		border: 1px solid #D1D3D4;
+		font-size: 1.1rem !important;
+	}
 }
 
 .radioWrap ul li input.radioWrapElement:empty ~ label {
@@ -42,7 +37,6 @@
 
 /* toggle hover */
 .radioWrap ul li input.radioWrapElement:hover:not(:checked) ~ label:before {
-	content:'\2714';
 	text-indent: .9em;
 	color: #C2C2C2;
 }
@@ -53,17 +47,11 @@
 
 /* toggle on */
 .radioWrap ul li input.radioWrapElement:checked ~ label:before {
-	content:'\2714';
 	text-indent: .9em;
-	color: #9CE2AE;
-	background-color: #4DCB6D;
+	color: $color-spacered;
+	background-color: $color-spacered;
 }
 
 .radioWrap ul li input.radioWrapElement:checked ~ label {
 	color: #777;
-}
-
-/* radio focus */
-.radioWrap ul li input.radioWrapElement:focus ~ label:before {
-	box-shadow: 0 0 0 3px #999;
 }

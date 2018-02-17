@@ -16,6 +16,7 @@ import Home from '../../ui/pages/Home/home.jsx';
 import ListingItem from '../../ui/pages/Listing/Listing.jsx';
 
 import Profile from '../../ui/pages/Profile/profile.jsx';
+import Settings from '../../ui/pages/Profile/settings.jsx';
 
 // Help Center
 import Help from '../../ui/pages/Help/help.jsx';
@@ -125,6 +126,17 @@ var profile = FlowRouter.group({
   name: "profile"
 });
 
+profile.route('/', {
+  name: 'profile',
+  action(params) {
+    window.scrollTo(0, 0);
+    var idr = "QhXDzoMQr5WD3vAut";
+    mount(MainLayout, {
+      content: <ProfileContainer id="QhXDzoMQr5WD3vAut" />
+    })
+  }
+});
+
 profile.route('/:id', {
   name: 'profiles',
   action(params) {
@@ -141,7 +153,7 @@ profile.route('/:id/settings', {
   name: 'settings',
   action(params) {
     mount(MainLayout, {
-      content: <Home />
+      content: <Settings />
     })
   }
 });
@@ -158,15 +170,6 @@ profile.route('/:id/active', {
 
 profile.route('/:id/saved', {
   name: 'adfsd',
-  action() {
-    mount(MainLayout, {
-      content: <Home />
-    })
-  }
-});
-
-profile.route('/:id/listings', {
-  name: 'listingds',
   action() {
     mount(MainLayout, {
       content: <Home />
@@ -218,7 +221,7 @@ help.route('/terms', {
   name: 'terms',
   action() {
     mount(MainLayout, {
-      content: <Privacy />
+      content: <AboutTerms />
     })
   }
 });

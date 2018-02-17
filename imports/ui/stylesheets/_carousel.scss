@@ -1,4 +1,3 @@
-// Wrapper for the slide container and indicators
 .carousel {
   width: 25em;
   float: left;
@@ -8,9 +7,14 @@
 
 .carousel-cell-image {
   border-radius: 0.5em;
-  height: 100%;
-  display: block;
-  margin: auto;
+  height: auto;
+  vertical-align: middle;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .carousel-cell {

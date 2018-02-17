@@ -136,7 +136,7 @@ export default class ListingItem extends Component {
           </div>
           <div className='topPage'>
             <Carousel />
-            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=600x600&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
+            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=500x500&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
           </div>
           <div className='bottomPage'>
             <div className="desc">

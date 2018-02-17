@@ -47,9 +47,9 @@ a[href] {
 }
 
 .add {
-    margin-left: 40%;
-    background-color: $color-spacegreen;
-    border-color: black;
+    background-color: #75D855;
+    font-family: 'Oswald';
+    border-radius: 0.2em;
     &:hover {
       background-color: green;
     }
