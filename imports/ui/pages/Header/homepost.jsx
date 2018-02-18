@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 export default class Homepost extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   currentUsername() {
     if(Meteor.user()) {
       var split = Meteor.user().profile.name.split(" ");

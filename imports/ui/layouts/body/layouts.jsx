@@ -5,10 +5,10 @@ import { render } from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import { createStore } from 'redux';
 
-import Modal from '../../pages/Modal/modal.jsx';
-import Alert from '../../pages/Solo/salert.jsx';
+import Alert from '../../pages/Solo/alert.jsx';
 import Header from '../../pages/Header/header.jsx';
-import Footer from '../../pages/Footer/Footer.jsx';
+import Modal from '../../pages/Modal/modal.jsx';
+import Footer from '../../pages/Footer/footer.jsx';
 
 HeaderContainer = withTracker(({ urlKey }) => {
   const list = Meteor.user();
