@@ -1,6 +1,5 @@
 i {
     color: $color-spacegrey;
-
     &:hover {
         color: black !important;
         text-shadow: none !important;
@@ -17,7 +16,7 @@ i {
 .fa-facebook {
     color: white;
     &:hover {
-    color: inherit !important;
+      color: inherit !important;
     }
 }
 

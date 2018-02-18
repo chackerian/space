@@ -11,7 +11,6 @@
 }
 
 // Contact
-
 .sent {
     display: none;
 }
@@ -63,10 +62,6 @@
   }
 }
 
-.faqsec {
-    margin-left: 1rem;
-}
-
 .faqinfo {
     text-align: center;
     margin: 3rem 0 0 0;
@@ -89,7 +84,6 @@
     }
 }
 
-.contactname input,
 .contactsubject input,
 .contactemail input {
     padding: 10px 12px !important;
@@ -97,13 +91,6 @@
     border-radius: 4px !important;
     border: 1px solid #d3d3d3 !important;
 }
-
-.contactname input,
-.contactsubject input .contactemail input {
-     width: 30%;
-     height: 20px;
-     padding-left: 5px;
- }
 
 .phone {
     float: right;
@@ -172,10 +159,6 @@
 .helpShow {
   margin-top: 2em;
   text-align: center;
-}
-
-.faqSec {
-    margin-left: 1rem;
 }
 
 .contacttext textarea {

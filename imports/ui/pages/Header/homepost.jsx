@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 
 export default class Homepost extends Component {
 
-  currentUsername() {
-    if(Meteor.user()) {
-      var split = Meteor.user().profile.name.split(" ");
-      var last = split[1].charAt();
-      var merge = split[0] + " " + last;
-      return merge;
-    }
-  }
-
   clearToggle() {
     if ($(".navNotifications > .headerDropDownNav").is( ":visible" )) {
       $(".navNotifications > .headerDropDownNav").toggle();
@@ -56,7 +47,6 @@ export default class Homepost extends Component {
               <li className="headerSearchRadiusLogo"><a href="/" id="radiusLogo">
               <span>SpaceTrades</span></a></li>
               <a className="modLocationRadiusTrigger btn btn-primary" href={`/profile/${this.profile}/settings`}>
-              <li className="headerLocation">{this.locationFull}</li>
               </a>
             </ul>
             <div className="searchBox">

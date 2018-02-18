@@ -37,6 +37,10 @@
 	}
 }
 
+.uploadimages {
+  background-color: $color-spacered;
+}
+
 .modal-body {
 	max-height: 500px;
 	overflow-y: scroll !important;
@@ -163,9 +167,9 @@
 .modWrapper {
 	h1 {
 		font-size: 1.5rem;
-	    font-weight: 400;
-	    margin-bottom: 0;
-	    margin-top: 0;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
 	}
 	h1 i {
 		margin-right: 20px;
