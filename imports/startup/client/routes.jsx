@@ -26,9 +26,8 @@ import Safety from '../../ui/pages/Help/safety.jsx';
 import AboutTerms from '../../ui/pages/Help/terms.jsx';
 import Prohibited from '../../ui/pages/Help/prohibited.jsx';
 
-import SearchPage from '../../ui/pages/Search/search.jsx';
-
-import Chat from '../../ui/pages/Chat/Chat.jsx';
+import SearchPage from '../../ui/pages/Search/searchpage.jsx';
+import Chat from '../../ui/pages/Chat/chat.jsx';
 
 //////////////////////////////////////////////
 

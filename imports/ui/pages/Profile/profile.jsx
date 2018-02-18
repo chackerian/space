@@ -18,6 +18,7 @@ export default class Profile extends Component {
 
     return(
       <div className="profileUser oneDiv">
+        <div className="topStrip">
           <div className="profileUserLeft">
               <a href="settings">
                 <div className="profileUserImage"><img className='profilePic' src={img} /></div>
@@ -61,6 +62,7 @@ export default class Profile extends Component {
           <div className="actions">
             <a className='actionButton editListing'>Edit</a>
           </div>
+        </div>
       </div>
     )
   }

@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
+import { currentUsername } from '../helpers.js';
 
 export default class Homepost extends Component {
 
   clearToggle() {
-    if ($(".navNotifications > .headerDropDownNav").is( ":visible" )) {
+    if ($(".navNotifications > .headerDropDownNav").is(":visible")) {
       $(".navNotifications > .headerDropDownNav").toggle();
     }
-    if ($(".navGeneral > .headerDropDownNav").is( ":visible" )) {
+    if ($(".navGeneral > .headerDropDownNav").is(":visible")) {
       $(".navGeneral > .headerDropDownNav").toggle();
     }
   }
 
   navGeneral() {
-    if ($(".navNotifications > .headerDropDownNav").is( ":visible" )) {
+    if ($(".navNotifications > .headerDropDownNav").is(":visible")) {
       $(".navNotifications > .headerDropDownNav").toggle();
     }
     $(".navGeneral > .headerDropDownNav").toggle();
   }
 
   navNotifications() {
-    if ($(".navGeneral > .headerDropDownNav").is( ":visible" )) {
+    if ($(".navGeneral > .headerDropDownNav").is(":visible")) {
       $(".navGeneral > .headerDropDownNav").toggle();
     }
     $(".fa-globe").removeClass('notificationHighlight');
@@ -57,7 +58,7 @@ export default class Homepost extends Component {
             <ul className="headerNameOptions">
               <li>
                 <a href={`/profile/${profile}`}>
-                  <span className="headerUsername">{this.currentUsername()}</span>
+                  <span className="headerUsername">{currentUsername()}</span>
                 </a>
               </li>
             </ul>

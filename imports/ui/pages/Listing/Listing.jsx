@@ -133,6 +133,7 @@ export default class ListingItem extends Component {
                   <li className="money itemMoney">${listing.price}</li>
               </ul>
             </div>
+
           </div>
           <div className='topPage'>
             <Carousel />

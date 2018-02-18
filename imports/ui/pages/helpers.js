@@ -1,4 +1,4 @@
-currentUsername() {
+export function currentUsername() {
   if(Meteor.user()) {
     var split = Meteor.user().profile.name.split(" ");
     var last = split[1].charAt();
@@ -7,7 +7,7 @@ currentUsername() {
   }
 }
 
-getLocation() {
+export function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   }

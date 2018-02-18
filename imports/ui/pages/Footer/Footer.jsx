@@ -13,8 +13,9 @@ export default class Footer extends Component {
 
   renderFooter = () => {
     if (Meteor.user()) {
-      var profile = Meteor.user()._id
+      return <FooterPost />
     } else {
+        return <FooterPre />
       }
   }
 
