@@ -200,12 +200,14 @@
 }
 
 .editing {
-    border: 1px solid black;
-    padding: 0.1em;
+  border: 1px solid $color-divider !important;
+  padding: 8px !important;
+  width: 50% !important;
 }
 
 .descEdit {
     width: 23em !important;
     padding: 5px 10px 25px 10px;
     margin: 5px;
+    outline: none;
 }

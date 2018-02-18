@@ -26,7 +26,7 @@ export default class ListingItem extends Component {
     var price = $(".itemMoney").text().replace(/\$/g, '');
     var desc = $(".desc-full").text();
 
-    $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' type='text' value='" + title + "'> </input>");
+    $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' placeholder='Enter Title' type='text' value='" + title + "'> </input>");
     $(".listingItemTitle").focus();
 
     $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
