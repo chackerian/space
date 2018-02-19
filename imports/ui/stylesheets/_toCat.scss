@@ -81,6 +81,13 @@ input {
   outline: none !important;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+  display: none;
+}
+
 .oneDiv {
     font-family: $font-norm !important;
     margin: 2em 1em;

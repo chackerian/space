@@ -145,10 +145,10 @@ export default class ListingItem extends Component {
                 <h4 className="box-title">Details</h4>
                 <p className="desc-full">
                   <span className='cat'>Category: <a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a></span>
-                  <span className='type right'>Type: <a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
+                  <span className='type'>Type: <a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
                   <br />
                   <span className='condition'>Condition: {listing.condition}</span>
-                  <span className="right">Trades: {listing.trade}</span>
+                  <span className="trades">Trades: {listing.trade}</span>
                 </p>
               </div>
               <div className="desc-box">

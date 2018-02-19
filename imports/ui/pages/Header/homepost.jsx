@@ -40,6 +40,7 @@ export default class Homepost extends Component {
 
   render() {
     let profile = Meteor.user()._id;
+    // this.clearToggle();
     return (
       <nav className="headerNav">
         <div className="wholeNav">
