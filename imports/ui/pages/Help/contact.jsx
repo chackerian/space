@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Users, Notifications } from '/imports/api/links/db.js';
 import { Meteor } from 'meteor/meteor';
 import HelpNav from './nav.jsx';
 

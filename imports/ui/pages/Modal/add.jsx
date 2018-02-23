@@ -164,7 +164,7 @@ export default class AddModal extends Component {
                           </div>
                       </li>
                         <li className="modOfferRequestOfferWrap">
-                          <h3 className="type">What is its Type?</h3>
+                          <h3 className="typed">What is its Type?</h3>
                           <select className="listtype" value={this.state.type} onChange={(event) => this.selectTypeChange(event)}>
                             <option defaultValue>Select Type</option>
                             {

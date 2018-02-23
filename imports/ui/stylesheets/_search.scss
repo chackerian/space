@@ -1,10 +1,11 @@
 .search {
   height: 30px;
-  width: 9em;
+  width: 10em;
   border-radius: 3px;
   color: $color-charcoal;
   font-size: 0.9em;
   padding-left: 20px;
+  padding-right: 2.5em;
   box-shadow: 0px 2px 5px;
 }
 
@@ -29,37 +30,7 @@
 }
 
 .searchBox {
-  display: initial;
-}
-
-.searchRefineHeadings {
-    color: $color-spaceblue;
-}
-
-.searchRefineCategories {
-    margin: 16px auto;
-}
-
-.search-wrapper {
-    width: 100%;
-}
-
-.cardprice {
-    font-family: 'Abel';
-    font-size: 0.95rem;
-    font-weight: 400;
-    color: #396;
-    margin: 2px 1.6rem 2px 10px !important;
-    float: left;
-}
-
-.cardname {
-    float: right;
-    margin: 2px 10px 5px 2px !important;
-    font-size: 0.8rem;
-    text-decoration: underline !important;
-    font-weight: 400;
-    font-family: $font-norm;
+  display: inline-block;
 }
 
 .defaultSearch {
@@ -74,36 +45,4 @@
         margin: 8px 0;
         color: #666 !important;
     }
-}
-
-.searchResultsCardPrice,
-.searchResultsCardSize,
-.searchResultsCardCondition,
-.searchResultsCardLocation {
-    font-size: 1.05rem;
-    margin: 10px 0;
-}
-
-.searchResultsCardPrice {
-    margin: 10px 0 15px 0;
-}
-
-.seachResultsCardArea  {
-    margin-bottom: 0;
-}
-
-.searchResultsDiv {
-    margin-top: 0 !important;
-}
-
-.searchResultsOptions {
-    margin-top: 10px;
-}
-
-.searchResultsOptions li {
-    display: inline-block;
-}
-
-.searchResultsCount {
-    font-size: 0.8rem;
-}
+} 

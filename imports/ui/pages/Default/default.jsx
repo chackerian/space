@@ -25,7 +25,7 @@ export default class Defaults extends Component {
     )
   }
 
-  fourofour() {
+  notfound() {
     return(
       <div className="errordiv">
         <h1 className="errorm"></h1>

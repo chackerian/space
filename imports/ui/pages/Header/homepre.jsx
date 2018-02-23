@@ -13,7 +13,7 @@ export default class Homepre extends Component {
             <div className="leftNav">
               <ul className="headerSearch">
                   <li className="headerSearchRadiusLogo">
-                      <a href="/" id="radiusLogo">
+                      <a href="/" className="radiusLogo">
                       <span>SpaceTrades</span></a>
                   </li>
               </ul>

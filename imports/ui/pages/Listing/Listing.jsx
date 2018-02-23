@@ -69,7 +69,7 @@ export default class ListingItem extends Component {
     if (isCreator && isUser) {
       return (
         <div className="actions">
-          <a className='actionButton editListing' href='#' onClick={() => this.edit()}>Edit</a>
+          <a className='actionButton editListing' onClick={() => this.edit()}>Edit</a>
         </div>
       )
     }
@@ -137,7 +137,7 @@ export default class ListingItem extends Component {
           </div>
           <div className='topPage'>
             <Carousel />
-            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=500x500&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
+            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x800&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
           </div>
           <div className='bottomPage'>
             <div className="desc">

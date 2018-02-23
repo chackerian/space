@@ -91,29 +91,11 @@
         }
     }
 
-    .headerPostOptions li a i {
-        font-size: 1.5rem !important;
-    }
 }
-
-
-// @media (max-width: 650px) {
-//
-//   .leftNav {
-//     width: 34%;
-//     height: 3.5em;
-//     padding-top: 0.5em;
-//   }
-//
-// }
 
 @media (max-width: 600px) {
 
     .headerNameOptions {
-        display: none !important;
-    }
-
-    .headerHomeButton {
         display: none !important;
     }
 
@@ -148,12 +130,12 @@
     }
 
     // logo change
-    #radiusLogo span {
-        display: none;
+    .radiusLogo span {
+      display: none;
     }
 
-    #radiusLogo::after {
-        content: "ST";
+    .radiusLogo::after {
+      content: "ST";
     }
 
     .homeCardLi {
@@ -161,12 +143,12 @@
     }
 
     .profileDesc p {
-        font-size: 0.8rem !important;
+      font-size: 0.8rem !important;
     }
 
     .footerDivide {
-        width: 90% !important;
-        margin: 20px auto !important;
+      width: 90% !important;
+      margin: 20px auto !important;
     }
 
     .desc-box {
@@ -178,7 +160,7 @@
     }
 
     .footerLeft > ul:first-child {
-        width: 90% !important;
+      width: 90% !important;
     }
 }
 
@@ -198,20 +180,8 @@
       width: 100%;
     }
 
-    .homeCardLi {
-      width: 150px;
-    }
-
     .profileUserInfo ul li a {
       font-size: 1.4rem !important;
-    }
-
-    .footerItems li h4 a {
-      font-size: 0.9em !important;
-    }
-
-    .leftNav {
-      width: 25%;
     }
 
     .profileUserRight {

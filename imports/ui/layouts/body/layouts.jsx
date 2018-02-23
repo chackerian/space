@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Offer, Listing } from '/imports/api/links/db.js';
+import { Listing } from '/imports/api/links/db.js';
 import { render } from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
+
+// import reducers
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import Alert from '../../pages/Solo/alert.jsx';
@@ -21,16 +24,12 @@ export default class MainLayout extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {status: "off", modal: "join", log: false}
-    this.onChangeModal = this.onChangeModal.bind(this);
-    this.login = this.login.bind(this);
-    this.logout = this.logout.bind(this);
   }
 
   onChangeModal(status, modal='join') {
 
     if (status == "off") {
-      $("body").css("overflow", "auto")
+      $("body").css("overflow", "auto");
     }
 
     this.setState({
@@ -63,13 +62,11 @@ export default class MainLayout extends Component {
               id: Meteor.user()._id,
               location: JSON.stringify(data, null, 2)
             }
-            console.log(options)
             Meteor.call('updateUserCreation', options)
         });
       }, 3000);
     }
 
-    // FB.login();
     Meteor.loginWithFacebook({}, function(err, result) {
       if (err == undefined) {
         rush()
@@ -81,15 +78,15 @@ export default class MainLayout extends Component {
 
   render() {
     return (
-      <div>
-        <Alert alert="on"/>
-        <Modal status={this.state.status} login={this.login} modal={this.state.modal} onChangeModal={this.onChangeModal} />
-        <HeaderContainer login={this.login} logout={this.logout} log={this.state.log} status={this.state.status} onChangeModal={this.onChangeModal} />
+      <Provider store={store}>
+        <Alert />
+        <Modal />
+        <HeaderContainer />
         {this.props.content}
         <FooterContainer />
-      </div>
-      )
-    }
+      </Provider>
+    )
+  }
 }
 
 FooterContainer = withTracker(({ urlKey }) => {

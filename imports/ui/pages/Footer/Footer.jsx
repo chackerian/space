@@ -15,8 +15,8 @@ export default class Footer extends Component {
     if (Meteor.user()) {
       return <FooterPost />
     } else {
-        return <FooterPre />
-      }
+      return <FooterPre />
+    }
   }
 
   render() {

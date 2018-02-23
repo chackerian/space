@@ -1,7 +1,11 @@
 .leftNav {
-  width: 60%;
+  width: 40%;
   height: 3.5em;
-  padding-top: 0.5em;
+  padding-top: 0.7em;
+}
+
+.rightNav {
+  margin-left: auto;
 }
 
 .searchIcon {
@@ -20,13 +24,7 @@
   height: 68px;
   position: fixed !important;
   border-bottom: 2px solid $color-spacegrey;
-  a {
-      transition: none !important;
-  }
   ul {
-      display: inline-block;
-  }
-  ul li {
       display: inline-block;
   }
 }
@@ -34,12 +32,12 @@
 .wholeNav {
   max-width: 1010px;
   align-items: center;
+  height: 68px !important;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
 }
 
-// Nav
 .headerAuth {
     li a {
       color: white !important;
@@ -49,26 +47,18 @@
       margin: 0.5em;
     }
     li a:hover {
-        color: white;
-        background: $color-spacegrey;
+      color: white;
+      background: $color-spacegrey;
     }
 }
 
-.headerLocation {
-    font-size: 0.8rem !important;
-}
-
-.headerLocationRadius {
-    float: left;
-    margin-top: 0;
-    font-size: 0.9rem;
-    &:hover {
-        color: yellow !important;
-    }
+.navGeneral {
+  margin-right: 22px;
 }
 
 .headerDropDown {
     position: relative;
+    display: inline-block;
     ul {
         display: none;
         position: absolute;
@@ -101,7 +91,7 @@
   }
 }
 
-#radiusLogo {
+.radiusLogo {
     font-size: 1.4rem !important;
     &:hover {
       font-weight: bold;
@@ -162,16 +152,6 @@
   }
 }
 
-.notifLi {
-    width: 100%;
-    margin: 2px 0;
-    padding: 10px 0;
-    border-bottom: 1px solid #d3d3d7;
-    ul > li {
-        display: inline-block;
-    }
-}
-
 .headerCatDropDown {
     margin-left: -151px !important;
     ul {
@@ -189,37 +169,16 @@
         font-size: 0.9rem;
     }
 }
-
-.headerCat,
-.headerBigCat {
-    margin: 0 0 0 0;
-}
-
-.headerPreDrop {
-    margin-left: -172px !important;
-}
-
-.hoverDropDown {
-    max-height: 400px !important;
-    overflow-y: scroll !important;
-}
-
-.headerHomeButton {
-    margin: 0;
-    a {
-        color: black !important;
-    }
-}
+//
+// .headerCat,
+// .headerBigCat {
+//     margin: 0 0 0 0;
+// }
 
 .headerNameOptions li a {
   padding: 8px !important;
   border: 1px solid black;
   color: black !important;
-  border-radius: 0.2em;
-}
-
-.headerHomeButton li a  {
-  padding: 12px !important;
   border-radius: 0.2em;
 }
 

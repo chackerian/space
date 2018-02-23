@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Listing, Offer } from '/imports/api/links/db.js';
+import { Listing } from '/imports/api/links/db.js';
 
 export default class Carousel extends Component {
 

@@ -40,14 +40,13 @@ export default class Homepost extends Component {
 
   render() {
     let profile = Meteor.user()._id;
-    // this.clearToggle();
+    this.clearToggle();
     return (
       <nav className="headerNav">
         <div className="wholeNav">
           <div className="leftNav">
             <ul className="headerSearch">
-              <li className="headerSearchRadiusLogo"><a href="/" id="radiusLogo">
-              <span>SpaceTrades</span></a></li>
+              <li className="headerSearchRadiusLogo"><a href="/" className="radiusLogo"><span>SpaceTrades</span></a></li>
               <a className="modLocationRadiusTrigger btn btn-primary" href={`/profile/${this.profile}/settings`}>
               </a>
             </ul>

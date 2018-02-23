@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Listing, Offer } from '/imports/api/links/db.js';
+import { Listing } from '/imports/api/links/db.js';
 
 export default class Profile extends Component {
 
@@ -8,14 +8,12 @@ export default class Profile extends Component {
     super(props)
   }
 
-  profile() {
+  render() {
     var prof = Meteor.users.find({_id: this.props.id}).fetch()[0];
     var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
     var facebook = "https://www.facebook.com/" + prof.services.facebook.id
-
     var city = JSON.parse(Meteor.user().profile.location).city
     var state = JSON.parse(Meteor.user().profile.location).region_name
-
     return(
       <div className="profileUser oneDiv">
         <div className="topStrip">
@@ -28,7 +26,7 @@ export default class Profile extends Component {
               <div className="profileUserName">
                   <ul>
                       <li data-toggle="tooltip" data-placement="right" title="Member since {prof.memberSince}"><h1>{prof.profile.name}</h1></li>
-                      <li><div className="circle" style={{'background-color': 'green'}}></div></li>
+                      <li><div className="circle" style={{'background-color': '#4E8F77'}}></div></li>
                   </ul>
               </div>
               <div className="profileUserRating">
@@ -40,7 +38,7 @@ export default class Profile extends Component {
                   </li>
                   <li>
                     <a href="mailto:{prof.services.facebook.email}" target="_blank">
-                        <i className="fa fa-envelope-o"></i>
+                      <i className="fa fa-envelope-o"></i>
                     </a>
                   </li>
                 </ul>
@@ -60,15 +58,11 @@ export default class Profile extends Component {
               </div>
           </div>
           <div className="actions">
-            <a className='actionButton editListing'>Edit</a>
+            <a className='editButton editListing'>Edit</a>
           </div>
         </div>
       </div>
     )
-  }
-
-  render() {
-    return this.profile()
   }
 
 }

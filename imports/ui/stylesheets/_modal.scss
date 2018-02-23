@@ -100,10 +100,6 @@
 .modLocationRadiusTrigger {
 	color: $color-spacegrey !important;
 	background-color: #f8504b !important;
-
-	&:hover {
-
-	}
 }
 
 .modLocationRadiusBody {
@@ -121,45 +117,6 @@
 
 #profileReceivedName {
 	margin: 8px 0 15px 0 !important;
-}
-
-.profileReceivedPriceOriginal {
-	font-size: 0.8rem;
-	vertical-align: middle;
-	margin-left: 6px;
-}
-
-
-.profileReceivedOffersInfoTime {
-	font-size: 0.85rem !important;
-	font-style: italic !important;
-	color: #6c54b3 !important;
-	float: right !important;
-	margin-top: 3px !important;
-	margin-right: 10px;
-}
-
-.receivedGoBack {
-	background-color: #00bfff !important;
-	margin-right: 10px !important;
-	& :hover {
-		background-color: #04b2ec !important;
-	}
-}
-
-.modReportPageTwo ul li:last-child {
-	margin-bottom: 0 !important;
-	padding-bottom: 0 !important;
-}
-
-.modReportPageTwo ul li input {
-	margin-right: 10px;
-	outline: none !important;
-}
-
-.modReportPageThree textarea {
-	width: 100%;
-	height: 280px;
 }
 
 ////////////////// Join ///////////////////
@@ -190,31 +147,6 @@
 }
 
 /////////////////////////////////////////
-
-.modEditListingDiv {
-	h2 {
-    	font-weight: 400 !important;
-    	font-size: 2rem !important;
-	}
-	& > ul > li {
-    	font-size: 1.1rem !important;
-	}
-	ul li:nth-child(2) {
-    	margin-left: 25px !important;
-	}
-	li div {
-    	margin-top: 5px !important;
-	}
-}
-
-.modEditListingDiv ul li:nth-child(5),
-.modEditListingDiv ul li:nth-child(8) {
-    margin-left: 35px !important;
-}
-
-.modEditListingDiv ul li:nth-child(4), .modEditListingDiv ul li:nth-child(5) {
-    margin-top: 30px !important;
-}
 
 .modProfileActiveBtn {
 	margin: 20px 0 !important;
@@ -277,22 +209,12 @@
 	font-size: 1.8rem !important;
 }
 
-// .modOfferRequestPageOneUl li h2 {
-// 	width: 100% !important;
-// }
-
 .joinAgreeSmall {
 	margin: 0px !important;
 	padding: 0 !important;
 	font-size: 0.75rem !important;
 	color: #444 !important;
 	margin-top: 15px !important;
-}
-
-.reportMain,
-.reportMain div,
-.reportText {
-    margin-left: 1rem;
 }
 
 .reportName {
@@ -304,95 +226,8 @@
     }
 }
 
-.reportName ul li,
-.reportCheck ul {
-    display: inline-block;
-}
-
-.reportListingImg img {
-    height: 6rem;
-    width: 9rem;
-    padding: 2px;
-    margin: 5px 10px 0 20px;
-    vertical-align: middle;
-}
-
-.reportCheck {
-	p {
-    	margin: 35px 0 2px 20px;
-	}
-	ul li {
-    margin: 2px 20px 25px 20px;
-    text-align: left;
-	    input {
-	        vertical-align: middle;
-	        margin-right: 5px;
-	    }
-	}
-}
-
 #datepicker {
     color: black !important;
-}
-
-.reportText p {
-    margin-left: 20px;
-}
-
-.reportUserImg img {
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-    padding: 2px;
-    margin: 5px 10px 0 20px;
-    vertical-align: middle;
-}
-
-.offerRequestDiv {
-    margin-bottom: 10px !important;
-    &  > div {
-    	display: inline-block;
-	}
-}
-
-.offerRequestRight {
-    width: 50%;
-    margin-left: 5%;
-}
-
-.offerRequestLeft {
-    width: 40%;
-    vertical-align: top;
-}
-
-.offerRequestImg {
-    width: 100%;
-}
-
-.offerRequestOfferPrice {
-    margin-left: 5%;
-}
-
-.offerRequestDate ul {
-    margin: 10px 0 0 0;
-    li h4 {
-    	margin: 0 0 5px 0;
-	}
-}
-
-.offerRequestLocation {
-	ul {
-    	margin: 10px 0 0 0;
-	}
-	h4 {
-    	margin: 0px;
-	}
-	ul li {
-    	display: inline-block !important;
-	}
-	input {
-    	margin: 10px 0 0 0 !important;
-	}
 }
 
 .offerAcceptButton input:hover {
