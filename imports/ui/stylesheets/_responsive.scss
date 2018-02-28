@@ -58,8 +58,7 @@
     }
 }
 
-@media (max-width: 750px) {
-
+@media (max-width: 850px) {
     .guardian {
         float: none;
         margin-top: 1em;
@@ -69,6 +68,9 @@
     .desc {
         width: 100% !important;
     }
+}
+
+@media (max-width: 750px) {
 
     .footerHide {
         display: inline-block !important;
@@ -171,9 +173,13 @@
       min-height: 50em;
     }
 
+    .profilePic {
+      margin-left: 75%;
+    }
+
     .topStrip {
       background: #f8504b;
-      padding: 0 !important;
+      padding: 1em !important;
       border-radius: none;
     }
 
