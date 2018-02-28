@@ -129,9 +129,9 @@ profile.route('/', {
   name: 'profile',
   action(params) {
     window.scrollTo(0, 0);
-    var idr = "QhXDzoMQr5WD3vAut";
+    var idr = params.id
     mount(MainLayout, {
-      content: <ProfileContainer id="QhXDzoMQr5WD3vAut" />
+      content: <ProfileContainer id={idr} />
     })
   }
 });
@@ -224,7 +224,6 @@ help.route('/terms', {
     })
   }
 });
-
 
 help.route('/contact', {
   name: 'contact',

@@ -44,6 +44,18 @@ a[href] {
   }
 }
 
+.editButton2 {
+  border: 1px solid black;
+  color: black;
+  padding: 0.5em 1.4em;
+  margin: 0 0.4em;
+  font-family: "Oswald", sans-serif;
+  &:hover {
+      color: white;
+      border-color: white;
+  }
+}
+
 .modalSubmitBtn {
     input {
         padding: 11px 50px !important;

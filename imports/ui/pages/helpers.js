@@ -9,6 +9,6 @@ export function currentUsername() {
 
 export function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition();
   }
 }

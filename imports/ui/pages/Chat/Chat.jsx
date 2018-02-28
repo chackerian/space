@@ -12,7 +12,7 @@ export default class Chat extends Component {
 			message: $(".chatText").val(),
 			sender: Meteor.userId(),
 			receiver: buyer,
-			conversation: id_sell,
+			conversation: id,
 			timestamp : new Date()
 		};
 	}

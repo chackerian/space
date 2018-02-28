@@ -58,7 +58,7 @@ export default class Profile extends Component {
               </div>
           </div>
           <div className="actions">
-            <a className='editButton editListing'>Edit</a>
+            <a className='editButton2 editListing'>Edit</a>
           </div>
         </div>
       </div>

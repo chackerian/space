@@ -166,6 +166,21 @@
 
 @media (max-width: 450px) {
 
+    .profileUser {
+      margin: 7em 3em;
+      min-height: 50em;
+    }
+
+    .topStrip {
+      background: #f8504b;
+      padding: 0 !important;
+      border-radius: none;
+    }
+
+    .leftNav {
+      width: 25%;
+    }
+
     .logo {
       font-size: 3.5rem;
     }

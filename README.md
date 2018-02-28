@@ -1,6 +1,2 @@
 # SpaceTrades
-## Buying and Selling Locally Through Meetups
-
-* Dropzone
-* Slingshot
-* Optimizer
+## Buying and Selling Locally Through Meet-ups

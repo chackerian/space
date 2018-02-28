@@ -2,15 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Listing, Notification, Message, Feedback, Report, Saves } from './db.js';
 
 Meteor.methods({
-   sendEmail: function(to, from, subject, text) {
-    this.unblock();
-    Email.send({
-      to: to,
-      from: from,
-      subject: subject,
-      text: text
-    });
-  },
  updateUserCreation: function(options) {
    Meteor.users.update({
      _id: options.id
@@ -26,46 +17,20 @@ Meteor.methods({
      }
    })
  },
- addListing: function(options) {
-  if (!Meteor.userId()) {
-    throw new Meteor.Error("Not Authorized");
-  }
-
-  Listing.insert({
-      // User Information
-      creator_id: options.creator_id,
-      creator_image: options.creator_image,
-      creator_facebook_id: options.creator_facebook_id,
-      creator_username: Meteor.user().profile.name,
-      listing_title: options.listing_title,
-      urlKey: options.urlKey,
-      // Category
-      category: options.category,
-      type: options.type,
-      brandReal: options.brand,
-      // Payment
-      price: options.price,
-      payment: options.payment,
-      trade: options.trade,
-      size: options.size,
-      // Information
-      condition: options.condition,
-      description: options.description,
-      // Location
-      lat: options.lat,
-      lng: options.lng,
-      city: options.city,
-      state: options.state,
-      locationString: options.locationString,
-      // Images
-      images: options.images,
-      // Status
-      createdAt: new Date(),
-      status: "Pending",
-      offers_received: options.offers_received,
-      offerAccepted: false
-    });
-},
+/*
+ * @summary Send Email
+ * @locus Server
+ *
+ */
+  sendEmail: function(to, from, subject, text) {
+   this.unblock();
+   Email.send({
+     to: to,
+     from: from,
+     subject: subject,
+     text: text
+   });
+  },
   /*
    * @summary Send Email
    * @locus Server
@@ -86,7 +51,6 @@ Meteor.methods({
       // Diff
       payment_rate: options.payment_rate
     })
-    // mark feedback seller flag
 
     Meteor.users.update({
       _id: options.rated_id
@@ -121,6 +85,66 @@ Meteor.methods({
     })
 
   },
+  addListing: function(options) {
+   if (!Meteor.userId()) {
+     throw new Meteor.Error("Not Authorized");
+   }
+
+   Listing.insert({
+       // User Information
+       creator_id: options.creator_id,
+       creator_image: options.creator_image,
+       creator_facebook_id: options.creator_facebook_id,
+       creator_username: Meteor.user().profile.name,
+       listing_title: options.listing_title,
+       urlKey: options.urlKey,
+       // Category
+       category: options.category,
+       type: options.type,
+       brandReal: options.brand,
+       // Payment
+       price: options.price,
+       payment: options.payment,
+       trade: options.trade,
+       size: options.size,
+       // Information
+       condition: options.condition,
+       description: options.description,
+       // Location
+       lat: options.lat,
+       lng: options.lng,
+       city: options.city,
+       state: options.state,
+       locationString: options.locationString,
+       // Images
+       images: options.images,
+       // Status
+       createdAt: new Date(),
+       status: "Pending",
+       offers_received: options.offers_received,
+       offerAccepted: false
+     });
+ },
+ /*
+  * @summary Edit listing
+  * @locus Server
+  */
+  updateListing: function(options) {
+   Listing.update({
+     _id: options.id
+   }, {
+     $set: {
+       listing_title: options.listing_title,
+       brand: options.brand,
+       price: options.price,
+       payment: options.payment,
+       trade: options.trade,
+       size: options.size,
+       condition: options.condition,
+       description: options.description
+     }
+   });
+ },
   /*
    * @summary Transfer Listing to history
    * @locus Server
@@ -178,28 +202,6 @@ Meteor.methods({
       _id: optionsA._id
     })
   },
-  /*
-   * @summary Edit listing
-   * @locus Server
-   */
-   updateListing: function(options) {
-    Listing.update({
-      _id: options.id
-    }, {
-      $set: {
-        listing_title: options.listing_title,
-        brand: options.brand,
-        quantity: options.quantity,
-        price: options.price,
-        payment: options.payment,
-        trade: options.trade,
-        size: options.size,
-        condition: options.condition,
-        description: options.description
-      }
-    });
-  },
-  // For: Report, Add offer, Accept Offer, Badge, new Follower, TB system
   // Destination is set in options previously
   /*
    * @summary Send Notification
@@ -247,7 +249,6 @@ Meteor.methods({
       description: options.description
     });
   },
-  // TASK - Assign a conversation id that is unique to A-B B-A correspondence
   /*
    * @summary Send a User
    * @locus Server

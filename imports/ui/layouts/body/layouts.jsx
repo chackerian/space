@@ -4,14 +4,18 @@ import { Listing } from '/imports/api/links/db.js';
 import { render } from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 
-// import reducers
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
+import reducer from '../../reducers/reduced.js';
 import Alert from '../../pages/Solo/alert.jsx';
 import Header from '../../pages/Header/header.jsx';
 import Modal from '../../pages/Modal/modal.jsx';
 import Footer from '../../pages/Footer/footer.jsx';
+
+const store = createStore(
+  combineReducers({ ints: reducer })
+);
 
 HeaderContainer = withTracker(({ urlKey }) => {
   const list = Meteor.user();
@@ -27,7 +31,6 @@ export default class MainLayout extends Component {
   }
 
   onChangeModal(status, modal='join') {
-
     if (status == "off") {
       $("body").css("overflow", "auto");
     }
@@ -55,14 +58,13 @@ export default class MainLayout extends Component {
       this.setState({
         log: true
       });
-
       setTimeout(function(){
         $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-            var options = {
-              id: Meteor.user()._id,
-              location: JSON.stringify(data, null, 2)
-            }
-            Meteor.call('updateUserCreation', options)
+          var options = {
+            id: Meteor.user()._id,
+            location: JSON.stringify(data, null, 2)
+          }
+          Meteor.call('updateUserCreation', options)
         });
       }, 3000);
     }
@@ -77,13 +79,16 @@ export default class MainLayout extends Component {
   }
 
   render() {
+    const store = createStore(reducer);
     return (
       <Provider store={store}>
-        <Alert />
-        <Modal />
-        <HeaderContainer />
-        {this.props.content}
-        <FooterContainer />
+        <div>
+          <Alert />
+          <Modal />
+          <HeaderContainer />
+          {this.props.content}
+          <FooterContainer />
+        </div>
       </Provider>
     )
   }

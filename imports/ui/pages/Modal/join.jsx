@@ -3,6 +3,12 @@ import { Listing } from '/imports/api/links/db.js';
 import { Meteor } from 'meteor/meteor';
 
 export default class JoinModal extends Component {
+
+  login = () => {
+    // Login
+    store.dispatch('login')
+  }
+
   render() {
     return(
       <div className="modJoin">
@@ -17,7 +23,7 @@ export default class JoinModal extends Component {
                     <li>Currently, we only allow Facebook sign-up to ensure site-wide credibility.</li>
                   </ul>
                   <p className="joinAgreeSmall">By signing up you agree to our <a className="link" href="/help/terms">Terms and Conditions</a></p>
-                  <div className="modJoinFB-Btn ph-button facebook" onClick={() => this.props.login()}>
+                  <div className="modJoinFB-Btn ph-button facebook" onClick={() => this.login()}>
                     <i className="fa fa-facebook-square"></i>
                     <b>Sign Up With Facebook</b>
                 </div>
