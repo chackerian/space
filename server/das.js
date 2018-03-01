@@ -1,4 +1,4 @@
-import { Listing, Notification, Message, Offer, Feedback, Report, Saves } from '/imports/api/links/db.js';
+import { Listing, Notification, Message, Feedback, Report, Saves } from '/imports/api/links/db.js';
 
 if (Meteor.isServer) {
 

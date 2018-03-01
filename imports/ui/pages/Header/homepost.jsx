@@ -51,7 +51,7 @@ export default class Homepost extends Component {
               </a>
             </ul>
             <div className="searchBox">
-              <input type="text" id="search" className="search" placeholder="Search" /> <i className="material-icons searchIcon">search</i>
+              <input type="text" id="search" className="search" placeholder="Search" autofocus="True" /> <i className="material-icons searchIcon">search</i>
             </div>
           </div>
           <div className="rightNav">

@@ -1,7 +1,6 @@
 .leftNav {
   width: 40%;
-  height: 3.5em;
-  padding-top: 0.7em;
+  height: 35px;
 }
 
 .rightNav {
@@ -32,7 +31,7 @@
 .wholeNav {
   max-width: 1010px;
   align-items: center;
-  height: 68px !important;
+  height: 70px !important;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -69,7 +68,7 @@
         margin: 0.6em -1px 0px -19.16em !important;
         border: 3px solid $color-spacegrey;
         border-radius: 0.3em;
-        animation: 0.5s pulse;
+        animation: 0.5s fadeInDownMini;
         padding: 0;
         background-color: white !important;
         font-size: 0.8rem;
@@ -96,7 +95,13 @@
 }
 
 .radiusLogo {
-    font-size: 1.4rem !important;
+    // background-image: url(//spacetrades.io/img/logo.svg);
+    // background-repeat: no-repeat !important;
+    // display: block;
+    // width: 79px;
+    // height: 19px;
+    // background-position: center center !important;
+    // background-size: 78px 22px;
     &:hover {
       font-weight: bold;
       animation: 2s;

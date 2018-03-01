@@ -18,11 +18,11 @@ export default class Homepre extends Component {
                   </li>
               </ul>
               <div className="searchBox">
-                <input type="text" id="search" className="search" placeholder="Search" /><i className="material-icons searchIcon">search</i>
+                <input type="text" id="search" className="search" placeholder="Search" autofocus="True" /><i className="material-icons searchIcon">search</i>
               </div>
             </div>
             <div className="rightNav">
-              <ul className="headerAuthPre">
+              <ul className="headerAuthPre headerAuth">
                   <li><a className="btn btn-primary" onClick={() => this.props.onChangeModal("on", "join")}>Join</a></li>
                   <li><a className="login" onClick={() => this.props.login()}>Login</a></li>
               </ul>
