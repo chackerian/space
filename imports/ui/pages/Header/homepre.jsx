@@ -22,7 +22,7 @@ export default class Homepre extends Component {
               </div>
             </div>
             <div className="rightNav">
-              <ul className="headerAuth">
+              <ul className="headerAuthPre">
                   <li><a className="btn btn-primary" onClick={() => this.props.onChangeModal("on", "join")}>Join</a></li>
                   <li><a className="login" onClick={() => this.props.login()}>Login</a></li>
               </ul>
