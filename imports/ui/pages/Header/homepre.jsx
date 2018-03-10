@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { store } from '../../layouts/body/layouts.jsx';
+import { connect } from 'react-redux';
 
-export default class Homepre extends Component {
+class Homepre extends Component {
 
   constructor(props) {
     super(props)
@@ -18,13 +20,13 @@ export default class Homepre extends Component {
                   </li>
               </ul>
               <div className="searchBox">
-                <input type="text" id="search" className="search" placeholder="Search" autofocus="True" /><i className="material-icons searchIcon">search</i>
+                <input type="text" id="search" className="search" placeholder="Search" autoFocus="True" /><i className="material-icons searchIcon">search</i>
               </div>
             </div>
             <div className="rightNav">
               <ul className="headerAuthPre headerAuth">
-                  <li><a className="btn btn-primary" onClick={() => this.props.onChangeModal("on", "join")}>Join</a></li>
-                  <li><a className="login" onClick={() => this.props.login()}>Login</a></li>
+                  <li><a className="btn btn-primary" onClick={() => store.dispatch({ type: 'JOIN'})}>Join</a></li>
+                  <li><a className="login" onClick={() => store.dispatch({ type: 'LOGIN'})}>Login</a></li>
               </ul>
             </div>
           </div>
@@ -32,3 +34,5 @@ export default class Homepre extends Component {
       )
     }
 }
+
+export default connect()(Homepre)

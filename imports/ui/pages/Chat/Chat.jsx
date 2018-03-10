@@ -27,8 +27,8 @@ export default class Chat extends Component {
 						<ul>
 							<li className="chatPerson">
 								<ul>
-										<li><a><img src={picturesm} /></a></li>
-										<li><a className="profile-link" href="/profile/{otherId}">{name}</a></li>
+									<li><a><img src={picturesm} /></a></li>
+									<li><a className="profile-link" href="/profile/{otherId}">{name}</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -51,7 +51,6 @@ export default class Chat extends Component {
 							<li className="chatMessageTempWrap">
 								<ul>
 									<li className="chatUserNameTime"><h4>{name}</h4></li>
-
 									<span className="timestamp">{createdAt}</span>
 									<li>
 										<ul>
@@ -72,7 +71,7 @@ export default class Chat extends Component {
 					</li>
 				</ul>
 			</div>
-			)
-		}
+		)
+	}
 
 }

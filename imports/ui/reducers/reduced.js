@@ -1,8 +1,6 @@
-const initialState = [];
-
-export default function(state, action) {
+export default function(state = [], action) {
   switch(action.type) {
-    case "ADD":
+    case "ADD_LISTING":
       return "app";
     case "JOIN":
       return "app";

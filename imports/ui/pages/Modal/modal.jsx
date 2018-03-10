@@ -14,16 +14,16 @@ export default class Modal extends Component {
       $("body").append("<div class='modal-backdrop'></div>");
       $("body").css("overflow", "hidden")
       if (this.props.modal == "add") {
-        return <AddModal onChangeModal={this.props.onChangeModal} />
+        return <AddModal />
       }
       if (this.props.modal == "join") {
-        return <JoinModal login={this.props.login} onChangeModal={this.props.onChangeModal} />
+        return <JoinModal login={this.props.login} />
       }
       if (this.props.modal == "reportUser") {
-        return <JoinModal login={this.props.login} onChangeModal={this.props.onChangeModal} />
+        return <JoinModal login={this.props.login} />
       }
       if (this.props.modal == "reportListing") {
-        return <JoinModal login={this.props.login} onChangeModal={this.props.onChangeModal} />
+        return <JoinModal login={this.props.login} />
       }
 
     }

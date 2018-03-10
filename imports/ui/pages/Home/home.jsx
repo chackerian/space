@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Listing, Offer } from '/imports/api/links/db.js';
 import GoogleAd from 'react-google-ad';
+import { connect } from 'react-redux';
+
+// var Client = require('coinbase').Client;
+// var client = new Client({'apiKey': mykey, 'apiSecret': mysecret});
+// var sass = require('node-sass');
+// sass.render({
+//   file: scss_filename,
+//   [, options..]
+// }, function(err, result) { /*...*/ });
 
 var HomeCard = ({item}) => (
   <div className="grid-item">
@@ -28,7 +37,7 @@ var HomeCard = ({item}) => (
   </div>
 )
 
-export default class Home extends Component {
+class Home extends Component {
 
   constructor(props) {
     super(props)
@@ -49,6 +58,7 @@ export default class Home extends Component {
     setTimeout(function(){
       $('.grid').masonry()
     }, 1000)
+    console.log(this.state)
     return (
       <div className="homeCard">
         <ul className="homeCardUl">
@@ -61,3 +71,5 @@ export default class Home extends Component {
   }
 
 }
+
+export default connect()(Home)

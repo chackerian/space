@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { currentUsername } from '../helpers.js';
+import { store } from '../../layouts/body/layouts.jsx';
 
 export default class Homepost extends Component {
 
@@ -41,6 +42,7 @@ export default class Homepost extends Component {
   render() {
     let profile = Meteor.user()._id;
     this.clearToggle();
+    console.log(this.state)
     return (
       <nav className="headerNav">
         <div className="wholeNav">
@@ -69,7 +71,7 @@ export default class Homepost extends Component {
                 </a>
               </li>
               <ul className="headerAuth">
-                  <li><a className="btn btn-primary addListing" href="#" onClick={() => this.props.onChangeModal("on", "add")}>Add Listing</a></li>
+                  <li><a className="btn btn-primary addListing" href="#" onClick={() => store.dispatch({ type: 'ADD_LISTING'})}>Add Listing</a></li>
               </ul>
               <li className="headerDropDown navNotifications">
                 <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>

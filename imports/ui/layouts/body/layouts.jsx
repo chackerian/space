@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 
 import { Provider } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 
 import reducer from '../../reducers/reduced.js';
 import Alert from '../../pages/Solo/alert.jsx';
@@ -13,9 +13,7 @@ import Header from '../../pages/Header/header.jsx';
 import Modal from '../../pages/Modal/modal.jsx';
 import Footer from '../../pages/Footer/footer.jsx';
 
-const store = createStore(
-  combineReducers({ ints: reducer })
-);
+export const store = createStore(reducer)
 
 HeaderContainer = withTracker(({ urlKey }) => {
   const list = Meteor.user();
@@ -79,7 +77,6 @@ export default class MainLayout extends Component {
   }
 
   render() {
-    const store = createStore(reducer);
     return (
       <Provider store={store}>
         <div>

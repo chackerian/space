@@ -1,6 +1,5 @@
 .leftNav {
   width: 40%;
-  height: 35px;
 }
 
 .rightNav {
@@ -95,16 +94,13 @@
 }
 
 .radiusLogo {
-    // background-image: url(//spacetrades.io/img/logo.svg);
-    // background-repeat: no-repeat !important;
-    // display: block;
-    // width: 79px;
-    // height: 19px;
-    // background-position: center center !important;
-    // background-size: 78px 22px;
-    &:hover {
+    span {
+      font-size: 1.3em;
       font-weight: bold;
-      animation: 2s;
+    }
+    &:hover {
+      color: black;
+      animation: 1s;
     }
 }
 
@@ -178,11 +174,6 @@
         font-size: 0.9rem;
     }
 }
-//
-// .headerCat,
-// .headerBigCat {
-//     margin: 0 0 0 0;
-// }
 
 .headerNameOptions li a {
   padding: 8px !important;
