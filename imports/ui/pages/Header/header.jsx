@@ -13,8 +13,8 @@ export default class Header extends Component {
 
   render() {
     if(Meteor.user()) {
-      return <Homepost logout={this.props.logout} onChangeModal={this.props.onChangeModal} />
+      return <Homepost />
     }
-    return <Homepre login={this.props.login} onChangeModal={this.props.onChangeModal} />
+    return <Homepre />
   }
 }

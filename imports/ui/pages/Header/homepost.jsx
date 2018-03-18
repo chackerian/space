@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { currentUsername } from '../helpers.js';
 import { store } from '../../layouts/body/layouts.jsx';
+import { connect } from 'react-redux';
 
-export default class Homepost extends Component {
+class Homepost extends Component {
 
   clearToggle() {
     if ($(".navNotifications > .headerDropDownNav").is(":visible")) {
@@ -42,7 +43,6 @@ export default class Homepost extends Component {
   render() {
     let profile = Meteor.user()._id;
     this.clearToggle();
-    console.log(this.state)
     return (
       <nav className="headerNav">
         <div className="wholeNav">
@@ -53,7 +53,7 @@ export default class Homepost extends Component {
               </a>
             </ul>
             <div className="searchBox">
-              <input type="text" id="search" className="search" placeholder="Search" autofocus="True" /> <i className="material-icons searchIcon">search</i>
+              <input type="text" id="search" className="search" placeholder="Search" autoFocus="True" /> <i className="material-icons searchIcon">search</i>
             </div>
           </div>
           <div className="rightNav">
@@ -71,7 +71,7 @@ export default class Homepost extends Component {
                 </a>
               </li>
               <ul className="headerAuth">
-                  <li><a className="btn btn-primary addListing" href="#" onClick={() => store.dispatch({ type: 'ADD_LISTING'})}>Add Listing</a></li>
+                  <li><a className="btn btn-primary addListing" href="#" onClick={this.props.add}>Add Listing</a></li>
               </ul>
               <li className="headerDropDown navNotifications">
                 <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
@@ -85,7 +85,7 @@ export default class Homepost extends Component {
                   <a href="/help"><li>Listings</li></a>
                   <a href="/help"><li>Saved</li></a>
                   <a href="/help"><li>Help Center</li></a>
-                  <a href="#" className="logout" onClick={() => this.props.logout()}><li>Logout</li></a>
+                  <a href="#" className="logout" onClick={this.props.logout()}><li>Logout</li></a>
                 </ul>
               </li>
             </ul>
@@ -94,4 +94,14 @@ export default class Homepost extends Component {
       </nav>
     )
   }
+
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+      logout: () => dispatch({type: 'LOGOUT'}),
+      add: () => dispatch({ type: 'ADD'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Homepost)

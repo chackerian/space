@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { store } from '../../layouts/body/layouts.jsx';
 import { connect } from 'react-redux';
 
 class Homepre extends Component {
@@ -16,7 +15,8 @@ class Homepre extends Component {
               <ul className="headerSearch">
                   <li className="headerSearchRadiusLogo">
                       <a href="/" className="radiusLogo">
-                      <span>SpaceTrades</span></a>
+                        <span>SpaceTrades</span>
+                      </a>
                   </li>
               </ul>
               <div className="searchBox">
@@ -25,8 +25,8 @@ class Homepre extends Component {
             </div>
             <div className="rightNav">
               <ul className="headerAuthPre headerAuth">
-                  <li><a className="btn btn-primary" onClick={() => store.dispatch({ type: 'JOIN'})}>Join</a></li>
-                  <li><a className="login" onClick={() => store.dispatch({ type: 'LOGIN'})}>Login</a></li>
+                  <li><a className="btn btn-primary" onClick={this.props.join}>Join</a></li>
+                  <li><a className="login" onClick={this.props.login}>Login</a></li>
               </ul>
             </div>
           </div>
@@ -35,4 +35,11 @@ class Homepre extends Component {
     }
 }
 
-export default connect()(Homepre)
+const mapDispatchToProps = dispatch => {
+  return {
+      login: () => dispatch({type: 'LOGIN'}),
+      join: () => dispatch({type: 'JOIN'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Homepre)

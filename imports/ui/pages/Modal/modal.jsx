@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 
-import AddModal from './add.jsx';
 import JoinModal from './join.jsx';
-import ReportUser from './reportUser.jsx';
-import ReportListing from './reportListing.jsx';
+import AddModal from './add.jsx';
+import ReportUserModal from './reportUser.jsx';
+import ReportListingModal from './reportListing.jsx';
 
-export default class Modal extends Component {
+import { connect } from 'react-redux';
+
+class Modal extends Component {
 
   render() {
+    console.log("state", this.state)
     if (this.props.status == "on") {
       $(".modal-backdrop").remove()
       $("body").append("<div class='modal-backdrop'></div>");
@@ -17,17 +20,15 @@ export default class Modal extends Component {
         return <AddModal />
       }
       if (this.props.modal == "join") {
-        return <JoinModal login={this.props.login} />
+        return <JoinModal />
       }
       if (this.props.modal == "reportUser") {
-        return <JoinModal login={this.props.login} />
+        return <ReportUserModal />
       }
       if (this.props.modal == "reportListing") {
-        return <JoinModal login={this.props.login} />
+        return <ReportListingModal />
       }
-
-    }
-    else {
+    } else {
       $(".modal-backdrop").remove()
       $("body").css("overflow", "none")
       return null
@@ -35,3 +36,11 @@ export default class Modal extends Component {
   }
 
 }
+
+const mapStateToProps = state => {
+  return {
+    status: state.status
+  };
+}
+
+export default connect(mapStateToProps, null)(Modal)

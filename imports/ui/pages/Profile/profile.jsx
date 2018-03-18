@@ -26,7 +26,7 @@ export default class Profile extends Component {
             <div className="profileUserName">
                 <ul>
                     <li data-toggle="tooltip" data-placement="right" title="Member since {prof.memberSince}"><h1>{prof.profile.name}</h1></li>
-                    <li><div className="circle" style={{'background-color': '#4E8F77'}}></div></li>
+                    <li><div className="circle" style={{'backgroundColor': '#4E8F77'}}></div></li>
                 </ul>
             </div>
             <div className="profileUserRating">
@@ -53,7 +53,7 @@ export default class Profile extends Component {
                   <li className="profileUserAmountBought">Meetups: {prof.profile.meetups_count}</li>
               </ul>
             </div>
-            <div class="rating">
+            <div className="rating">
               <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
             </div>
           </div>

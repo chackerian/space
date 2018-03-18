@@ -19,7 +19,7 @@
   z-index: 100;
   top: 0;
   max-width: 1920px;
-  height: 50px;
+  height: 65px;
   position: fixed !important;
   border-bottom: 2px solid $color-spacegrey;
   ul {
@@ -28,9 +28,9 @@
 }
 
 .wholeNav {
-  max-width: 1010px;
+  max-width: 1180px;
   align-items: center;
-  height: 50px !important;
+  height: 65px !important;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -94,8 +94,11 @@
 }
 
 .radiusLogo {
+    // background-image: url(/img/logo.png);
+    // background-repeat: no-repeat;
+    // background-size: 100px;
     span {
-      font-size: 1.3em;
+      font-size: 1.6em;
       font-weight: bold;
     }
     &:hover {

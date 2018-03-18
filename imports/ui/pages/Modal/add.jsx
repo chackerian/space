@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import ReactFilestack, { client } from 'filestack-react';
+//var s3 = new aws.S3();
+// var Imagemin = require('imagemin');
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
@@ -98,7 +100,6 @@ export default class AddModal extends Component {
       condition: this.state.condition,
       description: this.state.description,
       offers_received: 0,
-      images: Session.get('images')
     }
 
     function addListingValidate() {
