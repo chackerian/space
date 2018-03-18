@@ -5,6 +5,11 @@ import { connect } from 'react-redux';
 
 class Homepost extends Component {
 
+  logout = () => {
+    Meteor.logout(function(err, result) {
+    });
+  }
+
   clearToggle() {
     if ($(".navNotifications > .headerDropDownNav").is(":visible")) {
       $(".navNotifications > .headerDropDownNav").toggle();
@@ -85,7 +90,7 @@ class Homepost extends Component {
                   <a href="/help"><li>Listings</li></a>
                   <a href="/help"><li>Saved</li></a>
                   <a href="/help"><li>Help Center</li></a>
-                  <a href="#" className="logout" onClick={this.props.logout()}><li>Logout</li></a>
+                  <a href="#" className="logout" onClick={this.logout()}><li>Logout</li></a>
                 </ul>
               </li>
             </ul>
@@ -99,7 +104,6 @@ class Homepost extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      logout: () => dispatch({type: 'LOGOUT'}),
       add: () => dispatch({ type: 'ADD'})
   };
 };

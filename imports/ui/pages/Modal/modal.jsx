@@ -10,6 +10,10 @@ import { connect } from 'react-redux';
 
 class Modal extends Component {
 
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     console.log("state", this.state)
     if (this.props.status == "on") {
@@ -39,6 +43,7 @@ class Modal extends Component {
 
 const mapStateToProps = state => {
   return {
+    modal: state.modal,
     status: state.status
   };
 }
