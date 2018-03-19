@@ -94,16 +94,10 @@
 }
 
 .radiusLogo {
-    // background-image: url(/img/logo.png);
-    // background-repeat: no-repeat;
-    // background-size: 100px;
     span {
       font-size: 1.6em;
-      font-weight: bold;
-    }
-    &:hover {
+      font-weight: bold !important;
       color: black;
-      animation: 1s;
     }
 }
 

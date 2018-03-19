@@ -15,7 +15,6 @@ class Modal extends Component {
   }
 
   render() {
-    console.log("state", this.state)
     if (this.props.status == "on") {
       $(".modal-backdrop").remove()
       $("body").append("<div class='modal-backdrop'></div>");
