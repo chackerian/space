@@ -159,7 +159,7 @@
     }
 
     .actions {
-      margin: 0 !important;
+      margin: 2em 16em !important;
     }
 
     .footerLeft > ul:first-child {
@@ -176,6 +176,11 @@
 
     .profilePic {
       margin-left: 75%;
+      margin-top: 1em;
+    }
+
+    .profileUserRight {
+      margin-top: 2em;
     }
 
     .topStrip {

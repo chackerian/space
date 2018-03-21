@@ -12,16 +12,19 @@ class Homepre extends Component {
       requestPermissions: ['user_friends', 'public_profile', 'email']
     }, function(err, result) {
       if (err == undefined) {
-        // setTimeout(function(){
-        //   $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-        //     var options = {
-        //       id: Meteor.user()._id,
-        //       location: JSON.stringify(data, null, 2)
-        //     }
-        //     Meteor.call('updateUserCreation', options)
-        //   });
-        // }, 5000);
+        setTimeout(function(){
+          $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+            var options = {
+              id: Meteor.user()._id,
+              location: JSON.stringify(data, null, 2)
+            }
+            Meteor.call('updateUserCreation', options)
+          });
+        }, 5000);
       }
+    })
+    this.setState({
+      difference: 'aasd'
     })
   }
 

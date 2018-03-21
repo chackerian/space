@@ -14,6 +14,11 @@ export default function(state=[], action) {
         modal: "add",
         status: "on"
       }
+    case "CLOSE":
+      return {
+        modal: "add",
+        status: "off"
+      }
     default:
       return "app";
   }

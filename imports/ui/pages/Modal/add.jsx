@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import ReactFilestack, { client } from 'filestack-react';
-//var s3 = new aws.S3();
+import { connect } from 'react-redux';
+// var s3 = require('s3')
+// var s3 = new aws.S3();
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
 };
 
-export default class AddModal extends Component {
+class AddModal extends Component {
 
   constructor(props) {
     super(props);
@@ -82,13 +84,11 @@ export default class AddModal extends Component {
   }
 
   createListing = (props) => {
-    this.props.onChangeModal("off")
-    var image = "http://graph.facebook.com/" + Meteor.user().services.facebook.id + "/picture?type=large";
     var titled = this.state.listing_title.charAt(0).toUpperCase() + this.state.listing_title.slice(1)
     var options = {
       creator_id: Meteor.userId(),
       creator_facebook_id: Meteor.user().services.facebook.id,
-      creator_image: image,
+      creator_image: Meteor.user().profile.picturelrg,
       creator_username: Meteor.user().profile.name,
       listing_title: this.state.listing_title,
       urlKey: this.state.listing_title.replace(/ /g, '-'),
@@ -121,7 +121,7 @@ export default class AddModal extends Component {
           <div className="modAddListingDialog modal-dialog">
             <div className="modAddListingContent modal-content">
               <div className="modAddListingDiv modal-body step-1">
-                <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}><i className="material-icons">close</i></a></div>
+                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <div className="modAddListingPage">
                   <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
                     <li className="modOfferRequestOfferWrap">
@@ -148,7 +148,7 @@ export default class AddModal extends Component {
         <div className="modAddListingDialog modal-dialog">
           <div className="modAddListingContent modal-content">
             <div className="modAddListingDiv modAddListingDivTwo modal-body step-2">
-              <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}><i className="material-icons">close</i></a></div>
+              <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <div className="modAddListingPage">
                   <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
                       <li className="modOfferRequestOfferWrap">
@@ -191,7 +191,7 @@ export default class AddModal extends Component {
         <div className="modAddListingDialog modal-dialog">
           <div className="modAddListingContent modal-content">
             <div className="modAddListingDiv modal-body step step-3">
-              <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}><i className="material-icons">close</i></a></div>
+              <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               <div className="modAddListingPage">
               <h3>Provide Details</h3>
               <ul className="modAddListingPageFourUl">
@@ -319,7 +319,7 @@ export default class AddModal extends Component {
       <div className="modAddListingDialog modal-dialog">
         <div className="modAddListingContent modal-content">
           <div className="modAddListingDiv modal-body step step-4">
-            <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}><i className="material-icons">close</i></a></div>
+            <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
             <div className="modAddListingPage">
               <ul className="addListImg">
                 <ReactFilestack
@@ -346,7 +346,7 @@ export default class AddModal extends Component {
       <div className="modAddListingDialog modal-dialog">
         <div className="modAddListingContent modal-content">
           <div className="modAddListingDiv modAddListingDivFive modal-body step step-5">
-            <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}>
+            <div className="modal-close"><a className="close" onClick={this.props.close}>
             <i className="material-icons">close</i>
             </a></div>
             <div className="modAddListingPage">
@@ -394,7 +394,7 @@ export default class AddModal extends Component {
         <div className="modAddListingDialog modal-dialog">
           <div className="modAddListingContent modal-content">
             <div className="modAddListingDiv modAddListingDivSix modal-body step step-6">
-              <div className="modal-close"><a className="close" onClick={() => this.props.onChangeModal("off")}><i className="material-icons">close</i></a></div>
+              <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>
                 <textarea className="listdescription" placeholder="Briefly explain any other information about the item" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
@@ -411,3 +411,11 @@ export default class AddModal extends Component {
   }
 
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+      close: () => dispatch({type: 'CLOSE'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(AddModal)

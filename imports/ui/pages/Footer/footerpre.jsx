@@ -20,7 +20,7 @@ export default class FooterPre extends Component {
             </div>
           </ul>
           <ul className="footerbottom">
-            <li className="footerCopy">SpaceTrades &copy; 2018 </li>
+            <li className="footerCopy">SpaceTrades &copy; 2018</li>
             <li className="footerSocial">
               <ul>
                 <li><a href="https://facebook.com/SpaceTrades"><i className="fa fa-facebook"></i></a></li>

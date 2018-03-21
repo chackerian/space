@@ -47,6 +47,7 @@
       border-radius: 0.2em;
       padding: 8px 15px;
       margin: 0.5em;
+      transition: 0.5s;
     }
     li a:hover {
       color: white;
@@ -64,14 +65,14 @@
     ul {
         display: none;
         position: absolute;
-        margin: 0.6em -1px 0px -19.16em !important;
+        margin: 0.6em -1px 0px -13.16em !important;
         border: 3px solid $color-spacegrey;
         border-radius: 0.3em;
         animation: 0.5s fadeInDownMini;
         padding: 0;
         background-color: white !important;
         font-size: 0.8rem;
-        width: 23em;
+        width: 17em;
         z-index: 3;
 
         li {
@@ -89,16 +90,18 @@
 
 .navNotifications {
   ul {
-    margin: 0.6em -1px 0px -15.6em !important;
+    margin: 0.6em -1px 0px -13.2em !important;
   }
 }
 
-.radiusLogo {
-    span {
-      font-size: 1.6em;
-      font-weight: bold !important;
-      color: black;
-    }
+.radiusLogo span {
+    font-size: 1.6em;
+    font-weight: bold !important;
+    color: white;
+}
+
+.radiusLogo:hover {
+  color: white;
 }
 
 .clickDropper {
@@ -110,7 +113,7 @@
       color: $color-spacegrey;
       margin: -30px 15px -4px 0;
       font-size: 1.3rem;
-      left: 10.05em !important;
+      left: 8.55em !important;
       pointer-events: none;
       content: '';
       display: block;
@@ -126,7 +129,7 @@
       color: $color-spacegrey;
       margin: -30px 15px -4px 0;
       font-size: 1.3rem;
-      left: 12.25em !important;
+      left: 8.55em !important;
       pointer-events: none;
       content: '';
       display: block;
@@ -161,39 +164,25 @@
     }
 }
 
-.modTriggerJoin {
-    font-family: $font-header !important;
-}
-
-.hoverDropper {
-    padding: 12px !important;
-    span {
-        font-size: 0.9rem;
-    }
-}
-
 .headerNameOptions li a {
   padding: 8px !important;
   border: 1px solid black;
   color: black !important;
   border-radius: 0.2em;
+  transition: 0.5s;
+  &:hover {
+    color: #fff !important;
+    background-color: $color-spacegrey !important;
+  }
 }
 
-.headerNameOptions li a:hover,
-.headerHomeButton li a:hover {
-  color: #fff !important;
-  background-color: $color-spacegrey !important;
-}
-
-.headerPostOptions {
-  li a i {
+.headerPostOptions li a i {
     font-size: 1.6rem;
     padding: 6px;
     margin-right: 5px;
     margin-left: 5px;
     vertical-align: middle;
   }
-}
 
 .headerSearch {
   margin: 0 !important;

@@ -121,7 +121,7 @@ export default class ListingItem extends Component {
             <h1 className="listingItemTitle">{listing.listing_title}</h1>
           </div>
 
-          <div class="row">
+          <div className="row">
             <div className="offerDiv">
               <p className="listingItemOffersReceived">
                 {createdAt}th

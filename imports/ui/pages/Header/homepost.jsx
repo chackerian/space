@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { currentUsername } from '../helpers.js';
-import { store } from '../../layouts/body/layouts.jsx';
 import { connect } from 'react-redux';
 
 class Homepost extends Component {
@@ -53,7 +52,9 @@ class Homepost extends Component {
         <div className="wholeNav">
           <div className="leftNav">
             <ul className="headerSearch">
-              <li className="headerSearchRadiusLogo"><a href="/" className="radiusLogo"><span>SpaceTrades</span></a></li>
+              <li className="headerSearchRadiusLogo">
+                <a href="/" className="radiusLogo"><span>SpaceTrades</span></a>
+              </li>
               <a className="modLocationRadiusTrigger btn btn-primary" href={`/profile/${this.profile}/settings`}>
               </a>
             </ul>
@@ -90,7 +91,7 @@ class Homepost extends Component {
                   <a href="/help"><li>Listings</li></a>
                   <a href="/help"><li>Saved</li></a>
                   <a href="/help"><li>Help Center</li></a>
-                  <a href="#" className="logout" onClick={this.logout()}><li>Logout</li></a>
+                  <a href="#" className="logout" onClick={this.logout}><li>Logout</li></a>
                 </ul>
               </li>
             </ul>
