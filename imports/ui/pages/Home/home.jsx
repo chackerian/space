@@ -3,8 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Listing, Offer } from '/imports/api/links/db.js';
 import GoogleAd from 'react-google-ad';
 import { connect } from 'react-redux';
-// var Client = require('coinbase').Client;
-// var client = new Client({'apiKey': mykey, 'apiSecret': mysecret});
 
 var HomeCard = ({item}) => (
   <div className="grid-item">

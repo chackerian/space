@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 
+// var Client = require('coinbase').Client;
+// var client = new Client({'apiKey': mykey, 'apiSecret': mysecret});
+
 export default class Chat extends Component {
 
 	constructor(props) {

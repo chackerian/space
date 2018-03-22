@@ -14,6 +14,7 @@ export default class Carousel extends Component {
   render() {
     var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0];
     var img = listing.images;
+    console.log(img)
     return (
       <div className="carousel carousel-main" data-flickity>
         <div className="carousel-cell"><span className="helper"></span><img className="carousel-cell-image" data-flickity-lazyload={img[0]} /></div>
