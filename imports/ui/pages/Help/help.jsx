@@ -16,12 +16,6 @@ export default class Help extends Component {
             <p className="helpPagesPar">SpaceTrades helps people organize meetups for buying and selling items locally, whether you are looking to trade your products for others or just sell them. </p>
             <p className="helpPagesPar">Here you can find answers to common questions, review vital safety tips, check the privacy and terms policy and contact us. </p>
 
-            <ul className="helpImgUl">
-                <li><div className="aboutImg"></div></li>
-                <li><div className="aboutImg"></div></li>
-                <li><div className="aboutImg"></div></li>
-            </ul>
-
             <div className="helpCenterThree">
                 <ul className="helpThree">
                     <li>

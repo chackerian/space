@@ -9,8 +9,7 @@ export default class Help extends Component {
       <div className="oneDiv">
         <HelpNav />
         <div className='email'>
-          <h2>Contact Us</h2>
-          <p>Interested in getting in touch with us. <br /></p>
+          <h2>Contact</h2>
           <h3>Email</h3>
           <form className="contactform">
             <p className="contactsubject">

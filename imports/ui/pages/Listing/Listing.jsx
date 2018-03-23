@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
+import { Listing } from '/imports/api/links/db.js';
 
 import Carousel from './carousel.jsx';
-import { Listing, Offer } from '/imports/api/links/db.js';
 import { FlowRouter } from 'meteor/kadira:flow-router';
-import { withTracker } from 'meteor/react-meteor-data';
-
-String.prototype.shorten = function(n) {
-  return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
-};
 
 export default class ListingItem extends Component {
 
@@ -61,34 +56,32 @@ export default class ListingItem extends Component {
 
     try {
       var isCreator = listing.creator_id == Meteor.user()._id ? true : false;
-    }
-    catch (error) {
-      console.log(error)
+    } catch (error) {
+
     }
 
     if (isCreator && isUser) {
       return (
         <div className="actions">
-          <a className='actionButton editListing' onClick={() => this.edit()}>Edit</a>
+          <a className='actionButton editListing' onClick={this.edit}>Edit</a>
         </div>
       )
-    }
-    else if (isUser) {
+    } else if (isUser) {
       return (
         <div className="actions">
-          <a className='actionButton' href='chat'>Chat</a>
-          <a className='actionButton' onClick={() => saveListing()}>Save</a>
-          <a className='actionButton' onClick={() => reportListing()}>Report</a>
+          <a className='actionButton' href='/chat'>Chat</a>
+          <a className='actionButton' onClick={this.saveListing}>Save</a>
+          <a className='actionButton' onClick={this.reportListing}>Report</a>
         </div>
       )
     }
     else {
       return (
-      <div className="actions">
-        <a className='actionButton' href='chat'>Chat</a>
-        <a className='actionButton'>Save</a>
-        <a className='actionButton'>Report</a>
-      </div>
+        <div className="actions">
+          <a className='actionButton' href='/chat'>Chat</a>
+          <a className='actionButton'>Save</a>
+          <a className='actionButton'>Report</a>
+        </div>
       )
     }
   }
@@ -109,7 +102,7 @@ export default class ListingItem extends Component {
   }
 
   render() {
-    var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
+    let listing = Listing.find({ urlKey: FlowRouter.current().params.id }).fetch()
     var createdAt = moment(listing.createdAt).format("dddd, MMMM D");
 
     if (listing) {
@@ -122,9 +115,9 @@ export default class ListingItem extends Component {
           </div>
 
           <div className="row">
-            <div className="offerDiv">
+            <div className="dateDiv">
               <p className="listingItemOffersReceived">
-                {createdAt}th
+                {createdAt}
               </p>
             </div>
 

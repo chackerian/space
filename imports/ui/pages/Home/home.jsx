@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Meteor } from 'meteor/meteor';
-import { Listing, Offer } from '/imports/api/links/db.js';
-import GoogleAd from 'react-google-ad';
 import { connect } from 'react-redux';
+import { Meteor } from 'meteor/meteor';
+import { Listing } from '/imports/api/links/db.js';
+import GoogleAd from 'react-google-ad';
 
 var HomeCard = ({item}) => (
   <div className="grid-item">
     <li className="homeCardLi">
       <ul className="homeCardItem">
-        <li><a className='imglink' href={`/listing/${item.urlKey}`}><img src={item.images[0]} className="homeCardImg"/></a></li>
+        <li><a className='imglink' href={`/listing/${item.urlKey}`}><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ffreshkorean1.files.wordpress.com%2F2012%2F07%2Forange-ec98a4eba08ceca780-fresh-korean.jpg&f=1" className="homeCardImg"/></a></li>
       </ul>
       <ul className="homeCardDetails">
         <li className='homeTitle'><a href={`/listing/${item.urlKey}`}><h4>{item.listing_title}</h4></a></li>

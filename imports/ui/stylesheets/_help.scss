@@ -62,11 +62,6 @@
   }
 }
 
-.faqinfo {
-    text-align: center;
-    margin: 3rem 0 0 0;
-}
-
 .contactform {
     max-width: 400px !important;
 }
@@ -93,7 +88,8 @@
 }
 
 .phone {
-    float: right;
+  float: right;
+  margin-right: 3em;
 }
 
 .phoneNumber {
@@ -131,11 +127,6 @@
     }
 }
 
-.helpNavSelected {
-    background-color: $color-spacered;
-    color: white !important;
-}
-
 .fa-compass {
     margin-right: 1em;
 }
@@ -167,12 +158,4 @@
     height: 80px !important;
     border-radius: 4px !important;
     border: 1px solid #d3d3d3 !important;
-}
-
-.faqInfo {
-    text-align: center;
-    margin: 2rem 0 0 0;
-    h3, .faqInfo p {
-        margin: 5px 0;
-    }
 }

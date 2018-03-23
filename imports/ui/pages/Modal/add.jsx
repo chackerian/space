@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import ReactFilestack, { client } from 'filestack-react';
 import { connect } from 'react-redux';
 // var s3 = require('s3')
-// var s3 = new aws.S3();
+// var s4 = new aws.S3();
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
@@ -92,13 +92,13 @@ class AddModal extends Component {
       creator_username: Meteor.user().profile.name,
       listing_title: this.state.listing_title,
       urlKey: this.state.listing_title.replace(/ /g, '-'),
+      images: Session.get('images'),
       category: this.state.category,
       type: this.state.type,
       price: this.state.price,
       trade: this.state.trade,
       condition: this.state.condition,
       description: this.state.description,
-      offers_received: 0,
     }
 
     function addListingValidate() {
@@ -112,7 +112,7 @@ class AddModal extends Component {
     if (addListingValidate()) {
       Meteor.call('addListing', options);
     }
-
+    this.props.close()
   }
 
   render() {
@@ -159,7 +159,7 @@ class AddModal extends Component {
                                   <option value="Apparel">Apparel</option>
                                   <option value="Electronics">Electronics</option>
                                   <option value="Shoes">Shoes</option>
-                                  <option value="Shoes">Other</option>
+                                  <option value="Other">Other</option>
                               </select>
                           </div>
                       </li>
@@ -313,6 +313,7 @@ class AddModal extends Component {
         images.push(x.url)
       })
       Session.set('images', images)
+      console.log(images)
     }
 
     return(

@@ -6,7 +6,6 @@ import { render } from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-
 import reducer from '../../reducers/reduced.js';
 
 import Alert from '../../pages/Solo/alert.jsx';
@@ -22,6 +21,13 @@ HeaderContainer = withTracker(({ urlKey }) => {
     list
   };
 })(Header);
+
+FooterContainer = withTracker(({ urlKey }) => {
+  const list = Meteor.user();
+  return {
+    list
+  };
+})(Footer);
 
 export default class MainLayout extends Component {
 
@@ -47,10 +53,3 @@ export default class MainLayout extends Component {
     )
   }
 }
-
-FooterContainer = withTracker(({ urlKey }) => {
-  const list = Meteor.user();
-  return {
-    list
-  };
-})(Footer);

@@ -1,4 +1,4 @@
-import { Offer, Listing } from '/imports/api/links/db.js';
+import { Listing } from '/imports/api/links/db.js';
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
 
@@ -18,7 +18,6 @@ import ListingItem from '../../ui/pages/Listing/Listing.jsx';
 import Profile from '../../ui/pages/Profile/profile.jsx';
 import Settings from '../../ui/pages/Profile/settings.jsx';
 
-// Help Center
 import Help from '../../ui/pages/Help/help.jsx';
 import FAQ from '../../ui/pages/Help/faq.jsx';
 import Contact from '../../ui/pages/Help/contact.jsx';
@@ -31,13 +30,6 @@ import Chat from '../../ui/pages/Chat/chat.jsx';
 
 //////////////////////////////////////////////
 
-ListPageContainer = withTracker(({  }) => {
-  const list = Listing.findOne();
-  return {
-    list
-  };
-})(ListingItem);
-
 HomeContainer = withTracker(({ urlKey }) => {
   const list = Listing.find().fetch();
   return {
@@ -46,11 +38,19 @@ HomeContainer = withTracker(({ urlKey }) => {
 })(Home);
 
 ProfileContainer = withTracker(({ urlKey }) => {
-  const list = Meteor.users.find().fetch();
+  const prof = Meteor.users.find().fetch()
+  console.log(prof)
   return {
-    list
+    prof
   };
 })(Profile);
+
+ListingContainer = withTracker(({ urlKey }) => {
+  const lister = Listing.find().fetch()
+  return {
+    lister
+  };
+})(ListingItem);
 
 ///////////////////////////////////////////////
 
@@ -70,15 +70,6 @@ FlowRouter.route('/search', {
       content: <SearchPage />
     })
     Session.set('search', FlowRouter.getQueryParam("q"))
-  }
-});
-
-FlowRouter.route('/add', {
-  name: 'add',
-  action() {
-    mount(MainLayout, {
-      content: <Home />
-    })
   }
 });
 
@@ -115,7 +106,7 @@ listing.route('/:id', {
   action(params) {
     var listing = Listing.find({urlKey: params.id}).fetch()
     mount(MainLayout, {
-      content: <ListPageContainer />
+      content: <ListingContainer />
     })
   }
  });
@@ -125,21 +116,9 @@ var profile = FlowRouter.group({
   name: "profile"
 });
 
-profile.route('/', {
-  name: 'profile',
-  action(params) {
-    window.scrollTo(0, 0);
-    var idr = params.id
-    mount(MainLayout, {
-      content: <ProfileContainer id={idr} />
-    })
-  }
-});
-
 profile.route('/:id', {
   name: 'profiles',
   action(params) {
-    window.scrollTo(0, 0);
     const id_user = params.id
     mount(MainLayout, {
       content: <ProfileContainer id={id_user} />

@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 
+Meteor.subscribe('userShow');
 Meteor.subscribe('listingShow');
 Meteor.subscribe('listingUser');
 Meteor.subscribe('listingId');
-Meteor.subscribe('userShow');

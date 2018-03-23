@@ -101,18 +101,15 @@ Meteor.methods({
        // Category
        category: options.category,
        type: options.type,
-       brandReal: options.brand,
+       brand: options.brand,
        // Payment
        price: options.price,
        payment: options.payment,
        trade: options.trade,
-       size: options.size,
        // Information
        condition: options.condition,
        description: options.description,
        // Location
-       lat: options.lat,
-       lng: options.lng,
        city: options.city,
        state: options.state,
        locationString: options.locationString,
@@ -121,8 +118,6 @@ Meteor.methods({
        // Status
        createdAt: new Date(),
        status: "Pending",
-       offers_received: options.offers_received,
-       offerAccepted: false
      });
  },
  /*
@@ -260,7 +255,7 @@ Meteor.methods({
       receiver: options.receiver,
       conversation: options.conversation,
       timestamp: options.timestamp,
-      createdAt: options.createdAt
+      createdAt: new Date()
     });
   }
 

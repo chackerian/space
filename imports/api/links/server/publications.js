@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Listing, Notification, Message, Offer, Feedback, Report, Saves } from '../db.js';
+import { Listing, Notification, Message, Feedback, Report, Saves } from '../db.js';
 
 if (Meteor.isServer) {
 

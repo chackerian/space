@@ -13,8 +13,8 @@
   font-family: $font-norm;
 }
 
-.offerDiv {
-  width: 75%;
+.dateDiv {
+  width: 50%;
 }
 
 .rating {
@@ -124,17 +124,8 @@
     }
 }
 
-.profileManagerOffer {
-    margin: 0;
-}
-
-.profileManagerUl > li {
-    display: inline-block;
-}
-
 .profileUser {
-  margin: 7em 2em;
-  min-height: 50em;
+  margin: 6em 20em;
 }
 
 .circle {
@@ -147,7 +138,7 @@
 }
 
 .profileUserLeft {
-  width: 22%;
+  width: 14em;
   vertical-align: top;
   display: inline-block;
 }
@@ -159,7 +150,7 @@
 }
 
 .profileUserRight {
-  width: 16.9em;
+  width: 16.5em;
   padding: 1em;
   border: 1px solid;
   display: inline-block;
