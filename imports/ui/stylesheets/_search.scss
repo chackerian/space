@@ -1,25 +1,15 @@
 .search {
-  height: 30px;
   width: 15em;
+  height: 30px;
   border-radius: 3px;
   color: $color-charcoal;
   font-size: 0.9em;
   padding-left: 20px;
   padding-right: 2.5em;
-  box-shadow: 0px 2px 5px;
 }
 
 .small-search {
     display: none;
-}
-
-.searchReduce {
-    float: right;
-}
-
-.searchpage {
-    border: 1px solid black;
-    width: 50%;
 }
 
 .largeSearch {
@@ -30,20 +20,5 @@
 }
 
 .searchBox {
-  display: inline-block;
-  padding: 10px 0px 11px 14px;
-}
-
-.defaultSearch {
-    margin-left: 10%;
-    h2 {
-        font-weight: 400 !important;
-        color: #555 !important;
-        margin-left: -20px;
-    }
-    ul li {
-        list-style: initial;
-        margin: 8px 0;
-        color: #666 !important;
-    }
+  padding-top: 6px;
 }

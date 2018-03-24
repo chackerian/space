@@ -74,8 +74,7 @@ export default class ListingItem extends Component {
           <a className='actionButton' onClick={this.reportListing}>Report</a>
         </div>
       )
-    }
-    else {
+    } else {
       return (
         <div className="actions">
           <a className='actionButton' href='/chat'>Chat</a>
@@ -86,32 +85,18 @@ export default class ListingItem extends Component {
     }
   }
 
-  imageModal() {
-  	<div className="modJoin">
-  	    <div className="modImageDialog modal-dialog" role="document">
-  	        <div className="modal-content">
-  	        	<div className="modal-close">
-  					<a className="close"><i className="material-icons">close</i></a>
-  				</div>
-  	        	<div className="modal-body">
-  			        <img src="{img1}" />
-  	        	</div>
-  	        </div>
-  	    </div>
-  	</div>
-  }
-
   render() {
     let listing = Listing.find({ urlKey: FlowRouter.current().params.id }).fetch()
-    var createdAt = moment(listing.createdAt).format("dddd, MMMM D");
-
-    if (listing) {
+    if (listing && listing.length > 0) {
+      console.log(listing)
+      var listed = listing[0]
+      var createdAt = moment(listed.createdAt).format("dddd, MMMM D");
       return (
         <div className="listingItemDiv oneDiv">
           <div className="listingItemLeft">
 
           <div className="titleBox">
-            <h1 className="listingItemTitle">{listing.listing_title}</h1>
+            <h1 className="listingItemTitle">{listed.listing_title}</h1>
           </div>
 
           <div className="row">
@@ -123,7 +108,7 @@ export default class ListingItem extends Component {
 
             <div className="listingItemPriceButtons">
               <ul className="listingItemPrice">
-                  <li className="money itemMoney">${listing.price}</li>
+                  <li className="money itemMoney">${listed.price}</li>
               </ul>
             </div>
 
@@ -137,16 +122,16 @@ export default class ListingItem extends Component {
               <div className="desc-box desc-box-details">
                 <h4 className="box-title">Details</h4>
                 <p className="desc-full">
-                  <span className='cat'>Category: <a href={`/search?q=${listing.category}`} className="searchProperty">{listing.category}</a></span>
-                  <span className='type'>Type: <a href={`/search?q=${listing.type}`} className="searchProperty">{listing.type}</a></span>
+                  <span className='cat'>Category: <a href={`/search?q=${listed.category}`} className="searchProperty">{listed.category}</a></span>
+                  <span className='type'>Type: <a href={`/search?q=${listed.type}`} className="searchProperty">{listed.type}</a></span>
                   <br />
-                  <span className='condition'>Condition: {listing.condition}</span>
-                  <span className="trades">Trades: {listing.trade}</span>
+                  <span className='condition'>Condition: {listed.condition}</span>
+                  <span className="trades">Trades: {listed.trade}</span>
                 </p>
               </div>
               <div className="desc-box">
                 <h4 className="box-title">Description</h4>
-                <p className="desc-full description">{listing.description}</p>
+                <p className="desc-full description">{listed.description}</p>
               </div>
             </div>
 
@@ -154,16 +139,16 @@ export default class ListingItem extends Component {
               { this.manage() }
               <div className="listingItemUser">
                 <ul className="listingItemUserImg">
-                    <li><a href={`/profile/${listing.creator_id}`}><img src={listing.creator_image}/></a></li>
+                    <li><a href={`/profile/${listed.creator_id}`}><img src={listed.creator_image}/></a></li>
                 </ul>
                 <ul className="listingItemUserInfo">
-                    <li className="listingItemUserName"><a href={`/profile/${listing.creator_id}`}>{listing.creator_username}</a></li>
+                    <li className="listingItemUserName"><a href={`/profile/${listed.creator_id}`}>{listed.creator_username}</a></li>
                     <li className="rating">
-                        <div className="rateit" data-rateit-value="{listing.totalrating}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+                        <div className="rateit" data-rateit-value="{listed.totalrating}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
                     </li>
                 </ul>
               </div>
-              <Social listing={listing} />
+              <Social listing={listed} />
             </div>
           </div>
         </div>

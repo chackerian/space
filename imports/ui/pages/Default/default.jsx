@@ -17,14 +17,6 @@ export default class Defaults extends Component {
     )
   }
 
-  search() {
-    return(
-      <div className="defaultSearch">
-        <h2>Your Search Did Not Return Results</h2>
-      </div>
-    )
-  }
-
   notfound() {
     return(
       <div className="errordiv">

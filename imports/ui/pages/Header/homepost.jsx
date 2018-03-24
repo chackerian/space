@@ -51,13 +51,13 @@ class Homepost extends Component {
       <nav className="headerNav">
         <div className="wholeNav">
           <div className="leftNav">
-            <ul className="headerSearch">
-              <li className="headerSearchRadiusLogo">
-                <a href="/" className="radiusLogo"><span>SpaceTrades</span></a>
-              </li>
-              <a className="modLocationRadiusTrigger btn btn-primary" href={`/profile/${this.profile}/settings`}>
-              </a>
-            </ul>
+            <div className="iconLogo">
+              <ul className="headerSearch">
+                <li className="headerSearchRadiusLogo">
+                  <a href="/" className="radiusLogo"><span>SpaceTrades</span></a>
+                </li>
+              </ul>
+            </div>
             <div className="searchBox">
               <input type="text" id="search" className="search" placeholder="Search" autoFocus="True" /> <i className="material-icons searchIcon">search</i>
             </div>

@@ -106,7 +106,7 @@ listing.route('/:id', {
   action(params) {
     var listing = Listing.find({urlKey: params.id}).fetch()
     mount(MainLayout, {
-      content: <ListingContainer />
+      content: <ListingContainer ids={listing} />
     })
   }
  });

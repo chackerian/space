@@ -30,21 +30,23 @@ class Homepre extends Component {
         <nav className="headerNav">
           <div className="wholeNav">
             <div className="leftNav">
-              <ul className="headerSearch">
-                <li className="headerSearchRadiusLogo">
-                    <a href="/" className="radiusLogo">
-                      <span>SpaceTrades</span>
-                    </a>
-                </li>
-              </ul>
+              <div className="iconLogo">
+                <ul className="headerSearch">
+                  <li className="headerSearchRadiusLogo">
+                      <a href="/" className="radiusLogo">
+                        <span>SpaceTrades</span>
+                      </a>
+                  </li>
+                </ul>
+              </div>
               <div className="searchBox">
                 <input type="text" id="search" className="search" placeholder="Search" autoFocus="True" /><i className="material-icons searchIcon">search</i>
               </div>
             </div>
             <div className="rightNav">
               <ul className="headerAuthPre headerAuth">
-                  <li><a className="btn btn-primary" onClick={this.props.join}>Join</a></li>
-                  <li><a className="login" onClick={this.login}>Login</a></li>
+                  <li><a className="btn btn-primary" href="#" onClick={this.props.join}>Join</a></li>
+                  <li><a className="login" href="#" onClick={this.login}>Login</a></li>
               </ul>
             </div>
           </div>

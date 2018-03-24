@@ -32,13 +32,13 @@ export default class Help extends Component {
                     </li>
                     <li>
                         <ul>
-                            <li><h3>Review Terms</h3></li>
-                            <li>To use the site, you agree to certain <a className='link' href="/help/terms">Terms &amp; Conditions</a>.</li>
+                            <li><h3>Review Safety Tips</h3></li>
+                            <li>Take a look at the <a className='link' href="/help/safety">Safety Tips</a>.</li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li><h3>Terms and Conditions</h3></li>
+                            <li><h3>Review Terms and Conditions</h3></li>
                             <li>To use the site, you agree to certain <a className='link' href="/help/terms">Terms &amp; Conditions</a>.</li>
                         </ul>
                     </li>
