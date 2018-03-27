@@ -9,9 +9,10 @@ export default class Profile extends Component {
   }
 
   render() {
-    var prof = Meteor.users.find({_id: this.props.id}).fetch()
-    if (prof && prof.length > 0) {
-    console.log(prof)
+    var profile = Meteor.users.find({_id: FlowRouter.current().params.id}).fetch()
+    console.log("fortune is made", prof)
+    if (profile && profile.length > 0) {
+    var prof = profile[0];
     var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
     var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
     var city = JSON.parse(Meteor.user().profile.location).city;
@@ -31,7 +32,7 @@ export default class Profile extends Component {
                       <li><div className="circle" style={{'backgroundColor': '#4E8F77'}}></div></li>
                   </ul>
               </div>
-              <div className="profileUserRating">
+              <div className="UserRating">
                 <ul className="profileUserRatingUl">
                   <li>
                     <a href={facebook} target="_blank">
@@ -50,13 +51,15 @@ export default class Profile extends Component {
                       <i className="fa fa-compass"></i><li className='locoplace'>{city}, {state}</li>
                   </ul>
               </div>
-              <div className="profileUserAmount">
-                <ul>
-                    <li className="profileUserAmountBought">Meetups: {prof.profile.meetups_count}</li>
-                </ul>
-              </div>
-              <div className="rating">
-                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              <div className="stats">
+                <div className="profileUserAmount">
+                  <ul>
+                      <li className="profileUserAmountBought">Meetups: {prof.profile.meetups_count}</li>
+                  </ul>
+                </div>
+                <div className="rating">
+                  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
               </div>
             </div>
             <ul className="headerAuth editProfile">

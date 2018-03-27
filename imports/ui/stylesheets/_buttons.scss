@@ -14,46 +14,43 @@ a[href] {
 
 .link {
     color: $color-link !important;
-    font-family: 'arial';
+    font-family: 'arial' !important;
     &:hover {
         color: #0890F2 !important;
         text-decoration: underline;
     }
 }
 
-.actionButton {
-  border: 1px solid black;
-  padding: 0.5em 1.4em;
-  margin: 0 0.4em;
-  font-family: "Oswald", sans-serif;
-  &:hover {
-      color: $color-spacered;
-      border-color: $color-spacered;
-  }
-}
-
-.editButton {
-  border: 1px solid white;
-  color: white;
-  padding: 0.5em 1.4em;
-  margin: 0 0.4em;
-  font-family: "Oswald", sans-serif;
-  &:hover {
-      color: $color-spacered;
-      border-color: $color-spacered;
-  }
-}
-
-.editButton2 {
-  border: 1px solid black;
-  color: black;
-  padding: 0.5em 1.4em;
-  margin: 0 0.4em;
-  font-family: "Oswald", sans-serif;
-  &:hover {
+.headerAuth {
+    li a {
+      color: white !important;
+      border: 1px solid white !important;
+      border-radius: 0.2em;
+      padding: 3px 10px;
+      margin: 0.5em;
+      transition: 0.5s;
+    }
+    li a:hover {
       color: white;
-      border-color: white;
-  }
+      background: $color-spacegrey;
+    }
+}
+
+.buttonas {
+    text-align: center;
+    li a {
+      color: black !important;
+      border: 1px solid black !important;
+      border-radius: 0.2em;
+      padding: 5px 15px;
+      margin: 0.5em;
+      transition: 0.5s;
+    }
+    li a:hover {
+      color: white !important;
+      border: 1px solid black !important;
+      background: $color-spacegrey;
+    }
 }
 
 .modalSubmitBtn {
@@ -118,17 +115,4 @@ a[href] {
 
 .profileSettingsSubmit {
     float: right !important;
-}
-
-.defaultProfileButton {
-    margin-top: 30px;
-    list-style: none !important;
-     a {
-        padding: 12px 12px;
-        font-size: 0.9rem;
-        color: white;
-        background-color: $color-spacered;
-        border-bottom: 2px solid $color-spacered;
-        border-radius: 4px;
-    }
 }

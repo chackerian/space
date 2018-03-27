@@ -115,10 +115,6 @@
 	}
 }
 
-#profileReceivedName {
-	margin: 8px 0 15px 0 !important;
-}
-
 ////////////////// Join ///////////////////
 
 .modWrapper {
@@ -148,24 +144,6 @@
 
 /////////////////////////////////////////
 
-.modProfileActiveBtn {
-	margin: 20px 0 !important;
-	color: white !important;
-	button {
-		padding: 15px !important;
-		width: 75% !important;
-		color: white !important;
-		background-color: $color-spacered !important;
-		border-radius: 4px;
-	}
-	button:hover {
-		background-color: #f73c37 !important;
-	}
-	& :first-child {
-		margin-top: 40px !important;
-	}
-}
-
 .modActiveCreator {
 	color: $color-spaceblue !important;
 }
@@ -192,15 +170,6 @@
 	height: 320px !important;
 }
 
-.modProfileActiveBtnDir {
-	float: right !important;
-	width: 40% !important;
-	margin-top: 0 !important;
-	button {
-		margin-right: 200px;
-	}
-}
-
 .editListTrade {
 	margin-top: 30px !important;
 }
@@ -217,15 +186,6 @@
 	margin-top: 15px !important;
 }
 
-.reportName {
-    margin-left: 20px;
-    ul li a p {
-        font-size: 1.4rem;
-        padding: 2px;
-        margin: 0 10px;
-    }
-}
-
 #datepicker {
     color: black !important;
 }
@@ -233,8 +193,6 @@
 .offerAcceptButton input:hover {
     background-color: #6DAB59;
 }
-
-// Image
 
 .modImageDialog {
 	margin: 0px;

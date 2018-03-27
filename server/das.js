@@ -26,7 +26,7 @@ if (Meteor.isServer) {
   Slingshot.fileRestrictions("myFileUploads", {
         allowedFileTypes: ["image/png", "image/jpeg", "image/gif", "image/jpg"],
         maxSize: 10 * 1024 * 1024 // 10 MB
-    });
+  });
 
     try {
       Slingshot.createDirective("myFileUploads", Slingshot.S3Storage, {

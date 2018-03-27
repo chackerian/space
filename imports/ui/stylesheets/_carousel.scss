@@ -6,14 +6,9 @@
 }
 
 .carousel-cell-image {
-  border-radius: 0.5em;
-  height: 22em;
-  vertical-align: middle;
-}
-
-.helper {
-    display: inline-block;
-    height: 100%;
+    border-radius: 0.5em;
+    height: 22em;
+    width: auto !important;
     vertical-align: middle;
 }
 

@@ -39,7 +39,6 @@ HomeContainer = withTracker(({ urlKey }) => {
 
 ProfileContainer = withTracker(({ urlKey }) => {
   const prof = Meteor.users.find().fetch()
-  console.log(prof)
   return {
     prof
   };
@@ -104,9 +103,8 @@ var listing = FlowRouter.group({
 listing.route('/:id', {
   name: 'item',
   action(params) {
-    var listing = Listing.find({urlKey: params.id}).fetch()
     mount(MainLayout, {
-      content: <ListingContainer ids={listing} />
+      content: <ListingContainer />
     })
   }
  });
@@ -119,9 +117,8 @@ var profile = FlowRouter.group({
 profile.route('/:id', {
   name: 'profiles',
   action(params) {
-    const id_user = params.id
     mount(MainLayout, {
-      content: <ProfileContainer id={id_user} />
+      content: <ProfileContainer />
     })
   }
 });

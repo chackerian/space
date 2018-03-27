@@ -25,7 +25,7 @@
   width: 100%;
   z-index: 100;
   top: 0;
-  height: 65px;
+  height: 60px;
   position: fixed !important;
   border-bottom: 2px solid $color-spacegrey;
   ul {
@@ -36,7 +36,7 @@
 .wholeNav {
   max-width: 1180px;
   align-items: center;
-  height: 65px !important;
+  height: 60px !important;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -46,32 +46,44 @@
   display: flex !important;
 }
 
-.headerAuth {
-    li a {
-      color: white !important;
-      border: 1px solid white !important;
-      border-radius: 0.2em;
-      padding: 5px 15px;
-      margin: 0.5em;
-      transition: 0.5s;
-    }
-    li a:hover {
-      color: white;
-      background: $color-spacegrey;
+.navGeneral {
+  margin-right: 22px;
+  margin-left: .7em;
+}
+
+.navNotifications {
+  margin-left: .7em;
+    ul {
+        display: none;
+        position: absolute;
+        margin: 1.4em -1px 0px -19.1em !important;
+        border: 3px solid $color-spacegrey;
+        border-radius: 0.3em;
+        animation: 0.5s fadeInDownMini;
+        padding: 0;
+        background-color: white !important;
+        font-size: 0.8rem;
+        width: 24em;
+        z-index: 3;
+
+        li {
+            padding: 15px 50px 15px 15px;
+            display: flex;
+
+            a {
+                margin: 0 !important;
+                padding: 15px 80px 15px 15px !important;
+            }
+        }
+
     }
 }
 
 .navGeneral {
-  margin-right: 22px;
-}
-
-.headerDropDown {
-    position: relative;
-    display: inline-block;
     ul {
         display: none;
         position: absolute;
-        margin: 0.6em -1px 0px -13.16em !important;
+        margin: 1.4em -1px 0px -14.1em !important;
         border: 3px solid $color-spacegrey;
         border-radius: 0.3em;
         animation: 0.5s fadeInDownMini;
@@ -94,23 +106,23 @@
     }
 }
 
-.navNotifications {
-  ul {
-    margin: 1.6em -1px 0px -14.1em !important;
-  }
+.headerSearchRadiusLogo {
+  margin-right: 22px;
+  margin-top: 0.3em;
+  margin-left: 22px;
 }
 
 .radiusLogo span {
-    font-size: 1.6em;
-    font-weight: bold !important;
-    color: white;
-}
-
-.radiusLogo {
   color: white !important;
+  font-weight: bold !important;
+  font-size: 1.4em;
 }
 
 .clickDropper {
+    li {
+      display: inline-block !important;
+      padding: 0 0 0 0;
+    }
     li ul li a {
       padding: 15px 0px 15px 0px !important;
       font-size: 0.8rem !important;
@@ -119,7 +131,7 @@
       color: $color-spacegrey;
       margin: -30px 15px -4px 0;
       font-size: 1.3rem;
-      left: 8.55em !important;
+      left: 11.7em !important;
       pointer-events: none;
       content: '';
       display: block;
@@ -151,9 +163,10 @@
 
 .headerDropDownNav {
   box-shadow: 0px 2px 5px;
-  a li {
-    font-family: 'system-ui';
+  a {
+    font-family: 'system-ui' !important;
     font-weight: bold;
+    display: grid !important;
     &:hover {
         background: $color-charcoal;
         transition: 0.2s;
@@ -162,15 +175,8 @@
   }
 }
 
-.headerCatDropDown {
-    margin-left: -151px !important;
-    ul {
-      margin: 0.9em -1px 0px -14em !important;
-    }
-}
-
 .headerNameOptions li a {
-  padding: 8px !important;
+  padding: 3px 10px !important;
   border: 1px solid black;
   color: black !important;
   border-radius: 0.2em;
@@ -183,9 +189,4 @@
 
 .headerSearch {
   margin: 0 !important;
-}
-
-.headerSearchRadiusLogo {
-  margin-right: 22px;
-  margin-left: 22px;
 }

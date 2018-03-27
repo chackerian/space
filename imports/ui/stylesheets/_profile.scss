@@ -3,6 +3,10 @@
     width: 48%;
 }
 
+.locoplace {
+  display: inline-block !important;
+}
+
 .guardian {
     float: right;
     width: 48%;
@@ -31,21 +35,10 @@
   border-radius: 7.2em;
 }
 
-.profileSettingsSubmit {
-  background: $color-spacered;
-}
-
-.managerReceivedOffers {
-    display: inline-block;
-}
-
-.managerOfferStatus {
-    color: $color-purple !important;
-}
-
 .profile-link {
     color: $color-spacegrey !important;
     text-underline: underline;
+    font-family: 'system-ui' !important;
     :hover {
         color: #0890F2 !important;
         text-decoration: underline;
@@ -85,51 +78,8 @@
   }
 }
 
-.defaultProfileUserDiv {
-    margin-top: 0 !important;
-}
-
-.profileUserFeedbackUl {
-    margin: 0;
-}
-
-.profileUserButtonUl > li {
-    display: inline-block !important;
-}
-
-.profileUserImg {
-    height: 200px !important;
-    border-radius: 5px !important;
-}
-
-.profileUserCards {
-    text-align: center;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    h2 {
-        text-decoration: underline;
-    }
-}
-
-.profileUserCardsUl li {
-    width: 20%;
-    height: 100%;
-    display: inline-block;
-    margin: 0.6%;
-    border: 1px solid $color-spaceblue;
-    border-radius: 4px !important;
-    a {
-        padding: 0;
-    }
-    img {
-        width: 100%;
-        height: auto;
-        border-radius: 4px !important;
-    }
-}
-
 .profileUser {
-  margin: 6em 20em;
+    margin: 6em 20em;
 }
 
 .circle {
@@ -172,18 +122,19 @@
 }
 
 .profileUserName {
-    h1 {
-        font-size: 2.2rem;
-        font-weight: bold !important;
-        margin: 0;
-    }
-    ul {
-        margin: 0;
-        li {
-            display: inline-block;
-            vertical-align: middle;
-        }
-    }
+  h1 {
+      font-size: 1.5rem;
+      font-weight: bold !important;
+      margin: 0;
+      font-family: 'system-ui';
+  }
+  ul {
+      margin: 0;
+      li {
+          display: inline-block;
+          vertical-align: middle;
+      }
+  }
 }
 
 .profileUserRating ul {
@@ -240,44 +191,11 @@
     }
 }
 
-.profileStars {
-    font-size: 1.5em;
-    vertical-align: middle !important;
-    display: inline-block;
-    span {
-        color: #777 !important;
-        vertical-align: middle !important;
-    }
-    span:hover {
-        color: #555 !important;
-    }
-}
-
 .profileSettingsUl {
     width: 70% !important;
     margin: auto !important;
     & > li {
         display: block;
-    }
-}
-
-.profileSettingsLi {
-    width: 100%;
-    h4 {
-        font-weight: 400 !important;
-        font-size: 1.1rem !important;
-    }
-    ul > li {
-        display: inline-block;
-    }
-    ul li h4 {
-        margin-right: 40px;
-    }
-    ul li input {
-        padding: 10px 12px;
-        width: 95%;
-        border-radius: 4px;
-        border: 1px solid #d3d3d3;
     }
 }
 
@@ -315,119 +233,6 @@
     margin-left: 20px;
 }
 
-/* View Feedback */
-
-.profileUserFeedbackView {
-    width: 90%;
-}
-
-.profileUserFeedbackView h2 {
-    font-weight: 400 !important;
-    margin-left: 120px !important;
-}
-
-.profileUserFeedbackViewSymbols {
-    text-align: center;
-    font-size: 3.5rem;
-    color: #989898;
-    margin: 40px auto;
-}
-
-.profileUserFeedbackViewSymbols li {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0px 40px;
-}
-
-.profileUserFeedbackViewSymbols li i {
-    vertical-align: middle;
-    margin-right: 15px;
-    color: #989898;
-}
-
-.profileUserFeedbackViewPositive {
-    margin-left: 0 !important;
-}
-
-.profileUserFeedbackViewNegative {
-    margin-right: 0 !important;
-}
-
-.profileUserFeedbackViewPositive, .profileUserFeedbackViewPositive i, .profileUserFeedbackViewPositive i:hover {
-    color: #396 !important;
-}
-
-.profileUserFeedbackViewNegative, .profileUserFeedbackViewNegative i, .profileUserFeedbackViewNegative i:hover {
-    color: tomato !important;
-}
-
-.profileUserFeedbackViewCriteria {
-    margin: auto;
-    width: 73%;
-}
-
-.profileUserFeedbackViewCriteria li ul > li {
-    display: inline-block;
-}
-
-.profileUserFeedbackViewCriteria li > ul {
-    font-size: 1.2rem;
-}
-
-.profileUserFeedbackViewCriteria > li {
- margin: 25px 0;
- display: inline-block;
-}
-
-.profileUserFeedbackViewQuestion {
-    font-weight: 400 !important;
-}
-
-/************ IMPORTANT - CHANGE THE VALUES OF THE FOLLOWING AS THE CRITERIA TEXT CHANGES */
-
-/************ END END END END END */
-
-.profileUserFeedbackViewResponse {
-    font-size: 1rem;
-    border-radius: 4px;
-    width: 80% !important;
-    margin: 25px auto;
-}
-
-.profileUserFeedbackViewResponse li {
-    padding: 10px 0;
-    border-bottom: 1px solid #d3d3d7;
-}
-
-.profileUserFeedbackViewResponse li b {
-    font-weight: 400 !important;
-    font-size: 0.96rem !important;
-}
-
-.profileUserFeedbackViewResponse li p {
-    margin: 10px 0 0 0 !important;
-    font-size: 0.9rem !important;
-    overflow: initial !important;
-}
-
-.profileUserFeedbackViewResponse li i {
-    font-size: 0.8rem !important;
-    color: $color-purple !important;
-}
-
-.profileUserFeedbackViewResponse li i:hover {
-    color: $color-purple !important;
-}
-
-.profileUserFeedbackViewResponse li i a {
-    text-decoration: underline !important;
-    color: $color-purple !important;
-}
-
-.profileUserFeedbackViewResponse li i a:hover {
-    color: $color-spaceblue !important;
-}
-
 .profileCard > h2 {
     margin-left: 5px;
 }
@@ -446,69 +251,6 @@
     &:hover {
         border: 1px solid #999;
     }
-}
-
-.profileCardInfo {
-    text-align: left !important;
-    width: 45%;
-    margin-left: 2%;
-    vertical-align: top;
-    &  > li {
-        margin-bottom: 12px;
-    }
-    li a h4 {
-        margin: 0;
-        color: $color-spaceblue;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-weight: 400 !important;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        font-size: 1.5em;
-        font-family: "Oswald";
-    }
-    li a h4:hover {
-        text-decoration: underline;
-    }
-}
-
-.profileCardImage {
-    width: 49%;
-    margin-right: 2%;
-    img {
-        width: 100%;
-        height: 100%;
-        border-radius: 4px !important;
-    }
-}
-
-.profileCardName {
-    text-decoration: underline !important;
-    font-style: italic;
-    &:hover {
-        color: $color-blue2 !important;
-    }
-}
-
-.profileCardView {
-    margin: 25px 0 0 0;
-    text-align: right;
-    a {
-        padding: 10px 18px !important;
-        font-size: 0.9rem;
-        background-color: $color-spacered;
-        color: #fff;
-        border-radius: 4px;
-    }
-}
-
-.profileCardItem {
-    font-size: 0.9rem;
-    margin-bottom: 5px !important;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .featurePageTitle {
@@ -594,37 +336,12 @@
     margin: 2px 0 20px 0 !important;
 }
 
-.profileReceivedPrice {
-    margin: 12px 0 8px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .profileReceivedDate,
 .profileReceivedLocation {
     margin: 0 0 8px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.profileReceivedButtons {
-    margin-top: 15px;
-    li a {
-        padding: 14px 12px;
-        font-size: 1rem;
-        color: #fff !important;
-        background-color: $color-spacered;
-        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        border-radius: 6px;
-        overflow: hidden;
-        float: right;
-    }
-}
-
-.profileReceivedButtonsUl > li {
-    display: inline-block;
 }
 
 .profileReceivedAccept a {
@@ -649,41 +366,7 @@
     margin-bottom: 50px;
 }
 
-.abouttext textarea {
-    width: 95% !important;
-    padding: 10px 12px !important;
-    height: 80px !important;
-    border-radius: 4px !important;
-    border: 1px solid #d3d3d3 !important;
-    vertical-align: middle !important;
-}
-
 /** Social Button CSS **/
-
-.share-btn {
-    display: inline-block !important;
-    color: white !important;
-    width: 4em !important;
-    text-align: center !important;
-    border-radius: 4px;
-    margin: 0 1px !important;
-
-    &:hover {
-        color: #eeeeee !important;
-    }
-
-    &:active {
-        position: relative !important;
-        top: 2px !important;
-        box-shadow: none !important;
-        color: #e2e2e2 !important;
-        outline: none !important;
-    }
-
-    i {
-    color: #fff !important;
-    }
-}
 
 .defaultProfileDiv {
     text-align: center;

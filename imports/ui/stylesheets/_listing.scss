@@ -1,6 +1,6 @@
 .itemMoney {
     font-size: 1.7rem !important;
-    width: 2.5em;
+    width: 3.5em;
 }
 
 .actions {
@@ -12,9 +12,38 @@
   width: 50% !important;
 }
 
+.rowListing {
+  margin-bottom: 5em;
+}
+
 .type,
 .trades {
   float: right;
+}
+
+.share-btn {
+    display: inline-block !important;
+    color: white !important;
+    width: 4em !important;
+    text-align: center !important;
+    border-radius: 4px;
+    margin: 0 1px !important;
+
+    &:hover {
+        color: #eeeeee !important;
+    }
+
+    &:active {
+        position: relative !important;
+        top: 2px !important;
+        box-shadow: none !important;
+        color: #e2e2e2 !important;
+        outline: none !important;
+    }
+
+    i {
+    color: #fff !important;
+    }
 }
 
 .share-btn.twitter     {
@@ -66,7 +95,7 @@
 }
 
 .listingItemUser {
-    display: inline-block;
+    text-align: CENTER;
     a span {
         vertical-align: middle;
         margin-left: 4px;
@@ -91,8 +120,7 @@
   border-radius: 0.5em;
 }
 
-.listingItemUserImg {
-    margin-top: 10px !important;
+.userImgSmall {
     ul li a img {
         height: 80px !important;
         width: 80px !important;
@@ -101,7 +129,7 @@
 
 .listingItemUserInfo {
     margin-left: 15px !important;
-    margin-top: 10px !important;
+    margin-top: 30px !important;
     vertical-align: middle;
     font-size: 1.5rem;
 }
@@ -119,20 +147,18 @@
    }
 }
 
-.listingItemOffersReceived {
+.listingItemCreated {
     color: $color-royal;
     font-weight: bold;
     width: 100%;
     float: left;
-    font-size: 0.9em !important;
-    background: white;
 }
 
 .listingItemDiv {
   padding: 2em 2em;
   margin: 6em 13em;
   background: white;
-  border: 2px solid $color-spacegrey;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.05);
   & > div {
       display: inline-block;
   }
@@ -147,14 +173,7 @@
 }
 
 .listingItemPrice {
-  padding: 0.5em;
-  border-radius: 0.4em;
-}
-
-.listingItemPriceButtons {
-    width: 25%;
     float: right;
-    text-align: center;
      ul {
         margin: 0;
         display: inline-block;
@@ -165,66 +184,10 @@
     width: 100%;
 }
 
-.listingItemDetails {
-    margin-top: 150px;
-    margin-bottom: 20px;
-    width: 75%;
-}
-
-.listingItemDetails h4,
-.listingItemDesc h4 {
-    font-size: 1.6rem;
-    margin: 0;
-    border-bottom: 1px solid $color-spaceblue;
-    padding-bottom: 5px;
-    color: $color-spaceblue;
-}
-
-.listingItemDetailLeft {
-    width: 45%;
-    float: left;
-}
-
-.locoplace {
-  display: inline-block !important;
-}
-
-.listingItemDetailRight {
-    width: 45%;
-    float: right;
-}
-
-.listingItemDesc {
-    margin: 50px 0;
-    width: 75%;
-}
-
-.listingItemTrades {
-    margin-left: 15px;
-}
-
 .listingItemTitle {
     font-size: 2.4em !important;
     font-family: 'system-ui';
-    color: $color-spacered;
-    font-weight: bold;
     margin: 0;
-}
-
-.listingPayment {
-    display: block !important;
-    margin: -75px -100px 0 0;
-    li {
-       display: inline-block;
-       margin: 0;
-       i {
-           font-size: 1.6rem;
-           color: gold !important;
-       }
-       i:hover {
-           color: gold !important;
-       }
-   }
 }
 
 .listingItemShare {
@@ -235,15 +198,12 @@
     }
 }
 
-// Edits
-
 .titleEdit {
     width: 99%;
 }
 
 .editing {
   border: 1px solid $color-divider !important;
-  padding: 8px !important;
 }
 
 .descEdit {

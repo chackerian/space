@@ -18,9 +18,9 @@ export default class Help extends Component {
             <p className="contacttext">
               <textarea placeholder="Message" className="message"></textarea>
             </p>
-            <p className="contactSend">
-              <a className="actionButton" href="#">Send</a>
-            </p>
+            <ul className="buttonas">
+                <li><a className="btn btn-primary addListing" href="#" onClick={this.edit}>Send</a></li>
+            </ul>
           </form>
         </div>
         <div className='phone'>

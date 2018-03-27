@@ -369,8 +369,8 @@ class AddModal extends Component {
                           <h3>Which Form Of Payment Will You Accept?</h3>
                           <ul className="paymentform" data-key="payment" value={this.state.payment} onChange={(event) => this.handleChange(event)}>
                               <li className="modOfferRequestPaymentCash">
-                                  <input type="radio" id="modAddListingCashRadio" name="addListingPayment" value="Cash" className="radioWrapElement" defaultChecked/>
-                                  <label htmlFor="modAddListingCashRadio">Cash</label>
+                                  <input type="radio" id="cashRadio" name="addListingPayment" value="Cash" className="radioWrapElement" defaultChecked/>
+                                  <label htmlFor="cashRadio">Cash</label>
                               </li>
                               <li className="modOfferRequestPaymentOther">
                                   <input type="radio" id="modAddListingOtherRadio" name="addListingPayment" value="Other" className="radioWrapElement"/>

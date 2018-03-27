@@ -62,9 +62,9 @@ export default class ListingItem extends Component {
 
     if (isCreator && isUser) {
       return (
-        <div className="actions">
-          <a className='actionButton editListing' onClick={this.edit}>Edit</a>
-        </div>
+        <ul className="buttonas">
+            <li><a className="btn btn-primary addListing" href="#" onClick={this.edit}>Edit Listing</a></li>
+        </ul>
       )
     } else if (isUser) {
       return (
@@ -88,7 +88,6 @@ export default class ListingItem extends Component {
   render() {
     let listing = Listing.find({ urlKey: FlowRouter.current().params.id }).fetch()
     if (listing && listing.length > 0) {
-      console.log(listing)
       var listed = listing[0]
       var createdAt = moment(listed.createdAt).format("dddd, MMMM D");
       return (
@@ -99,19 +98,17 @@ export default class ListingItem extends Component {
             <h1 className="listingItemTitle">{listed.listing_title}</h1>
           </div>
 
-          <div className="row">
+          <div className="row rowListing">
             <div className="dateDiv">
-              <p className="listingItemOffersReceived">
+              <p className="listingItemCreated">
                 {createdAt}
               </p>
             </div>
-
-            <div className="listingItemPriceButtons">
+            <div className="listingPrice">
               <ul className="listingItemPrice">
                   <li className="money itemMoney">${listed.price}</li>
               </ul>
             </div>
-
           </div>
           <div className='topPage'>
             <Carousel />

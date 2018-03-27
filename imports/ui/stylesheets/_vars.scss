@@ -2,8 +2,6 @@
 $color-spacered:    		#D9342D;
 $color-spaceblue:   		#00bfff;
 $color-spacegreen:  		#75D855;
-$color-green1:          #5FCF80;
-$color-green2:          #6DAB59;
 
 $color-spacegrey:   		#404040;
 $color-subtlegrey: 		  rgba(211, 211, 211, 0.31);
@@ -12,25 +10,17 @@ $color-divider: 			  #d3d3d3;
 $color-orange:          #ff5700;
 $color-blue:            #006eff;
 $color-lightblue:       #34dddd;
-$color-cardinal:    		#C41E3A;
 $color-burgundy:    		#900020;
-$color-banana:      		#ffff00;
 $color-royal:       		#523f8c;
 $color-blue:        		#0266C8;
 $color-blue2:       		#0295ff;
 $color-venetian-red:		#C80815;
 $color-lightgrey:   		#999;
 $color-purple:      		#6c54b3;
-$color-platinum:    		#E5E4E2;
-$color-hashtag:         #40e0d0;
-$color-blueglue:        #0800ff;
-$color-orangeporridge:  #FFA500;
-$color-blueboo:         #4d90fe;
 $color-darkblue:        #3b5998;
 $color-limey:           #2dbb7b;
 $color-bluey:           #3c37c3;
 $color-charcoal:        #262626;
-$color-darker:          #171717;
 $color-ruddy:           #f73c37;
 $color-bluey:           #06C1FF;
 
@@ -65,16 +55,10 @@ $font-secondary:               'Roboto', sans-serif;
 // Money
 $font-text:                      'Abel', sans-serif;
 
-// Error
-$font-alfred:             'Baskerville', sans-serif;
-
 .money {
     color: $color-money !important;
-    font-weight: 400;
     font-family: 'Open Sans' !important;
 }
-
-// #E4A83A
 
 $enable-flex: true;
 $enable-gradients: true;

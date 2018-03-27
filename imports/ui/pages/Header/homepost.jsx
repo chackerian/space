@@ -70,7 +70,7 @@ class Homepost extends Component {
                 </a>
               </li>
             </ul>
-            <ul className="headerPostOptions clickDropper">
+            <ul className="clickDropper">
               <li className="headerDropDown">
                 <a className="small-search" data-toggle="tooltip" data-placement="bottom">
                   <i className="fa fa-search"></i>

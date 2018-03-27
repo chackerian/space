@@ -96,17 +96,17 @@
 }
 
 .helpiteml {
-    margin-top: 7.2rem;
+    margin-top: 5.2rem;
     text-align: center;
     li {
-        padding: 0.9em !important;
-        font-family: $font-norm;
-        a {
-            color: $color-spacegrey !important;
-        }
-        a:hover {
-            color: white !important;
-        }
+      padding: 0.9em !important;
+      font-family: $font-norm;
+      a {
+          color: $color-spacegrey !important;
+      }
+      a:hover {
+          color: white !important;
+      }
     }
 }
 
@@ -149,6 +149,7 @@
 .helpShow {
   margin-top: 1em;
   text-align: center;
+  font-size: 2rem;
 }
 
 .contacttext textarea {
