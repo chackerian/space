@@ -91,7 +91,7 @@ export default class ListingItem extends Component {
       var listed = listing[0]
       var createdAt = moment(listed.createdAt).format("dddd, MMMM D");
       return (
-        <div className="listingItemDiv oneDiv">
+        <div className="listingItemDiv">
           <div className="listingItemLeft">
 
           <div className="titleBox">
@@ -112,28 +112,10 @@ export default class ListingItem extends Component {
           </div>
           <div className='topPage'>
             <Carousel />
-            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x800&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
+            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x300&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
           </div>
           <div className='bottomPage'>
-            <div className="desc">
-              <div className="desc-box desc-box-details">
-                <h4 className="box-title">Details</h4>
-                <p className="desc-full">
-                  <span className='cat'>Category: <a href={`/search?q=${listed.category}`} className="link">{listed.category}</a></span>
-                  <span className='type'>Type: <a href={`/search?q=${listed.type}`} className="link">{listed.type}</a></span>
-                  <br />
-                  <span className='condition'>Condition: {listed.condition}</span>
-                  <span className="trades">Trades: {listed.trade}</span>
-                </p>
-              </div>
-              <div className="desc-box">
-                <h4 className="box-title">Description</h4>
-                <p className="desc-full description">{listed.description}</p>
-              </div>
-            </div>
-
             <div className="guardian">
-              { this.manage() }
               <div className="listingItemUser">
                 <ul className="listingItemUserImg">
                     <li><a href={`/profile/${listed.creator_id}`}><img src={listed.creator_image}/></a></li>
@@ -146,6 +128,13 @@ export default class ListingItem extends Component {
                 </ul>
               </div>
               <Social listing={listed} />
+              { this.manage() }
+            </div>
+            <div className="desc">
+              <div className="desc-box">
+                <h4 className="box-title">Description</h4>
+                <p className="desc-full description">{listed.description}</p>
+              </div>
             </div>
           </div>
         </div>

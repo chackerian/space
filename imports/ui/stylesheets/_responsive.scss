@@ -2,7 +2,30 @@
     Adds responsiveness to mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media (max-width: 1350px) {
+@media (max-width: 900px) {
+
+  .small-search {
+    display: inline-block !important;
+  }
+
+  .searchIcon {
+    display: none;
+  }
+
+  .search {
+    display: none
+  }
+
+  .placeLocation {
+    display: none;
+  }
+
+  .headerNameOptions {
+    display: none !important;
+  }
+}
+
+@media (max-width: 850px) {
 
   .carousel {
     width: 100% !important;
@@ -21,49 +44,24 @@
     padding: 2em 1em;
   }
 
-}
-@media (max-width: 900px) {
+  .profileUserImage {
+    height: 125px !important;
+    width: 125px !important;
+  }
 
-    .profileUserImage {
-      height: 125px !important;
-      width: 125px !important;
-    }
+  .guardian {
+      float: none;
+      margin-top: 1em;
+      width: 100% !important;
+  }
 
-    .small-search {
-      display: inline-block !important;
-    }
+  .desc {
+      width: 100% !important;
+  }
 
-    .searchIcon {
-      display: none;
-    }
-
-    .search {
-      display: none
-    }
-
-    .placeLocation {
-      display: none;
-    }
-
-    .headerNameOptions {
-      display: none !important;
-    }
-}
-
-@media (max-width: 850px) {
-    .guardian {
-        float: none;
-        margin-top: 1em;
-        width: 100% !important;
-    }
-
-    .desc {
-        width: 100% !important;
-    }
-
-    .oneDiv {
-      margin: 0em 2em;
-    }
+  .oneDiv {
+    margin: 0em 2em;
+  }
 }
 
 @media (max-width: 750px) {

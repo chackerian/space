@@ -42,8 +42,8 @@ a[href] {
       border: 1px solid black !important;
       border-radius: 0.2em;
       padding: 5px 15px;
-      margin: 0.5em;
       transition: 0.5s;
+      margin-left: 1em;
     }
     li a:hover {
       color: white !important;
@@ -77,6 +77,8 @@ a[href] {
 .join-button {
     cursor: pointer;
     margin-top: 20px;
+    padding: 1em;
+    width: 13em;
     background-color: #3A5795 !important;
     border-radius: 4px;
     color: white !important;

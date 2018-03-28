@@ -1,6 +1,6 @@
 .desc {
     float: left;
-    width: 48%;
+    width: 100%;
 }
 
 .locoplace {
@@ -9,8 +9,6 @@
 
 .guardian {
     float: right;
-    width: 48%;
-    padding-top: 3em;
 }
 
 .editProfile {
@@ -53,10 +51,8 @@
 .desc-box {
   border: 1px solid $color-spacered;
   border-radius: 4px;
-  margin-top: 3em;
+  margin-top: 2em;
   box-shadow: 0px 1px 3px red;
-  width: 30em;
-  background: white;
   p {
       width: 91%;
       padding: 10px 10px 13px 10px;
@@ -65,9 +61,6 @@
   ul li {
       padding: 10px;
       font-size: 1rem !important;
-  }
-  ul li:first-child {
-      padding-bottom: 1px !important;
   }
   ul li:last-child {
       padding-top: 6px !important;
