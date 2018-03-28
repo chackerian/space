@@ -68,19 +68,19 @@ export default class ListingItem extends Component {
       )
     } else if (isUser) {
       return (
-        <div className="actions">
-          <a className='actionButton' href='/chat'>Chat</a>
-          <a className='actionButton' onClick={this.saveListing}>Save</a>
-          <a className='actionButton' onClick={this.reportListing}>Report</a>
-        </div>
+        <ul class="buttonas">
+          <li><a class="btn btn-primary editListing" href="/chat">Chat</a></li>
+          <li><a class="btn btn-primary editListing" href="#">Save</a></li>
+          <li><a class="btn btn-primary editListing" href="#">Report</a></li>
+        </ul>
       )
     } else {
       return (
-        <div className="actions">
-          <a className='actionButton' href='/chat'>Chat</a>
-          <a className='actionButton'>Save</a>
-          <a className='actionButton'>Report</a>
-        </div>
+        <ul class="buttonas">
+          <li><a class="btn btn-primary editListing" href="#">Chat</a></li>
+          <li><a class="btn btn-primary editListing" href="#">Save</a></li>
+          <li><a class="btn btn-primary editListing" href="#">Report</a></li>
+        </ul>
       )
     }
   }

@@ -68,6 +68,10 @@
     .desc {
         width: 100% !important;
     }
+
+    .oneDiv {
+      margin: 0em 2em;
+    }
 }
 
 @media (max-width: 750px) {
@@ -162,19 +166,12 @@
       margin: 2em 16em !important;
     }
 
-    .footerLeft > ul:first-child {
-      width: 90% !important;
-    }
 }
 
 @media (max-width: 450px) {
 
     .profileUser {
       margin: 7em 2em !important
-    }
-
-    .oneDiv {
-      margin: 0em 2em;
     }
 
     .profilePic {
@@ -193,7 +190,6 @@
     .topStrip {
       background: #f8504b;
       padding: 1em !important;
-      border-radius: none;
     }
 
     .leftNav {
