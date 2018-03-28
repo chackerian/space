@@ -63,7 +63,7 @@ export default class ListingItem extends Component {
     if (isCreator && isUser) {
       return (
         <ul className="buttonas">
-            <li><a className="btn btn-primary addListing" href="#" onClick={this.edit}>Edit Listing</a></li>
+            <li><a className="btn btn-primary editListing" href="#" onClick={this.edit}>Edit Listing</a></li>
         </ul>
       )
     } else if (isUser) {
@@ -119,8 +119,8 @@ export default class ListingItem extends Component {
               <div className="desc-box desc-box-details">
                 <h4 className="box-title">Details</h4>
                 <p className="desc-full">
-                  <span className='cat'>Category: <a href={`/search?q=${listed.category}`} className="searchProperty">{listed.category}</a></span>
-                  <span className='type'>Type: <a href={`/search?q=${listed.type}`} className="searchProperty">{listed.type}</a></span>
+                  <span className='cat'>Category: <a href={`/search?q=${listed.category}`} className="link">{listed.category}</a></span>
+                  <span className='type'>Type: <a href={`/search?q=${listed.type}`} className="link">{listed.type}</a></span>
                   <br />
                   <span className='condition'>Condition: {listed.condition}</span>
                   <span className="trades">Trades: {listed.trade}</span>

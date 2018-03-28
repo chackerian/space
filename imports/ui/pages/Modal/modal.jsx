@@ -32,8 +32,8 @@ class Modal extends Component {
         return <ReportListingModal />
       }
     } else {
-      $(".modal-backdrop").remove()
-      $("body").css("overflow", "none")
+      $(".modal-backdrop").remove();
+      $("body").css("overflow", "visible");
       return null
     }
   }

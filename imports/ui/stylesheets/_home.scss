@@ -3,22 +3,22 @@
   float: left;
 }
 
-.homeCard {
-  margin: 1em;
-  overflow: auto;
-  min-height: 54em;
+.modAddListingPageFourUl li {
+  padding-bottom: 1em;
 }
 
-.modAddListingPageFourUl li {
-  padding: 1em;
+.editListing {
+  float: right !important;
 }
 
 .homeCardUl {
   padding-top: 3em;
 }
 
-.imglink {
-  background: white;
+.homeCard {
+  margin: 1em;
+  overflow: auto;
+  min-height: 54em;
 }
 
 .homeCardLi {
@@ -30,7 +30,6 @@
 
 .homeCardDetails {
   padding: 0em 1em 2.5em 1em;
-  background: white;
   li ul li {
       font-size: 0.7rem;
       margin: 2px auto;
@@ -43,14 +42,6 @@
         animation: 0.2s;
         filter: brightness(70%);
     }
-}
-
-.searchResultsCardImg {
-    height: 100% !important;
-    width: 85% !important;
-    margin: 1em;
-    max-height: 100%;
-    border-radius: 6px;
 }
 
 .homeCardItem {
@@ -96,7 +87,6 @@
 .homeTitle {
   padding-bottom: 1em;
   a h4 {
-    color: $color-spacered !important;
     font-family: 'system-ui';
   }
 }

@@ -1,5 +1,5 @@
 .leftNav {
-  width: 40%;
+  width: 70%;
   display: flex;
   flex: 1 1 auto;
   justify-content: flex-start;
@@ -46,11 +46,6 @@
   display: flex !important;
 }
 
-.navGeneral {
-  margin-right: 22px;
-  margin-left: .7em;
-}
-
 .navNotifications {
   margin-left: .7em;
     ul {
@@ -80,6 +75,8 @@
 }
 
 .navGeneral {
+    margin-right: 22px;
+    margin-left: .7em;
     ul {
         display: none;
         position: absolute;
@@ -112,10 +109,14 @@
   margin-left: 22px;
 }
 
-.radiusLogo span {
+.radiusLogo {
   color: white !important;
-  font-weight: bold !important;
-  font-size: 1.4em;
+  span {
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 1.4em;
+    font-family: 'Oswald' !important;
+  }
 }
 
 .clickDropper {
@@ -176,7 +177,7 @@
 }
 
 .headerNameOptions li a {
-  padding: 3px 10px !important;
+  padding: 5px 15px !important;
   border: 1px solid black;
   color: black !important;
   border-radius: 0.2em;

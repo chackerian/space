@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Listing } from '/imports/api/links/db.js';
 
-import { render } from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';

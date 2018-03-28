@@ -47,9 +47,6 @@ class Home extends Component {
   }
 
   render() {
-    setTimeout(function(){
-      $('.grid').masonry()
-    }, 1000)
     return (
       <div className="homeCard">
         <ul className="homeCardUl">
@@ -63,4 +60,4 @@ class Home extends Component {
 
 }
 
-export default connect()(Home)
+export default Home

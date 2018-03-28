@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-class Dropzone extends React.Component {
+export class Dropzone extends Component {
 
-  dropped() {
+  dropped(event) {
     console.log(event.dataTransfer)
     Array.prototype.slice.call(event.dataTransfer.files)
   }
@@ -11,14 +11,14 @@ class Dropzone extends React.Component {
     return (
       <div
         className='dropzone'
-        onClick
-        onDrop={this.dropped()}
+        onClick={this.dropped}
+        onDrop={this.dropped}
       >
         <input />
       </div>
     )
   }
-  
+
 }
 
 export default Dropzone

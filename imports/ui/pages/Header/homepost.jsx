@@ -66,7 +66,7 @@ class Homepost extends Component {
             <ul className="headerNameOptions">
               <li>
                 <a href={`/profile/${profile}`}>
-                  <span className="headerUsername">{currentUsername()}</span>
+                  <span>{currentUsername()}</span>
                 </a>
               </li>
             </ul>

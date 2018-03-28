@@ -170,8 +170,11 @@
 @media (max-width: 450px) {
 
     .profileUser {
-      margin: 7em 3em;
-      min-height: 50em;
+      margin: 7em 2em !important
+    }
+
+    .oneDiv {
+      margin: 0em 2em;
     }
 
     .profilePic {

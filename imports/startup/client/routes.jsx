@@ -32,6 +32,7 @@ import Chat from '../../ui/pages/Chat/chat.jsx';
 
 HomeContainer = withTracker(({ urlKey }) => {
   const list = Listing.find().fetch();
+  console.log("new size")
   return {
     list
   };
