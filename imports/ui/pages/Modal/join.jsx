@@ -37,7 +37,7 @@ class JoinModal extends Component {
                   <li className="modJoinMessage">We aim to make Buying and Selling Safer and Easier.</li>
                 </ul>
                 <p className="joinAgreeSmall">By signing up you agree to our <a className="link" href="/help/terms">Terms and Conditions</a></p>
-                <div className="modJoinFB-Btn ph-button facebook" onClick={this.login}>
+                <div className="join-button facebook" onClick={this.login}>
                   <i className="fa fa-facebook-square"></i>
                   <b>Sign Up With Facebook</b>
                 </div>

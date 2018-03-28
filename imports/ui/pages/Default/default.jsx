@@ -21,7 +21,7 @@ export default class Defaults extends Component {
     return(
       <div className="errordiv">
         <h1 className="errorm">We couldn't find what you were looking for. <br /> This page may not exist or may have been removed.</h1>
-        <a href="/" className="errorButton ph-button ph-btn-red">Home</a>
+        <a href="/" className="errorButton ph-btn-red">Home</a>
       </div>
     )
   }
