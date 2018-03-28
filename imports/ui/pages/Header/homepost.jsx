@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 class Homepost extends Component {
 
   logout = () => {
-    Meteor.logout(function(err, result) {
-    });
+    Meteor.logout();
   }
 
   clearToggle() {
@@ -39,7 +38,7 @@ class Homepost extends Component {
       var key = e.key
       if (key == "Enter") {
         var search = $(".search").val();
-        FlowRouter.go("/search?q="+search)
+        FlowRouter.go("/search?q="+search);
       }
     });
   }
@@ -88,8 +87,8 @@ class Homepost extends Component {
               <li className="headerDropDown navGeneral">
                 <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons">more_vert</i></a>
                 <ul className="headerDropDownNav">
-                  <a href="/help/listings"><li>Listings</li></a>
-                  <a href="/help/saved"><li>Saved</li></a>
+                  <a href="/listings"><li>Listings</li></a>
+                  <a href="/saved"><li>Saved</li></a>
                   <a href="/help"><li>Help Center</li></a>
                   <a href="#" className="logout" onClick={this.logout}><li>Logout</li></a>
                 </ul>

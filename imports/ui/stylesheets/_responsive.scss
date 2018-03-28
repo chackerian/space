@@ -41,14 +41,6 @@
       display: none
     }
 
-    .headerCatDrop {
-      display: none !important;
-    }
-
-    .headerCat {
-      display: none !important
-    }
-
     .placeLocation {
       display: none;
     }
@@ -76,10 +68,6 @@
 
 @media (max-width: 750px) {
 
-    .footerHide {
-        display: inline-block !important;
-    }
-
     .footerbottom > li {
         display: block !important;
     }
@@ -103,11 +91,6 @@
 
     .headerNameOptions {
         display: none !important;
-    }
-
-    .actions {
-      margin: 1.5em -1em;
-      float: none;
     }
 
     .box-title {
@@ -135,14 +118,14 @@
       margin: 0 !important;
     }
 
-    // logo change
     .radiusLogo span {
       display: none;
     }
 
     .radiusLogo::after {
       content: "ST";
-      font-size: 1.6em;
+      font-size: 1.4em;
+      font-weight: bold;
     }
 
     .homeCardLi {
@@ -160,10 +143,6 @@
 
     .desc-box {
       width: 19em !important;
-    }
-
-    .actions {
-      margin: 2em 16em !important;
     }
 
 }
