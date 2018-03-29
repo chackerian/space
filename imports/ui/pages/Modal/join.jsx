@@ -34,7 +34,7 @@ class JoinModal extends Component {
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <h1>Join SpaceTrades</h1>
                 <ul>
-                  <li className="modJoinMessage">We aim to make Buying and Selling Safer and Easier.</li>
+                  <li className="modJoinMessage">SpaceTrades helps people organize meetups for buying and selling items locally. We aim to make Buying and Selling Safer and Easier.</li>
                 </ul>
                 <p className="joinAgreeSmall">By signing up you agree to our <a className="link" href="/help/terms">Terms and Conditions</a></p>
                 <div className="join-button facebook" onClick={this.login}>

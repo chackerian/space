@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import ReactFilestack, { client } from 'filestack-react';
 import { connect } from 'react-redux';
-// var s3 = require('s3')
+// import { s3 } from 's3';
 // var s4 = new aws.S3();
 
 String.prototype.shorten = function(n) {
@@ -195,18 +195,6 @@ class AddModal extends Component {
               <div className="modAddListingPage">
               <h3>Provide Details</h3>
               <ul className="modAddListingPageFourUl">
-                  <li><label>Brand</label>
-                    <div className="styled-select">
-                        <select className="listbrand" value={this.state.brandReal} onChange={(event) => this.selectBrandChange(event)}>
-                            <option disabled defaultValue>Select Brand</option>
-                            {
-                              this.state.brand.map(brand => {
-                                return <option value={brand}>{brand}</option>
-                              })
-                            }
-                        </select>
-                    </div>
-                  </li>
                   <li>
                     <label>Condition</label>
                     <div className="styled-select">
@@ -217,75 +205,6 @@ class AddModal extends Component {
                             <option value="Needs Repair">Needs Repair</option>
                         </select>
                     </div>
-                  </li>
-                  <li hidden className="listsizenumber"><label>Size</label>
-                      <div className="styled-select">
-                          <select className="listsizeshoe" onChange={this.shoeChange} value={this.state.size}>
-                              <option disabled defaultValue>Select Size</option>
-                              <option value="5 womens">5 Womens</option>
-                              <option value="5.5 womens">5.5 Womens</option>
-                              <option value="6 womens">6 Womens</option>
-                              <option value="6.5 womens">6.5 Womens</option>
-                              <option value="7 womens">7 Womens</option>
-                              <option value="7 mens">7 Mens</option>
-                              <option value="7.5 womens">7.5 Womens</option>
-                              <option value="7.5 mens">7.5 Mens</option>
-                              <option value="8 womens">8 Womens</option>
-                              <option value="8 mens">8 Mens</option>
-                              <option value="8.5 womens">8.5 Womens</option>
-                              <option value="8.5 mens">8.5 Mens</option>
-                              <option value="9 womens">9 Womens</option>
-                              <option value="9 mens">9 Mens</option>
-                              <option value="9.5 womens">9.5 Womens</option>
-                              <option value="9.5 mens">9.5 Mens</option>
-                              <option value="10 womens">10 Womens</option>
-                              <option value="10 mens">10 Mens</option>
-                              <option value="10.5 womens">10.5 Womens</option>
-                              <option value="10.5 mens">10.5 Mens</option>
-                              <option value="11 womens">11 Womens</option>
-                              <option value="11 mens">11 Mens</option>
-                              <option value="11.5 womens">11.5 Womens</option>
-                              <option value="11.5 mens">11.5 Mens</option>
-                              <option value="12 womens">12 Womens</option>
-                              <option value="12 mens">12 Mens</option>
-                              <option value="12.5 mens">12.5 Mens</option>
-                              <option value="13 mens">13 Mens</option>
-                              <option value="13.5 mens">13.5 Mens</option>
-                              <option value="14 mens">14 Mens</option>
-                              <option value="14.5 mens">14.5 Mens</option>
-                              <option value="15 mens">15 Mens</option>
-                          </select>
-                      </div>
-                  </li>
-                  <li hidden className="listsizename"><label>Size</label>
-                      <div className="styled-select">
-                          <select className="listsizename">
-                              <option disabled defaultValue>Select Size</option>
-                              <option value="XS">XS</option>
-                              <option value="Small">Small</option>
-                              <option value="Medium">Medium</option>
-                              <option value="Large">Large</option>
-                              <option value="XL">XL</option>
-                              <option value="XXL">XXL</option>
-                          </select>
-                      </div>
-                  </li>
-                  <li hidden className="listcapacity"><label>Capacity</label>
-                      <div className="styled-select capacity-select">
-                          <select className="listspace">
-                              <option disabled defaultValue>Select Size</option>option>
-                              <option value="4 GB">4 GB</option>
-                              <option value="8 GB">8 GB</option>
-                              <option value="16 GB">16 GB</option>
-                              <option value="32 GB">32 GB</option>
-                              <option value="64 GB">64 GB</option>
-                              <option value="128 GB">128 GB</option>
-                              <option value="250 GB">250 GB</option>
-                              <option value="500 GB">500 GB</option>
-                              <option value="1 TB">1 TB</option>
-                              <option value="1 TB +">1 TB +</option>
-                          </select>
-                      </div>
                   </li>
                 </ul>
               </div>
@@ -313,7 +232,6 @@ class AddModal extends Component {
         images.push(x.url)
       })
       Session.set('images', images)
-      console.log(images)
     }
 
     return(
@@ -347,37 +265,37 @@ class AddModal extends Component {
       <div className="modAddListingDialog modal-dialog">
         <div className="modAddListingContent modal-content">
           <div className="modAddListingDiv modAddListingDivFive modal-body step step-5">
-            <div className="modal-close"><a className="close" onClick={this.props.close}>
-            <i className="material-icons">close</i>
-            </a></div>
+            <div className="modal-close">
+              <a className="close" onClick={this.props.close}><i className="material-icons">close</i></a>
+            </div>
             <div className="modAddListingPage">
-                <ul className="modOfferRequestPageOneUl">
-                      <li className="radioWrap" value={this.state.trade} onChange={(event) => this.handleChange(event)}>
-                        <h3>Do You Want To Allow Trade Offers?</h3>
-                        <ul>
-                          <li>
-                              <input type="radio" id="modAddListingTradeOffersNo" data-key="trade" name="addListingTradeOffers" value="Not Allowed" className="radioWrapElement"/>
-                              <label htmlFor="modAddListingTradeOffersNo">No</label>
-                          </li>
-                          <li className="modOfferRequestPaymentCash">
-                              <input type="radio" id="modAddListingTradeOffersYes" data-key="trade" name="addListingTradeOffers" value="Allowed" className="radioWrapElement"/>
-                              <label htmlFor="modAddListingTradeOffersYes">Yes</label>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="radioWrap">
-                          <h3>Which Form Of Payment Will You Accept?</h3>
-                          <ul className="paymentform" data-key="payment" value={this.state.payment} onChange={(event) => this.handleChange(event)}>
-                              <li className="modOfferRequestPaymentCash">
-                                  <input type="radio" id="cashRadio" name="addListingPayment" value="Cash" className="radioWrapElement" defaultChecked/>
-                                  <label htmlFor="cashRadio">Cash</label>
-                              </li>
-                              <li className="modOfferRequestPaymentOther">
-                                  <input type="radio" id="modAddListingOtherRadio" name="addListingPayment" value="Other" className="radioWrapElement"/>
-                                  <label htmlFor="modAddListingOtherRadio">Other</label>
-                              </li>
-                          </ul>
-                      </li>
+              <ul className="modOfferRequestPageOneUl">
+                <li className="radioWrap" value={this.state.trade} onChange={(event) => this.handleChange(event)}>
+                  <h3>Do You Want To Allow Trade Offers?</h3>
+                  <ul>
+                    <li>
+                        <input type="radio" id="modAddListingTradeOffersNo" data-key="trade" name="addListingTradeOffers" value="Not Allowed" className="radioWrapElement"/>
+                        <label htmlFor="modAddListingTradeOffersNo">No</label>
+                    </li>
+                    <li className="modOfferRequestPaymentCash">
+                        <input type="radio" id="modAddListingTradeOffersYes" data-key="trade" name="addListingTradeOffers" value="Allowed" className="radioWrapElement"/>
+                        <label htmlFor="modAddListingTradeOffersYes">Yes</label>
+                    </li>
+                  </ul>
+                </li>
+                <li className="radioWrap">
+                    <h3>Which Form Of Payment Will You Accept?</h3>
+                    <ul className="paymentform" data-key="payment" value={this.state.payment} onChange={(event) => this.handleChange(event)}>
+                        <li className="modOfferRequestPaymentCash">
+                            <input type="radio" id="cashRadio" name="addListingPayment" value="Cash" className="radioWrapElement" defaultChecked/>
+                            <label htmlFor="cashRadio">Cash</label>
+                        </li>
+                        <li className="modOfferRequestPaymentOther">
+                            <input type="radio" id="modAddListingOtherRadio" name="addListingPayment" value="Other" className="radioWrapElement"/>
+                            <label htmlFor="modAddListingOtherRadio">Other</label>
+                        </li>
+                    </ul>
+                </li>
                   </ul>
                 </div>
                 <div className="modMultiBtn">

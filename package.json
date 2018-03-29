@@ -30,6 +30,7 @@
     "react-mounter": "^1.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "s3": "^4.4.0",
     "slideout": "^1.0.1",
     "tinify": "^1.5.0"
   }
