@@ -45,7 +45,7 @@ class Homepre extends Component {
             </div>
             <div className="rightNav">
               <ul className="headerAuthPre headerAuth">
-                  <li><a className="btn btn-primary" href="#" onClick={this.props.join}>Join</a></li>
+                  <li><a href="#" onClick={this.props.join}>Join</a></li>
                   <li><a className="login" href="#" onClick={this.login}>Login</a></li>
               </ul>
             </div>

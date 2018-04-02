@@ -9,7 +9,6 @@ export default class Help extends Component {
       <div className="oneDiv">
         <HelpNav />
         <div className='email'>
-          <h2>Contact</h2>
           <h3>Email</h3>
           <form className="contactform">
             <p className="contactsubject">
@@ -19,7 +18,7 @@ export default class Help extends Component {
               <textarea placeholder="Message" className="message"></textarea>
             </p>
             <ul className="buttonas">
-                <li><a className="btn btn-primary addListing" href="#" onClick={this.edit}>Send</a></li>
+                <li><a className="addListing" href="#" onClick={this.edit}>Send</a></li>
             </ul>
           </form>
         </div>

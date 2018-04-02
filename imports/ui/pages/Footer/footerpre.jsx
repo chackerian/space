@@ -8,7 +8,6 @@ export default class FooterPre extends Component {
         <div className="footerLeft">
           <ul className="footerItems">
             <div className='leftInnerFooter'>
-              <li><h3><a href="/">SpaceTrades</a></h3></li>
               <li><h4><a href="/help">Help</a></h4></li>
               <li><h4><a href="/help/faq">FAQ</a></h4></li>
               <li><h4><a href="/help/terms">Terms</a></h4></li>

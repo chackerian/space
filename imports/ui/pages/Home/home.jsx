@@ -20,7 +20,7 @@ var HomeCard = ({item}) => (
         <li className="homeCardRight">
             <ul>
               <li className="homeCardUser">
-                <a href={`/profile/${item.creator_id}`} className="profile-link">{item.creator_username}</a>
+                <a href={`/profile/${item.creator_id}`} className="profile-link">{item.creator_initials}</a>
               </li>
             </ul>
         </li>

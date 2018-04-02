@@ -69,22 +69,20 @@ class Homepost extends Component {
                 </a>
               </li>
             </ul>
+            <li className="headerDropDown">
+              <a className="small-search" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-search"></i></a>
+            </li>
+            <ul className="headerAuth">
+                <li><a className="addListing" href="#" onClick={this.props.add}>Add Listing</a></li>
+            </ul>
             <ul className="clickDropper">
-              <li className="headerDropDown">
-                <a className="small-search" data-toggle="tooltip" data-placement="bottom">
-                  <i className="fa fa-search"></i>
-                </a>
-              </li>
-              <ul className="headerAuth">
-                  <li><a className="btn btn-primary addListing" href="#" onClick={this.props.add}>Add Listing</a></li>
-              </ul>
-              <li className="headerDropDown navNotifications">
+              <li className="navNotifications">
                 <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
                 <ul className="headerDropDownNav notifyDropdown">
                   <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
                 </ul>
               </li>
-              <li className="headerDropDown navGeneral">
+              <li className="navGeneral">
                 <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons">more_vert</i></a>
                 <ul className="headerDropDownNav">
                   <a href="/listings"><li>Listings</li></a>

@@ -1,10 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
 
-const insert = (state, action) => {
-    return [...state, action.data];
-};
-
 export default function(state=[], action) {
 
   switch(action.type) {
@@ -25,7 +21,7 @@ export default function(state=[], action) {
       }
     case "NOTIFY":
       return {
-        modal: "add",
+        type: "add",
         status: "on"
       }
     case "CLOSE_NOTIFY":

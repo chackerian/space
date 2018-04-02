@@ -63,23 +63,23 @@ export default class ListingItem extends Component {
     if (isCreator && isUser) {
       return (
         <ul className="buttonas">
-            <li><a className="btn btn-primary editListing" href="#" onClick={this.edit}>Edit Listing</a></li>
+            <li><a className="editListing" href="#" onClick={this.edit}>Edit Listing</a></li>
         </ul>
       )
     } else if (isUser) {
       return (
         <ul class="buttonas">
-          <li><a class="btn btn-primary editListing" href="/chat">Chat</a></li>
-          <li><a class="btn btn-primary editListing" href="#">Save</a></li>
-          <li><a class="btn btn-primary editListing" href="#">Report</a></li>
+          <li><a class="editListing" href="/chat">Chat</a></li>
+          <li><a class="editListing" href="#">Save</a></li>
+          <li><a class="editListing" href="#">Report</a></li>
         </ul>
       )
     } else {
       return (
         <ul class="buttonas">
-          <li><a class="btn btn-primary editListing" href="#">Chat</a></li>
-          <li><a class="btn btn-primary editListing" href="#">Save</a></li>
-          <li><a class="btn btn-primary editListing" href="#">Report</a></li>
+          <li><a class="editListing" href="#">Chat</a></li>
+          <li><a class="editListing" href="#">Save</a></li>
+          <li><a class="editListing" href="#">Report</a></li>
         </ul>
       )
     }
@@ -87,6 +87,7 @@ export default class ListingItem extends Component {
 
   render() {
     let listing = Listing.find({ urlKey: FlowRouter.current().params.id }).fetch()
+    console.log("listing", listing)
     if (listing && listing.length > 0) {
       var listed = listing[0]
       var createdAt = moment(listed.createdAt).format("dddd, MMMM D");

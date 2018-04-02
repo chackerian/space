@@ -96,6 +96,7 @@ Meteor.methods({
        creator_image: options.creator_image,
        creator_facebook_id: options.creator_facebook_id,
        creator_username: Meteor.user().profile.name,
+       creator_initials: options.creator_initials,
        listing_title: options.listing_title,
        urlKey: options.urlKey,
        // Category

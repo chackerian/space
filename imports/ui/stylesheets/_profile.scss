@@ -29,16 +29,6 @@
   border-radius: 7.2em;
 }
 
-.profile-link {
-    color: $color-spacegrey !important;
-    text-underline: underline;
-    font-family: 'system-ui' !important;
-    :hover {
-        color: #0890F2 !important;
-        text-decoration: underline;
-    }
-}
-
 .box-title {
     background: $color-spacered !important;
     font-family: inherit;
@@ -49,10 +39,9 @@
 }
 
 .desc-box {
-  border: 1px solid $color-spacered;
   border-radius: 4px;
   margin-top: 2em;
-  box-shadow: 0px 1px 3px red;
+  box-shadow: 0px 1px 3px black;
   p {
       width: 91%;
       padding: 10px 10px 13px 10px;
@@ -88,7 +77,7 @@
 }
 
 .topStrip {
-  background-image: linear-gradient(to bottom, #f8504b, #E63223);
+  background-image: linear-gradient(to bottom, $color-spacered, #E63223);
   padding: 3em;
   border-radius: 0.2em;
   box-shadow: 0px 2px 5px;
@@ -148,8 +137,7 @@
 }
 
 .profileUserInfo ul {
-    margin: 10px 0 0 0 ;
-    vertical-align: middle;
+    margin: 0px 0px 5px 0px;
     & > ul li {
         display: inline-block;
         margin-left: 0.3em;
@@ -160,23 +148,20 @@
         font-size: 1.6rem;
         vertical-align: middle !important;
     }
-    li a i {
-        color: $color-darkblue !important;
-    }
 }
 
 .profileUserAmount {
   display: inline-block;
   ul {
-      margin: 15px 0 8px 0 !important;
-      li {
-          display: inline-block;
-          padding: 10px 10px;
-          border-radius: 4px;
-          background-color: $color-spaceblue !important;
-          font-family: 'Helvetica Neue', sans-serif !important;
-          color: white !important;
-      }
+    margin: 15px 0 8px 0 !important;
+    li {
+        display: inline-block;
+        padding: 10px 10px;
+        border-radius: 4px;
+        font-family: 'Helvetica Neue', sans-serif !important;
+        color: white !important;
+        background: $color-spacered;
+    }
   }
 }
 
@@ -186,26 +171,6 @@
     & > li {
         display: block;
     }
-}
-
-.profileSettingsEmail li input {
-    margin-left: 38px;
-}
-
-.profileSettingsLocation li input {
-    margin-left: 14px;
-}
-
-.profileSettingsUsername li input {
-    margin-left: -5px;
-}
-
-.profileSettingsImage {
-    margin-left: 35px;
-}
-
-.profileSettingsPhoto li h4 {
-    vertical-align: top !important;
 }
 
 .profileSettingsPhoto li img {
@@ -232,7 +197,7 @@
 
 .profileCardUl > li {
     display: inline-block;
-    border: 1px solid $color-spaceblue;
+    border: 1px solid black;
     border-radius: 5px;
     margin: 10px 5px;
     padding: 0px 10px 0px 10px;
@@ -297,13 +262,11 @@
     vertical-align: top;
     li a {
         margin: 0;
-        color: $color-spaceblue !important;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     li a:hover {
-        color: $color-spaceblue !important;
         text-decoration: underline;
     }
     li a h3 {
@@ -356,22 +319,6 @@
 }
 
 /** Social Button CSS **/
-
-.defaultProfileDiv {
-    text-align: center;
-    h2 {
-        font-weight: 400 !important;
-        color: #555 !important;
-        vertical-align: middle !important;
-    }
-     h2 i {
-        margin-right: 15px;
-        vertical-align: middle !important;
-        padding: 10px !important;
-        background-color: $color-spacered !important;
-        color: #fff !important;
-    }
-}
 
 .listtitle {
     width: 80%;

@@ -1,28 +1,15 @@
 // Theme
 $color-spacered:    		#D9342D;
-$color-spaceblue:   		#00bfff;
-$color-spacegreen:  		#75D855;
+$color-spaceyellow:  		#FDF150;
 
 $color-spacegrey:   		#404040;
-$color-subtlegrey: 		  rgba(211, 211, 211, 0.31);
-$color-lightred:        #ee4641;
 $color-divider: 			  #d3d3d3;
 $color-orange:          #ff5700;
-$color-blue:            #006eff;
-$color-lightblue:       #34dddd;
 $color-burgundy:    		#900020;
-$color-royal:       		#523f8c;
-$color-blue:        		#0266C8;
-$color-blue2:       		#0295ff;
-$color-venetian-red:		#C80815;
+
 $color-lightgrey:   		#999;
-$color-purple:      		#6c54b3;
-$color-darkblue:        #3b5998;
-$color-limey:           #2dbb7b;
-$color-bluey:           #3c37c3;
 $color-charcoal:        #262626;
 $color-ruddy:           #f73c37;
-$color-bluey:           #06C1FF;
 
 $color-money:           #339966;
 $color-gold:            #ffd700;
@@ -35,8 +22,6 @@ $color-instagram:   		#125688;
 $color-link:        		#07C;
 $color-linkhover:   		#0890F2;
 $color-visited:     		#0c65a5;
-
-$shadow:                1px 2px 6px black;
 
 /////////////////////////////////////////////////////
 // Font Stacks
@@ -58,46 +43,5 @@ $font-text:                      'Abel', sans-serif;
 .money {
     color: $color-money !important;
     font-family: 'Open Sans' !important;
+    font-weight: 300;
 }
-
-$enable-flex: true;
-$enable-gradients: true;
-$enable-shadows: true;
-
-$carousel-control-color: white !default;
-$carousel-control-width: 15% !default;
-$carousel-control-opacity: .5 !default;
-
-$carousel-control-prev-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
-$carousel-control-next-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
-
-$carousel-indicator-active-bg: black;
-$carousel-control-color: red;
-$carousel-indicator-width: 12px;
-$carousel-indicator-height: 12px;
-$carousel-indicator-spacer: 6px;
-
-$carousel-dots-width: 30px !default;
-$carousel-dots-height: 3px !default;
-$carousel-dots-spacer: 3px !default;
-$carousel-dots-active-bg: white !default;
-$carousel-control-icon-width: 20px !default;
-
-$carousel-caption-width: 70% !default;
-$carousel-caption-color: white !default;
-
-$carousel-control-icon-width: 20px !default;
-
-$carousel-transition: transform .6s ease !default;
-
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
-
-$carousel-control-color:                      #fff;
-$carousel-control-width:                      15%;
-$carousel-control-opacity:                    .5;
-$carousel-control-font-size:                  20px;
-
-$carousel-indicator-active-bg:                #fff;
-$carousel-indicator-border-color:             #fff;
-
-$carousel-caption-color:                      #fff;

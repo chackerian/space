@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import ReactFilestack, { client } from 'filestack-react';
 import { connect } from 'react-redux';
+// import Dropzone '/'
 // import { s3 } from 's3';
 // var s4 = new aws.S3();
 
@@ -85,11 +86,17 @@ class AddModal extends Component {
 
   createListing = (props) => {
     var titled = this.state.listing_title.charAt(0).toUpperCase() + this.state.listing_title.slice(1)
+
+    var splite = Meteor.user().profile.name.split(" ")
+    var last = splite[1].charAt();
+    var initials = splite[0] + " " + last;
+
     var options = {
       creator_id: Meteor.userId(),
       creator_facebook_id: Meteor.user().services.facebook.id,
       creator_image: Meteor.user().profile.picturelrg,
       creator_username: Meteor.user().profile.name,
+      creator_initials: initials,
       listing_title: this.state.listing_title,
       urlKey: this.state.listing_title.replace(/ /g, '-'),
       images: Session.get('images'),
@@ -135,7 +142,7 @@ class AddModal extends Component {
                   </ul>
                 </div>
                 <div className="modMultiBtn modMultiBtnSingle">
-                    <button type="button" className="btn btn-primary modalNext" data-step="1" onClick={(event) => this.nextPage(event)}>Next</button>
+                    <button type="button" className="modalNext" data-step="1" onClick={(event) => this.nextPage(event)}>Next</button>
                 </div>
               </div>
             </div>
@@ -177,8 +184,8 @@ class AddModal extends Component {
                     </ul>
               </div>
               <div className="modMultiBtn">
-                  <button type="button" className="btn btn-primary modalNext" data-step="2" onClick={(event) => this.nextPage(event)}>Next</button>
-                  <button type="button" className="btn btn-primary modalBack" data-step="2" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="modalNext" data-step="2" onClick={(event) => this.nextPage(event)}>Next</button>
+                  <button type="button" className="modalBack" data-step="2" onClick={(event) => this.backPage(event)}>Back</button>
               </div>
             </div>
           </div>
@@ -209,8 +216,8 @@ class AddModal extends Component {
                 </ul>
               </div>
               <div className="modMultiBtn">
-                  <button type="button" className="btn btn-primary modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
-                  <button type="button" className="btn btn-primary modalBack" data-step="3" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
+                  <button type="button" className="modalBack" data-step="3" onClick={(event) => this.backPage(event)}>Back</button>
               </div>
             </div>
           </div>
@@ -251,8 +258,8 @@ class AddModal extends Component {
               </ul>
             </div>
             <div className="modMultiBtn">
-                <button type="button" className="btn btn-primary modalNext" data-step="4" onClick={(event) => this.nextPage(event)}>Next</button>
-                <button type="button" className="btn btn-primary modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
+                <button type="button" className="modalNext" data-step="4" onClick={(event) => this.nextPage(event)}>Next</button>
+                <button type="button" className="modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
             </div>
           </div>
         </div>
@@ -299,8 +306,8 @@ class AddModal extends Component {
                   </ul>
                 </div>
                 <div className="modMultiBtn">
-                    <button type="button" className="btn btn-primary modalNext" data-step="5" onClick={(event) => this.nextPage(event)}>Next</button>
-                    <button type="button" className="btn btn-primary modalBack" data-step="5"  onClick={(event) => this.backPage(event)}>Back</button>
+                    <button type="button" className="modalNext" data-step="5" onClick={(event) => this.nextPage(event)}>Next</button>
+                    <button type="button" className="modalBack" data-step="5"  onClick={(event) => this.backPage(event)}>Back</button>
                 </div>
               </div>
             </div>
@@ -319,8 +326,8 @@ class AddModal extends Component {
                 <textarea className="listdescription" placeholder="Briefly explain any other information about the item" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
               </div>
               <div className="modMultiBtn">
-                  <button type="button" className="add btn btn-primary modalSubmitBtn" onClick={this.createListing}>Create</button>
-                  <button type="button" className="btn btn-primary step step-6 modalBack" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="add modalSubmitBtn" onClick={this.createListing}>Create</button>
+                  <button type="button" className="modalBack" onClick={(event) => this.backPage(event)}>Back</button>
               </div>
             </div>
           </div>

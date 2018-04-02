@@ -155,6 +155,10 @@
     }
 }
 
+.headerDropDown {
+  display: inline-block !important;
+}
+
 .headerDropDownNav {
   box-shadow: 0px 2px 5px;
   a {
@@ -170,7 +174,7 @@
 }
 
 .headerNameOptions li a {
-  padding: 5px 15px !important;
+  padding: 5px 10px !important;
   border: 1px solid black;
   color: black !important;
   border-radius: 0.2em;

@@ -7,13 +7,14 @@ export default class Settings extends Component {
     }
 
     render() {
+      var image = Meteor.user().profile.picturelrg;
       return (
         <div className="profileSettingsDiv oneDiv">
           <ul className="profileSettingsUl">
             <li className="profileSettingsLi">
               <ul className="profileSettingsPhoto">
                 <li><h4>Photo</h4></li>
-                <li className="profileSettingsImage"><img id="profileImage" src={picturelrg} /><input type="file" classNameName="profileSettingsSelectImg" onChange={this.changeImage} /></li>
+                <li className="profileSettingsImage"><img id="profileImage" src={image} /><input type="file" classNameName="profileSettingsSelectImg" onChange={this.changeImage} /></li>
               </ul>
             </li>
             <li className="profileSettingsLi">
@@ -25,7 +26,7 @@ export default class Settings extends Component {
             <li className="profileSettingsLi">
               <ul className="profileSettingsBlock">
                 <li><h4>Location</h4></li>
-                <li><input id="pac-input" className="controls" type="text" placeholder="Choose Location" value={locationFull} onChange={() => this.changeLocation(event)} /></li>
+                <li><input id="pac-input" className="controls" type="text" placeholder="Choose Location" value={locationFull='asd'} /></li>
               </ul>
             </li>
           </ul>

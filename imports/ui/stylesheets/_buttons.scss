@@ -4,7 +4,7 @@ button {
     padding: 13px 18px;
     color: white !important;
     &:hover {
-        background-color: #f73c37;
+        background-color: $color-spacered;
     }
 }
 
@@ -21,12 +21,22 @@ a[href] {
     }
 }
 
+.profile-link {
+    color: $color-spacegrey !important;
+    text-underline: underline;
+    font-family: 'system-ui' !important;
+    :hover {
+        color: #0890F2 !important;
+        text-decoration: underline;
+    }
+}
+
 .headerAuth {
     li a {
       color: white !important;
       border: 1px solid white !important;
       border-radius: 0.2em;
-      padding: 5px 15px;
+      padding: 5px 10px;
       margin: 0.5em;
       transition: 0.5s;
     }
@@ -74,6 +84,12 @@ a[href] {
     }
 }
 
+.listingItemShare {
+    a {
+      padding: 0.5em 0.1em;
+    }
+}
+
 .join-button {
     cursor: pointer;
     margin-top: 20px;
@@ -102,8 +118,4 @@ a[href] {
         border-radius: 0.2em;
         padding: 5px 15px;
     }
-}
-
-.profileSettingsSubmit {
-    float: right !important;
 }

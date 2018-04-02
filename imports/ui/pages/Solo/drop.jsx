@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-export class Dropzone extends Component {
+class Dropzone extends Component {
 
   dropped(event) {
-    console.log(event.dataTransfer)
-    Array.prototype.slice.call(event.dataTransfer.files)
+    console.log(event.dataTransfer);
+    Array.prototype.slice.call(event.dataTransfer.files);
   }
 
   render() {
