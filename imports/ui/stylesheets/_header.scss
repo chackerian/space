@@ -47,13 +47,10 @@
     ul {
         display: none;
         position: absolute;
-        margin: 1.4em -1px 0px -19.1em !important;
-        border: 3px solid $color-spacegrey;
-        border-radius: 0.3em;
+        margin: 1.22em -1px 0px -19.02em !important;
+        border: 2px solid #404040;
         animation: 100ms fadeInDownMini;
-        padding: 0;
         background-color: white !important;
-        font-size: 0.8rem;
         width: 24em;
         z-index: 3;
 
@@ -76,12 +73,10 @@
     ul {
         display: none;
         position: absolute;
-        margin: 1.4em -1px 0px -14.1em !important;
-        border: 3px solid $color-spacegrey;
-        border-radius: 0.3em;
+        margin: 1.22em -1px 0px -14.1em !important;
+        border: 2px solid $color-spacegrey;
         animation: 100ms fadeInDownMini;
         background-color: white !important;
-        font-size: 0.8rem;
         width: 17em;
 
         li {
@@ -122,20 +117,20 @@
       font-size: 0.8rem !important;
     }
     & > .navNotifications > ul > a:first-child::before {
-      color: $color-spacegrey;
-      margin: -30px 15px -4px 0;
+      color: #404040;
+      margin: -17px 0px 3px 68px;
       font-size: 1.3rem;
-      left: 11.7em !important;
+      left: 11.5355em !important;
       pointer-events: none;
       content: '';
       display: block;
       position: absolute;
       width: 0;
       height: 0;
-      border-left: 11.5px solid transparent;
-      border-right: 11.5px solid transparent;
-      border-bottom: 11px solid $color-spacegrey;
-      margin-top: -13px;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #404040;
+      margin-top: -12px;
     }
     & > .navGeneral > ul > a:first-child::before {
       color: $color-spacegrey;
