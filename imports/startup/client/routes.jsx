@@ -26,7 +26,6 @@ import AboutTerms from '../../ui/pages/Help/terms.jsx';
 import Prohibited from '../../ui/pages/Help/prohibited.jsx';
 
 import SearchPage from '../../ui/pages/Search/searchpage.jsx';
-import Chat from '../../ui/pages/Chat/chat.jsx';
 
 //////////////////////////////////////////////
 
@@ -71,29 +70,6 @@ FlowRouter.route('/search', {
     Session.set('search', FlowRouter.getQueryParam("q"))
   }
 });
-
-var chat = FlowRouter.group({
-  prefix: "/chat",
-  name: "chat"
-});
-
-chat.route('/', {
-  name: 'chats',
-  action(params) {
-    mount(MainLayout, {
-      content: <Home />
-    })
-  }
-})
-
-chat.route('/:id', {
-  name: 'chatter',
-  action(params) {
-    mount(MainLayout, {
-      content: <Home />
-    })
-  }
-})
 
 var listing = FlowRouter.group({
   prefix: "/listing",

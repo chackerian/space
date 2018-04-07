@@ -1,5 +1,4 @@
 .leftNav {
-  width: 70%;
   display: flex;
   flex: 1 1 auto;
   justify-content: flex-start;
@@ -21,7 +20,7 @@
   width: 100%;
   z-index: 100;
   top: 0;
-  height: 60px;
+  height: 50px;
   position: fixed !important;
   border-bottom: 2px solid $color-spacegrey;
   ul {
@@ -32,7 +31,7 @@
 .wholeNav {
   max-width: 1180px;
   align-items: center;
-  height: 60px !important;
+  height: 50px !important;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -40,6 +39,7 @@
 
 .headerAuthPre {
   display: flex !important;
+  padding-bottom: 0 !important;
 }
 
 .navNotifications {
@@ -47,7 +47,7 @@
     ul {
         display: none;
         position: absolute;
-        margin: 1.22em -1px 0px -19.02em !important;
+        margin: 1.5em -1px 0px -19.22em !important;
         border: 2px solid #404040;
         animation: 100ms fadeInDownMini;
         background-color: white !important;
@@ -73,11 +73,11 @@
     ul {
         display: none;
         position: absolute;
-        margin: 1.22em -1px 0px -14.1em !important;
+        margin: 1.5em 0px 0px -8.35em !important;
         border: 2px solid $color-spacegrey;
         animation: 100ms fadeInDownMini;
         background-color: white !important;
-        width: 17em;
+        width: 10em;
 
         li {
             padding: 15px 50px 15px 15px;
@@ -118,35 +118,31 @@
     }
     & > .navNotifications > ul > a:first-child::before {
       color: #404040;
-      margin: -17px 0px 3px 68px;
-      font-size: 1.3rem;
-      left: 11.5355em !important;
+      left: 27.6em !important;
       pointer-events: none;
       content: '';
       display: block;
       position: absolute;
       width: 0;
       height: 0;
-      border-left: 7px solid transparent;
-      border-right: 7px solid transparent;
-      border-bottom: 7px solid #404040;
-      margin-top: -12px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #404040;
+      margin-top: -10px;
     }
     & > .navGeneral > ul > a:first-child::before {
       color: $color-spacegrey;
-      margin: -30px 15px -4px 0;
-      font-size: 1.3rem;
-      left: 8.55em !important;
+      left: 12.22em !important;
       pointer-events: none;
       content: '';
       display: block;
       position: absolute;
       width: 0;
       height: 0;
-      border-left: 11.5px solid transparent;
-      border-right: 11.5px solid transparent;
-      border-bottom: 11px solid $color-spacegrey;
-      margin-top: -13px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $color-spacegrey;
+      margin-top: -10px;
     }
 }
 
@@ -158,6 +154,7 @@
   box-shadow: 0px 2px 5px;
   a {
     font-family: 'system-ui' !important;
+    font-size: 0.7em;
     font-weight: bold;
     display: grid !important;
     &:hover {
@@ -169,6 +166,7 @@
 }
 
 .headerNameOptions li a {
+  font-size: 0.9em;
   padding: 5px 10px !important;
   border: 1px solid black;
   color: black !important;

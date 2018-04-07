@@ -8,6 +8,7 @@
     "@babel/runtime": "^7.0.0-beta.42",
     "animate.css": "^3.5.2",
     "aws": "0.0.3-2",
+    "aws-sdk": "^2.220.1",
     "babel-runtime": "^6.26.0",
     "bcrypt": "^1.0.3",
     "coinbase": "^2.0.7",

@@ -2,7 +2,55 @@
     Adds responsiveness to mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+@media (max-width: 1200px) {
+  .search {
+    width: 30em;
+  }
+}
+
+@media (max-width: 950px) {
+  .search {
+    width: 25em;
+  }
+
+}
+
 @media (max-width: 900px) {
+
+  .profileUser {
+    margin: 7em 2em !important
+  }
+
+  .profilePic {
+    margin-left: 75%;
+    margin-top: 1em;
+  }
+
+  .placeLocation {
+    width: 19.5em !important;
+    height: 250px;
+    float: left !important;
+  }
+
+  .carousel-cell-image {
+    width: 100%;
+  }
+
+  .profileUserInfo ul li a {
+    font-size: 1.4rem !important;
+  }
+
+  .profileUserRight {
+    width: 17em;
+  }
+
+  .profileUserName h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .profileUserRight {
+    margin-top: 2em;
+  }
 
   .small-search {
     display: inline-block !important;
@@ -13,7 +61,7 @@
   }
 
   .search {
-    display: none
+    display: none;
   }
 
   .placeLocation {
@@ -146,19 +194,6 @@
 
 @media (max-width: 450px) {
 
-    .profileUser {
-      margin: 7em 2em !important
-    }
-
-    .profilePic {
-      margin-left: 75%;
-      margin-top: 1em;
-    }
-
-    .profileUserRight {
-      margin-top: 2em;
-    }
-
     .helpThree > li {
       width: 35%;
     }
@@ -175,25 +210,4 @@
       font-size: 3.5rem;
     }
 
-    .placeLocation {
-      width: 19.5em !important;
-      height: 250px;
-      float: left !important;
-    }
-
-    .carousel-cell-image {
-      width: 100%;
-    }
-
-    .profileUserInfo ul li a {
-      font-size: 1.4rem !important;
-    }
-
-    .profileUserRight {
-      width: 17em;
-    }
-
-    .profileUserName h1 {
-      font-size: 1.6rem !important;
-    }
 }

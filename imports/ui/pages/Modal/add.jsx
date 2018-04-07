@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import ReactFilestack, { client } from 'filestack-react';
 import { connect } from 'react-redux';
-// import Dropzone '/'
-// import { s3 } from 's3';
-// var s4 = new aws.S3();
+import Dropzone from '../Solo/drop.jsx';
+import { s3 } from 'aws-sdk';
+
+console.log(s3);
+
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);

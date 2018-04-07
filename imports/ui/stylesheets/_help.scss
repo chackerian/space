@@ -34,10 +34,6 @@
     margin: 3rem 0;
 }
 
-.helpImgUl li {
-    width: 25%;
-}
-
 .helpCenterThree {
     border-top: 1px solid $color-spacegrey;
 }
@@ -50,7 +46,7 @@
     display: inline-block;
     vertical-align: top !important;
     margin: 0.5em;
-    border: 1px solid black;
+    box-shadow: 0px 2px 5px;
     border-radius: 0.2em;
   }
   li ul li h3 {
