@@ -26,7 +26,6 @@ export default class FooterPre extends Component {
                 <li><a href="https://twitter.com/SpaceTrades"><i className="fa fa-twitter"></i></a></li>
                 <li><a href="https://instagram.com/SpaceTrades"><i className="fa fa-instagram"></i></a></li>
                 <li><a href="https://youtube.com/SpaceTrades"><i className="fa fa-youtube"></i></a></li>
-                <li><a href="/help/contact"><i className="material-icons">email</i></a></li>
               </ul>
            </li>
           </ul>
