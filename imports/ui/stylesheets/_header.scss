@@ -47,7 +47,7 @@
     ul {
         display: none;
         position: absolute;
-        margin: 1.2em -1px 0px -19.22em !important;
+        margin: 1.7em -1px 0px -19.22em !important;
         border: 2px solid #404040;
         animation: 100ms fadeInDownMini;
         background-color: white !important;
@@ -73,7 +73,7 @@
     ul {
         display: none;
         position: absolute;
-        margin: 1.2em 0px 0px -8.35em !important;
+        margin: 1.7em 0px 0px -8.35em !important;
         border: 2px solid $color-spacegrey;
         animation: 100ms fadeInDownMini;
         background-color: white !important;
@@ -110,7 +110,7 @@
 .clickDropper {
     li {
       display: inline-block !important;
-      padding: 0 0 0 0;
+      padding: 0.5em;
     }
     li ul li a {
       padding: 15px 0px 15px 0px !important;

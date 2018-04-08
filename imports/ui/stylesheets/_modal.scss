@@ -15,7 +15,7 @@
 
 .modal-content {
 	transition: all .3s ease;
-	border-radius: 15px !important;
+	border-radius: 5px !important;
 	box-shadow: 0 0 16px black !important;
 	overflow-y: hidden !important;
 	& > div {
@@ -51,20 +51,19 @@
 }
 
 .modalNext {
-	float: right !important;
-	background-color: #04b2ec !important;
+	background-color: $color-spacered !important;
 	&:hover {
-		background-color: #06C1FF !important;
+		background-color: red !important;
 	}
 }
 
 .modalBack,
 .modalExit {
 	float: left !important;
-	background-color: #999 !important;
+	background-color: $color-spacered !important;
 	margin-right: 10px;
 	&:hover {
-		background-color: #ababab !important;
+		background-color: red !important;
 	}
 }
 
