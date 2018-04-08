@@ -94,7 +94,7 @@ input[type="radio"] {
 
 .oneDiv {
   font-family: $font-norm !important;
-  margin: 0em 16em;
+  margin: 0em 10em;
   min-height: 50em;
 }
 
@@ -104,6 +104,9 @@ input[type="radio"] {
 
 .material-icons {
 	font-size: 24px !important;
-  position: absolute;
-  bottom: .6em;
+}
+
+.matdrop {
+  position: absolute !important;
+  bottom: 0.4em !important;
 }

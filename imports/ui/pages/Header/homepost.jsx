@@ -77,13 +77,13 @@ class Homepost extends Component {
             </ul>
             <ul className="clickDropper">
               <li className="navNotifications">
-                <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons">notifications</i></a>
+                <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons matdrop">notifications</i></a>
                 <ul className="headerDropDownNav notifyDropdown">
                   <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
                 </ul>
               </li>
               <li className="navGeneral">
-                <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons">more_vert</i></a>
+                <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons matdrop">more_vert</i></a>
                 <ul className="headerDropDownNav">
                   <a href="/listings"><li>Listings</li></a>
                   <a href="/saved"><li>Saved</li></a>

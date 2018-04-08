@@ -12,79 +12,6 @@
   margin-bottom: 3em;
 }
 
-.share-btn {
-    display: inline-block !important;
-    color: white !important;
-    width: 4em !important;
-    text-align: center !important;
-    border-radius: 4px;
-    margin: 0 1px !important;
-
-    &:hover {
-        color: #eeeeee !important;
-    }
-
-    &:active {
-        position: relative !important;
-        top: 2px !important;
-        box-shadow: none !important;
-        color: #e2e2e2 !important;
-        outline: none !important;
-    }
-
-    i {
-    color: #fff !important;
-    }
-}
-
-.share-btn.twitter     {
-    background: #55acee !important;
-}
-
-.share-btn.google-plus {
-    background: #dd4b39 !important;
-}
-
-.share-btn.facebook {
-    background: #3B5998 !important;
-}
-
-.share-btn.linkedin {
-    background: #4875B4 !important;
-}
-
-.share-btn.email {
-    background: #444444 !important;
-}
-
-.share-btn.reddit {
-    background: #ff5700 !important;
-}
-
-.share-btn.twitter:hover {
-    background: #0091FF !important;
-}
-
-.share-btn.google-plus:hover {
-    background: #FF1C00 !important;
-}
-
-.share-btn.facebook:hover {
-    background: #0B3388 !important;
-}
-
-.share-btn.linkedin:hover {
-    background: #4875B4 !important;
-}
-
-.share-btn.email:hover {
-    background: #444444 !important;
-}
-
-.share-btn.reddit:hover {
-    background: #FF2F00 !important;
-}
-
 .listingItemUser {
     text-align: CENTER;
     a span {
@@ -169,6 +96,24 @@
         margin: 0;
         display: inline-block;
     }
+}
+
+.desc-box {
+  border-radius: 4px;
+  margin-top: 1em;
+  box-shadow: 0px 1px 3px black;
+  p {
+      width: 91%;
+      padding: 10px 10px 13px 10px;
+      margin: 5px;
+  }
+  ul li {
+      padding: 10px;
+      font-size: 1rem !important;
+  }
+  ul li:last-child {
+      padding-top: 6px !important;
+  }
 }
 
 .listingItemLeft {

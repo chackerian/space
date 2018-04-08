@@ -8,7 +8,7 @@
 }
 
 .guardian {
-    float: right;
+  float: right;
 }
 
 .editProfile {
@@ -38,22 +38,8 @@
     padding: 5px 8px;
 }
 
-.desc-box {
-  border-radius: 4px;
-  margin-top: 2em;
-  box-shadow: 0px 1px 3px black;
-  p {
-      width: 91%;
-      padding: 10px 10px 13px 10px;
-      margin: 5px;
-  }
-  ul li {
-      padding: 10px;
-      font-size: 1rem !important;
-  }
-  ul li:last-child {
-      padding-top: 6px !important;
-  }
+.flickity-page-dots {
+  display: none !important;
 }
 
 .profileUser {
@@ -165,28 +151,6 @@
   }
 }
 
-.profileSettingsUl {
-    width: 70% !important;
-    margin: auto !important;
-    & > li {
-        display: block;
-    }
-}
-
-.profileSettingsPhoto li img {
-    width: 100px;
-    height: 100px;
-    border-radius: 4px;
-}
-
-.profileSettingsPhoto li input {
-    padding: 0 !important;
-    width: 200px !important;
-    border-radius: 0 !important;
-    border: none !important;
-    margin-left: 20px;
-}
-
 .profileCard > h2 {
     margin-left: 5px;
 }
@@ -205,117 +169,6 @@
     &:hover {
         border: 1px solid #999;
     }
-}
-
-.featurePageTitle {
-    text-decoration: underline;
-}
-
-.profileReceivedOffers h2 {
-    margin: 0;
-}
-
-.profileReceivedOffers > ul {
-    margin-left: 0%;
-}
-
-.profileReceivedOriginal {
-    margin: 3px 0 0 0;
-    font-size: 0.9rem;
-}
-
-.profileReceivedUl {
-    width: 97%;
-    margin: 0;
-}
-
-.profileReceivedLi {
-    height: 475px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-}
-
-.profileReceivedLi > ul {
-    display: inline-block !important;
-}
-
-.profileReceivedCardLeft {
-    width: 35% !important;
-}
-
-.profileReceivedImage {
-    width: 100% !important;
-    height: 260px;
-}
-
-.profileReceivedImg {
-    width: 100% !important;
-    height: 100%;
-    border-radius: 6px !important;
-}
-
-.profileReceivedCardRight {
-    width: 50% !important;
-    margin-left: 5%;
-    vertical-align: top;
-    li a {
-        margin: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    li a:hover {
-        text-decoration: underline;
-    }
-    li a h3 {
-        margin: 0;
-        font-size: 1.4rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-
-.profileReceivedName {
-    font-size: 0.8rem;
-    color: #6c54b3;
-    font-style: italic;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 2px 0 20px 0 !important;
-}
-
-.profileReceivedDate,
-.profileReceivedLocation {
-    margin: 0 0 8px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.profileReceivedAccept a {
-    background-color: #49E20E !important;
-}
-
-.profileReceivedDecline {
-    margin: 0 0 0 10px !important;
-}
-
-#profileReceivedOffersMaps {
-    margin-top: 10px;
-    width: 100%;
-    height: 180px;
-}
-
-.profileViewMeetupRight li {
-    margin: 16px 0 !important;
-}
-
-.profileViewMeetupLi {
-    margin-bottom: 50px;
 }
 
 /** Social Button CSS **/
