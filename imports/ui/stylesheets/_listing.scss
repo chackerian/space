@@ -1,5 +1,4 @@
 .itemMoney {
-    font-size: 20px !important;
     width: 3.5em;
 }
 
@@ -13,7 +12,6 @@
 }
 
 .listingItemUser {
-    text-align: CENTER;
     a span {
         vertical-align: middle;
         margin-left: 4px;
@@ -36,18 +34,10 @@
   border-radius: 0.5em;
 }
 
-.userImgSmall {
-    ul li a img {
-        height: 80px !important;
-        width: 80px !important;
-    }
-}
-
 .listingItemUserInfo {
     margin-left: 15px !important;
     margin-top: 30px !important;
     vertical-align: middle;
-    font-size: 1.5rem;
 }
 
 .listingItemUserName {
@@ -63,12 +53,10 @@
 }
 
 .listingItemCreated {
-    color: $color-burgundy;
-    font-size: 13px;
-    font-weight: bold;
-    width: 100%;
-    float: left;
-    margin-bottom: 0px;
+  color: $color-spacered;
+  font-size: 13px;
+  float: left;
+  margin-bottom: 0px;
 }
 
 .listingItemDiv {
@@ -103,16 +91,12 @@
   margin-top: 1em;
   box-shadow: 0px 1px 3px black;
   p {
-      width: 91%;
       padding: 10px 10px 13px 10px;
       margin: 5px;
   }
   ul li {
       padding: 10px;
       font-size: 1rem !important;
-  }
-  ul li:last-child {
-      padding-top: 6px !important;
   }
 }
 
@@ -127,13 +111,12 @@
 }
 
 .titleEdit {
-    width: 99%;
     font-weight: bold !important;
 }
 
 .editing {
     border: 1px solid $color-divider !important;
-    padding: 8px;
+    padding: 3px;
 }
 
 .descEdit {

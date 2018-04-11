@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 class Dropzone extends Component {
 
-  dropped(event) {
-    console.log(event.dataTransfer);
+  dropped = (event) => {
+    event.preventDefault();
+    console.log(event.dataTransfer, "ASD");
     Array.prototype.slice.call(event.dataTransfer.files);
   }
 
@@ -14,7 +15,6 @@ class Dropzone extends Component {
         onClick={this.dropped}
         onDrop={this.dropped}
       >
-        <input />
       </div>
     )
   }

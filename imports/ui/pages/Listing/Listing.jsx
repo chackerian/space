@@ -14,6 +14,10 @@ export default class ListingItem extends Component {
     }
   }
 
+  settings() {
+    $(".settings > .headerDropDownNav").toggle();
+  }
+
   edit = () => {
     $(".editListing").text("Save");
 
@@ -62,24 +66,39 @@ export default class ListingItem extends Component {
 
     if (isCreator && isUser) {
       return (
-        <ul className="buttonas">
-            <li><a className="editListing" href="#" onClick={this.edit}>Edit Listing</a></li>
+        <ul className="clickDropper">
+          <li className="settings">
+            <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
+            <ul className="headerDropDownNav">
+              <a onClick={this.edit}><li>Edit</li></a>
+            </ul>
+          </li>
         </ul>
       )
     } else if (isUser) {
       return (
-        <ul class="buttonas">
-          <li><a class="editListing" href="/chat">Chat</a></li>
-          <li><a class="editListing" href="#">Save</a></li>
-          <li><a class="editListing" href="#">Report</a></li>
+        <ul className="clickDropper">
+          <li className="settings">
+            <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
+            <ul className="headerDropDownNav">
+              <a><li>Report User</li></a>
+              <a><li>Report Listing</li></a>
+              <a><li>Save</li></a>
+            </ul>
+          </li>
         </ul>
       )
     } else {
       return (
-        <ul class="buttonas">
-          <li><a class="editListing" href="#">Chat</a></li>
-          <li><a class="editListing" href="#">Save</a></li>
-          <li><a class="editListing" href="#">Report</a></li>
+        <ul className="clickDropper">
+          <li className="settings">
+            <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
+            <ul className="headerDropDownNav">
+              <a><li>Report User</li></a>
+              <a><li>Report Listing</li></a>
+              <a><li>Save</li></a>
+            </ul>
+          </li>
         </ul>
       )
     }
@@ -123,13 +142,10 @@ export default class ListingItem extends Component {
                 </ul>
                 <ul className="listingItemUserInfo">
                     <li className="listingItemUserName"><a href={`/profile/${listed.creator_id}`}>{listed.creator_username}</a></li>
-                    <li className="rating">
-                        <div className="rateit" data-rateit-value="{listed.totalrating}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
-                    </li>
+                    { this.manage() }
                 </ul>
               </div>
               <Social listing={listed} />
-              { this.manage() }
             </div>
             <div className="desc">
               <div className="desc-box">

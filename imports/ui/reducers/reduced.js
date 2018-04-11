@@ -14,6 +14,16 @@ export default function(state=[], action) {
         modal: "add",
         status: "on"
       }
+    case "REPORT_USER":
+      return {
+        modal: "reportUser",
+        status: "on"
+      }
+    case "REPORT_LISTING":
+      return {
+        modal: "reportListing",
+        status: "on"
+      }
     case "CLOSE_MODAL":
       return {
         modal: "add",

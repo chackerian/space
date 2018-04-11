@@ -9,6 +9,7 @@
 
 .guardian {
   float: right;
+  margin-top: 2em;
 }
 
 .editProfile {
@@ -31,10 +32,8 @@
 
 .box-title {
     background: $color-spacered !important;
-    font-family: inherit;
     font-size: 1.1em !important;
     color: white;
-    margin: 0 !important;
     padding: 5px 8px;
 }
 

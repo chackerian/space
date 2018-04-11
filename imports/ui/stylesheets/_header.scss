@@ -5,7 +5,7 @@
 }
 
 .login {
-  margin-right: 22px;
+  margin-right: 22px !important;
 }
 
 .searchIcon {
@@ -20,7 +20,6 @@
   width: 100%;
   z-index: 100;
   top: 0;
-  height: 50px;
   position: fixed !important;
   border-bottom: 2px solid $color-spacegrey;
   ul {
@@ -31,7 +30,6 @@
 .wholeNav {
   max-width: 1050px;
   align-items: center;
-  height: 50px !important;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -70,6 +68,31 @@
 .navGeneral {
     margin-right: 22px;
     margin-left: .7em;
+    ul {
+        display: none;
+        position: absolute;
+        margin: 1.7em 0px 0px -8.35em !important;
+        border: 2px solid $color-spacegrey;
+        animation: 100ms fadeInDownMini;
+        background-color: white !important;
+        width: 10em;
+
+        li {
+            padding: 15px 50px 15px 15px;
+            display: flex;
+
+            a {
+                margin: 0 !important;
+                padding: 15px 80px 15px 15px !important;
+            }
+        }
+
+    }
+}
+
+.settings {
+    margin-left: .7em;
+    float: right;
     ul {
         display: none;
         position: absolute;
@@ -144,6 +167,20 @@
       border-bottom: 8px solid $color-spacegrey;
       margin-top: -10px;
     }
+    & > .settings > ul > a:first-child::before {
+      color: $color-spacegrey;
+      left: 12.22em !important;
+      pointer-events: none;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $color-spacegrey;
+      margin-top: -10px;
+    }
 }
 
 .headerDropDown {
@@ -152,6 +189,8 @@
 
 .headerDropDownNav {
   box-shadow: 0px 2px 5px;
+  position: absolute;
+  background: white;
   a {
     font-family: 'system-ui' !important;
     font-size: 0.7em;

@@ -7,7 +7,6 @@ import { s3 } from 'aws-sdk';
 
 console.log(s3);
 
-
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
 };
@@ -137,6 +136,11 @@ class AddModal extends Component {
                       <h3 className="listing_title">What Are You Selling?</h3>
                       <input type="text" className="listtitle" placeholder="Listing Title" maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
                     </li>
+                    <div className="dropzone">
+                      <Dropzone>
+                        <p>Try dropping some files here, or click to select files to upload.</p>
+                      </Dropzone>
+                    </div>
                     <li className="modOfferRequestOfferWrap">
                       <h3 className="price">At What Price?</h3>
                       <input type="text" className="listprice" placeholder="Price" maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
@@ -309,7 +313,7 @@ class AddModal extends Component {
                 </div>
                 <div className="modMultiBtn">
                     <button type="button" className="modalNext" data-step="5" onClick={(event) => this.nextPage(event)}>Next</button>
-                    <button type="button" className="modalBack" data-step="5"  onClick={(event) => this.backPage(event)}>Back</button>
+                    <button type="button" className="modalBack" data-step="5" onClick={(event) => this.backPage(event)}>Back</button>
                 </div>
               </div>
             </div>
@@ -328,8 +332,8 @@ class AddModal extends Component {
                 <textarea className="listdescription" placeholder="Briefly explain any other information about the item" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
               </div>
               <div className="modMultiBtn">
-                  <button type="button" className="add modalSubmitBtn" onClick={this.createListing}>Create</button>
-                  <button type="button" className="modalBack" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="add modalSubmitBtn" data-step="6" onClick={this.createListing}>Create</button>
+                  <button type="button" className="modalBack" data-step="6" onClick={(event) => this.backPage(event)}>Back</button>
               </div>
             </div>
           </div>

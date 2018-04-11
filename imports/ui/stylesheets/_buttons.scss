@@ -39,7 +39,6 @@ a[href] {
       border-radius: 0.2em;
       padding: 5px 10px;
       margin: 0.5em;
-      transition: 0.5s;
       font-size: 14px;
     }
     li a:hover {
@@ -54,7 +53,6 @@ a[href] {
       border: 1px solid black !important;
       border-radius: 0.2em;
       padding: 5px 10px;
-      transition: 0.5s;
       margin: 0 0 0 0.5em;
     }
     li a:hover {
@@ -79,10 +77,9 @@ a[href] {
 }
 
 .add {
-    background-color: #75D855;
-    border-radius: 0.2em;
+    background-color: $color-spacered;
     &:hover {
-      background-color: green;
+      background-color: red;
     }
 }
 

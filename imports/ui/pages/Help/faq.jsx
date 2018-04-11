@@ -7,6 +7,7 @@ export default class AboutHelp extends Component {
     return(
       <div className="faqdiv oneDiv">
         <HelpNav />
+        <h1>SpaceTrades helps people organize meetups for buying and selling items locally. We aim to make buying and selling safer and easier.</h1>
         <h2>How Does It Work?</h2>
         Create a listing, wait for messages from other users, organize a meetup.
 
