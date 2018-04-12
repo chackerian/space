@@ -136,11 +136,6 @@ class AddModal extends Component {
                       <h3 className="listing_title">What Are You Selling?</h3>
                       <input type="text" className="listtitle" placeholder="Listing Title" maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
                     </li>
-                    <div className="dropzone">
-                      <Dropzone>
-                        <p>Try dropping some files here, or click to select files to upload.</p>
-                      </Dropzone>
-                    </div>
                     <li className="modOfferRequestOfferWrap">
                       <h3 className="price">At What Price?</h3>
                       <input type="text" className="listprice" placeholder="Price" maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
@@ -254,13 +249,9 @@ class AddModal extends Component {
             <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
             <div className="modAddListingPage">
               <ul className="addListImg">
-                <ReactFilestack
-                  apikey='AY9qCMb1DR52X6kAM4p5Bz'
-                  buttonText="Add Images"
-                  buttonClass="uploadimages"
-                  options={options}
-                  onSuccess={onSuccess}
-                />
+                <Dropzone>
+                  <input type="file" /><p>Try dropping some files here, or click to select files to upload.</p>
+                </Dropzone>
               </ul>
             </div>
             <div className="modMultiBtn">

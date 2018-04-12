@@ -13,6 +13,14 @@
 	transition: all .3s ease;
 }
 
+.dropzone {
+	min-height: 150px;
+	border: 2px dashed;
+	background: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
 .modal-content {
 	transition: all .3s ease;
 	border-radius: 5px !important;
@@ -34,10 +42,6 @@
 	&:hover {
 		color: $color-spacered;
 	}
-}
-
-.uploadimages {
-  background-color: $color-spacered;
 }
 
 .modal-body {
@@ -81,38 +85,6 @@
 	transition: opacity 0.15s linear;
 }
 
-.listdescription {
-    resize: none;
-    width: 92%;
-    height: 150px;
-}
-
-.currentLocation input {
-	padding: 11px 50px !important;
-	color: #fff !important;
-	background-color: red;
-	border: none;
-	border-radius: 4px !important;
-}
-
-.modLocationRadiusTrigger {
-	color: $color-spacegrey !important;
-	background-color: #f8504b !important;
-}
-
-.modLocationRadiusBody {
-	margin-bottom: 17em;
-}
-
-.notifMainWrap {
-    width: 70%;
-    margin:auto;
-    h2 {
-		margin-top: 50px !important;
-		font-weight: 400 !important;
-	}
-}
-
 ////////////////// Join ///////////////////
 
 .modWrapper {
@@ -134,37 +106,10 @@
 	}
 }
 
-.modJoinOnly {
-	color: blue;
-	font-size: 1rem !important;
-    font-weight: bold;
-}
-
 /////////////////////////////////////////
-
-.modActiveDirWrap {
-	text-align: center;
-	h3 {
-		font-weight: 400;
-	}
-}
 
 .modEditListingBody {
     overflow: scroll !important;
-}
-
-.modReportTrigger {
-    background-color: #E87600 !important;
-    display: initial !important;
-}
-
-.modActiveDirMaps img {
-	width: 80% !important;
-	height: 320px !important;
-}
-
-.editListTrade {
-	margin-top: 30px !important;
 }
 
 .editListRadio h2 {
@@ -177,14 +122,6 @@
 	font-size: 0.75rem !important;
 	color: #444 !important;
 	margin-top: 15px !important;
-}
-
-#datepicker {
-    color: black !important;
-}
-
-.offerAcceptButton input:hover {
-    background-color: #6DAB59;
 }
 
 .modImageDialog {
