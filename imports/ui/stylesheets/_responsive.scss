@@ -8,6 +8,32 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .profileUserRight {
+    width: 17em;
+  }
+
+  .profileUserName h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .small-search {
+    display: inline-block !important;
+  }
+
+  .searchIcon {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .headerNameOptions {
+    display: none !important;
+  }
+}
+
 @media (max-width: 950px) {
   .search {
     width: 25em;
@@ -40,37 +66,6 @@
     font-size: 1.4rem !important;
   }
 
-  .profileUserRight {
-    width: 17em;
-  }
-
-  .profileUserName h1 {
-    font-size: 1.6rem !important;
-  }
-
-  .profileUserRight {
-    margin-top: 2em;
-  }
-
-  .small-search {
-    display: inline-block !important;
-  }
-
-  .searchIcon {
-    display: none;
-  }
-
-  .search {
-    display: none;
-  }
-
-  .placeLocation {
-    display: none;
-  }
-
-  .headerNameOptions {
-    display: none !important;
-  }
 }
 
 @media (max-width: 850px) {
@@ -89,11 +84,6 @@
     padding: 2em 4em;
     margin: 3em 0em !important;
     padding: 2em 1em;
-  }
-
-  .profileUserImage {
-    height: 125px !important;
-    width: 125px !important;
   }
 
   .guardian {

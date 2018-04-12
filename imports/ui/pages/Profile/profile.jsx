@@ -20,6 +20,9 @@ export default class Profile extends Component {
         return(
           <div className="profileUser oneDiv">
             <div className="topStrip">
+              <ul className="headerAuth editProfile">
+                  <li><a className="addListing" href="/settings" onClick={this.edit}>Edit Profile</a></li>
+              </ul>
               <div className="profileUserLeft">
                   <a href="settings">
                     <div className="profileUserImage"><img className='profilePic' src={img} /></div>
@@ -62,9 +65,6 @@ export default class Profile extends Component {
                   </div>
                 </div>
               </div>
-              <ul className="headerAuth editProfile">
-                  <li><a className="addListing" href="/settings" onClick={this.edit}>Edit Profile</a></li>
-              </ul>
             </div>
           </div>
         )

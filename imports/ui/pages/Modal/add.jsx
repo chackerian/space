@@ -233,25 +233,14 @@ class AddModal extends Component {
       maxFiles: 4
     };
 
-    onSuccess = (result) => {
-      var images = [];
-      var files = result.filesUploaded
-      files.map(x => {
-        images.push(x.url)
-      })
-      Session.set('images', images)
-    }
-
     return(
       <div className="modAddListingDialog modal-dialog">
         <div className="modAddListingContent modal-content">
           <div className="modAddListingDiv modal-body step step-4">
             <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
-            <div className="modAddListingPage">
+            <div className="modAddListingPage imageUploadPage">
               <ul className="addListImg">
-                <Dropzone>
-                  <input type="file" /><p>Try dropping some files here, or click to select files to upload.</p>
-                </Dropzone>
+                <Dropzone></Dropzone>
               </ul>
             </div>
             <div className="modMultiBtn">

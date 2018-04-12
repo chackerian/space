@@ -18,9 +18,11 @@
 .headerNav {
   background-color: $color-spacered;
   width: 100%;
+  z-index: 1;
   top: 0;
   position: fixed !important;
   border-bottom: 2px solid $color-spacegrey;
+  box-shadow: 0 4px 6px -3px rgb(64, 64, 64);
   ul {
       display: inline-block;
   }
@@ -48,7 +50,6 @@
         animation: 100ms fadeInDownMini;
         background-color: white !important;
         width: 21em;
-        z-index: 3;
 
         li {
             padding: 15px 50px 15px 15px;
@@ -64,7 +65,7 @@
 }
 
 .navGeneral {
-    margin-right: 22px;
+    margin-right: 35px;
     margin-left: .7em;
     ul {
         display: none;
@@ -183,6 +184,7 @@
 }
 
 .headerDropDown {
+  margin-right: 0.55em;
   display: inline-block !important;
 }
 

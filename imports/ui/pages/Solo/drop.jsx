@@ -3,13 +3,14 @@ import React, { Component } from 'react';
 class Dropzone extends Component {
 
   allowDrop = (event) => {
+    console.log("drag")
     event.preventDefault();
   }
 
   dropped = (event) => {
     event.preventDefault();
     var cool = Array.prototype.slice.call(event.dataTransfer.files);
-    console.log(cool)
+    console.log(cool, "bool")
     let dataTransferItemsList = []
     if (event.dataTransfer) {
       const dt = event.dataTransfer
@@ -33,6 +34,7 @@ class Dropzone extends Component {
         onEnter={(event) => this.dropped(event)}
         onDrop={(event) => this.dropped(event)}
       >
+      <input className='fileDropper' type="file" /><p>Try dropping some files here, or click to select files to upload.</p>
       </div>
     )
   }
