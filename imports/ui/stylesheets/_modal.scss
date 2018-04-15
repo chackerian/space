@@ -17,12 +17,16 @@
 	min-height: 150px;
 	border: 2px dashed black;
 	cursor: pointer;
+	p {
+		text-align: center;
+    padding-top: 3em;
+	}
 }
 
 .modal-content {
 	transition: all .3s ease;
 	border-radius: 5px !important;
-	box-shadow: 0 0 16px black !important;
+	box-shadow: 0 0 16px rgba(27, 2, 35, 0.15) !important;
 	overflow-y: hidden !important;
 	& > div {
 		background-color: white !important;
@@ -102,16 +106,6 @@
 	ul li {
 		line-height: 2;
 	}
-}
-
-/////////////////////////////////////////
-
-.modEditListingBody {
-    overflow: scroll !important;
-}
-
-.editListRadio h2 {
-	font-size: 1.8rem !important;
 }
 
 .joinAgreeSmall {

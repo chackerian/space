@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import ReactFilestack, { client } from 'filestack-react';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
 import { s3 } from 'aws-sdk';
@@ -124,6 +123,7 @@ class AddModal extends Component {
   }
 
   render() {
+    $(".listtitle").focus()
     if(this.state.modaltab == 1) {
       return(
           <div className="modAddListingDialog modal-dialog">
@@ -153,104 +153,99 @@ class AddModal extends Component {
 
     if(this.state.modaltab == 2) {
       return(
-        <div className="modAddListingDialog modal-dialog">
-          <div className="modAddListingContent modal-content">
-            <div className="modAddListingDiv modAddListingDivTwo modal-body step-2">
-              <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
-                <div className="modAddListingPage">
-                  <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
-                      <li className="modOfferRequestOfferWrap">
-                          <h3 className="category">What is its Category?</h3>
-                          <div className="styled-select">
-                              <select className="listcategory" value={this.state.category} onChange={(event) => this.selectChange(event)}>
-                                  <option disabled defaultValue>Select Category</option>
-                                  <option value="Apparel">Apparel</option>
-                                  <option value="Electronics">Electronics</option>
-                                  <option value="Shoes">Shoes</option>
-                                  <option value="Other">Other</option>
-                              </select>
-                          </div>
-                      </li>
+          <div className="modAddListingDialog modal-dialog">
+            <div className="modAddListingContent modal-content">
+              <div className="modAddListingDiv modAddListingDivTwo modal-body step-2">
+                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+                  <div className="modAddListingPage">
+                    <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
                         <li className="modOfferRequestOfferWrap">
-                          <h3 className="typed">What is its Type?</h3>
-                          <select className="listtype" value={this.state.type} onChange={(event) => this.selectTypeChange(event)}>
-                            <option defaultValue>Select Type</option>
-                            {
-                              this.state.types.map(type => {
-                                return <option value={type}>{type}</option>
-                              })
-                            }
-                          </select>
+                            <h3 className="category">What is its Category?</h3>
+                            <div className="styled-select">
+                                <select className="listcategory" value={this.state.category} onChange={(event) => this.selectChange(event)}>
+                                    <option disabled defaultValue>Select Category</option>
+                                    <option value="Apparel">Apparel</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Shoes">Shoes</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
                         </li>
-                    </ul>
-              </div>
-              <div className="modMultiBtn">
-                  <button type="button" className="modalNext" data-step="2" onClick={(event) => this.nextPage(event)}>Next</button>
-                  <button type="button" className="modalBack" data-step="2" onClick={(event) => this.backPage(event)}>Back</button>
+                          <li className="modOfferRequestOfferWrap">
+                            <h3 className="typed">What is its Type?</h3>
+                            <select className="listtype" value={this.state.type} onChange={(event) => this.selectTypeChange(event)}>
+                              <option defaultValue>Select Type</option>
+                              {
+                                this.state.types.map(type => {
+                                  return <option value={type}>{type}</option>
+                                })
+                              }
+                            </select>
+                          </li>
+                      </ul>
+                </div>
+                <div className="modMultiBtn">
+                    <button type="button" className="modalNext" data-step="2" onClick={(event) => this.nextPage(event)}>Next</button>
+                    <button type="button" className="modalBack" data-step="2" onClick={(event) => this.backPage(event)}>Back</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         )
       }
 
     if(this.state.modaltab == 3) {
       return(
-        <div className="modAddListingDialog modal-dialog">
-          <div className="modAddListingContent modal-content">
-            <div className="modAddListingDiv modal-body step step-3">
-              <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
-              <div className="modAddListingPage">
-              <h3>Provide Details</h3>
-              <ul className="modAddListingPageFourUl">
-                  <li>
-                    <label>Condition</label>
-                    <div className="styled-select">
-                        <select className="condition" value={this.state.condition} onChange={(event) => this.selectConditionChange(event)}>
-                            <option value="New">New</option>
-                            <option value="Like New">Like New</option>
-                            <option value="Used">Used</option>
-                            <option value="Needs Repair">Needs Repair</option>
-                        </select>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div className="modMultiBtn">
-                  <button type="button" className="modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
-                  <button type="button" className="modalBack" data-step="3" onClick={(event) => this.backPage(event)}>Back</button>
+          <div className="modAddListingDialog modal-dialog">
+            <div className="modAddListingContent modal-content">
+              <div className="modAddListingDiv modal-body step step-3">
+                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+                <div className="modAddListingPage">
+                <h3>Provide Details</h3>
+                <ul className="modAddListingPageFourUl">
+                    <li>
+                      <label>Condition</label>
+                      <div className="styled-select">
+                          <select className="condition" value={this.state.condition} onChange={(event) => this.selectConditionChange(event)}>
+                              <option value="New">New</option>
+                              <option value="Like New">Like New</option>
+                              <option value="Used">Used</option>
+                              <option value="Needs Repair">Needs Repair</option>
+                          </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="modMultiBtn">
+                    <button type="button" className="modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
+                    <button type="button" className="modalBack" data-step="3" onClick={(event) => this.backPage(event)}>Back</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       )
     }
 
   if(this.state.modaltab == 4) {
 
-    const options = {
-      accept: 'image/*',
-      maxFiles: 4
-    };
-
     return(
-      <div className="modAddListingDialog modal-dialog">
-        <div className="modAddListingContent modal-content">
-          <div className="modAddListingDiv modal-body step step-4">
-            <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
-            <div className="modAddListingPage imageUploadPage">
-              <ul className="addListImg">
-                <Dropzone></Dropzone>
-              </ul>
-            </div>
-            <div className="modMultiBtn">
-                <button type="button" className="modalNext" data-step="4" onClick={(event) => this.nextPage(event)}>Next</button>
-                <button type="button" className="modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
+          <div className="modAddListingDialog modal-dialog">
+            <div className="modAddListingContent modal-content">
+              <div className="modAddListingDiv modal-body step step-4">
+                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+                <div className="modAddListingPage imageUploadPage">
+                  <ul className="addListImg">
+                    <Dropzone></Dropzone>
+                  </ul>
+                </div>
+                <div className="modMultiBtn">
+                    <button type="button" className="modalNext" data-step="4" onClick={(event) => this.nextPage(event)}>Next</button>
+                    <button type="button" className="modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    )
+      )
   }
 
   if(this.state.modaltab == 5) {
@@ -309,7 +304,7 @@ class AddModal extends Component {
               <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>
-                <textarea className="listdescription" placeholder="Briefly explain any other information about the item" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
+                <textarea className="listdescription" placeholder="Briefly explain any other information" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
               </div>
               <div className="modMultiBtn">
                   <button type="button" className="add modalSubmitBtn" data-step="6" onClick={this.createListing}>Create</button>

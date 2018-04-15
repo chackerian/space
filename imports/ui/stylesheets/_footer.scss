@@ -5,7 +5,7 @@ footer {
     position: inherit;
     bottom: 0px;
     margin-bottom: 0px;
-    background-color: $color-spacered
+    background-color: $color-spacered;
 }
 
 .footerDivide {
@@ -23,7 +23,7 @@ footer {
     display: inline-flex;
     li {
         display: inline-block;
-        margin-right: 16px;
+        margin-right: 6px;
     }
     li h3 {
         margin: 0 20px 0 0 !important;

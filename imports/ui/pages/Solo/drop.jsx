@@ -13,6 +13,7 @@ class Dropzone extends Component {
     console.log(cool, "bool")
     let dataTransferItemsList = []
     if (event.dataTransfer) {
+      console.log("dataTransfer 1")
       const dt = event.dataTransfer
       if (dt.files && dt.files.length) {
         dataTransferItemsList = dt.files
@@ -20,9 +21,10 @@ class Dropzone extends Component {
         dataTransferItemsList = dt.items
       }
     } else if (event.target && event.target.files) {
+      console.log("dataTransfer 2")
       dataTransferItemsList = event.target.files
     }
-    console.log(dataTransferItemsList)
+    console.log("end", dataTransferItemsList)
   }
 
   render() {
@@ -34,7 +36,7 @@ class Dropzone extends Component {
         onEnter={(event) => this.dropped(event)}
         onDrop={(event) => this.dropped(event)}
       >
-      <input className='fileDropper' type="file" /><p>Try dropping some files here, or click to select files to upload.</p>
+      <input className='fileDropper' type="file" /><p>Drop images here or click to select</p>
       </div>
     )
   }

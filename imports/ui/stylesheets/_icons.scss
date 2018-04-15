@@ -14,13 +14,6 @@ i {
     }
 }
 
-.fa-plus-circle {
-    color: $color-spacered !important
-    &:hover {
-        color: $color-spacered !important;
-    };
-}
-
 .fa-instagram {
     color: white;
 }
@@ -31,8 +24,4 @@ i {
 
 .facebook {
     background-color: $color-facebook;
-}
-
-.instagram {
-    background-color: $color-instagram;
 }
