@@ -10,7 +10,6 @@ export default class Profile extends Component {
 
   render() {
     var profile = Meteor.users.find({_id: FlowRouter.current().params.id}).fetch()
-    console.log("profile", profile)
     if (profile && profile.length > 0) {
       var prof = profile[0];
       var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
@@ -21,7 +20,7 @@ export default class Profile extends Component {
           <div className="profileUser oneDiv">
             <div className="topStrip">
               <ul className="headerAuth editProfile">
-                  <li><a className="addListing" href="/settings" onClick={this.edit}>Edit Profile</a></li>
+                  <li><a className="addListing" href="/settings">Edit</a></li>
               </ul>
               <div className="profileUserLeft">
                   <a href="settings">
