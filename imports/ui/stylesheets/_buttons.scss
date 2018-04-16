@@ -93,7 +93,8 @@ a[href] {
     margin-top: 20px;
     padding: 1em;
     width: 13em;
-    background-color: #3A5795 !important;
+    background-color: $color-facebook !important;
+    text-align: center;
     border-radius: 4px;
     color: white !important;
     b {
