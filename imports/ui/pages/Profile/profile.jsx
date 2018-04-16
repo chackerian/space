@@ -15,8 +15,8 @@ export default class Profile extends Component {
       var prof = profile[0];
       var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
       var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
-      // var city = JSON.parse(Meteor.user().profile.location).city;
-      // var state = JSON.parse(Meteor.user().profile.location).region_name;
+      var city = JSON.parse(Meteor.user().profile.location).city;
+      var state = JSON.parse(Meteor.user().profile.location).region_name;
         return(
           <div className="profileUser oneDiv">
             <div className="topStrip">
@@ -51,7 +51,7 @@ export default class Profile extends Component {
                 </div>
                 <div className="profileUserInfo">
                     <ul className="profileUserArea">
-                        <i className="fa fa-compass"></i><li className='locoplace'>{city='asd'}, {state='ad'}</li>
+                        <i className="fa fa-compass"></i><li className='locoplace'>{city='New York'}, {state='New York'}</li>
                     </ul>
                 </div>
                 <div className="stats">

@@ -8,7 +8,7 @@
 }
 
 .rowListing {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .listingItemUser {
@@ -25,6 +25,10 @@
         display: inline-block;
         margin: 0;
     }
+}
+
+.listingPrice {
+  display: initial;
 }
 
 .placeLocation {

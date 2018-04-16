@@ -78,7 +78,7 @@ class Homepost extends Component {
             <ul className="clickDropper">
               <li className="navNotifications">
                 <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons matdrop">notifications</i></a>
-                <ul className="headerDropDownNav notifyDropdown">
+                <ul className="headerDropDownNav">
                   <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
                 </ul>
               </li>

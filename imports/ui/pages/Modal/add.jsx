@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
 import { s3 } from 'aws-sdk';
 
-console.log(s3);
-
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
 };
@@ -122,8 +120,11 @@ class AddModal extends Component {
     this.props.close()
   }
 
-  render() {
+  componentDidMount() {
     $(".listtitle").focus()
+  }
+
+  render() {
     if(this.state.modaltab == 1) {
       return(
           <div className="modAddListingDialog modal-dialog">
