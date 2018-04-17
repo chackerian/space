@@ -106,10 +106,12 @@ export default class ListingItem extends Component {
 
   render() {
     let listing = Listing.find({ urlKey: FlowRouter.current().params.id }).fetch()
-    var height = (350 - $(".carousel-cell-image").height()) / 2
     if (listing && listing.length > 0) {
       var listed = listing[0]
       var createdAt = moment(listed.createdAt).format("dddd, MMMM D");
+      var height = (350 - $(".carousel-cell-image").height()) / 2
+      var pixheight = height+"px";
+      $(".carousel-cell-image").css('top', pixheight)
       return (
         <div className="listingItemDiv">
           <div className="listingItemLeft">
