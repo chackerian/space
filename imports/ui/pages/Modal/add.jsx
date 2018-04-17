@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
 import { s3 } from 'aws-sdk';
+var AWS = require('aws-sdk');
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
@@ -122,6 +123,7 @@ class AddModal extends Component {
 
   componentDidMount() {
     $(".listtitle").focus()
+    console.log(s3, AWS)
   }
 
   render() {

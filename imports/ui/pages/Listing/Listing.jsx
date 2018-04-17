@@ -106,7 +106,7 @@ export default class ListingItem extends Component {
 
   render() {
     let listing = Listing.find({ urlKey: FlowRouter.current().params.id }).fetch()
-    console.log("listing", listing)
+    var height = (350 - $(".carousel-cell-image").height()) / 2
     if (listing && listing.length > 0) {
       var listed = listing[0]
       var createdAt = moment(listed.createdAt).format("dddd, MMMM D");
@@ -118,7 +118,7 @@ export default class ListingItem extends Component {
             <h1 className="listingItemTitle">{listed.listing_title}</h1>
           </div>
 
-          <div className="row rowListing">
+          <div className="row">
             <div className="dateDiv">
               <p className="listingItemCreated">
                 {createdAt}

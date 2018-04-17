@@ -85,7 +85,7 @@ class Homepost extends Component {
               <li className="navGeneral">
                 <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons matdrop">more_vert</i></a>
                 <ul className="headerDropDownNav">
-                  <a href="/listings"><li>Profile</li></a>
+                  <a href={`/profile/${profile}`}><li>Profile</li></a>
                   <a href="/listings"><li>Listings</li></a>
                   <a href="/saved"><li>Saved</li></a>
                   <a href="/help"><li>Help Center</li></a>

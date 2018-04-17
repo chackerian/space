@@ -44,7 +44,7 @@
 @media (max-width: 900px) {
 
   .profileUser {
-    margin: 7em 2em !important;
+    margin: 7em 1em !important;
   }
 
   .carousel-cell-image {
@@ -117,6 +117,14 @@
 
     .profileDesc p {
         font-size: 0.85rem !important;
+    }
+
+    .profileUserImage {
+      margin: 0 auto !important;
+    }
+
+    .profileUserLeft {
+      width: 95% !important;
     }
 
     .profileUserAmount ul {
