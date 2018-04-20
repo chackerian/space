@@ -73,7 +73,7 @@ class Homepost extends Component {
               <a className="small-search" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-search"></i></a>
             </li>
             <ul className="headerAuth">
-                <li><a className="addListing" href="#" onClick={this.props.add}>Add Listing</a></li>
+                <li><a href="#" onClick={this.props.add}>Add Listing</a></li>
             </ul>
             <ul className="clickDropper">
               <li className="navNotifications">

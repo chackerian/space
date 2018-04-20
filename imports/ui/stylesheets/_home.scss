@@ -1,10 +1,6 @@
 .grid-item {
-  width: 225px;
+  width: 207px;
   float: left;
-}
-
-.modAddListingPageFourUl li {
-  padding-bottom: 1em;
 }
 
 .editListing {
@@ -51,7 +47,6 @@
         color: $color-spacegrey;
         margin: 0;
         overflow: hidden;
-        text-overflow: ellipsis !important;
         text-align: center;
         padding: 0.5em;
         font-weight: bold;
@@ -71,12 +66,10 @@
 
 .homeCardRight {
     float: right !important;
-    text-align: right;
 }
 
 .homeCardUser {
   text-decoration: underline;
-  margin-left: 0px !important;
   a {
       font-size: 0.6rem !important;
   }
@@ -86,10 +79,10 @@
   padding-bottom: 1em;
   a h4 {
     font-family: 'system-ui';
+    overflow: hidden !important;
   }
 }
 
 .homePrice {
-  text-align: left !important;
   font-size: 0.8em !important;
 }

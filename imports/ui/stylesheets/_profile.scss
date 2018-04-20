@@ -9,7 +9,7 @@
 
 .guardian {
   float: right;
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .editProfile {
@@ -28,8 +28,8 @@
 .profilePic {
   border: 4px solid white !important;
   border-radius: 0.4em;
-  height: 125px;
-  width: 125px;
+  height: 150px;
+  width: 150px;
 }
 
 .box-title {
@@ -41,10 +41,6 @@
 
 .flickity-page-dots {
   display: none !important;
-}
-
-.profileUser {
-    margin: 6em 10em;
 }
 
 .circle {
@@ -70,7 +66,6 @@
 }
 
 .profileUserRight {
-  width: 17.5em;
   padding: 0.9em;
   display: inline-block;
   background: white;

@@ -12,19 +12,20 @@ export default class Profile extends Component {
     var profile = Meteor.users.find({_id: FlowRouter.current().params.id}).fetch()
     if (profile && profile.length > 0) {
       var prof = profile[0];
+      var linked = Meteor.userId()
       var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
       var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
       var city = JSON.parse(Meteor.user().profile.location).city;
       var state = JSON.parse(Meteor.user().profile.location).region_name;
         return(
-          <div className="profileUser oneDiv">
+          <div className="oneDiv">
             <div className="topStrip">
               <ul className="headerAuth editProfile">
-                  <li><a className="addListing" href="/settings">Edit</a></li>
+                  <li><a href={`/profile/${linked}/settings`}>Edit</a></li>
               </ul>
               <div className="profileUserLeft">
                   <a href="settings">
-                    <div className="profileUserImage"><img className='profilePic' src={img} /></div>
+                    <div className="profileUserImage"><img className='profilePic' src={img} /><div className='overflower'>Edit Photo</div></div>
                   </a>
               </div>
               <div className="profileUserRight">

@@ -47,10 +47,11 @@
         display: none;
         position: absolute;
         padding: 5px 0;
-        margin: 1.73em -1px 0px -19.22em !important;
+        margin: 1.85em -1px 0px -16.22em !important;
         animation: 100ms fadeInDownMini;
         background-color: white !important;
-        width: 21em;
+        width: 18em;
+        border: 1px solid #d3d3d3;
         li {
             padding: 15px 50px 15px 15px;
             display: flex;
@@ -73,8 +74,8 @@
         padding: 5px 0;
         margin: 1.73em 0px 0px -10.35em !important;
         animation: 100ms fadeInDownMini;
-        background-color: white !important;
         width: 12.33em;
+        border: 1px solid #d3d3d3;
         li {
             padding: 15px 50px 15px 15px;
             display: flex;
@@ -137,7 +138,7 @@
       font-size: 0.8rem !important;
     }
     & > .navNotifications > ul > a:first-child::before {
-      left: 27.8em !important;
+      left: 23.5em !important;
       content: '';
       display: block;
       position: absolute;

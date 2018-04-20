@@ -8,7 +8,7 @@ var HomeCard = ({item}) => (
   <div className="grid-item">
     <li className="homeCardLi">
       <ul className="homeCardItem">
-        <li><a className='imglink' href={`/listing/${item.urlKey}`}><img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ffreshkorean1.files.wordpress.com%2F2012%2F07%2Forange-ec98a4eba08ceca780-fresh-korean.jpg&f=1" className="homeCardImg"/></a></li>
+        <li><a className='imglink' href={`/listing/${item.urlKey}`}><img src="https://img.letgo.com/images/c6/55/e4/5a/c655e45a8fb23585e392f1273d7d5511.jpeg?impolicy=img_900" className="homeCardImg"/></a></li>
       </ul>
       <ul className="homeCardDetails">
         <li className='homeTitle'><a href={`/listing/${item.urlKey}`}><h4>{item.listing_title}</h4></a></li>

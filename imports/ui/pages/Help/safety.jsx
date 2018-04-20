@@ -5,7 +5,7 @@ export default class Safety extends Component {
 
   render() {
     return(
-      <div className="prohibiteddiv oneDiv">
+      <div className="oneDiv">
         <HelpNav />
         <h2>Don't Reveal Sensitive Personal Information</h2>
 

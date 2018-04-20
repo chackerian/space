@@ -33,7 +33,7 @@ class Dropzone extends Component {
         className='dropzone'
         onClick={(event) => this.dropped(event)}
         onDragOver={(event) => this.allowDrop(event)}
-        onEnter={(event) => this.dropped(event)}
+        onDragEnter={(event) => this.dropped(event)}
         onDrop={(event) => this.dropped(event)}
       >
       <input className='fileDropper' type="file" /><p>Drop images here or click to select</p>

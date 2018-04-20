@@ -14,6 +14,12 @@ export default class ListingItem extends Component {
     }
   }
 
+  componentDidMount() {
+      var height = (350 - $(".carousel-cell-image").height()) / 2
+      var pixheight = height+"px";
+      $(".carousel-cell-image").css('top', pixheight)
+  }
+
   settings() {
     $(".settings > .headerDropDownNav").toggle();
   }
@@ -109,9 +115,6 @@ export default class ListingItem extends Component {
     if (listing && listing.length > 0) {
       var listed = listing[0]
       var createdAt = moment(listed.createdAt).format("dddd, MMMM D");
-      var height = (350 - $(".carousel-cell-image").height()) / 2
-      var pixheight = height+"px";
-      $(".carousel-cell-image").css('top', pixheight)
       return (
         <div className="listingItemDiv">
           <div className="listingItemLeft">

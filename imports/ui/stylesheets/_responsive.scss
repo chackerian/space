@@ -8,15 +8,7 @@
   }
 }
 
-@media (max-width: 1025px) {
-  .profileUserRight {
-    width: 17em;
-  }
-
-  .profileUserName h1 {
-    font-size: 1.6rem !important;
-  }
-
+@media (max-width: 1035px) {
   .small-search {
     display: inline-block !important;
   }
@@ -43,10 +35,6 @@
 
 @media (max-width: 900px) {
 
-  .profileUser {
-    margin: 7em 1em !important;
-  }
-
   .carousel-cell-image {
     width: 100%;
   }
@@ -64,14 +52,17 @@
   }
 
   .listingItemDiv {
-    padding: 2em 4em;
-    margin: 3em 0em !important;
+    margin: 4em 0em !important;
     padding: 2em 1em;
+  }
+
+  .placeLocation {
+    display: none !important; 
   }
 
   .guardian {
       float: none;
-      margin-top: 1em;
+      margin-top: 1em !important;
       width: 100% !important;
   }
 
@@ -82,27 +73,6 @@
   .oneDiv {
     margin: 0em 1em;
   }
-}
-
-@media (max-width: 750px) {
-
-    .footerbottom > li {
-        display: block !important;
-    }
-
-    .footerSocial {
-        margin-left: 0 !important;
-        margin-top: 20px !important;
-    }
-
-    .footerDivide {
-        width: 85% !important;
-        margin: 20px auto !important;
-        li:nth-child(5) {
-            margin-top: 20px !important;
-        }
-    }
-
 }
 
 @media (max-width: 600px) {
@@ -120,11 +90,15 @@
     }
 
     .profileUserImage {
-      margin: 0 auto !important;
+      margin: 1em auto !important;
     }
 
+    .profileUserRight {
+      width: 91%;
+    }
+    
     .profileUserLeft {
-      width: 95% !important;
+      width: 100% !important;
     }
 
     .profileUserAmount ul {

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Meteor } from 'meteor/meteor';
 
 import JoinModal from './join.jsx';
 import AddModal from './add.jsx';
-
 import ReportUserModal from './reportUser.jsx';
 import ReportListingModal from './reportListing.jsx';
 

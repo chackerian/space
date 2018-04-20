@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
-import { s3 } from 'aws-sdk';
 var AWS = require('aws-sdk');
 
 String.prototype.shorten = function(n) {
@@ -123,7 +122,7 @@ class AddModal extends Component {
 
   componentDidMount() {
     $(".listtitle").focus()
-    console.log(s3, AWS)
+    console.log(AWS)
   }
 
   render() {
@@ -166,7 +165,7 @@ class AddModal extends Component {
                             <h3 className="category">What is its Category?</h3>
                             <div className="styled-select">
                                 <select className="listcategory" value={this.state.category} onChange={(event) => this.selectChange(event)}>
-                                    <option disabled defaultValue>Select Category</option>
+                                    <option defaultValue>Select Category</option>
                                     <option value="Apparel">Apparel</option>
                                     <option value="Electronics">Electronics</option>
                                     <option value="Shoes">Shoes</option>
@@ -251,55 +250,7 @@ class AddModal extends Component {
       )
   }
 
-  if(this.state.modaltab == 5) {
-    return(
-      <div className="modAddListingDialog modal-dialog">
-        <div className="modAddListingContent modal-content">
-          <div className="modAddListingDiv modAddListingDivFive modal-body step step-5">
-            <div className="modal-close">
-              <a className="close" onClick={this.props.close}><i className="material-icons">close</i></a>
-            </div>
-            <div className="modAddListingPage">
-              <ul className="modOfferRequestPageOneUl">
-                <li className="radioWrap" value={this.state.trade} onChange={(event) => this.handleChange(event)}>
-                  <h3>Do You Want To Allow Trade Offers?</h3>
-                  <ul>
-                    <li>
-                        <input type="radio" id="modAddListingTradeOffersNo" data-key="trade" name="addListingTradeOffers" value="Not Allowed" className="radioWrapElement"/>
-                        <label htmlFor="modAddListingTradeOffersNo">No</label>
-                    </li>
-                    <li className="modOfferRequestPaymentCash">
-                        <input type="radio" id="modAddListingTradeOffersYes" data-key="trade" name="addListingTradeOffers" value="Allowed" className="radioWrapElement"/>
-                        <label htmlFor="modAddListingTradeOffersYes">Yes</label>
-                    </li>
-                  </ul>
-                </li>
-                <li className="radioWrap">
-                    <h3>Which Form Of Payment Will You Accept?</h3>
-                    <ul className="paymentform" data-key="payment" value={this.state.payment} onChange={(event) => this.handleChange(event)}>
-                        <li className="modOfferRequestPaymentCash">
-                            <input type="radio" id="cashRadio" name="addListingPayment" value="Cash" className="radioWrapElement" defaultChecked/>
-                            <label htmlFor="cashRadio">Cash</label>
-                        </li>
-                        <li className="modOfferRequestPaymentOther">
-                            <input type="radio" id="modAddListingOtherRadio" name="addListingPayment" value="Other" className="radioWrapElement"/>
-                            <label htmlFor="modAddListingOtherRadio">Other</label>
-                        </li>
-                    </ul>
-                </li>
-                  </ul>
-                </div>
-                <div className="modMultiBtn">
-                    <button type="button" className="modalNext" data-step="5" onClick={(event) => this.nextPage(event)}>Next</button>
-                    <button type="button" className="modalBack" data-step="5" onClick={(event) => this.backPage(event)}>Back</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          )
-        }
-
-    if(this.state.modaltab == 6) {
+    if(this.state.modaltab == 5) {
       return(
         <div className="modAddListingDialog modal-dialog">
           <div className="modAddListingContent modal-content">
