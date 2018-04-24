@@ -10,10 +10,10 @@ export default class reportListing extends Component {
 
     render() {
       return(
-        <form className="modReport modal">
-          <div className="modReportDialog modal-dialog">
-            <div className="modReportContent modal-content">
-              <div className="modReportDiv modReportDivOne modal-body step step-1">
+        <form className="modal">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-body step step-1">
                 <h2>Select All That Apply</h2>
                 <ul>
                  <li><input type="checkbox" classNameName="prohibitChoice" />Product is Prohibited </li>
@@ -25,7 +25,7 @@ export default class reportListing extends Component {
                  <li><input type="checkbox" className="complianceChoice" />Or Doesn't Comply With a Community Standard</li>
                </ul>
               </div>
-            <div className="modReportDiv modReportDivThree modal-body step step-3">
+            <div className="modal-body step step-3">
               <div className="modReportPageThree">
                 <h2>Please Tell Us More</h2>
                 <textarea className="message" placeholder="Briefly provide explanation"></textarea>

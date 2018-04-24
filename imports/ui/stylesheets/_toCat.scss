@@ -102,6 +102,23 @@ input[type="radio"] {
 	font-size: 24px !important;
 }
 
+.overflower {
+  position: absolute;
+  display: none;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  left: 15em;
+  text-align: center;
+  opacity: 0.8;
+  border-radius: 0 0 0.2em 0.2em;
+  font-weight: bold;
+  font-size: 12px;
+  top: 18em;
+  width: 130px;
+  font-family: 'system-ui';
+  background: black;
+}
+
 .matdrop {
   position: absolute !important;
   bottom: 0.55em !important;

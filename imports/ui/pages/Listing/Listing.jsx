@@ -1,63 +1,25 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Listing } from '/imports/api/links/db.js';
 
+import { Listing } from '/imports/api/links/db.js';
+import { connect } from 'react-redux';
 import Carousel from './carousel.jsx';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
-export default class ListingItem extends Component {
+class ListingItem extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-      editing: false
-    }
   }
 
-  componentDidMount() {
-      var height = (350 - $(".carousel-cell-image").height()) / 2
-      var pixheight = height+"px";
-      $(".carousel-cell-image").css('top', pixheight)
-  }
+  // componentDidMount() {
+  //     var height = (350 - $(".carousel-cell-image").height()) / 2
+  //     var pixheight = Math.abs(height)+"px";
+  //     $(".carousel-cell-image").css('top', pixheight)
+  // }
 
   settings() {
     $(".settings > .headerDropDownNav").toggle();
-  }
-
-  edit = () => {
-    $(".editListing").text("Save");
-
-    var title = $(".listingItemTitle").text();
-    var price = $(".itemMoney").text().replace(/\$/g, '');
-    var desc = $(".desc-full").text();
-
-    $(".listingItemTitle").replaceWith("<input class='listingItemTitle titleEdit editing' placeholder='Enter Title' type='text' value='" + title + "'> </input>");
-    $(".listingItemTitle").focus();
-
-    $(".itemMoney").replaceWith("<input class='moneyEdit itemMoney money editing' type='text' value='" + price + "'> </input>");
-    $(".desc-full").replaceWith("<div contenteditable='true' class='descEdit editing'> </div>");
-  }
-
-  save = () => {
-      sAlert.success("Saved", {position: "top"});
-      $(".editListing").text("Edit");
-
-      var title = $(".titleEdit").val().shorten(25);
-      var price = $(".moneyEdit").val().shorten(10);
-      var desc = $(".descEdit").val().shorten(50);
-
-      $(".titleEdit").replaceWith("<h1 class='listingItemTitle'>" + title + "</h1>");
-      $(".moneyEdit").replaceWith("<li class='money itemMoney'>$" + price + "</li>");
-      $(".descEdit").replaceWith("<p class='desc-full'>" + desc + "</p>");
-
-      var options = {
-        id: FlowRouter.current().params.id,
-        listing_title: title,
-        price: price,
-        description: desc
-      }
-
-      Meteor.call('updateListing', options)
   }
 
   manage = () => {
@@ -76,7 +38,7 @@ export default class ListingItem extends Component {
           <li className="settings">
             <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
             <ul className="headerDropDownNav">
-              <a onClick={this.edit}><li>Edit</li></a>
+              <a onClick={this.props.edit}><li>Edit</li></a>
             </ul>
           </li>
         </ul>
@@ -119,44 +81,46 @@ export default class ListingItem extends Component {
         <div className="listingItemDiv">
           <div className="listingItemLeft">
 
-          <div className="titleBox">
-            <h1 className="listingItemTitle">{listed.listing_title}</h1>
-          </div>
+            <div className="titleBox">
+              <h1 className="listingItemTitle">{listed.listing_title}</h1>
+            </div>
 
-          <div className="row">
-            <div className="dateDiv">
-              <p className="listingItemCreated">
-                {createdAt}
-              </p>
-            </div>
-            <div className="listingPrice">
-              <ul className="listingItemPrice">
-                  <li className="money itemMoney">${listed.price}</li>
-              </ul>
-            </div>
-          </div>
-          <div className='topPage'>
-            <Carousel />
-            <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x300&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
-          </div>
-          <div className='bottomPage'>
-            <div className="guardian">
-              <div className="listingItemUser">
-                <ul className="listingItemUserImg">
-                    <li><a href={`/profile/${listed.creator_id}`}><img src={listed.creator_image}/></a></li>
-                </ul>
-                <ul className="listingItemUserInfo">
-                    <li className="listingItemUserName"><a href={`/profile/${listed.creator_id}`}>{listed.creator_username}</a></li>
-                    { this.manage() }
+            <div className="row">
+              <div className="dateDiv">
+                <p className="listingItemCreated">
+                  {createdAt}
+                </p>
+              </div>
+              <div className="listingPrice">
+                <ul className="listingItemPrice">
+                    <li className="money itemMoney">${listed.price}</li>
                 </ul>
               </div>
-              <Social listing={listed} />
             </div>
-            <div className="desc">
-              <div className="desc-box">
-                <h4 className="box-title">Description</h4>
-                <p className="desc-full description">{listed.description}</p>
+
+            <div className='topPage'>
+              <Carousel />
+              <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x300&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
+            </div>
+
+            <div className='bottomPage'>
+              <div className="guardian">
+                <div className="listingItemUser">
+                  <ul className="listingItemUserImg">
+                      <li><a href={`/profile/${listed.creator_id}`}><img src={listed.creator_image}/></a></li>
+                  </ul>
+                  <ul className="listingItemUserInfo">
+                      <li className="listingItemUserName"><a href={`/profile/${listed.creator_id}`}>{listed.creator_username}</a></li>
+                      { this.manage() }
+                  </ul>
+                </div>
+                <Social listing={listed} />
               </div>
+              <div className="desc">
+                <div className="desc-box">
+                  <h4 className="box-title">Description</h4>
+                  <p className="desc-full description">{listed.description}</p>
+                </div>
             </div>
           </div>
         </div>
@@ -167,6 +131,14 @@ export default class ListingItem extends Component {
       }
     }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+      edit: () => dispatch({ type: 'EDIT'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(ListingItem)
 
 var Social = ({listing}) => (
   <div className="listingItemShare">

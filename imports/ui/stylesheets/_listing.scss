@@ -41,9 +41,9 @@
     font-size: 19px;
     padding-left: 1em;
     a {
-       white-space: nowrap !important;
-       float: left !important;
-       font-weight: bold;
+      white-space: nowrap !important;
+      font-weight: bold;
+      font-family: 'system-ui';
    }
 }
 
@@ -56,7 +56,7 @@
 
 .listingItemDiv {
   padding: 1em 2em;
-  margin: 6em auto;
+  margin: 5em auto 2em auto;
   max-width: 850px;
   box-shadow: 0px 2px 5px rgba(27,2,35,0.15);
   background: white;

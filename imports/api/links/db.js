@@ -6,9 +6,6 @@ export const Listing = new Mongo.Collection('listing');
 // Notification
 export const Notification = new Mongo.Collection('notifications');
 
-// Message
-export const Message = new Mongo.Collection('message');
-
 // Feedback
 export const Feedback = new Mongo.Collection('feedback');
 

@@ -10,7 +10,7 @@
 
 .searchIcon {
   position: relative;
-  top: 0.2em;
+  top: 0.25em;
   font-size: 1em !important;
   left: -2em;
 }
@@ -21,7 +21,7 @@
   z-index: 1;
   top: 0;
   position: fixed !important;
-  border-top: 2px solid $color-spaceyellow;
+  border-top: 2px solid $color-spaceyellow2;
   border-bottom: 2px solid $color-spacegrey;
   box-shadow: 0 4px 6px -3px rgba(27, 2, 35, 0.15);
   ul {
@@ -123,7 +123,7 @@
   span {
     color: white !important;
     font-weight: bold !important;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-family: 'Oswald' !important;
   }
 }
@@ -150,7 +150,7 @@
       margin-top: -13px;
     }
     & > .navGeneral > ul > a:first-child::before {
-      left: 15.19em !important;
+      left: 15.1em !important;
       content: '';
       display: block;
       position: absolute;
@@ -193,19 +193,6 @@
         transition: 0.1s;
         color: white !important;
     }
-  }
-}
-
-.headerNameOptions li a {
-  font-size: 0.9em;
-  padding: 5px 10px !important;
-  border: 1px solid black;
-  color: black !important;
-  border-radius: 0.2em;
-  transition: 0.5s;
-  &:hover {
-    color: #fff !important;
-    background-color: $color-spacegrey !important;
   }
 }
 

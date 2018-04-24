@@ -122,13 +122,12 @@ class AddModal extends Component {
 
   componentDidMount() {
     $(".listtitle").focus()
-    console.log(AWS)
   }
 
   render() {
-    if(this.state.modaltab == 1) {
+    if (this.state.modaltab == 1) {
       return(
-          <div className="modAddListingDialog modal-dialog">
+          <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
               <div className="modAddListingDiv modal-body step-1">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -153,9 +152,9 @@ class AddModal extends Component {
       )
     }
 
-    if(this.state.modaltab == 2) {
+    if (this.state.modaltab == 2) {
       return(
-          <div className="modAddListingDialog modal-dialog">
+          <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
               <div className="modAddListingDiv modAddListingDivTwo modal-body step-2">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -196,9 +195,9 @@ class AddModal extends Component {
         )
       }
 
-    if(this.state.modaltab == 3) {
+    if (this.state.modaltab == 3) {
       return(
-          <div className="modAddListingDialog modal-dialog">
+          <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
               <div className="modAddListingDiv modal-body step step-3">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -228,10 +227,10 @@ class AddModal extends Component {
       )
     }
 
-  if(this.state.modaltab == 4) {
+  if (this.state.modaltab == 4) {
 
     return(
-          <div className="modAddListingDialog modal-dialog">
+          <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
               <div className="modAddListingDiv modal-body step step-4">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -250,9 +249,9 @@ class AddModal extends Component {
       )
   }
 
-    if(this.state.modaltab == 5) {
+    if (this.state.modaltab == 5) {
       return(
-        <div className="modAddListingDialog modal-dialog">
+        <div className="modal-dialog">
           <div className="modAddListingContent modal-content">
             <div className="modAddListingDiv modAddListingDivSix modal-body step step-6">
               <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>

@@ -1,17 +1,4 @@
-///////////////////////////////
-// Map
-////////////////////////////////
 
-.locate {
-    background: none !important;
-    width: 100%;
-    font-size: 1.6em;
-    position: relative;
-}
-
-.mapRadius {
-    font-size: 1em;
-}
 
 .controls {
     -moz-box-sizing: border-box;
@@ -34,10 +21,6 @@
     &:focus {
         border-color: #4d90fe;
     }
-}
-
-.pac-container {
-    font-family: 'Roboto';
 }
 
 .modLocationRadiusMaps {

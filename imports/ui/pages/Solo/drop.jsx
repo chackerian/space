@@ -3,17 +3,14 @@ import React, { Component } from 'react';
 class Dropzone extends Component {
 
   allowDrop = (event) => {
-    console.log("drag")
+    $(".dropzone").css('border', '2px dashed red')
     event.preventDefault();
   }
 
   dropped = (event) => {
-    event.preventDefault();
-    var cool = Array.prototype.slice.call(event.dataTransfer.files);
-    console.log(cool, "bool")
+  event.preventDefault();
     let dataTransferItemsList = []
     if (event.dataTransfer) {
-      console.log("dataTransfer 1")
       const dt = event.dataTransfer
       if (dt.files && dt.files.length) {
         dataTransferItemsList = dt.files
@@ -21,10 +18,8 @@ class Dropzone extends Component {
         dataTransferItemsList = dt.items
       }
     } else if (event.target && event.target.files) {
-      console.log("dataTransfer 2")
       dataTransferItemsList = event.target.files
     }
-    console.log("end", dataTransferItemsList)
   }
 
   render() {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
+
 import { Listing } from '/imports/api/links/db.js';
 
 import { withTracker } from 'meteor/react-meteor-data';

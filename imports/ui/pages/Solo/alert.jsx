@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Meteor } from 'meteor/meteor';
 
+import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 
 class Alert extends Component {
@@ -10,13 +10,10 @@ class Alert extends Component {
   }
 
   render() {
-    if (this.props.status == "on") {
+    if (this.props.status == "alert") {
       return (
-        <div className={this.props.classNames} id={this.props.id} style={this.props.styles}>
-            <div className='s-alert-box-inner'>
-                {this.props.message}
-            </div>
-            <span className='s-alert-close' onClick={this.props.handleClose}></span>
+        <div className="fall">
+          <span>{this.props.message="Listing Created Successfully"}</span>
         </div>
       )
     } else {

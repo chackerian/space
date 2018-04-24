@@ -19,7 +19,7 @@
 	cursor: pointer;
 	p {
 		text-align: center;
-    padding-top: 3em;
+    	padding-top: 3em;
 	}
 }
 
@@ -35,6 +35,10 @@
 	}
 }
 
+.imageUploadPage {
+	padding-top: 2em;
+}
+
 .modal-close {
 	float: right;
 }
@@ -42,7 +46,7 @@
 .close i {
 	font-size: 2em;
 	&:hover {
-		color: $color-spacered;
+		color: $color-spacered !important;
 	}
 }
 

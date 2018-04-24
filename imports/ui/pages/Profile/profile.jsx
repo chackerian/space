@@ -24,9 +24,7 @@ export default class Profile extends Component {
                   <li><a href={`/profile/${linked}/settings`}>Edit</a></li>
               </ul>
               <div className="profileUserLeft">
-                  <a href="settings">
-                    <div className="profileUserImage"><img className='profilePic' src={img} /><div className='overflower'>Edit Photo</div></div>
-                  </a>
+                  <div className="profileUserImage"><img className='profilePic' src={img} /><a href={`/profile/${linked}/settings`}><div className='overflower'>Edit Photo</div></a></div>
               </div>
               <div className="profileUserRight">
                 <div className="profileUserName">
