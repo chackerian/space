@@ -13,7 +13,7 @@ export default class reportListing extends Component {
         <form className="modal">
           <div className="modal-dialog">
             <div className="modal-content">
-              <div className="modal-body step step-1">
+              <div className="modal-body">
                 <h2>Select All That Apply</h2>
                 <ul>
                  <li><input type="checkbox" classNameName="prohibitChoice" />Product is Prohibited </li>

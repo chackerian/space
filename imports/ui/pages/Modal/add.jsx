@@ -129,8 +129,11 @@ class AddModal extends Component {
       return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modAddListingDiv modal-body step-1">
+              <div className='modal-head'>
+                <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+              </div>
+              <div className="modal-body step-1">
                 <div className="modAddListingPage">
                   <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
                     <li className="modOfferRequestOfferWrap">
@@ -156,7 +159,7 @@ class AddModal extends Component {
       return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modAddListingDiv modAddListingDivTwo modal-body step-2">
+              <div className="modal-body step-2">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                   <div className="modAddListingPage">
                     <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
@@ -199,7 +202,7 @@ class AddModal extends Component {
       return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modAddListingDiv modal-body step step-3">
+              <div className="modal-body step step-3">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <div className="modAddListingPage">
                 <h3>Provide Details</h3>
@@ -232,7 +235,7 @@ class AddModal extends Component {
     return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modAddListingDiv modal-body step step-4">
+              <div className="modal-body step step-4">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <div className="modAddListingPage imageUploadPage">
                   <ul className="addListImg">
@@ -253,7 +256,7 @@ class AddModal extends Component {
       return(
         <div className="modal-dialog">
           <div className="modAddListingContent modal-content">
-            <div className="modAddListingDiv modAddListingDivSix modal-body step step-6">
+            <div className="modal-body step step-6">
               <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>

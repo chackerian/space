@@ -9,6 +9,8 @@ export default class Carousel extends Component {
       lazyLoad: true,
       wrapAround: true
     });
+    var left = (475-$(".carousel-cell-image").width())/2
+    $(".carousel-cell-image").css('left', left)
   }
 
   render() {

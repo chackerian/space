@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Meteor } from 'meteor/meteor';
 
-export default class SettingsModal extends Component {
+class SettingsModal extends Component {
 
     constructor(props) {
       super(props)
@@ -15,6 +16,7 @@ export default class SettingsModal extends Component {
           <div className="modal-content">
             <div className="modal-body">
               <div className="modWrapper">
+                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <li className="profileSettingsLi">
                   <ul className="profileSettingsPhoto">
                     <li><h4>Photo</h4></li>
@@ -43,3 +45,11 @@ export default class SettingsModal extends Component {
       )
     }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+      close: () => dispatch({type: 'CLOSE'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(SettingsModal)

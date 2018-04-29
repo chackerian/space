@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Listing } from '/imports/api/links/db.js';
+import { connect } from 'react-redux';
 
-export default class Profile extends Component {
+class Profile extends Component {
 
   constructor(props) {
     super(props)
@@ -21,10 +22,10 @@ export default class Profile extends Component {
           <div className="oneDiv">
             <div className="topStrip">
               <ul className="headerAuth editProfile">
-                  <li><a href={`/profile/${linked}/settings`}>Edit</a></li>
+                  <li><a onClick={this.props.edit}>Edit</a></li>
               </ul>
               <div className="profileUserLeft">
-                  <div className="profileUserImage"><img className='profilePic' src={img} /><a href={`/profile/${linked}/settings`}><div className='overflower'>Edit Photo</div></a></div>
+                  <div className="profileUserImage"><img className='profilePic' src={img} /><a onClick={this.props.edit}><div className='overflower'>Edit Photo</div></a></div>
               </div>
               <div className="profileUserRight">
                 <div className="profileUserName">
@@ -70,3 +71,11 @@ export default class Profile extends Component {
   }
 
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+      edit: () => dispatch({ type: 'EDIT_PROFILE'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Profile)

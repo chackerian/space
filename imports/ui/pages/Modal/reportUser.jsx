@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Listing } from '/imports/api/links/db.js';
 import { Meteor } from 'meteor/meteor';
+import { connect } from 'react-redux';
 
 export default class reportUser extends Component {
 
@@ -10,17 +11,17 @@ export default class reportUser extends Component {
 
     render() {
       return(
-        <form className="modReport modal">
-          <div className="modReportDialog modal-dialog">
-            <div className="modReportContent modal-content">
-              <div className="modReportDiv modReportDivTwo modal-body step step-1">
+        <form className="modal">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-body">
                 <div className="modReportPageOne">
                   <h2>Select All That Apply</h2>
                     <ul>
                     	<li><input type="checkbox" />Using a Fake Name</li>
                     	<li><input type="checkbox" />User is a Scammer</li>
-                    	<li><input type="checkbox" />They're Racist/Offensive</li>
-                    	<li><input type="checkbox" />They're Posting Spam</li>
+                    	<li><input type="checkbox" />User is Racist/Offensive</li>
+                    	<li><input type="checkbox" />User is Posting Spam</li>
                     </ul>
                       </div>
                       <div className="modReportPageThree">

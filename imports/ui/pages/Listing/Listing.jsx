@@ -62,9 +62,9 @@ class ListingItem extends Component {
           <li className="settings">
             <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
             <ul className="headerDropDownNav">
-              <a><li>Report User</li></a>
-              <a><li>Report Listing</li></a>
-              <a><li>Save</li></a>
+              <a onClick={this.props.join}><li>Report User</li></a>
+              <a onClick={this.props.join}><li>Report Listing</li></a>
+              <a onClick={this.props.join}><li>Save</li></a>
             </ul>
           </li>
         </ul>
@@ -134,7 +134,8 @@ class ListingItem extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      edit: () => dispatch({ type: 'EDIT'})
+      edit: () => dispatch({ type: 'EDIT_LISTING'}),
+      join: () => dispatch({type: 'JOIN'})
   };
 };
 

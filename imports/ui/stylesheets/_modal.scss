@@ -13,6 +13,18 @@
 	transition: all .3s ease;
 }
 
+.modal-header {
+	width: 95%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    display: inline-block;
+}
+
+.modal-head {
+	border-bottom: 1px solid #404040;
+}
+
 .dropzone {
 	min-height: 150px;
 	border: 2px dashed black;
@@ -28,11 +40,6 @@
 	border-radius: 5px !important;
 	box-shadow: 0 0 16px rgba(27, 2, 35, 0.15) !important;
 	overflow-y: hidden !important;
-	& > div {
-		background-color: white !important;
-		overflow-y: hidden !important;
-		border-radius: 11px;
-	}
 }
 
 .imageUploadPage {
@@ -45,6 +52,9 @@
 
 .close i {
 	font-size: 2em;
+	position: absolute;
+    right: 1em;
+    top: 0.6em;
 	&:hover {
 		color: $color-spacered !important;
 	}
@@ -55,9 +65,6 @@
 	overflow-y: scroll !important;
 	overflow-x: hidden;
 	padding: 25px !important;
-	img {
-    	height: 30em;
-	}
 }
 
 .modalNext {
@@ -94,18 +101,21 @@
 ////////////////// Join ///////////////////
 
 .modWrapper {
+	li {
+		list-style: none;
+	}
 	h1 {
 		font-size: 1.5rem;
 	    font-weight: bold;
 	    margin-bottom: 0;
 	    margin-top: 0;
-	}
-	h1 i {
-		margin-right: 20px;
-		vertical-align: middle !important;
-		padding: 10px !important;
-		background-color: $color-spacered !important;
-		color: white !important;
+	    i {
+			margin-right: 20px;
+			vertical-align: middle !important;
+			padding: 10px !important;
+			background-color: $color-spacered !important;
+			color: white !important;
+		}
 	}
 	ul li {
 		line-height: 2;

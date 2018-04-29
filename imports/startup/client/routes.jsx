@@ -16,7 +16,6 @@ import Home from '../../ui/pages/Home/home.jsx';
 import ListingItem from '../../ui/pages/Listing/Listing.jsx';
 
 import Profile from '../../ui/pages/Profile/profile.jsx';
-import Settings from '../../ui/pages/Profile/settings.jsx';
 
 import Help from '../../ui/pages/Help/help.jsx';
 import FAQ from '../../ui/pages/Help/faq.jsx';
@@ -99,15 +98,6 @@ profile.route('/:id', {
   }
 });
 
-// UserProfileSettings
-profile.route('/:id/settings', {
-  name: 'settings',
-  action(params) {
-    mount(MainLayout, {
-      content: <Settings />
-    })
-  }
-});
 
 // ProfileActive
 profile.route('/:id/active', {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import JoinModal from './join.jsx';
 import AddModal from './add.jsx';
-import EditModal from './edit.jsx';
+import EditListingModal from './edit.jsx';
 import SettingsModal from './settings.jsx';
 import ReportUserModal from './reportUser.jsx';
 import ReportListingModal from './reportListing.jsx';
@@ -27,7 +27,7 @@ class Modal extends Component {
         return <JoinModal />
       }
       if (this.props.modal == "editListing") {
-        return <EditModal />
+        return <EditListingModal />
       }
       if (this.props.modal == "editProfile") {
         return <SettingsModal />
