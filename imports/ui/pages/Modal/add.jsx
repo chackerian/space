@@ -52,7 +52,6 @@ class AddModal extends Component {
     this.setState({
       category: catvalue,
       types: categories[catvalue],
-      brand: brands[catvalue]
     })
 
   }
@@ -60,12 +59,6 @@ class AddModal extends Component {
   selectTypeChange(event) {
     this.setState({
       type: event.target.value
-    })
-  }
-
-  selectBrandChange(event) {
-    this.setState({
-      brandReal: event.target.value
     })
   }
 
@@ -97,11 +90,10 @@ class AddModal extends Component {
       creator_initials: initials,
       listing_title: this.state.listing_title,
       urlKey: this.state.listing_title.replace(/ /g, '-'),
-      images: Session.get('images'),
+      images: [],
       category: this.state.category,
       type: this.state.type,
       price: this.state.price,
-      trade: this.state.trade,
       condition: this.state.condition,
       description: this.state.description,
     }
@@ -133,7 +125,7 @@ class AddModal extends Component {
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               </div>
-              <div className="modal-body step-1">
+              <div className="modal-body">
                 <div className="modAddListingPage">
                   <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
                     <li className="modOfferRequestOfferWrap">
@@ -159,7 +151,7 @@ class AddModal extends Component {
       return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modal-body step-2">
+              <div className="modal-body">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                   <div className="modAddListingPage">
                     <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
@@ -202,7 +194,7 @@ class AddModal extends Component {
       return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modal-body step step-3">
+              <div className="modal-body step">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <div className="modAddListingPage">
                 <h3>Provide Details</h3>
@@ -235,7 +227,7 @@ class AddModal extends Component {
     return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modal-body step step-4">
+              <div className="modal-body step">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <div className="modAddListingPage imageUploadPage">
                   <ul className="addListImg">
@@ -256,7 +248,7 @@ class AddModal extends Component {
       return(
         <div className="modal-dialog">
           <div className="modAddListingContent modal-content">
-            <div className="modal-body step step-6">
+            <div className="modal-body step">
               <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>
