@@ -74,7 +74,7 @@ class Profile extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      edit: () => dispatch({ type: 'IMAGE'})
+      edit: () => dispatch({ type: 'EDIT_PROFILE'})
   };
 };
 
