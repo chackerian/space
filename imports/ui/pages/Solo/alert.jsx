@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 
 class Alert extends Component {

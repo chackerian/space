@@ -34,6 +34,11 @@ export default function(state=[], action) {
         modal: "reportListing",
         status: "on"
       }
+    case "IMAGE":
+      return {
+        modal: "image",
+        status: "on"
+      }
     case "CLOSE_MODAL":
       return {
         modal: "add",

@@ -12,12 +12,6 @@ class ListingItem extends Component {
     super(props)
   }
 
-  // componentDidMount() {
-  //     var height = (350 - $(".carousel-cell-image").height()) / 2
-  //     var pixheight = Math.abs(height)+"px";
-  //     $(".carousel-cell-image").css('top', pixheight)
-  // }
-
   settings() {
     $(".settings > .headerDropDownNav").toggle();
   }

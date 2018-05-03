@@ -18,12 +18,6 @@ class SettingsModal extends Component {
               <div className="modWrapper">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <li className="profileSettingsLi">
-                  <ul className="profileSettingsPhoto">
-                    <li><h4>Photo</h4></li>
-                    <li className="profileSettingsImage"><img className="profilePic" src={image} /><input type="file" classNameName="profileSettingsSelectImg" onChange={this.changeImage} /></li>
-                  </ul>
-                </li>
-                <li className="profileSettingsLi">
                   <ul className="profileSettingsEmail">
                     <li><h4>Email</h4></li>
                     <li><input type="text" className="profileSettingsEmailInput" placeholder="Email" value={email} /></li>
@@ -48,7 +42,8 @@ class SettingsModal extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      close: () => dispatch({type: 'CLOSE'})
+      close: () => dispatch({type: 'CLOSE'}),
+      image: () => dispatch({type: 'IMAGE'})
   };
 };
 

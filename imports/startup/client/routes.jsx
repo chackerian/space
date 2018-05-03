@@ -14,10 +14,12 @@ import MainLayout from '../../ui/layouts/body/layouts.jsx';
 
 import Home from '../../ui/pages/Home/home.jsx';
 import ListingItem from '../../ui/pages/Listing/Listing.jsx';
-
+import UserListings from '../../ui/pages/UserListings/userlistings.jsx';
+import Saved from '../../ui/pages/Saved/saved.jsx';
 import Profile from '../../ui/pages/Profile/profile.jsx';
 
 import Help from '../../ui/pages/Help/help.jsx';
+import Chat from '../../ui/pages/Chat/chat.jsx';
 import FAQ from '../../ui/pages/Help/faq.jsx';
 import Contact from '../../ui/pages/Help/contact.jsx';
 import Safety from '../../ui/pages/Help/safety.jsx';
@@ -56,6 +58,33 @@ FlowRouter.route('/', {
   action() {
     mount(MainLayout, {
       content: <HomeContainer />
+    })
+  }
+});
+
+FlowRouter.route('/chat', {
+  name: 'chat',
+  action() {
+    mount(MainLayout, {
+      content: <Chat />
+    })
+  }
+});
+
+FlowRouter.route('/listings', {
+  name: 'da',
+  action() {
+    mount(MainLayout, {
+      content: <UserListings />
+    })
+  }
+});
+
+FlowRouter.route('/saved', {
+  name: 'adfsd',
+  action() {
+    mount(MainLayout, {
+      content: <Saved />
     })
   }
 });
@@ -107,15 +136,6 @@ profile.route('/:id/active', {
       content: <Home />
     })
  }
-});
-
-profile.route('/:id/saved', {
-  name: 'adfsd',
-  action() {
-    mount(MainLayout, {
-      content: <Home />
-    })
-  }
 });
 
 var help = FlowRouter.group({

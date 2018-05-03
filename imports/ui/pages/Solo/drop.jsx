@@ -3,8 +3,16 @@ import React, { Component } from 'react';
 class Dropzone extends Component {
 
   allowDrop = (event) => {
-    $(".dropzone").css('border', '2px dashed red')
+    $(".dropzone").addClass("highlighted-drop")
     event.preventDefault();
+  }
+
+  openDrop() {
+    $(".fileDropper").click()
+  }
+
+  removeColor = (event) => {
+    $(".dropzone").removeClass("highlighted-drop")
   }
 
   dropped = (event) => {
@@ -32,10 +40,11 @@ class Dropzone extends Component {
     return (
       <div
         className='dropzone'
-        onClick={(event) => this.dropped(event)}
+        onClick={this.openDrop}
         onDragOver={(event) => this.allowDrop(event)}
         onDragEnter={(event) => this.dropped(event)}
         onDrop={(event) => this.dropped(event)}
+        onDragLeave={this.removeColor}
       >
       <input className='fileDropper' type="file" /><p>Drop images here or click to select</p>
       </div>

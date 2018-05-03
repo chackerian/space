@@ -58,7 +58,7 @@ class Homepost extends Component {
               </ul>
             </div>
             <div className="searchBox">
-              <input type="text" id="search" className="search" placeholder="Search" autoFocus="True" /> <i className="material-icons searchIcon">search</i>
+              <input type="text" className="search" placeholder="Search" autoFocus="True" /> <i className="material-icons searchIcon">search</i>
             </div>
           </div>
           <div className="rightNav">
@@ -79,7 +79,7 @@ class Homepost extends Component {
               <li className="navNotifications">
                 <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons matdrop">notifications</i></a>
                 <ul className="headerDropDownNav">
-                  <a href={`/profile/${profile}/listings`}><li>You received a message</li></a>
+                  <a href='/chat'><li>You received a message</li></a>
                 </ul>
               </li>
               <li className="navGeneral">

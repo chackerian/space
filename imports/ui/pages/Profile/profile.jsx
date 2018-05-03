@@ -29,10 +29,10 @@ class Profile extends Component {
               </div>
               <div className="profileUserRight">
                 <div className="profileUserName">
-                    <ul>
-                        <li data-toggle="tooltip" data-placement="right" title="Member since {prof.memberSince}"><h1>{prof.profile.name}</h1></li>
-                        <li><div className="circle" style={{'backgroundColor': '#4E8F77'}}></div></li>
-                    </ul>
+                  <ul>
+                      <li data-toggle="tooltip" data-placement="right" title="Member since {prof.memberSince}"><h1>{prof.profile.name}</h1></li>
+                      <li><div className="circle" style={{'backgroundColor': '#4E8F77'}}></div></li>
+                  </ul>
                 </div>
                 <div className="UserRating">
                   <ul className="profileUserRatingUl">
@@ -74,7 +74,7 @@ class Profile extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      edit: () => dispatch({ type: 'EDIT_PROFILE'})
+      edit: () => dispatch({ type: 'IMAGE'})
   };
 };
 

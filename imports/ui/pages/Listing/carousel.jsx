@@ -11,6 +11,10 @@ export default class Carousel extends Component {
     });
     var left = (475-$(".carousel-cell-image").width())/2
     $(".carousel-cell-image").css('left', left)
+
+    // var height = (350 - $(".carousel-cell-image").height()) / 2
+    // var pixheight = Math.abs(height)+"px";
+    // $(".carousel-cell-image").css('top', pixheight)
   }
 
   render() {

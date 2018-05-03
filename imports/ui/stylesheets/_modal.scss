@@ -35,15 +35,15 @@
 	}
 }
 
+.highlighted-drop {
+	border-color: red;
+}
+
 .modal-content {
 	transition: all .3s ease;
 	border-radius: 5px !important;
 	box-shadow: 0 0 16px rgba(27, 2, 35, 0.15) !important;
 	overflow-y: hidden !important;
-}
-
-.imageUploadPage {
-	padding-top: 2em;
 }
 
 .modal-close {
@@ -62,26 +62,8 @@
 
 .modal-body {
 	max-height: 500px;
-	overflow-y: scroll !important;
 	overflow-x: hidden;
 	padding: 25px !important;
-}
-
-.modalNext {
-	background-color: $color-spacered !important;
-	&:hover {
-		background-color: red !important;
-	}
-}
-
-.modalBack,
-.modalExit {
-	float: left !important;
-	background-color: $color-spacered !important;
-	margin-right: 10px;
-	&:hover {
-		background-color: red !important;
-	}
 }
 
 .modal-backdrop {

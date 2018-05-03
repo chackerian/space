@@ -31,6 +31,23 @@ a[href] {
     }
 }
 
+.modalNext {
+  background-color: $color-spacered !important;
+  &:hover {
+    background-color: red !important;
+  }
+}
+
+.modalBack,
+.modalExit {
+  float: left !important;
+  background-color: $color-spacered !important;
+  margin-right: 10px;
+  &:hover {
+    background-color: red !important;
+  }
+}
+
 .headerAuth {
     li a {
       color: white !important;
@@ -44,6 +61,20 @@ a[href] {
       color: white;
       background: $color-spacegrey;
     }
+}
+
+.buttonred {
+  color: white !important;
+  border-radius: 0.2em;
+  padding: 5px 10px;
+  font-size: 14px;
+  background: $color-spacered;
+  border: 1px solid black !important;
+  &:hover {
+      color: white !important;
+      border: 1px solid black !important;
+      background: $color-spacegrey;
+  }
 }
 
 .buttonas {
@@ -75,17 +106,17 @@ a[href] {
 }
 
 .modalSubmitBtn {
-    input {
-        padding: 11px 50px !important;
-        color: #fff !important;
-        background-color: #04b2ec;
-        border: none;
-        border-radius: 4px !important;
-        font-size: 1.6em;
-    }
-    input:hover {
-        background-color: green;
-    }
+  input {
+      padding: 11px 50px !important;
+      color: #fff !important;
+      background-color: #04b2ec;
+      border: none;
+      border-radius: 4px !important;
+      font-size: 1.6em;
+  }
+  input:hover {
+      background-color: green;
+  }
 }
 
 .add {
@@ -101,6 +132,7 @@ a[href] {
     width: 13em;
     padding: 1em;
     display: inline-block;
+    box-shadow: 0px 2px 5px black;
     margin-left: 1em;
     border-radius: 4px;
     color: white !important;

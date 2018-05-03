@@ -3,6 +3,7 @@
   width: 40em;
   border-radius: 3px;
   color: $color-charcoal;
+  border: 1px solid #404040;
   font-size: 0.9em;
   padding-left: 10px;
   padding-right: 2.5em;
@@ -10,6 +11,17 @@
 
 .small-search {
     display: none;
+}
+
+.chat {
+  height: 29px;
+  width: 40em;
+  border-radius: 3px;
+  color: $color-charcoal;
+  border: 1px solid #404040;
+  font-size: 0.9em;
+  padding-left: 10px;
+  padding-right: 2.5em;
 }
 
 .largeSearch {

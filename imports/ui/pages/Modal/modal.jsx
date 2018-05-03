@@ -5,6 +5,7 @@ import AddModal from './add.jsx';
 import EditListingModal from './edit.jsx';
 import SettingsModal from './settings.jsx';
 import ReportUserModal from './reportUser.jsx';
+import ImageModal from './image.jsx';
 import ReportListingModal from './reportListing.jsx';
 
 import { connect } from 'react-redux';
@@ -34,6 +35,9 @@ class Modal extends Component {
       }
       if (this.props.modal == "reportUser") {
         return <ReportUserModal />
+      }
+      if (this.props.modal == "image") {
+        return <ImageModal />
       }
       if (this.props.modal == "reportListing") {
         return <ReportListingModal />

@@ -3,6 +3,38 @@ import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
 var AWS = require('aws-sdk');
+// var imagemin = require('imagemin')
+
+s3 = new AWS.S3();
+
+var UPLOAD_BUCKET = process.env.UPLOAD_BUCKET;
+var UPLOAD_ACL = 'public-read';
+
+var imageminOptions = {
+  optimizationLevel: 7,
+  progressive: 'true',
+  interlaced: 'true'
+};
+
+// function process(obj) {
+//   new Imagemin()
+//     .src(obj.Body)
+//     .use(Imagemin.jpegtran(imageminOptions))
+//     .use(Imagemin.gifsicle(imageminOptions))
+//     .use(Imagemin.optipng(imageminOptions))
+//     .use(Imagemin.svgo({plugins: imageminOptions.svgoPlugins || []}))
+//     }
+
+// function upload(obj, file) {
+
+//   s3.putObject({
+//     ACL: UPLOAD_ACL,
+//     Bucket: UPLOAD_BUCKET,
+//     Key: key,
+//     Body: file.contents,
+//     ContentType: obj.ContentType,
+//   });
+// }
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);
@@ -127,7 +159,7 @@ class AddModal extends Component {
               </div>
               <div className="modal-body">
                 <div className="modAddListingPage">
-                  <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
+                  <ul className="modAddListingPageOneUl">
                     <li className="modOfferRequestOfferWrap">
                       <h3 className="listing_title">What Are You Selling?</h3>
                       <input type="text" className="listtitle" placeholder="Listing Title" maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
@@ -151,10 +183,13 @@ class AddModal extends Component {
       return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modal-body">
+              <div className='modal-head'>
+                <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+              </div>
+              <div className="modal-body">
                   <div className="modAddListingPage">
-                    <ul className="modAddListingPageOneUl modOfferRequestPageOneUl">
+                    <ul className="modAddListingPageOneUl">
                         <li className="modOfferRequestOfferWrap">
                             <h3 className="category">What is its Category?</h3>
                             <div className="styled-select">
@@ -194,8 +229,11 @@ class AddModal extends Component {
       return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modal-body step">
+              <div className='modal-head'>
+                <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+              </div>
+              <div className="modal-body step">
                 <div className="modAddListingPage">
                 <h3>Provide Details</h3>
                 <ul className="modAddListingPageFourUl">
@@ -227,8 +265,11 @@ class AddModal extends Component {
     return(
           <div className="modal-dialog">
             <div className="modAddListingContent modal-content">
-              <div className="modal-body step">
+              <div className='modal-head'>
+                <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+              </div>
+              <div className="modal-body step">
                 <div className="modAddListingPage imageUploadPage">
                   <ul className="addListImg">
                     <Dropzone></Dropzone>
@@ -248,15 +289,18 @@ class AddModal extends Component {
       return(
         <div className="modal-dialog">
           <div className="modAddListingContent modal-content">
+            <div className='modal-head'>
+                <div className='modal-header'>Add Listing</div>
+                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+            </div>
             <div className="modal-body step">
-              <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>
                 <textarea className="listdescription" placeholder="Briefly explain any other information" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
               </div>
               <div className="modMultiBtn">
-                  <button type="button" className="add modalSubmitBtn" data-step="6" onClick={this.createListing}>Create</button>
-                  <button type="button" className="modalBack" data-step="6" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="add modalSubmitBtn" data-step="5" onClick={this.createListing}>Create</button>
+                  <button type="button" className="modalBack" data-step="5" onClick={(event) => this.backPage(event)}>Back</button>
               </div>
             </div>
           </div>
