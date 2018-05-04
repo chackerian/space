@@ -2,12 +2,6 @@
     Adds responsiveness to mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media (max-width: 1200px) {
-  .search {
-    width: 30em;
-  }
-}
-
 @media (max-width: 1035px) {
   .small-search {
     display: inline-block !important;
@@ -24,13 +18,6 @@
   .headerNameOptions {
     display: none !important;
   }
-}
-
-@media (max-width: 950px) {
-  .search {
-    width: 25em;
-  }
-
 }
 
 @media (max-width: 900px) {
