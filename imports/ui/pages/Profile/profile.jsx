@@ -21,9 +21,6 @@ class Profile extends Component {
         return(
           <div className="oneDiv">
             <div className="topStrip">
-              <ul className="headerAuth editProfile">
-                  <li><a onClick={this.props.edit}>Edit</a></li>
-              </ul>
               <div className="profileUserLeft">
                   <div className="profileUserImage"><img className='profilePic' src={img} /><a onClick={this.props.edit}><div className='overflower'>Edit Photo</div></a></div>
               </div>
@@ -64,6 +61,9 @@ class Profile extends Component {
                   </div>
                 </div>
               </div>
+              <ul className="headerAuth editProfile">
+                <li><a onClick={this.props.edit}>Edit</a></li>
+              </ul>
             </div>
           </div>
         )

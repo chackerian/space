@@ -12,11 +12,6 @@
   margin-top: 3em;
 }
 
-.editProfile {
-  float: right;
-  margin: 0 !important;
-}
-
 .dateDiv {
   display: inline-block;
 }
@@ -55,22 +50,17 @@
     margin-top: 4px;
 }
 
-.profileUserLeft {
-  padding-right: 2em;
-  vertical-align: top;
-  display: inline-block;
-}
-
 .topStrip {
   background-image: linear-gradient(to bottom, $color-spacered, #E63223);
+  display: flex;
   padding: 1em;
   border-radius: 0.2em;
   box-shadow: 0px 2px 5px;
 }
 
 .profileUserRight {
-  padding: 0.9em;
-  display: inline-block;
+  padding: 1em;
+  margin-left: 1.5em;
   background: white;
   box-shadow: 0px 2px 5px;
 }
@@ -84,6 +74,23 @@
       display: block;
     }
   }
+}
+
+.overflower {
+  position: absolute;
+  display: none;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  left: 15em;
+  text-align: center;
+  opacity: 0.8;
+  border-radius: 0 0 0.2em 0.2em;
+  font-weight: bold;
+  font-size: 12px;
+  top: 18em;
+  width: 130px;
+  font-family: 'system-ui';
+  background: black;
 }
 
 .profileUserName {

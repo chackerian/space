@@ -1,7 +1,6 @@
 .leftNav {
   display: flex;
   flex: 1 1 auto;
-  justify-content: flex-start;
 }
 
 .login {
@@ -20,6 +19,7 @@
   width: 100%;
   z-index: 1;
   top: 0;
+  height: 55px;
   position: fixed !important;
   border-top: 1px solid $color-spaceyellow2;
   border-bottom: 1px solid $color-spacegrey;
@@ -32,6 +32,7 @@
 .wholeNav {
   max-width: 1050px;
   align-items: center;
+  height: 55px;
   display: flex;
   margin: 0 auto;
 }
@@ -111,11 +112,6 @@
         }
 
     }
-}
-
-.headerSearchRadiusLogo {
-  margin-right: 22px;
-  margin-left: 22px;
 }
 
 .radiusLogo {
