@@ -92,6 +92,11 @@ input[type="file"] {
   display: none;
 }
 
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+}
+
 .oneDiv {
   font-family: $font-norm !important;
   margin: 5em 10em;
@@ -126,6 +131,11 @@ input[type="file"] {
   height: 32em;
   background: white;
   padding: 2em;
+}
+
+.searchBox {
+  margin-left: 15px;
+  height: 1em;
 }
 
 .sentMessage {

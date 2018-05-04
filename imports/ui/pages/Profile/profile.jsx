@@ -22,7 +22,7 @@ class Profile extends Component {
           <div className="oneDiv">
             <div className="topStrip">
               <div className="profileUserLeft">
-                  <div className="profileUserImage"><img className='profilePic' src={img} /><a onClick={this.props.edit}><div className='overflower'>Edit Photo</div></a></div>
+                  <div className="profileUserImage"><img className='profilePic' src={img} /><a onClick={this.props.image}><div className='overflower'>Edit Photo</div></a></div>
               </div>
               <div className="profileUserRight">
                 <div className="profileUserName">
@@ -74,7 +74,8 @@ class Profile extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      edit: () => dispatch({ type: 'EDIT_PROFILE'})
+      edit: () => dispatch({ type: 'EDIT_PROFILE'}),
+      image: () => dispatch({ type: 'IMAGE'})
   };
 };
 

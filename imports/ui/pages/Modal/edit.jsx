@@ -20,7 +20,7 @@ class EditListingModal extends Component {
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <input type="text" className="listtitle" placeholder="Listing Title" maxLength="30" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
                 <input type="text" className="listprice" placeholder="Price" maxLength="5" value={this.state.price} onChange={(event) => this.handleChange(event)} />
-                <textarea className="listdescription" placeholder="Briefly explain any other information"></textarea>
+                <div className="listdescription" placeholder="Briefly explain any other information" contentEditable ></div>
               </div>
             </div>
           </div>

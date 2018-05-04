@@ -233,7 +233,7 @@ class AddModal extends Component {
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               </div>
-              <div className="modal-body step">
+              <div className="modal-body">
                 <div className="modAddListingPage">
                 <h3>Provide Details</h3>
                 <ul className="modAddListingPageFourUl">
@@ -269,7 +269,7 @@ class AddModal extends Component {
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
               </div>
-              <div className="modal-body step">
+              <div className="modal-body">
                 <div className="modAddListingPage imageUploadPage">
                   <ul className="addListImg">
                     <Dropzone></Dropzone>
@@ -293,10 +293,10 @@ class AddModal extends Component {
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
             </div>
-            <div className="modal-body step">
+            <div className="modal-body">
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>
-                <textarea className="listdescription" placeholder="Briefly explain any other information" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></textarea>
+                <div className="listdescription" placeholder="Briefly explain any other information" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></div>
               </div>
               <div className="modMultiBtn">
                   <button type="button" className="add modalSubmitBtn" data-step="5" onClick={this.createListing}>Create</button>

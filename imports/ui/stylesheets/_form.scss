@@ -72,9 +72,10 @@ select {
 }
 
 .listdescription {
-    resize: none;
-    width: 92%;
-    height: 150px;
+    height: 100px;
+    padding: 16px 16px 32px;
+    outline: none;
+    border: 1px solid #e2e2e2;
 }
 
 .fileDropper {
