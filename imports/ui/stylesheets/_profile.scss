@@ -1,23 +1,15 @@
 .desc {
-    float: left;
-    width: 100%;
+  display: flex;
+  border-radius: 0.2em;
+  box-shadow: 0px 2px 5px rgba(27, 2, 35, 0.15);
+  background: white;
+  padding: 2em 2em 2em 2em;
+  margin-top: 2em;
 }
 
-.locoplace {
-  display: inline-block !important;
-}
-
-.guardian {
-  float: right;
-  margin-top: 3em;
-}
-
-.dateDiv {
-  display: inline-block;
-}
-
-.rating {
-  float: right;
+.placeLocation {
+  height: 150px;
+  width: 300px;
 }
 
 .profilePic {
@@ -26,39 +18,28 @@
   width: 145px;
 }
 
-.box-title {
-  background: $color-spacered !important;
-  font-size: 1.1em !important;
-  color: white;
-  padding: 5px 8px;
-}
-
-.flickity-page-dots {
-  display: none !important;
-}
-
-.circle {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-left: 10px;
-    margin-top: 4px;
-}
-
 .topStrip {
-  background-image: linear-gradient(to bottom, $color-spacered, #E63223);
+  background-image: linear-gradient(to bottom, $color-spacered, #f81300);
+  border-bottom: 75px solid white;
   display: flex;
-  padding: 1em;
+  height: 7em;
   border-radius: 0.2em;
-  box-shadow: 0px 2px 5px;
+  box-shadow: 0px 2px 5px rgba(27, 2, 35, 0.15);
+  padding: 9em 1em 1em 1em
 }
 
-.profileUserRight {
-  padding: 1em;
-  margin-left: 1.5em;
-  background: white;
-  box-shadow: 0px 2px 5px;
+.profileUserLeft {
+  display: flex;
+  margin-right: 2em;
+}
+
+.name {
+  font-size: 22px;
+  font-family: 'system-ui';
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
 .profileUserImage {
@@ -77,110 +58,25 @@
   display: none;
   color: white;
   padding: 10px 10px 10px 10px;
-  left: 15em;
   text-align: center;
   opacity: 0.8;
   border-radius: 0 0 0.2em 0.2em;
   font-weight: bold;
   font-size: 12px;
-  top: 18em;
-  width: 130px;
+  width: 134px;
   font-family: 'system-ui';
   background: black;
 }
 
-.profileUserName {
-  h1 {
-      font-size: 26px;
-      font-weight: bold !important;
-      margin: 0;
-      font-family: 'system-ui';
-  }
-  ul {
-      margin: 0;
-      li {
-          display: inline-block;
-          vertical-align: middle;
-      }
-  }
-}
-
-.UserRating {
-  display: inline-block;
-}
-
-.UserRating ul {
-    li {
-        display: inline-block;
-    }
-    li span {
-        margin-left: 5px;
-        font-size: 1.3rem;
-    }
-    li span a {
-        color: $color-spacegrey !important;
-    }
-    li i {
-        margin-left: 15px;
-        font-size: 1.3rem;
-        color: #3b5998 !important;
-    }
-}
-
-.profileUserInfo {
-  display: inline-block;
-  margin-left: 1.5em;
-}
-
-.profileUserInfo ul {
-    & > ul li {
-        display: inline-block;
-        margin-left: 0.3em;
-        vertical-align: middle !important;
-    }
-    li a {
-        padding: 2px 5px;
-        font-size: 1.6rem;
-        vertical-align: middle !important;
-    }
+.editProfile {
+  margin-left: 50%;
+  margin-top: 10em;
 }
 
 .profileUserAmount {
   display: inline-block;
-  ul {
-    margin: 0 !important;
-  }
-  ul li {
-        display: inline-block;
-        padding: 10px 10px;
-        border-radius: 4px;
-        color: white !important;
-        background: $color-spacered;
-    }
-}
-
-.profileCard > h2 {
-    margin-left: 5px;
-}
-
-.profileCard > ul {
-    text-align: center;
-}
-
-.profileCardUl > li {
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 10px 5px;
-    padding: 0px 10px 0px 10px;
-    width: 28.9%;
-    &:hover {
-        border: 1px solid #999;
-    }
-}
-
-/** Social Button CSS **/
-
-.listtitle {
-    width: 80%;
+  padding: 10px 10px;
+  border-radius: 4px;
+  color: white !important;
+  background: $color-spacered;
 }

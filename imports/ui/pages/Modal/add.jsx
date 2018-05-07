@@ -296,7 +296,7 @@ class AddModal extends Component {
             <div className="modal-body">
               <div className="modAddListingPage">
                 <h3 className="description">Add Description</h3>
-                <div className="listdescription" placeholder="Briefly explain any other information" data-key="description" value={this.state.description} onChange={(event) => this.handleChange(event)}></div>
+                <div className="listdescription" placeholder="Briefly explain any other information" data-key="description" value={this.state.description} contentEditable onChange={(event) => this.handleChange(event)}></div>
               </div>
               <div className="modMultiBtn">
                   <button type="button" className="add modalSubmitBtn" data-step="5" onClick={this.createListing}>Create</button>

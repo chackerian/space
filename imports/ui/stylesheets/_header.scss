@@ -1,6 +1,24 @@
+@keyframes fadeInDownMini {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 .leftNav {
   display: flex;
   flex: 1 1 auto;
+}
+
+.rightNav {
+  display: flex;
+  align-items: center;
 }
 
 .login {
@@ -22,19 +40,16 @@
   height: 55px;
   position: fixed !important;
   border-top: 1px solid $color-spaceyellow2;
-  border-bottom: 1px solid $color-spacegrey;
-  box-shadow: 0 4px 6px -3px rgba(27, 2, 35, 0.15);
-  ul {
-      display: inline-block;
-  }
+  box-shadow: 0 -1px 4px 2px #404040;
 }
 
 .wholeNav {
   max-width: 1050px;
   align-items: center;
-  height: 55px;
+  padding: 0em 1em 0 1em;
   display: flex;
   margin: 0 auto;
+  height: 56px;
 }
 
 .headerAuthPre {
@@ -48,7 +63,7 @@
         display: none;
         position: absolute;
         padding: 5px 0;
-        margin: 1.43em -1px 0px -16.22em !important;
+        margin: 0.43em -1px 0px -16.22em !important;
         animation: 100ms fadeInDownMini;
         background-color: white !important;
         width: 18em;
@@ -67,14 +82,11 @@
 }
 
 .navGeneral {
-    margin-right: 35px;
-    margin-left: .7em;
-    font-family: 'Roboto' !important;
     ul {
         display: none;
         position: absolute;
         padding: 5px 0;
-        margin: 1.43em 0px 0px -10.35em !important;
+        margin: 0.43em 0px 0px -10.35em !important;
         animation: 100ms fadeInDownMini;
         width: 12.33em;
         border: 1px solid #d3d3d3;
@@ -116,6 +128,7 @@
 
 .radiusLogo {
   color: white !important;
+  font-family: 'Oswald';
   span {
     color: white !important;
     font-weight: bold !important;
@@ -127,7 +140,6 @@
 .clickDropper {
     li {
       display: inline-block !important;
-      padding: 0.5em;
     }
     li ul li a {
       padding: 15px 0px 15px 0px !important;
@@ -169,10 +181,6 @@
       border-bottom: 8px solid white;
       margin-top: -13px;
     }
-}
-
-.headerDropDown {
-  display: inline-block !important;
 }
 
 .headerDropDownNav {

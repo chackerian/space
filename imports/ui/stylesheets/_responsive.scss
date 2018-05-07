@@ -18,6 +18,11 @@
   .headerNameOptions {
     display: none !important;
   }
+
+  .oneDiv {
+    margin: 5em 1em;
+  }
+  
 }
 
 @media (max-width: 900px) {
@@ -39,31 +44,15 @@
     padding: 2em 1em;
   }
 
-  .placeLocation {
-    display: none !important; 
-  }
-
   .guardian {
       float: none;
       margin-top: 1em !important;
       width: 100% !important;
   }
 
-  .desc {
-      width: 100% !important;
-  }
-
-  .oneDiv {
-    margin: 5em 1em;
-  }
-
 }
 
 @media (max-width: 600px) {
-
-    .headerNameOptions {
-        display: none !important;
-    }
 
     .box-title {
         font-size: 0.9rem !important;
@@ -117,21 +106,9 @@
       margin: 20px auto !important;
     }
 
-    .desc-box {
-      width: 19em !important;
-    }
-
 }
 
 @media (max-width: 450px) {
-
-    .topStrip {
-      padding: 1em !important;
-    }
-
-    .leftNav {
-      width: 25%;
-    }
 
     .logo {
       font-size: 3.5rem;

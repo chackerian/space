@@ -35,8 +35,7 @@ class Homepost extends Component {
   componentDidMount() {
     this.clearToggle();
     $(".search").keypress(function(e) {
-      var key = e.key
-      if (key == "Enter") {
+      if (e.key == "Enter") {
         var search = $(".search").val();
         FlowRouter.go("/search?q="+search);
       }
@@ -69,9 +68,6 @@ class Homepost extends Component {
                 </a>
               </li>
             </ul>
-            <li className="headerDropDown">
-              <a className="small-search" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-search"></i></a>
-            </li>
             <ul className="headerAuth">
                 <li><a href="#" onClick={this.props.add}>Add Listing</a></li>
             </ul>

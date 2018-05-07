@@ -101,6 +101,24 @@ button {
   }
 }
 
+.editButton {
+  margin-top: 10em;
+  margin-left: auto;
+}
+
+.editButton li a {
+  font-size: 0.9em;
+  padding: 5px 10px !important;
+  border: 1px solid black;
+  color: black !important;
+  border-radius: 0.2em;
+  transition: 0.2s;
+  &:hover {
+    color: #fff !important;
+    background-color: $color-spacegrey !important;
+  }
+}
+
 .modalSubmitBtn {
   input {
       padding: 11px 50px !important;

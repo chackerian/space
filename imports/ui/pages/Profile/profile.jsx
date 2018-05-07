@@ -22,48 +22,17 @@ class Profile extends Component {
           <div className="oneDiv">
             <div className="topStrip">
               <div className="profileUserLeft">
-                  <div className="profileUserImage"><img className='profilePic' src={img} /><a onClick={this.props.image}><div className='overflower'>Edit Photo</div></a></div>
+                  <div className="profileUserImage"><img className='profilePic' src={img} /><a onClick={this.props.image}>
+                  <div className='overflower'><div className="overflow">Edit Photo</div></div></a></div>
               </div>
-              <div className="profileUserRight">
-                <div className="profileUserName">
-                  <ul>
-                      <li data-toggle="tooltip" data-placement="right" title="Member since {prof.memberSince}"><h1>{prof.profile.name}</h1></li>
-                      <li><div className="circle" style={{'backgroundColor': '#4E8F77'}}></div></li>
-                  </ul>
-                </div>
-                <div className="UserRating">
-                  <ul className="profileUserRatingUl">
-                    <li>
-                      <a href={facebook} target="_blank">
-                        <i className="fa fa-facebook-square"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="mailto:{prof.services.facebook.email}" target="_blank">
-                        <i className="fa fa-envelope-o"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="profileUserInfo">
-                    <ul className="profileUserArea">
-                        <i className="fa fa-compass"></i><li className='locoplace'>{city='New York'}, {state='New York'}</li>
-                    </ul>
-                </div>
-                <div className="stats">
-                  <div className="profileUserAmount">
-                    <ul>
-                        <li className="profileUserAmountBought">Meetups: {prof.profile.meetups_count}</li>
-                    </ul>
-                  </div>
-                  <div className="rating">
-                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                  </div>
-                </div>
-              </div>
-              <ul className="headerAuth editProfile">
+              <div className='name'>{Meteor.user().profile.name}</div>
+              <ul className="editButton">
                 <li><a onClick={this.props.edit}>Edit</a></li>
               </ul>
+            </div>
+            <div className='desc'>
+              Location: 
+              Meetups
             </div>
           </div>
         )

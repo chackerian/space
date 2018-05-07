@@ -1,0 +1,39 @@
+.users {
+  flex: 0 0 25%;
+  max-width: 420px;
+  min-width: 240px;
+  ul li {
+    padding: 1em;
+    font-family: 'system-ui';
+  }
+}
+
+.messages {
+  width: 80%;
+  box-shadow: 0px 2px 5px rgba(27, 2, 35, 0.15);
+  height: 32em;
+  background: white;
+  padding: 2em;
+}
+
+.sentMessage {
+  background-color: blue;
+  color: white;
+  float: right;
+}
+
+.receivedMessage {
+  background-color: grey;
+  color: black;
+  float: left;
+}
+
+.bubble {
+  border-radius: 27px;
+  font-weight: 600;
+  padding: 3px 12px 4px 12px;
+}
+
+.allMessages {
+  display: flex;
+}

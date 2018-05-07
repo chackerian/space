@@ -24,14 +24,7 @@
 }
 
 .listingPrice {
-  display: initial;
-}
-
-.placeLocation {
-  padding-top: 1em;
-  width: 20em;
-  float: right;
-  border-radius: 0.5em;
+  margin-left: auto;
 }
 
 .listingItemUserName {
@@ -60,9 +53,6 @@
   max-width: 850px;
   box-shadow: 0px 2px 5px rgba(27,2,35,0.15);
   background: white;
-  & > div {
-      display: inline-block;
-  }
   & > h1, .listingItemDiv p {
       margin: 0;
   }
@@ -73,31 +63,8 @@
   }
 }
 
-.listingItemPrice {
-    float: right;
-    margin: 0;
-     ul {
-        margin: 0;
-        display: inline-block;
-    }
-}
-
-.desc-box {
-  border-radius: 4px;
-  margin-top: 1em;
-  box-shadow: 0px 1px 3px rgba(27,2,35,0.15);
-  p {
-      padding: 10px 10px 13px 10px;
-      margin: 5px;
-  }
-  ul li {
-      padding: 10px;
-      font-size: 1rem !important;
-  }
-}
-
-.listingItemLeft {
-    width: 100%;
+.row {
+  display: flex;
 }
 
 .listingItemTitle {
