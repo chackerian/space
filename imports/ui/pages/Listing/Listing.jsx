@@ -95,9 +95,6 @@ class ListingItem extends Component {
             <div className='topPage'>
               <Carousel />
               <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x300&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
-            </div>
-
-            <div className='bottomPage'>
               <div className="guardian">
                 <div className="listingItemUser">
                   <ul className="listingItemUserImg">
@@ -110,6 +107,9 @@ class ListingItem extends Component {
                 </div>
                 <Social listing={listed} />
               </div>
+            </div>
+
+            <div className='bottomPage'>
               <div className="desc">
                 <div className="desc-box">
                   <h4 className="box-title">Description</h4>

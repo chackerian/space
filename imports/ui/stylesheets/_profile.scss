@@ -10,6 +10,7 @@
 .placeLocation {
   height: 150px;
   width: 300px;
+  margin-left: auto;
 }
 
 .profilePic {
@@ -31,6 +32,10 @@
 .profileUserLeft {
   display: flex;
   margin-right: 2em;
+}
+
+.guardian {
+  margin-left: auto;
 }
 
 .name {
