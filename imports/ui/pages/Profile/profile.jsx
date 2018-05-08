@@ -32,7 +32,6 @@ class Profile extends Component {
             </div>
             <div className='desc'>
               Location: 
-              Meetups
             </div>
           </div>
         )

@@ -3,12 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
 var AWS = require('aws-sdk');
-// var imagemin = require('imagemin')
 
 s3 = new AWS.S3();
-
-var UPLOAD_BUCKET = process.env.UPLOAD_BUCKET;
-var UPLOAD_ACL = 'public-read';
 
 var imageminOptions = {
   optimizationLevel: 7,
@@ -16,17 +12,7 @@ var imageminOptions = {
   interlaced: 'true'
 };
 
-// function process(obj) {
-//   new Imagemin()
-//     .src(obj.Body)
-//     .use(Imagemin.jpegtran(imageminOptions))
-//     .use(Imagemin.gifsicle(imageminOptions))
-//     .use(Imagemin.optipng(imageminOptions))
-//     .use(Imagemin.svgo({plugins: imageminOptions.svgoPlugins || []}))
-//     }
-
 // function upload(obj, file) {
-
 //   s3.putObject({
 //     ACL: UPLOAD_ACL,
 //     Bucket: UPLOAD_BUCKET,
@@ -294,9 +280,15 @@ class AddModal extends Component {
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
             </div>
             <div className="modal-body">
-              <div className="modAddListingPage">
-                <h3 className="description">Add Description</h3>
-                <div className="listdescription" placeholder="Briefly explain any other information" data-key="description" value={this.state.description} contentEditable onChange={(event) => this.handleChange(event)}></div>
+              <div className="addBitExterior">
+                <div className="toolbar">
+                  <ul className="tools">
+                    <li><a onMouseDown={(event) => event.preventDefault()} onClick={this.actionBold}><i className="material-icons tool">format_bold</i></a></li>
+                    <li><a onMouseDown={(event) => event.preventDefault()} onClick={this.actionItalic}><i className="material-icons tool">format_italic</i></a></li>
+                    <li><a onMouseDown={(event) => event.preventDefault()} onClick={this.actionLink}><i className="material-icons tool">link</i></a></li>
+                  </ul>
+                </div>
+                <div contentEditable="true" data-text="Enter description" className="contentsBit"></div>
               </div>
               <div className="modMultiBtn">
                   <button type="button" className="add modalSubmitBtn" data-step="5" onClick={this.createListing}>Create</button>

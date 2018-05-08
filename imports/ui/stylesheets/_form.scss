@@ -10,18 +10,6 @@ input {
     border: none;
 }
 
-input[type=text]::-ms-clear {
-    display: none;
-    height: 0;
-    width : 0;
-}
-
-input[type=text]::-ms-reveal {
-    display: none;
-    height: 0;
-    width : 0;
-}
-
 input[type="radio"] + label {
     font-size: 14px;
 }

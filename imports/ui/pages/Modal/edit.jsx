@@ -13,6 +13,7 @@ class EditListingModal extends Component {
     }
 
     render() {
+      var mape = new google.maps.places.SearchBox(document.getElementById('pac-input'))
       return(
           <div className="modal-dialog">
             <div className="modal-content">

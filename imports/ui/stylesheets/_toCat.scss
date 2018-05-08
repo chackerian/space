@@ -90,8 +90,69 @@ input[type="file"] {
   min-height: 50em;
 }
 
-.topPage {
+.leftPage {
   display: flex;
+}
+
+.rightPage {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+[contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-text);
+  text-align: center;
+  color: #e2e2e2 !important;
+}
+
+.tools {
+  display: flex;
+  margin-left: 1em;
+}
+
+.tools li {
+  color: black;
+  padding: 0.4em 0 0 0;
+  margin-right: 8px;
+}
+
+.tools li a i:hover {
+  color: #50c878;
+  cursor: pointer;
+  outline: 1px solid;
+}
+
+.toolbar {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.contentsBit {
+  font-size: 1.3em;
+  font-family: Georgia;
+  padding: 1em;
+  cursor: text;
+  min-height: 6em;
+  outline: none;
+}
+
+.contentBox {
+  margin: 7em auto;
+  width: 650px;
+  border-radius: 0.5em;
+  padding: 4em;
+  box-shadow: 0 0 5px #888;
+}
+
+.addBitButton {
+  margin-top: 2em;
+  position: absolute;
+  padding: 0.8em;
+  background-color: #50c878;
+}
+
+.addBitExterior {
+  border: 1px solid #e2e2e2;
 }
 
 ::selection {

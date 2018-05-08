@@ -10,7 +10,6 @@
 .placeLocation {
   height: 150px;
   width: 300px;
-  margin-left: auto;
 }
 
 .profilePic {
@@ -34,10 +33,6 @@
   margin-right: 2em;
 }
 
-.guardian {
-  margin-left: auto;
-}
-
 .name {
   font-size: 22px;
   font-family: 'system-ui';
@@ -58,6 +53,10 @@
   }
 }
 
+.pac-container {
+  z-index: 10000;
+}
+
 .overflower {
   position: absolute;
   display: none;
@@ -71,17 +70,9 @@
   width: 134px;
   font-family: 'system-ui';
   background: black;
+  top: 341px;
 }
 
-.editProfile {
-  margin-left: 50%;
-  margin-top: 10em;
-}
-
-.profileUserAmount {
-  display: inline-block;
-  padding: 10px 10px;
-  border-radius: 4px;
-  color: white !important;
-  background: $color-spacered;
+.overflow {
+  position: relative;
 }

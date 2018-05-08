@@ -93,19 +93,23 @@ class ListingItem extends Component {
             </div>
 
             <div className='topPage'>
-              <Carousel />
-              <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x300&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
-              <div className="guardian">
-                <div className="listingItemUser">
-                  <ul className="listingItemUserImg">
-                      <li><a href={`/profile/${listed.creator_id}`}><img src={listed.creator_image}/></a></li>
-                  </ul>
-                  <ul className="listingItemUserInfo">
-                      <li className="listingItemUserName"><a href={`/profile/${listed.creator_id}`}>{listed.creator_username}</a></li>
-                      { this.manage() }
-                  </ul>
+              <div className='leftPage'>
+                <Carousel />
+              </div>
+              <div className='rightPage'>
+                <img className='placeLocation' src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=15&size=800x300&key=AIzaSyAEOUmcuTmsCc3YaJ2pnX70Utc2V4MOj64" />
+                <div className="guardian">
+                  <div className="listingItemUser">
+                    <ul className="listingItemUserImg">
+                        <li><a href={`/profile/${listed.creator_id}`}><img src={listed.creator_image}/></a></li>
+                    </ul>
+                    <ul className="listingItemUserInfo">
+                        <li className="listingItemUserName"><a href={`/profile/${listed.creator_id}`}>{listed.creator_username}</a></li>
+                        { this.manage() }
+                    </ul>
+                  </div>
+                  <Social listing={listed} />
                 </div>
-                <Social listing={listed} />
               </div>
             </div>
 

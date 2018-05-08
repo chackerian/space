@@ -12,7 +12,7 @@ class JoinModal extends Component {
     }, function(err, result) {
       if (err == undefined) {
         setTimeout(function(){
-          $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+          $.getJSON('//json.geoiplookup.io/api', function(data) {
             var options = {
               id: Meteor.user()._id,
               location: JSON.stringify(data, null, 2)

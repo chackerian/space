@@ -20,7 +20,7 @@
   }
 
   .oneDiv {
-    margin: 5em 1em;
+    margin: 5em 0em;
   }
   
 }
@@ -31,12 +31,12 @@
     width: 100%;
   }
 
-  .profileUserInfo ul li a {
-    font-size: 1.4rem !important;
-  }
-  
   .carousel {
     width: 100% !important;
+  }
+
+  .topPage {
+    display: block; 
   }
 
   .listingItemDiv {
@@ -45,21 +45,13 @@
   }
 
   .guardian {
-      margin-top: 1em !important;
-      width: 100% !important;
+    margin-top: 1em !important;
+    width: 100% !important;
   }
 
 }
 
 @media (max-width: 600px) {
-
-    .box-title {
-        font-size: 0.9rem !important;
-    }
-
-    .profileDesc p {
-        font-size: 0.85rem !important;
-    }
 
     .profileUserImage {
       margin: 1em auto !important;
@@ -67,11 +59,6 @@
     
     .profileUserLeft {
       width: 100% !important;
-    }
-
-    .profileUserAmount ul {
-        margin: 5px 0 !important;
-        margin-top: 5px !important;
     }
 
 }
@@ -94,15 +81,6 @@
 
     .homeCardLi {
       width: 150px;
-    }
-
-    .profileDesc p {
-      font-size: 0.8rem !important;
-    }
-
-    .footerDivide {
-      width: 90% !important;
-      margin: 20px auto !important;
     }
 
 }
