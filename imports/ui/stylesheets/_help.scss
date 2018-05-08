@@ -19,10 +19,6 @@
   border-bottom: 1px solid black;
 }
 
-.helpPagesPar {
-  text-align: center;
-}
-
 .email {
   width: 51%;
   float: left;
@@ -57,40 +53,6 @@
   }
 }
 
-.contactform {
-    max-width: 400px !important;
-}
-
-.contactsubmit input {
-    padding: 8px 15px;
-    font-size: 1rem;
-    color: $color-spacegrey;
-    background-color: #fff;
-    border: none;
-    border: 1px solid $color-spacered;
-    &:hover {
-        color: #fff;
-        background-color: $color-spacered;
-    }
-}
-
-.contactsubject input,
-.contactemail input {
-    padding: 10px 12px !important;
-    width: 100% !important;
-    border-radius: 4px !important;
-    border: 1px solid #d3d3d3 !important;
-}
-
-.phone {
-  float: right;
-  margin-right: 3em;
-}
-
-.phoneNumber {
-    width: 200px;
-}
-
 .helpiteml {
     text-align: center;
     li {
@@ -123,32 +85,8 @@
     }
 }
 
-.faqdiv {
-    ul {
-        padding: 0;
-    }
-    ul li ul li p {
-        width: 70%;
-    }
-    h3 {
-        margin-bottom: 10px !important;
-        margin-left: -15px;
-    }
-    p {
-        margin-bottom: 25px !important;
-    }
-}
-
 .helpShow {
   margin-top: 1em;
   text-align: center;
   font-size: 1rem;
-}
-
-.contacttext textarea {
-    width: 100% !important;
-    padding: 10px 12px !important;
-    height: 80px !important;
-    border-radius: 4px !important;
-    border: 1px solid #d3d3d3 !important;
 }

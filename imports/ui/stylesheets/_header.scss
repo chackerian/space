@@ -138,9 +138,7 @@
 }
 
 .clickDropper {
-    li {
-      display: inline-block !important;
-    }
+  display: flex;
     li ul li a {
       padding: 15px 0px 15px 0px !important;
       font-size: 0.8rem !important;

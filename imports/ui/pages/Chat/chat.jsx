@@ -30,7 +30,7 @@ class Chat extends Component {
 	    return(
 	      this.state.messages.map((item, index) => {
 	        return (
-	          <span className="bubble">{item}</span>
+	          <div className="bubble sentMessage">{item}</div>
 	        )
 	      })
 	    )
@@ -47,11 +47,19 @@ class Chat extends Component {
 							<li>John George</li>
 						</ul>
 					</div>
-					<div className='messages'>
-						{ this.messages() }
-					</div>
-					<div>
-						<input type="text" className="chat" placeholder="Send a message" maxLength="30" value={this.state.message} onChange={(event) => this.changeMessage(event)} onKeyPress={(event) => this.sendMessage(event)} />
+					<div className='messageBox'>
+						<div className='messages'>
+							<div className='bubble sentMessage'>Hey, how are you doing?</div>
+							<div className='bubble receivedMessage'>Good thanks</div>
+							<div className='bubble sentMessage'>Hey, how are you doing?</div>
+							<div className='bubble receivedMessage'>Good thanks</div>
+							<div className='bubble sentMessage'>Hey, how are you doing?</div>
+							<div className='bubble receivedMessage'>Good thanks</div>
+							{ this.messages() }
+						</div>
+						<div>
+							<input type="text" className="chat" placeholder="Send a message" maxLength="30" value={this.state.message} onChange={(event) => this.changeMessage(event)} onKeyPress={(event) => this.sendMessage(event)} />
+						</div>
 					</div>
 				</div>
 			</div>

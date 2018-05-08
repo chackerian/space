@@ -123,6 +123,12 @@ input[type="file"] {
   outline: 1px solid;
 }
 
+.messageBox {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
 .toolbar {
   border-bottom: 1px solid #e2e2e2;
 }

@@ -1,11 +1,13 @@
 .users {
-  flex: 0 0 25%;
-  max-width: 420px;
-  min-width: 240px;
+  flex: 0 0 15%;
   ul li {
     padding: 1em;
     font-family: 'system-ui';
   }
+}
+
+.allMessages {
+  display: flex;
 }
 
 .messages {
@@ -19,21 +21,15 @@
 .sentMessage {
   background-color: blue;
   color: white;
-  float: right;
 }
 
 .receivedMessage {
   background-color: grey;
   color: black;
-  float: left;
 }
 
 .bubble {
   border-radius: 27px;
-  font-weight: 600;
+  padding: 1em;
   padding: 3px 12px 4px 12px;
-}
-
-.allMessages {
-  display: flex;
 }
