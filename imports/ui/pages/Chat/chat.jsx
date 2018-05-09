@@ -21,6 +21,7 @@ class Chat extends Component {
   	}
 
   	sendMessage(event) {
+  		console.log(event)
 		if (event.key == "Enter") {
 			this.state.messages.push(event.target.value)
 		}
@@ -30,7 +31,7 @@ class Chat extends Component {
 	    return(
 	      this.state.messages.map((item, index) => {
 	        return (
-	          <div className="bubble sentMessage">{item}</div>
+	          <div className="bubble sent"><div className='sentMessage'>{item}</div></div>
 	        )
 	      })
 	    )
@@ -49,16 +50,16 @@ class Chat extends Component {
 					</div>
 					<div className='messageBox'>
 						<div className='messages'>
-							<div className='bubble sentMessage'>Hey, how are you doing?</div>
-							<div className='bubble receivedMessage'>Good thanks</div>
-							<div className='bubble sentMessage'>Hey, how are you doing?</div>
-							<div className='bubble receivedMessage'>Good thanks</div>
-							<div className='bubble sentMessage'>Hey, how are you doing?</div>
-							<div className='bubble receivedMessage'>Good thanks</div>
+							<div className='bubble sent'><div className='sentMessage'>Hey, how are you doing?</div></div>
+							<div className='bubble'><div className='receivedMessage'>Good thanks</div></div>
+							<div className='bubble sent'><div className='sentMessage'>Hey, how are you doing?</div></div>
+							<div className='bubble'><div className='receivedMessage'>Good thanks</div></div>
+							<div className='bubble sent'><div className='sentMessage'>Hey, how are you doing?</div></div>
+							<div className='bubble'><div className='receivedMessage'>Good thanks</div></div>
 							{ this.messages() }
 						</div>
 						<div>
-							<input type="text" className="chat" placeholder="Send a message" maxLength="30" value={this.state.message} onChange={(event) => this.changeMessage(event)} onKeyPress={(event) => this.sendMessage(event)} />
+							<input className="chat" placeholder="Send a message" maxLength="30" value={this.state.message} onChange={this.changeMessage(event)} onKeyPress={(event) => this.sendMessage(event)} /> 
 						</div>
 					</div>
 				</div>
