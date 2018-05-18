@@ -22,6 +22,7 @@ class ListingItem extends Component {
 
     try {
       var isCreator = listing.creator_id == Meteor.user()._id ? true : false;
+      console.log(isCreator)
     } catch (error) {
 
     }
@@ -43,7 +44,6 @@ class ListingItem extends Component {
           <li className="settings">
             <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
             <ul className="headerDropDownNav">
-              <a><li>Report User</li></a>
               <a><li>Report Listing</li></a>
               <a><li>Save</li></a>
             </ul>
@@ -56,7 +56,6 @@ class ListingItem extends Component {
           <li className="settings">
             <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
             <ul className="headerDropDownNav">
-              <a onClick={this.props.join}><li>Report User</li></a>
               <a onClick={this.props.join}><li>Report Listing</li></a>
               <a onClick={this.props.join}><li>Save</li></a>
             </ul>
@@ -114,12 +113,10 @@ class ListingItem extends Component {
             </div>
 
             <div className='bottomPage'>
-              <div className="desc">
-                <div className="desc-box">
-                  <h4 className="box-title">Description</h4>
-                  <p className="desc-full description">{listed.description}</p>
-                </div>
-            </div>
+              <div className="desc-box">
+                <h4 className="box-title">Description</h4>
+                <p className="desc-full description">{listed.description}</p>
+              </div>
           </div>
         </div>
       </div>
@@ -133,6 +130,7 @@ class ListingItem extends Component {
 const mapDispatchToProps = dispatch => {
   return {
       edit: () => dispatch({ type: 'EDIT_LISTING'}),
+      reportListing: dispatch({ type: 'REPORT_LISTING'}),
       join: () => dispatch({type: 'JOIN'})
   };
 };

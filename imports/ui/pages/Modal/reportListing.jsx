@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Listing } from '/imports/api/links/db.js';
 import { Meteor } from 'meteor/meteor';
+import { connect } from 'react-redux';
 
-export default class reportListing extends Component {
+class reportListing extends Component {
 
     constructor(props) {
       super(props)
@@ -38,6 +39,13 @@ export default class reportListing extends Component {
        </div>
       </form>
       )
-  }
-
+    }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+      close: () => dispatch({type: 'CLOSE'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(reportListing)

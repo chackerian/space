@@ -69,26 +69,8 @@
       width: 160px;
     }
 
-    .radiusLogo span {
-      display: none;
-    }
-
-    .radiusLogo::after {
-      content: "ST";
-      font-size: 1.4em;
-      font-weight: bold;
-    }
-
     .homeCardLi {
       width: 150px;
-    }
-
-}
-
-@media (max-width: 450px) {
-
-    .logo {
-      font-size: 3.5rem;
     }
 
 }

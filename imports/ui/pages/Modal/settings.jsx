@@ -20,7 +20,7 @@ class SettingsModal extends Component {
                 <li className="profileSettingsLi">
                   <ul className="profileSettingsEmail">
                     <li><h4>Email</h4></li>
-                    <li><input type="text" className="profileSettingsEmailInput" placeholder="Email" value={email} /></li>
+                    <li><input type="text" placeholder="Email" value={email} /></li>
                   </ul>
                 </li>
                 <li className="profileSettingsLi">

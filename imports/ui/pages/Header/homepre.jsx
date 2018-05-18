@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 
 class Homepre extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   login = () => {
     Meteor.loginWithFacebook({
       requestPermissions: ['user_friends', 'public_profile', 'email']
@@ -25,28 +21,34 @@ class Homepre extends Component {
     })
   }
 
+  componentDidMount() {
+    $(".search").keypress(function(e) {
+      if (e.key == "Enter") {
+        var search = $(".search").val();
+        FlowRouter.go("/search?q="+search);
+      }
+    });
+  }
+
   render() {
     return (
         <nav className="headerNav">
           <div className="wholeNav">
             <div className="leftNav">
               <div className="iconLogo">
-                <ul className="headerSearch">
-                  <li className="headerSearchRadiusLogo">
-                      <a href="/" className="radiusLogo">
-                        <span>SpaceTrades</span>
-                      </a>
-                  </li>
-                </ul>
+                <a href="/" className="radiusLogo">
+                  <svg class='logo' xmlns="http://www.w3.org/2000/svg" width="100" height="28">
+                    <text class="cls-1" x="0" y="50">SpaceTrades</text>
+                  </svg>
+                </a>
               </div>
               <div className="searchBox">
-                <input type="text" id="search" className="search" placeholder="Search" autoFocus="True" /><i className="material-icons searchIcon">search</i>
+                <input type="text" className="search" placeholder="Search" autoFocus="True" /> <i className="material-icons searchIcon">search</i>
               </div>
             </div>
             <div className="rightNav">
-              <ul className="headerAuthPre headerAuth">
-                  <li><a href="#" onClick={this.props.join}>Join</a></li>
-                  <li><a className="login" href="#" onClick={this.login}>Login</a></li>
+              <ul className="headerAuth">
+                  <li><a href="#" onClick={this.props.join}>Login</a></li>
               </ul>
             </div>
           </div>

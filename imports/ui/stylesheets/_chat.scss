@@ -1,7 +1,6 @@
 .users {
-  flex: 0 0 15%;
+  flex: 0 0 23%;
   background: white;
-  border: 1px solid #e7e6e7;
   ul {
     margin: 0;
   }
@@ -14,6 +13,13 @@
 
 .allMessages {
   display: flex;
+}
+
+.messageBox {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  border: 1px solid #e7e6e7;
 }
 
 .messages {
@@ -30,15 +36,16 @@
 .sentMessage {
   background-color: blue;
   color: white;
-  border-radius: 27px;
-  padding: 3px 12px 4px 12px;
 }
 
 .receivedMessage {
   background-color: #F5F5F5;
   color: black;
+}
+
+.sentMessage, .receivedMessage {
+  padding: 8px 12px;
   border-radius: 27px;
-  padding: 3px 12px 4px 12px;
 }
 
 .bubble {
@@ -49,4 +56,5 @@
 .chat {
   padding: 1em;
   background: white;
+  border-top: 2px solid #e7e6e7;
 }

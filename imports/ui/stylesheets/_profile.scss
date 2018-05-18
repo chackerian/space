@@ -1,5 +1,6 @@
 .desc {
   display: flex;
+  flex: 1;
   border-radius: 0.2em;
   box-shadow: 0px 2px 5px rgba(27, 2, 35, 0.15);
   background: white;
@@ -7,15 +8,40 @@
   margin-top: 2em;
 }
 
+.desc-box {
+  padding: 1em 1em 1em 1em;
+  border: 1px solid #f0f0f0;
+  margin-top: 3em;
+}
+
 .placeLocation {
   height: 150px;
   width: 300px;
+}
+
+.leftPage {
+  display: flex;
+}
+
+.rightPage {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
 }
 
 .profilePic {
   border: 4px solid white !important;
   height: 145px;
   width: 145px;
+  border-radius: 0.2em;
+}
+
+.location {
+  margin-right: 2em;
+}
+
+.bottom {
+  display: flex;
 }
 
 .topStrip {
@@ -36,7 +62,7 @@
 .name {
   font-size: 22px;
   font-family: 'system-ui';
-  font-weight: bolder;
+  font-weight: 500;
   display: flex;
   align-items: center;
   color: white;
@@ -45,12 +71,6 @@
 .profileUserImage {
   height: 150px;
   width: 150px;
-  &:hover {
-    opacity: 0.9;
-    .overflower {
-      display: block;
-    }
-  }
 }
 
 .pac-container {

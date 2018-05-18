@@ -22,13 +22,6 @@ HeaderContainer = withTracker(({ urlKey }) => {
   };
 })(Header);
 
-FooterContainer = withTracker(({ urlKey }) => {
-  const list = Meteor.user();
-  return {
-    list
-  };
-})(Footer);
-
 export default class MainLayout extends Component {
 
   constructor(props) {
@@ -47,7 +40,6 @@ export default class MainLayout extends Component {
           <Modal />
           <HeaderContainer />
           {this.props.content}
-          <FooterContainer />
         </div>
       </Provider>
     )

@@ -26,18 +26,12 @@ $color-visited:     	      #0c65a5;
 // Font Stacks
 /////////////////////////////////////////////////////
 
-// Header
-$font-header:              'Droid Sans', sans-serif;
-
 // Text
 $font-norm:            'Helvetica Neue', sans-serif;
 $font-link:                  "Oswald", sans-serif;
 
 // Primary button font
 $font-secondary:               'Roboto', sans-serif;
-
-// Money
-$font-text:                      'Abel', sans-serif;
 
 .money {
     color: $color-money !important;

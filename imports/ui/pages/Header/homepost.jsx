@@ -50,11 +50,11 @@ class Homepost extends Component {
         <div className="wholeNav">
           <div className="leftNav">
             <div className="iconLogo">
-              <ul className="headerSearch">
-                <li className="headerSearchRadiusLogo">
-                  <a href="/" className="radiusLogo"><span>SpaceTrades</span></a>
-                </li>
-              </ul>
+              <a href="/" className="radiusLogo">
+                <svg class='logo' xmlns="http://www.w3.org/2000/svg" width="100" height="28">
+                  <text class="cls-1" x="0" y="50">SpaceTrades</text>
+                </svg>
+              </a>
             </div>
             <div className="searchBox">
               <input type="text" className="search" placeholder="Search" autoFocus="True" /> <i className="material-icons searchIcon">search</i>
@@ -73,7 +73,7 @@ class Homepost extends Component {
             </ul>
             <ul className="clickDropper">
               <li className="navNotifications">
-                <a data-toggle="tooltip" onClick={this.navNotifications} data-placement="bottom"><i className="material-icons matdrop">notifications</i></a>
+                <a data-toggle="tooltip" onClick={this.navNotifications}><i className="material-icons matdrop">notifications</i></a>
                 <ul className="headerDropDownNav">
                   <a href='/chat'><li>You received a message</li></a>
                 </ul>
@@ -85,7 +85,7 @@ class Homepost extends Component {
                   <a href="/listings"><li>Listings</li></a>
                   <a href="/saved"><li>Saved</li></a>
                   <a href="/help"><li>Help Center</li></a>
-                  <a href="#" className="logout" onClick={this.logout}><li>Log out</li></a>
+                  <a href="#" onClick={this.logout}><li>Log out</li></a>
                 </ul>
               </li>
             </ul>

@@ -59,7 +59,7 @@ class Chat extends Component {
 							{ this.messages() }
 						</div>
 						<div>
-							<input className="chat" placeholder="Send a message" maxLength="30" value={this.state.message} onChange={this.changeMessage(event)} onKeyPress={(event) => this.sendMessage(event)} /> 
+							<div className="chat" contentEditable > </div> 
 						</div>
 					</div>
 				</div>

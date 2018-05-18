@@ -14,7 +14,6 @@
 .homeCard {
   margin: 1em;
   overflow: auto;
-  min-height: 54em;
 }
 
 .homeCardLi {
@@ -31,12 +30,12 @@
   }
 }
 
-.homeCardImg {
-    &:hover {
-        animation: 0.2s;
-        filter: brightness(70%);
-    }
-}
+// .homeCardImg {
+//     &:hover {
+//         animation: 0.2s;
+//         filter: brightness(70%);
+//     }
+// }
 
 .homeCardItem {
     max-height: 18em !important;

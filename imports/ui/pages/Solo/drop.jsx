@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 class Dropzone extends Component {
 
   allowDrop = (event) => {
-    $(".dropzone").addClass("highlighted-drop")
+    $(".dropzone").addClass("highlighted-drop");
     event.preventDefault();
   }
 
   openDrop() {
-    $(".fileDropper").click()
+    $(".fileDropper").click();
   }
 
   removeColor = (event) => {
-    $(".dropzone").removeClass("highlighted-drop")
+    $(".dropzone").removeClass("highlighted-drop");
   }
 
   dropped = (event) => {

@@ -10,20 +10,6 @@ input {
     border: none;
 }
 
-input[type="radio"] + label {
-    font-size: 14px;
-}
-
-input[type="radio"] + label span {
-    display: inline-block;
-    background-color: $color-spacegrey;
-    width: 13px;
-    height: 19px;
-    margin: -1px 4px 0 0;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -32,40 +18,71 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 select {
-    width: 150px;
-    height: 34px;
-    overflow: hidden;
-    border: 1px solid black !important;
-    background-color: white !important;
-    border-radius: 0;
-    padding: 0 10px 0 15px;
-    font-size: 16px;
-    line-height: 1;
-    option {
-        background-color: rgb(221, 221, 221) !important;
-        color: $color-spacegrey !important;
-        outline: none !important;
-        border: 1px solid #ccc !important;
-    }
-    &:focus {
-        outline: none !important;
-        border: 1px solid #ccc !important;
-    }
-}
-
-.listprice {
-  color: $color-money;
-  width: 60px;
-  font-family: 'Open Sans' !important;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid black !important;
+  background-color: white !important;
+  padding: 0 10px 0 10px;
+  &:focus {
+      outline: none !important;
+  }
 }
 
 .listdescription {
-    height: 100px;
-    padding: 16px 16px 32px;
-    outline: none;
-    border: 1px solid #e2e2e2;
+  height: 100px;
+  padding: 16px 16px 32px;
+  outline: none;
+  border: 1px solid #e2e2e2;
 }
 
 .fileDropper {
   display: none !important;
+}
+
+#pac-input {
+    text-overflow: ellipsis;
+    width: 250px;
+    height: 3em;
+    &:focus {
+        border-color: #4d90fe;
+    }
+}
+
+.toolbar {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.contentsBit {
+  padding: 1em;
+  cursor: text;
+  min-height: 6em;
+  outline: none;
+}
+
+.contentBox {
+  margin: 7em auto;
+  width: 650px;
+  border-radius: 0.5em;
+  padding: 4em;
+  box-shadow: 0 0 5px #888;
+}
+
+.tools {
+  display: flex;
+  margin-left: 1em;
+  margin: 10px;
+  li {
+    color: black;
+    padding: 0.4em 0 0 0;
+    margin-right: 8px;
+  }
+  li a i:hover {
+    color: #50c878;
+    cursor: pointer;
+    outline: 1px solid;
+  }
+}
+
+.addBitExterior {
+  border: 1px solid #e2e2e2;
 }

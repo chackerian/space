@@ -5,15 +5,11 @@ import Dropzone from '../Solo/drop.jsx';
 var AWS = require('aws-sdk');
 
 class ImageModal extends Component {
-
-  constructor(props) {
-    super(props)
-  }
           
   render() {
     return(
       <div className="modal-dialog">
-        <div className="modAddListingContent modal-content">
+        <div className="modal-content">
           <div className='modal-head'>
             <div className='modal-header'>Edit Photo</div>
             <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>

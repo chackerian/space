@@ -3,7 +3,7 @@ import { Listing } from '/imports/api/links/db.js';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 
-export default class reportUser extends Component {
+class reportUser extends Component {
 
     constructor(props) {
       super(props)
@@ -35,3 +35,11 @@ export default class reportUser extends Component {
       )
     }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+      close: () => dispatch({type: 'CLOSE'})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(reportUser)

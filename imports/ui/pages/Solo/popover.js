@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 
 class Popper extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
 		<div className='popover'>
@@ -14,7 +10,7 @@ class Popper extends Component {
 			<h3 className='popover-header'></h3>
 			<div className='popover-body'></div>
 		</div>
-	)
+	 )
   }
 }
 

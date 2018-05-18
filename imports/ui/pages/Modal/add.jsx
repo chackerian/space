@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
-var AWS = require('aws-sdk');
-
-s3 = new AWS.S3();
+import { S3 } from 'aws-sdk'
 
 var imageminOptions = {
   optimizationLevel: 7,
   progressive: 'true',
   interlaced: 'true'
 };
+
+console.log(S3)
 
 // function upload(obj, file) {
 //   s3.putObject({
@@ -80,10 +80,12 @@ class AddModal extends Component {
     })
   }
 
-  selectConditionChange(event) {
-    this.setState({
-      condition: event.target.value
-    })
+  actionBold = () => {
+    document.execCommand('bold');
+  }
+
+  actionItalic = () => {
+    document.execCommand('italic');
   }
 
   handleChange(event) {
@@ -112,7 +114,6 @@ class AddModal extends Component {
       category: this.state.category,
       type: this.state.type,
       price: this.state.price,
-      condition: this.state.condition,
       description: this.state.description,
     }
 
@@ -127,7 +128,9 @@ class AddModal extends Component {
     if (addListingValidate()) {
       Meteor.call('addListing', options);
     }
+    
     this.props.close()
+    // this.props.alert()
   }
 
   componentDidMount() {
@@ -138,7 +141,7 @@ class AddModal extends Component {
     if (this.state.modaltab == 1) {
       return(
           <div className="modal-dialog">
-            <div className="modAddListingContent modal-content">
+            <div className="modal-content">
               <div className='modal-head'>
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -146,13 +149,13 @@ class AddModal extends Component {
               <div className="modal-body">
                 <div className="modAddListingPage">
                   <ul className="modAddListingPageOneUl">
-                    <li className="modOfferRequestOfferWrap">
+                    <li>
                       <h3 className="listing_title">What Are You Selling?</h3>
-                      <input type="text" className="listtitle" placeholder="Listing Title" maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
+                      <input type="text" className="listtitle" placeholder="Title" maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
                     </li>
-                    <li className="modOfferRequestOfferWrap">
+                    <li>
                       <h3 className="price">At What Price?</h3>
-                      <input type="text" className="listprice" placeholder="Price" maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
+                      <input type="text" className="money" placeholder="Price" maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
                     </li>
                   </ul>
                 </div>
@@ -168,7 +171,7 @@ class AddModal extends Component {
     if (this.state.modaltab == 2) {
       return(
           <div className="modal-dialog">
-            <div className="modAddListingContent modal-content">
+            <div className="modal-content">
               <div className='modal-head'>
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -211,46 +214,11 @@ class AddModal extends Component {
         )
       }
 
-    if (this.state.modaltab == 3) {
-      return(
-          <div className="modal-dialog">
-            <div className="modAddListingContent modal-content">
-              <div className='modal-head'>
-                <div className='modal-header'>Add Listing</div>
-                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
-              </div>
-              <div className="modal-body">
-                <div className="modAddListingPage">
-                <h3>Provide Details</h3>
-                <ul className="modAddListingPageFourUl">
-                    <li>
-                      <label>Condition</label>
-                      <div className="styled-select">
-                          <select className="condition" value={this.state.condition} onChange={(event) => this.selectConditionChange(event)}>
-                              <option value="New">New</option>
-                              <option value="Like New">Like New</option>
-                              <option value="Used">Used</option>
-                              <option value="Needs Repair">Needs Repair</option>
-                          </select>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="modMultiBtn">
-                    <button type="button" className="modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
-                    <button type="button" className="modalBack" data-step="3" onClick={(event) => this.backPage(event)}>Back</button>
-                </div>
-              </div>
-            </div>
-          </div>
-      )
-    }
-
-  if (this.state.modaltab == 4) {
+  if (this.state.modaltab == 3) {
 
     return(
           <div className="modal-dialog">
-            <div className="modAddListingContent modal-content">
+            <div className="modal-content">
               <div className='modal-head'>
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -262,8 +230,8 @@ class AddModal extends Component {
                   </ul>
                 </div>
                 <div className="modMultiBtn">
-                    <button type="button" className="modalNext" data-step="4" onClick={(event) => this.nextPage(event)}>Next</button>
-                    <button type="button" className="modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
+                    <button type="button" className="modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
+                    <button type="button" className="modalBack" data-step="3" onClick={(event) => this.backPage(event)}>Back</button>
                 </div>
               </div>
             </div>
@@ -271,10 +239,10 @@ class AddModal extends Component {
       )
   }
 
-    if (this.state.modaltab == 5) {
+    if (this.state.modaltab == 4) {
       return(
         <div className="modal-dialog">
-          <div className="modAddListingContent modal-content">
+          <div className="modal-content">
             <div className='modal-head'>
                 <div className='modal-header'>Add Listing</div>
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
@@ -291,8 +259,8 @@ class AddModal extends Component {
                 <div contentEditable="true" data-text="Enter description" className="contentsBit"></div>
               </div>
               <div className="modMultiBtn">
-                  <button type="button" className="add modalSubmitBtn" data-step="5" onClick={this.createListing}>Create</button>
-                  <button type="button" className="modalBack" data-step="5" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="add modalSubmitBtn" data-step="4" onClick={this.createListing}>Create</button>
+                  <button type="button" className="modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
               </div>
             </div>
           </div>
@@ -305,7 +273,8 @@ class AddModal extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      close: () => dispatch({type: 'CLOSE'})
+      close: () => dispatch({type: 'CLOSE'}),
+      alert: () => dispatch({status: 'NOTIFY'})
   };
 };
 
