@@ -21,8 +21,11 @@ class EditListingModal extends Component {
     return(
         <div className="modal-dialog">
           <div className="modal-content">
-            <div className="modal-body">
+            <div className='modal-head'>
+              <div className='modal-header'>Edit Listing</div>
               <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+            </div>
+            <div className="modal-body">
               <input type="text" className="listtitle" placeholder="Title" maxLength="30" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
               <input type="text" className="money" placeholder="Price" maxLength="5" value={this.state.price} onChange={(event) => this.handleChange(event)} />
               <div className="addBitExterior">
