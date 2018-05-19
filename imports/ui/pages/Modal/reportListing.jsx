@@ -3,7 +3,7 @@ import { Listing } from '/imports/api/links/db.js';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 
-class reportListing extends Component {
+class reportListingModal extends Component {
 
     constructor(props) {
       super(props)
@@ -11,33 +11,28 @@ class reportListing extends Component {
 
     render() {
       return(
-        <form className="modal">
           <div className="modal-dialog">
             <div className="modal-content">
+              <div className='modal-head'>
+                <div className='modal-header'>Report Listing</div>
+                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+              </div>
               <div className="modal-body">
                 <h2>Select All That Apply</h2>
-                <ul>
-                 <li><input type="checkbox" classNameName="prohibitChoice" />Product is Prohibited </li>
-                 <li><input type="checkbox" className="offenseChoice" />Contains Offensive Content</li>
-                 <li><input type="checkbox" className="irrelevantChoice" />Contains Irrelevant Content</li>
-                 <li><input type="checkbox" className="falseChoice" />Contains False Content</li>
-                 <li><input type="checkbox" className="falseChoice" />Contains Nudity</li>
-                 <li><input type="checkbox" className="falseChoice" />Doesn't Belong On SpaceTrades</li>
-                 <li><input type="checkbox" className="complianceChoice" />Or Doesn't Comply With a Community Standard</li>
-               </ul>
+                <ul className='reportListingChecks'>
+                 <li><input type="checkbox" />Product is Prohibited</li>
+                 <li><input type="checkbox" />Contains Offensive Content</li>
+                 <li><input type="checkbox" />Contains Irrelevant Content</li>
+                 <li><input type="checkbox" />Contains False Content</li>
+                </ul>
+                <h2>Tell Us More</h2>
+                <div className="contentsBit" data-text="Briefly explain" contentEditable="true"></div>
               </div>
-            <div className="modal-body step step-3">
-              <div className="modReportPageThree">
-                <h2>Please Tell Us More</h2>
-                <textarea className="message" placeholder="Briefly provide explanation"></textarea>
-              </div>
-              <div className="modMultiBtn modMultiBtnReportThree">
+              <div className="modMultiBtn">
                  <a className="action" value="Send Report" />
-             </div>
-           </div>
-         </div>
-       </div>
-      </form>
+              </div>
+            </div>
+        </div>
       )
     }
 }
@@ -48,4 +43,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(reportListing)
+export default connect(null, mapDispatchToProps)(reportListingModal)

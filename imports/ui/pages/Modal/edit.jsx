@@ -13,8 +13,10 @@ class EditListingModal extends Component {
   }
 
   componentDidMount() {
-    var mape = new google.maps.places.SearchBox(document.getElementById('pac-input'))
-    mape.getPlaces()
+    setTimeout(function(){
+      var mape = new google.maps.places.SearchBox(document.getElementById('pac-input'));
+      mape.getPlaces();
+    }, 2000)
   }
 
   render() {
@@ -26,8 +28,10 @@ class EditListingModal extends Component {
               <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
             </div>
             <div className="modal-body">
-              <input type="text" className="listtitle" placeholder="Title" maxLength="30" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
-              <input type="text" className="money" placeholder="Price" maxLength="5" value={this.state.price} onChange={(event) => this.handleChange(event)} />
+              <div classname='mod-top'>
+                <input type="text" className="listtitle" placeholder="Title" maxLength="30" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
+                <input type="text" className="money" placeholder="Price" maxLength="5" value={this.state.price} onChange={(event) => this.handleChange(event)} />
+              </div>
               <div className="addBitExterior">
                 <div className="toolbar">
                   <ul className="tools">
@@ -38,9 +42,10 @@ class EditListingModal extends Component {
                 </div>
                 <div contentEditable="true" data-text="Enter description" className="contentsBit"></div>
               </div>
+            </div>
+            <div className='modal-foot'>
               <div className="modMultiBtn">
-                  <button type="button" className="add modalSubmitBtn" data-step="4" onClick={this.createListing}>Create</button>
-                  <button type="button" className="modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="add modalSubmitBtn" onClick={this.createListing}>Update</button>
               </div>
             </div>
           </div>

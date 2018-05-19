@@ -14,16 +14,19 @@ class Chat extends Component {
 		}
 	}
 
-	changeMessage(event) {
-	    this.setState({
-	      message: event.target.value
-	    })
-  	}
+	componentDidMount() {
+		setInterval(function(){
+			console.log(window.innerHeight-220)
+			var newheight = window.innerHeight-220
+			$('.messages').css('height', newheight)
+		}, 100)
+	}
 
   	sendMessage(event) {
-  		console.log(event)
+  		console.log(event.key)
 		if (event.key == "Enter") {
 			this.state.messages.push(event.target.value)
+			this.setState({message: event.target.value})
 		}
   	}
 
@@ -59,7 +62,7 @@ class Chat extends Component {
 							{ this.messages() }
 						</div>
 						<div>
-							<div className="chat" contentEditable > </div> 
+							<div data-text="Enter your message" className="chat" contenteditable="true" onKeyPress={(event) => this.sendMessage(event)}></div> 
 						</div>
 					</div>
 				</div>

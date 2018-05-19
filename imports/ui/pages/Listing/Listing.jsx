@@ -16,18 +16,15 @@ class ListingItem extends Component {
     $(".settings > .headerDropDownNav").toggle();
   }
 
+  save() {
+
+  }
+
   manage = () => {
     var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
-    var isUser = Meteor.user();
 
-    try {
-      var isCreator = listing.creator_id == Meteor.user()._id ? true : false;
-      console.log(isCreator)
-    } catch (error) {
 
-    }
-
-    if (isCreator && isUser) {
+    if (listing.creator_id == Meteor.user()._id) {
       return (
         <ul className="clickDropper">
           <li className="settings">
@@ -38,14 +35,14 @@ class ListingItem extends Component {
           </li>
         </ul>
       )
-    } else if (isUser) {
+    } else if (Meteor.user()) {
       return (
         <ul className="clickDropper">
           <li className="settings">
-            <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
+            <a onClick={this.settings}><i className="material-icons">more_horiz</i></a>
             <ul className="headerDropDownNav">
-              <a><li>Report Listing</li></a>
-              <a><li>Save</li></a>
+              <a onClick={this.props.report}><li>Report Listing</li></a>
+              <a onClick={this.save}><li>Save</li></a>
             </ul>
           </li>
         </ul>
@@ -130,7 +127,7 @@ class ListingItem extends Component {
 const mapDispatchToProps = dispatch => {
   return {
       edit: () => dispatch({ type: 'EDIT_LISTING'}),
-      reportListing: dispatch({ type: 'REPORT_LISTING'}),
+      report: () => dispatch({ type: 'REPORT_LISTING'}),
       join: () => dispatch({type: 'JOIN'})
   };
 };

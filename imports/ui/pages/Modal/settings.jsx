@@ -14,9 +14,12 @@ class SettingsModal extends Component {
       return (
         <div className="modal-dialog">
           <div className="modal-content">
+            <div className='modal-head'>
+              <div className='modal-header'>Edit Profile</div>
+              <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
+            </div>
             <div className="modal-body">
               <div className="modWrapper">
-                <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <li className="profileSettingsLi">
                   <ul className="profileSettingsEmail">
                     <li><h4>Email</h4></li>

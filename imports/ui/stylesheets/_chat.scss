@@ -6,25 +6,25 @@
   }
   ul li {
     padding: 1.5em;
-    border: 1px solid #e7e6e7;
+    border-bottom: 1px solid #e7e6e7;
     font-family: 'system-ui';
   }
 }
 
 .allMessages {
   display: flex;
+  border: 1px solid #e7e6e7;
 }
 
 .messageBox {
   display: flex;
   flex-direction: column;
-  width: 65%;
-  border: 1px solid #e7e6e7;
+  width: 77%;
+  overflow-y: hidden;
+  border-left: 1px solid #e7e6e7;
 }
 
 .messages {
-  box-shadow: 0px 2px 5px rgba(27, 2, 35, 0.15);
-  height: 32em;
   background: white;
   padding: 2em;
 }
@@ -55,6 +55,8 @@
 
 .chat {
   padding: 1em;
+  height: 1.5em;
   background: white;
-  border-top: 2px solid #e7e6e7;
+  border-top: 1px solid #e7e6e7;
+  outline: none;
 }

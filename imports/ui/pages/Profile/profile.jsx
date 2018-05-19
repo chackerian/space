@@ -26,9 +26,9 @@ class Profile extends Component {
 
       var prof = profile[0];
       var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
-      var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
+      // var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
       var city = JSON.parse(prof.profile.location).city;
-      var state = JSON.parse(prof.profile.location).region_name;
+      var state = JSON.parse(prof.profile.location).region;
 
         return(
           <div className="oneDiv">
@@ -45,10 +45,10 @@ class Profile extends Component {
             </div>
             <div className='bottom'>
               <div className='desc location'>
-                Location: 
+                Location: {city}, {state}
               </div>
               <div className='desc'>
-                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-facebook-square fbconnect" aria-hidden="true"></i>
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
               </div>
             </div>

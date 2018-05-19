@@ -58,12 +58,25 @@ button {
   }
 }
 
+.headerNameOptions li a {
+  font-size: 0.9em;
+  padding: 5px 10px !important;
+  border: 1px solid black;
+  border-radius: 0.2em;
+  color: black !important;
+  transition: 0.2s;
+  &:hover {
+    color: white !important;
+    background-color: $color-spacegrey !important;
+  }
+}
+
 .buttonas {
     li a {
-      color: black !important;
+      padding: 5px 10px;
       border: 1px solid black !important;
       border-radius: 0.2em;
-      padding: 5px 10px;
+      color: black !important;
       margin: 0 0 0 0.5em;
     }
     li a:hover {
@@ -73,34 +86,20 @@ button {
     }
 }
 
-.headerNameOptions li a {
-  font-size: 0.9em;
-  padding: 5px 10px !important;
-  border: 1px solid black;
-  color: black !important;
-  border-radius: 0.2em;
-  transition: 0.2s;
-  &:hover {
-    color: #fff !important;
-    background-color: $color-spacegrey !important;
-  }
-}
-
 .editButton {
   margin-top: 10em;
   margin-left: auto;
-}
-
-.editButton li a {
-  font-size: 0.9em;
-  padding: 5px 10px !important;
-  border: 1px solid black;
-  color: black !important;
-  border-radius: 0.2em;
-  transition: 0.2s;
-  &:hover {
-    color: #fff !important;
-    background-color: $color-spacegrey !important;
+  li a {
+    font-size: 0.9em;
+    padding: 5px 10px !important;
+    border: 1px solid black;
+    color: black !important;
+    border-radius: 0.2em;
+    transition: 0.2s;
+    &:hover {
+      color: #fff !important;
+      background-color: $color-spacegrey !important;
+    }
   }
 }
 
@@ -131,7 +130,6 @@ button {
 
 .modMultiBtn {
     button {
-        margin-top: 1em;
         outline: none;
         float: right;
         border-radius: 0.2em;
