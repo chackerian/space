@@ -8,6 +8,12 @@ textarea {
 input {
     font-family: $font-secondary;
     border: none;
+    outline: none !important;
+    width: -webkit-fill-available;
+}
+
+input[type="file"] {
+  display: none;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -16,6 +22,17 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+}
+
+[contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-text);
+  color: #e2e2e2 !important;
+}
+
 
 select {
   height: 34px;
@@ -69,7 +86,6 @@ select {
 
 .tools {
   display: flex;
-  margin-left: 1em;
   margin: 10px;
   li {
     color: black;
@@ -77,9 +93,8 @@ select {
     margin-right: 8px;
   }
   li a i:hover {
-    color: #50c878;
+    color: $color-spacetrades;
     cursor: pointer;
-    outline: 1px solid;
   }
 }
 

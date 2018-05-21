@@ -27,11 +27,8 @@ button {
     }
 }
 
-.modalBack,
-.modalExit {
-  float: left !important;
+.modalBack {
   background-color: $color-spacered !important;
-  margin-right: 10px;
   &:hover {
     background-color: red !important;
   }
@@ -39,27 +36,13 @@ button {
 
 .modalNext {
   background-color: $color-spacered !important;
+  margin-left: auto;
   &:hover {
     background-color: red !important;
   }
 }
 
-.buttonred {
-  color: white !important;
-  border-radius: 0.2em;
-  padding: 5px 10px;
-  font-size: 14px;
-  background: $color-spacered;
-  border: 1px solid black !important;
-  &:hover {
-      color: white !important;
-      border: 1px solid black !important;
-      background: $color-spacegrey;
-  }
-}
-
 .headerNameOptions li a {
-  font-size: 0.9em;
   padding: 5px 10px !important;
   border: 1px solid black;
   border-radius: 0.2em;
@@ -103,16 +86,10 @@ button {
   }
 }
 
-.add {
-    background-color: $color-spacered;
-    &:hover {
-      background-color: red;
-    }
-}
-
 .join-button {
     cursor: pointer;
     margin-top: 10px;
+    user-select: none;
     padding: 1em;
     border-radius: 4px;
     color: white !important;
@@ -129,6 +106,7 @@ button {
 }
 
 .modMultiBtn {
+  display: flex;
     button {
         outline: none;
         float: right;

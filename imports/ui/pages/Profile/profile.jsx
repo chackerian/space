@@ -16,6 +16,12 @@ class Profile extends Component {
           <li><a onClick={this.props.edit}>Edit</a></li>
         </ul>
       )
+    } else {
+      return (
+        <ul className="editButton">
+          <li><a onClick={this.props.edit}>Message</a></li>
+        </ul>
+      )
     }
   }
 
@@ -25,6 +31,7 @@ class Profile extends Component {
 
 
       var prof = profile[0];
+      var name = prof.profile.name;
       var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
       // var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
       var city = JSON.parse(prof.profile.location).city;
@@ -37,10 +44,7 @@ class Profile extends Component {
                   <div className="profileUserImage"><img className='profilePic' src={img} /><a onClick={this.props.image}>
                   <div className='overflower'><div className="overflow">Edit Photo</div></div></a></div>
               </div>
-              <div className='name'></div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="122" height="28">
-                  <text id="SpaceTrades" class="cls-1" x="0" y="50">SpaceTrades</text>
-                </svg>
+              <div className='name'>{name}</div>
               { this.edit() }
             </div>
             <div className='bottom'>

@@ -16,16 +16,17 @@ class Chat extends Component {
 
 	componentDidMount() {
 		setInterval(function(){
-			console.log(window.innerHeight-220)
 			var newheight = window.innerHeight-220
 			$('.messages').css('height', newheight)
 		}, 100)
 	}
 
   	sendMessage(event) {
-  		console.log(event.key)
 		if (event.key == "Enter") {
-			this.state.messages.push(event.target.value)
+			event.preventDefault()
+			var message = $('.chat').text()
+			$('.chat').text('');
+			this.state.messages.push(message)
 			this.setState({message: event.target.value})
 		}
   	}

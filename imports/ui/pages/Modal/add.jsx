@@ -154,7 +154,7 @@ class AddModal extends Component {
                       <input type="text" className="listtitle" placeholder="Title" maxLength="30" data-key="listing_title" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
                     </li>
                     <li>
-                      <h3 className="price">At What Price?</h3>
+                      <h3>At What Price?</h3>
                       <input type="text" className="money" placeholder="Price" maxLength="5" data-key="price" value={this.state.price} onChange={(event) => this.handleChange(event)} />
                     </li>
                   </ul>
@@ -209,8 +209,8 @@ class AddModal extends Component {
               </div>
               <div className='modal-foot'>
                 <div className="modMultiBtn">
-                    <button type="button" className="modalNext" data-step="2" onClick={(event) => this.nextPage(event)}>Next</button>
                     <button type="button" className="modalBack" data-step="2" onClick={(event) => this.backPage(event)}>Back</button>
+                    <button type="button" className="modalNext" data-step="2" onClick={(event) => this.nextPage(event)}>Next</button>
                 </div>
               </div>
             </div>
@@ -236,8 +236,8 @@ class AddModal extends Component {
               </div>
               <div className='modal-foot'>
                 <div className="modMultiBtn">
-                  <button type="button" className="modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
                   <button type="button" className="modalBack" data-step="3" onClick={(event) => this.backPage(event)}>Back</button>
+                  <button type="button" className="modalNext" data-step="3" onClick={(event) => this.nextPage(event)}>Next</button>
                 </div>
               </div>
             </div>
@@ -267,8 +267,8 @@ class AddModal extends Component {
             </div>
             <div className='modal-foot'>
               <div className="modMultiBtn">
-                <button type="button" className="add modalSubmitBtn" data-step="4" onClick={this.createListing}>Create</button>
                 <button type="button" className="modalBack" data-step="4" onClick={(event) => this.backPage(event)}>Back</button>
+                <button type="button" className="modalNext" data-step="4" onClick={this.createListing}>Create</button>
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@ class AddModal extends Component {
 const mapDispatchToProps = dispatch => {
   return {
       close: () => dispatch({type: 'CLOSE'}),
-      alert: () => dispatch({status: 'NOTIFY'})
+      alert: () => dispatch({type: 'NOTIFY'})
   };
 };
 

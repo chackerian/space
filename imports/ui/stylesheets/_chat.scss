@@ -20,12 +20,12 @@
   display: flex;
   flex-direction: column;
   width: 77%;
-  overflow-y: hidden;
   border-left: 1px solid #e7e6e7;
 }
 
 .messages {
   background: white;
+  overflow-y: scroll;
   padding: 2em;
 }
 

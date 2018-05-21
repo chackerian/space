@@ -22,6 +22,7 @@ class JoinModal extends Component {
         }, 5000);
       }
     })
+    this.props.alert();
   }
 
   render() {
@@ -30,7 +31,6 @@ class JoinModal extends Component {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-body">
-              <div className="modWrapper">
                 <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
                 <h1>Join SpaceTrades</h1>
                 <ul>
@@ -39,13 +39,12 @@ class JoinModal extends Component {
                 <p className="joinAgreeSmall">By signing up you agree to our <a className="link" target="_blank" href="/help/terms">Terms and Conditions</a></p>
                 <div className="join-button facebook" onClick={this.login}>
                   <i className="fa fa-facebook-square"></i>
-                  <b>Continue with Facebook</b>
+                  <span>Continue with Facebook</span>
                 </div>
                 <div className="join-button google" onClick={this.login}>
                   <i className="fa fa-google"></i>
-                  <b>Continue with Google</b>
+                  <span>Continue with Google</span>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -57,7 +56,8 @@ class JoinModal extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      close: () => dispatch({type: 'CLOSE'})
+      close: () => dispatch({type: 'CLOSE'}),
+      alert: () => dispatch({type: 'NOTIFY'})
   };
 };
 

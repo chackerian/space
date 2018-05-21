@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Alert extends Component {
 
   render() {
-    if (this.props.status == "alert") {
+    if (this.props.alert == "add") {
       return (
         <div className="fall">
           <span>{this.props.message="Listing Created Successfully"}</span>
@@ -19,7 +19,7 @@ class Alert extends Component {
 
 const mapStateToProps = state => {
   return {
-    status: state.status
+    alert: state.alert
   };
 }
 

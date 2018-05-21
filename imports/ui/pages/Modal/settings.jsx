@@ -32,11 +32,13 @@ class SettingsModal extends Component {
                     <li><input id="pac-input" className="controls" type="text" placeholder="Choose Location" /></li>
                   </ul>
                 </li>
-                <ul className="buttonas">
-                    <li><a href="#" onClick={this.edit}>Save</a></li>
-                </ul>
               </div>
             </div>
+            <div className='modal-foot'>
+                <div className="modMultiBtn">
+                  <button type="button" className="modalSubmitBtn" onClick={this.edit}>Update</button>
+                </div>
+              </div>
           </div>
         </div>
       )

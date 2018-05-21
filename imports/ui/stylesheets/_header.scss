@@ -11,6 +11,17 @@
   }
 }
 
+.search {
+  border-radius: 2px;
+  color: white;
+  padding: 6px 8px;
+  background-color: rgba(255,255,255,0.125);
+}
+
+.search::placeholder {
+  color: white;
+}
+
 .leftNav {
   display: flex;
   flex: 1 1 auto;
@@ -67,7 +78,6 @@
     border: 1px solid white !important;
     border-radius: 0.2em;
     padding: 5px 10px;
-    font-size: 14px;
     margin-left: 1em;
   }
   li a:hover {

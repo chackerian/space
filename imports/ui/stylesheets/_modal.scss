@@ -20,6 +20,14 @@
     font-size: 1.4em;
 }
 
+.mod-top {
+	padding-bottom: 1em;
+}
+
+.price {
+	float: right;
+}
+
 .dropzone {
 	min-height: 150px;
 	border: 2px dashed black;
@@ -39,10 +47,6 @@
 	border-radius: 5px !important;
 	box-shadow: 0 0 16px rgba(27, 2, 35, 0.15) !important;
 	overflow-y: hidden !important;
-}
-
-.modal-close {
-	float: right;
 }
 
 .close i {

@@ -51,13 +51,10 @@ class Homepost extends Component {
           <div className="leftNav">
             <div className="iconLogo">
               <a href="/" className="radiusLogo">
-                <svg class='logo' xmlns="http://www.w3.org/2000/svg" width="100" height="28">
-                  <text class="cls-1" x="0" y="50">SpaceTrades</text>
-                </svg>
               </a>
             </div>
             <div className="searchBox">
-              <input type="text" className="search" placeholder="Search" autoFocus="True" /> <i className="material-icons searchIcon">search</i>
+              <input type="text" className="search" placeholder="Search" autoFocus="True" />
             </div>
           </div>
           <div className="rightNav">

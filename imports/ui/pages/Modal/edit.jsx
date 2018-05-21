@@ -19,6 +19,13 @@ class EditListingModal extends Component {
     }, 2000)
   }
 
+  handleChange(event) {
+    var key = event.target.getAttribute('data-key');
+    this.setState({
+      [key]: event.target.value
+    })
+  }
+
   render() {
     return(
         <div className="modal-dialog">
@@ -30,7 +37,7 @@ class EditListingModal extends Component {
             <div className="modal-body">
               <div classname='mod-top'>
                 <input type="text" className="listtitle" placeholder="Title" maxLength="30" value={this.state.listing_title} onChange={(event) => this.handleChange(event)} />
-                <input type="text" className="money" placeholder="Price" maxLength="5" value={this.state.price} onChange={(event) => this.handleChange(event)} />
+                <input type="text" className="money price" placeholder="Price" maxLength="5" value={this.state.price} onChange={(event) => this.handleChange(event)} />
               </div>
               <div className="addBitExterior">
                 <div className="toolbar">

@@ -64,31 +64,9 @@ label {
   padding: 0;
 }
 
-input {
-  outline: none !important;
-}
-
-input[type="file"] {
-  display: none;
-}
-
-[contenteditable=true]:empty:before {
-  content: attr(placeholder);
-  display: block; /* For Firefox */
-}
-
-[contentEditable=true]:empty:not(:focus):before {
-  content: attr(data-text);
-  color: #e2e2e2 !important;
-}
-
 .oneDiv {
   font-family: $font-norm !important;
   margin: 5em 10em 0em 10em;
-}
-
-.reportListingChecks {
-  padding: 1em;
 }
 
 .fbconnect {
@@ -101,10 +79,4 @@ input[type="file"] {
 
 .material-icons {
 	font-size: 24px !important;
-}
-
-.searchBox {
-  margin-left: 15px;
-  height: 1em;
-  margin-top: 1.6em;
 }

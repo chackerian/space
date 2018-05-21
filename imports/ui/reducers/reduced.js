@@ -46,13 +46,12 @@ export default function(state=[], action) {
       }
     case "NOTIFY":
       return {
-        type: "add",
-        status: "on"
+        alert: "add",
       }
     case "CLOSE_NOTIFY":
       return {
-        modal: "add",
-        status: "on"
+        alert: "add",
+        status: "off"
       }
     default:
       return "app";
