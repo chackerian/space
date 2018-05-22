@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
+import { Message } from '/imports/api/links/db.js';
+
 var AWS = require('aws-sdk');
 
 class Chat extends Component {
@@ -27,6 +29,7 @@ class Chat extends Component {
 			var message = $('.chat').text()
 			$('.chat').text('');
 			this.state.messages.push(message)
+			Message.insert({ text: message, date: new Date() })
 			this.setState({message: event.target.value})
 		}
   	}
@@ -40,6 +43,12 @@ class Chat extends Component {
 	      })
 	    )
   	}
+
+  	// users() {
+  	// 	return (
+
+  	// 	)
+  	// }
 
 	render() {
 		return(

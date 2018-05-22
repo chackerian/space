@@ -18,8 +18,7 @@ class Homepre extends Component {
           <div className="wholeNav">
             <div className="leftNav">
               <div className="iconLogo">
-                <a href="/" className="radiusLogo">
-                </a>
+                <a href="/" className="radiusLogo"></a>
               </div>
               <div className="searchBox">
                 <input type="text" className="search" placeholder="Search" autoFocus="True" />

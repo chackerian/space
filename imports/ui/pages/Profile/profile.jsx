@@ -9,6 +9,10 @@ class Profile extends Component {
     super(props)
   }
 
+  // message = () => {
+  //   FlowRouter.go('/chat')
+  // }
+
   edit = () => {
     if (Meteor.userId() == FlowRouter.current().params.id) {
       return (
@@ -16,10 +20,17 @@ class Profile extends Component {
           <li><a onClick={this.props.edit}>Edit</a></li>
         </ul>
       )
-    } else {
+    } else if (Meteor.user()) {
       return (
         <ul className="editButton">
-          <li><a onClick={this.props.edit}>Message</a></li>
+          <li><a onClick={this.message}>Message</a></li>
+        </ul>
+      )
+    }
+    else {
+      return (
+        <ul className="editButton">
+          <li><a onClick={this.props.join}>Message</a></li>
         </ul>
       )
     }
@@ -33,7 +44,7 @@ class Profile extends Component {
       var prof = profile[0];
       var name = prof.profile.name;
       var img = "http://graph.facebook.com/" + prof.services.facebook.id + "/picture?type=large";
-      // var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
+      var facebook = "https://www.facebook.com/" + prof.services.facebook.id;
       var city = JSON.parse(prof.profile.location).city;
       var state = JSON.parse(prof.profile.location).region;
 
@@ -52,7 +63,7 @@ class Profile extends Component {
                 Location: {city}, {state}
               </div>
               <div className='desc'>
-                <i class="fa fa-facebook-square fbconnect" aria-hidden="true"></i>
+                <a href={facebook}> <i class="fa fa-facebook-square fbconnect" aria-hidden="true"></i></a>
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
               </div>
             </div>
@@ -72,7 +83,8 @@ class Profile extends Component {
 const mapDispatchToProps = dispatch => {
   return {
       edit: () => dispatch({ type: 'EDIT_PROFILE'}),
-      image: () => dispatch({ type: 'IMAGE'})
+      image: () => dispatch({ type: 'IMAGE'}),
+      join: () => dispatch({type: 'JOIN'})
   };
 };
 

@@ -3,6 +3,9 @@ import { Mongo } from 'meteor/mongo';
 // Listing
 export const Listing = new Mongo.Collection('listing');
 
+// Listing
+export const Message = new Mongo.Collection('message');
+
 // Notification
 export const Notification = new Mongo.Collection('notifications');
 

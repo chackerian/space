@@ -5,12 +5,26 @@ class Alert extends Component {
 
   render() {
     if (this.props.alert == "add") {
-      return (
-        <div className="fall">
-          <span>{this.props.message="Listing Created Successfully"}</span>
-        </div>
-      )
-    } else {
+      setTimeout(function(){
+        return (
+          <div className="fall">
+            <span>Welcome</span>
+          </div>
+        )
+      }, 2000)
+    } 
+
+    if (this.props.alert == "login") {
+      setTimeout(function(){
+        return (
+          <div className="fall">
+            <span>Welcome</span>
+          </div>
+        )
+      }, 2000)
+    } 
+
+    else {
       return null
     }
   }
