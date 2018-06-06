@@ -17,7 +17,7 @@ export default class Help extends Component {
             <p className="contacttext">
               <textarea placeholder="Message" className="message"></textarea>
             </p>
-            <ul className="buttonas">
+            <ul className="blackon">
                 <li><a href="#" onClick={this.edit}>Send</a></li>
             </ul>
           </form>

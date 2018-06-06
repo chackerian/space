@@ -58,9 +58,9 @@ class Homepost extends Component {
             </div>
           </div>
           <div className="rightNav">
-            <ul className="headerNameOptions">
+            <ul>
               <li>
-                <a href={`/profile/${profile}`}>
+                <a className='blackon' href={`/profile/${profile}`}>
                   <span>{currentUsername()}</span>
                 </a>
               </li>
@@ -70,13 +70,14 @@ class Homepost extends Component {
             </ul>
             <ul className="clickDropper">
               <li className="navNotifications">
-                <a data-toggle="tooltip" onClick={this.navNotifications}><i className="material-icons matdrop">notifications</i></a>
+                <a onClick={this.navNotifications}><i className="material-icons matdrop">notifications</i><span className='notify'></span></a>
+
                 <ul className="headerDropDownNav">
                   <a href='/chat'><li>You received a message</li></a>
                 </ul>
               </li>
               <li className="navGeneral">
-                <a data-toggle="tooltip" onClick={this.navGeneral} data-placement="bottom"><i className="material-icons matdrop">more_vert</i></a>
+                <a onClick={this.navGeneral}><i className="material-icons matdrop">more_vert</i></a>
                 <ul className="headerDropDownNav">
                   <a href={`/profile/${profile}`}><li>Profile</li></a>
                   <a href="/listings"><li>Listings</li></a>

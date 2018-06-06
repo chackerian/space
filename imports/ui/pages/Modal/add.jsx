@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import Dropzone from '../Solo/drop.jsx';
-import { S3 } from 'aws-sdk'
+import { S3 } from 'aws-sdk';
+
+var AWS = require('aws-sdk');
 
 var imageminOptions = {
   optimizationLevel: 7,
@@ -10,17 +12,8 @@ var imageminOptions = {
   interlaced: 'true'
 };
 
-console.log(S3)
-
-// function upload(obj, file) {
-//   s3.putObject({
-//     ACL: UPLOAD_ACL,
-//     Bucket: UPLOAD_BUCKET,
-//     Key: key,
-//     Body: file.contents,
-//     ContentType: obj.ContentType,
-//   });
-// }
+// var s3 = new AWS.S3().putObject()
+// console.log(s3)
 
 String.prototype.shorten = function(n) {
   return (this.length > n) ? this.substr(0, n-1) + '...' : this.substr(0,n);

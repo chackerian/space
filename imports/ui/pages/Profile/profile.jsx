@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Listing } from '/imports/api/links/db.js';
 import { connect } from 'react-redux';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 class Profile extends Component {
 
@@ -9,28 +10,50 @@ class Profile extends Component {
     super(props)
   }
 
-  // message = () => {
-  //   FlowRouter.go('/chat')
-  // }
+  message = () => {
+    FlowRouter.go('/chat')
+  }
+
+  settings = () => {
+    $(".prof_settings > .headerDropDownNav").toggle();
+  }
 
   edit = () => {
     if (Meteor.userId() == FlowRouter.current().params.id) {
       return (
         <ul className="editButton">
-          <li><a onClick={this.props.edit}>Edit</a></li>
+          <li><a className='blackon' onClick={this.props.edit}>Edit</a></li>
+          <li className='prof_settings'>
+            <a onClick={this.settings}><i className="material-icons">more_horiz</i></a>
+            <ul className="headerDropDownNav">
+              <a><li>Edit</li></a>
+            </ul>
+          </li>
         </ul>
       )
     } else if (Meteor.user()) {
       return (
         <ul className="editButton">
-          <li><a onClick={this.message}>Message</a></li>
+          <li><a className='blackon' onClick={this.message}>Message</a></li>
+          <li className='prof_settings'>
+            <a onClick={this.settings}><i className="material-icons">more_horiz</i></a>
+            <ul className="headerDropDownNav">
+              <a><li>Edit</li></a>
+            </ul>
+          </li>
         </ul>
       )
     }
     else {
       return (
         <ul className="editButton">
-          <li><a onClick={this.props.join}>Message</a></li>
+          <li><a className='blackon' onClick={this.props.join}>Message</a></li>
+          <li className='prof_settings'>
+            <a data-toggle="tooltip" onClick={this.settings}><i className="material-icons">more_horiz</i></a>
+            <ul className="headerDropDownNav">
+              <a><li>Edit</li></a>
+            </ul>
+          </li>
         </ul>
       )
     }
@@ -39,7 +62,6 @@ class Profile extends Component {
   render() {
     var profile = Meteor.users.find({_id: FlowRouter.current().params.id}).fetch()
     if (profile.length > 0) {
-
 
       var prof = profile[0];
       var name = prof.profile.name;
@@ -60,7 +82,7 @@ class Profile extends Component {
             </div>
             <div className='bottom'>
               <div className='desc location'>
-                Location: {city}, {state}
+                {city}, {state}
               </div>
               <div className='desc'>
                 <a href={facebook}> <i class="fa fa-facebook-square fbconnect" aria-hidden="true"></i></a>

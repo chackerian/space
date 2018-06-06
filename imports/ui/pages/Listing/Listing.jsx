@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-
 import { Listing } from '/imports/api/links/db.js';
 import { connect } from 'react-redux';
 import Carousel from './carousel.jsx';
@@ -17,18 +16,17 @@ class ListingItem extends Component {
   }
 
   save() {
-
+    Meteor.call('saveListing', FlowRouter.current().params.id);
   }
 
   manage = () => {
     var listing = Listing.find({urlKey: FlowRouter.current().params.id}).fetch()[0]
 
-
     if (listing.creator_id == Meteor.user()._id) {
       return (
         <ul className="clickDropper">
           <li className="settings">
-            <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
+            <a onClick={this.settings}><i className="material-icons">more_horiz</i></a>
             <ul className="headerDropDownNav">
               <a onClick={this.props.edit}><li>Edit</li></a>
             </ul>
@@ -51,7 +49,7 @@ class ListingItem extends Component {
       return (
         <ul className="clickDropper">
           <li className="settings">
-            <a data-toggle="tooltip" onClick={this.settings} data-placement="bottom"><i className="material-icons">more_horiz</i></a>
+            <a onClick={this.settings}><i className="material-icons">more_horiz</i></a>
             <ul className="headerDropDownNav">
               <a onClick={this.props.join}><li>Report Listing</li></a>
               <a onClick={this.props.join}><li>Save</li></a>
@@ -109,7 +107,7 @@ class ListingItem extends Component {
               </div>
             </div>
 
-            <div className='bottomPage'>
+          <div className='bottomPage'>
               <div className="desc-box">
                 <h4 className="box-title">Description</h4>
                 <p className="desc-full description">{listed.description}</p>

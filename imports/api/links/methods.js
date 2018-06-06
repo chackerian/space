@@ -20,7 +20,6 @@ Meteor.methods({
 /*
  * @summary Send Email
  * @locus Server
- *
  */
   sendEmail: function(to, from, subject, text) {
    this.unblock();
@@ -176,17 +175,9 @@ Meteor.methods({
    * @summary Save A Listing
    * @locus Server
    */
-   saveListing: function(optionsA) {
+   saveListing: function(id) {
     Saves.insert({
-      user: this.userId,
-      listing_title: optionsA.listing_title,
-      item_id: optionsA._id,
-      price: optionsA.price,
-      status: optionsA.status,
-      city: optionsA.city,
-      state: optionsA.state,
-      img1: optionsA.img1,
-      username: optionsA.username
+      listing_id: id
     })
   },
   /*
@@ -218,13 +209,10 @@ Meteor.methods({
       listing_creator_id: options.listing_creator_id
     });
   },
-  /*
-   * @summary Send feedback notification and Transfer
-   * @locus Server
-   */
-  deleteAccount: function(option) {
+
+  deleteAccount: function() {
     Meteor.users.remove({
-      _id: option
+      _id: Meteor.userId()
     });
   },
   /*

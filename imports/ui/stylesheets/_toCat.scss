@@ -64,6 +64,10 @@ label {
   padding: 0;
 }
 
+.popover {
+  display: none;
+}
+
 .oneDiv {
   font-family: $font-norm !important;
   margin: 5em 10em 0em 10em;
@@ -71,6 +75,10 @@ label {
 
 .fbconnect {
   color: $color-facebook;
+}
+
+.listingItemUserInfo {
+  width: 14.9em;
 }
 
 ::selection {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 
-class EditListingModal extends Component {
+class AddBitModal extends Component {
 
   constructor(props) {
     super(props)
@@ -32,7 +32,7 @@ class EditListingModal extends Component {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className='modal-head'>
-              <div className='modal-header'>Edit Listing</div>
+              <div className='modal-header'>Add Bit</div>
               <div className="modal-close"><a className="close" onClick={this.props.close}><i className="material-icons">close</i></a></div>
             </div>
             <div className="modal-body">

@@ -42,14 +42,6 @@
   height: 3.8em;
 }
 
-.searchIcon {
-  position: relative;
-  top: 0.2em;
-  font-size: 1em !important;
-  left: -12.6em;
-  color: grey;
-}
-
 .headerNav {
   background-color: $color-spacered;
   width: 100%;
@@ -71,8 +63,6 @@
 }
 
 .headerAuth {
-  display: flex;
-  align-items: center;
   li a {
     color: white !important;
     border: 1px solid white !important;
@@ -130,27 +120,50 @@
     }
 }
 
-.settings {
-    margin-left: 12.3em;
-    float: right;
+.prof_settings {
+  margin-left: 2em;
     ul {
-        display: none;
-        position: absolute;
-        padding: 5px 0;
-        margin: 0em 0px 0px -8.35em !important;
-        animation: 100ms fadeInDownMini;
-        background-color: white !important;
-        width: 10em;
+      display: none;
+      position: absolute;
+      padding: 5px 0;
+      margin: 0em 0px 0px -8.35em !important;
+      animation: 100ms fadeInDownMini;
+      background-color: white !important;
+      width: 10em;
 
-        li {
-            padding: 15px 50px 15px 15px;
-            display: flex;
+      li {
+          padding: 15px 50px 15px 15px;
+          display: flex;
 
-            a {
-                margin: 0 !important;
-                padding: 15px 80px 15px 15px !important;
-            }
-        }
+          a {
+              margin: 0 !important;
+              padding: 15px 80px 15px 15px !important;
+          }
+      }
+
+    }
+}
+
+.settings {
+    margin-left: auto;
+    ul {
+      display: none;
+      position: absolute;
+      padding: 5px 0;
+      margin: 0em 0px 0px -8.35em !important;
+      animation: 100ms fadeInDownMini;
+      background-color: white !important;
+      width: 10em;
+
+      li {
+          padding: 15px 50px 15px 15px;
+          display: flex;
+
+          a {
+              margin: 0 !important;
+              padding: 15px 80px 15px 15px !important;
+          }
+      }
 
     }
 }

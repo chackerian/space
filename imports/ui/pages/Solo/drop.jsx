@@ -16,10 +16,10 @@ class Dropzone extends Component {
   }
 
   dropped = (event) => {
-  event.preventDefault();
+    event.preventDefault();
     let dataTransferItemsList = []
     if (event.dataTransfer) {
-      console.log('dasfool', event.dataTransfer)
+      console.log('holly');
       const dt = event.dataTransfer
       if (dt.files && dt.files.length) {
         dataTransferItemsList = dt.files
@@ -27,13 +27,13 @@ class Dropzone extends Component {
         dataTransferItemsList = dt.items
       }
     } else if (event.target && event.target.files) {
-      console.log('dasbool', event.target);
       dataTransferItemsList = event.target.files
+      console.log('bolly', event.target.files);
     }
   }
 
   // if(extension.match(/(jpeg|jpg|png)/) > 0 && size > 2000) {
-  // 
+  
   // }
 
   render() {

@@ -47,6 +47,11 @@ class Home extends Component {
   }
 
   render() {
+    
+    $('.homeCardRight').hover(function() {
+      $('.popover').show();  
+    })
+
     return (
       <div className="homeCard">
         <ul className="homeCardUl">

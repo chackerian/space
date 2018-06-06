@@ -42,7 +42,7 @@ button {
   }
 }
 
-.headerNameOptions li a {
+.blackon {
   padding: 5px 10px !important;
   border: 1px solid black;
   border-radius: 0.2em;
@@ -54,36 +54,10 @@ button {
   }
 }
 
-.buttonas {
-    li a {
-      padding: 5px 10px;
-      border: 1px solid black !important;
-      border-radius: 0.2em;
-      color: black !important;
-      margin: 0 0 0 0.5em;
-    }
-    li a:hover {
-      color: white !important;
-      border: 1px solid black !important;
-      background: $color-spacegrey;
-    }
-}
-
 .editButton {
   margin-top: 10em;
   margin-left: auto;
-  li a {
-    font-size: 0.9em;
-    padding: 5px 10px !important;
-    border: 1px solid black;
-    color: black !important;
-    border-radius: 0.2em;
-    transition: 0.2s;
-    &:hover {
-      color: #fff !important;
-      background-color: $color-spacegrey !important;
-    }
-  }
+  display: flex;
 }
 
 .join-button {
@@ -109,16 +83,15 @@ button {
   display: flex;
     button {
         outline: none;
-        float: right;
         border-radius: 0.2em;
         padding: 5px 15px;
     }
 }
 
 .listingItemShare {
-    a {
-      padding: 0.5em 0.32em;
-    }
+  a {
+    padding: 0.5em 0.32em;
+  }
 }
 
 .share-btn {
