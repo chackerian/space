@@ -19,7 +19,7 @@ var HomeCard = ({item}) => (
         </li>
         <li className="homeCardRight">
             <ul>
-              <li className="homeCardUser">
+              <li className="homeCardUser" popshow='true'>
                 <a href={`/profile/${item.creator_id}`} className="profile-link">{item.creator_initials}</a>
               </li>
             </ul>
@@ -46,12 +46,21 @@ class Home extends Component {
     )
   }
 
-  render() {
-    
-    $('.homeCardRight').hover(function() {
-      $('.popover').show();  
+  componentDidMount() {
+    $("[popshow='true']").hover(() => {
+      var pos = $(this).getBoundingClientRect();
+      var left = pos.left;
+      var top = pos.top+30;
+      console.log(top, left);
+      $('.popover').css({
+        'left': left,
+        'top': top 
+      });
+      $('popover').toggle();
     })
+  }
 
+  render() {
     return (
       <div className="homeCard">
         <ul className="homeCardUl">

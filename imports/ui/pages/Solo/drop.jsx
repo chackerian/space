@@ -19,14 +19,16 @@ class Dropzone extends Component {
     event.preventDefault();
     let dataTransferItemsList = []
     if (event.dataTransfer) {
-      console.log('holly');
+      console.log('holly', event.dataTransfer);
       const dt = event.dataTransfer
       if (dt.files && dt.files.length) {
         dataTransferItemsList = dt.files
       } else if (dt.items && dt.items.length) {
         dataTransferItemsList = dt.items
       }
-    } else if (event.target && event.target.files) {
+    } 
+
+    if (event.target && event.target.files) {
       dataTransferItemsList = event.target.files
       console.log('bolly', event.target.files);
     }

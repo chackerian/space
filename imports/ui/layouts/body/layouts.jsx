@@ -12,7 +12,6 @@ import Alert from '../../pages/Solo/alert.jsx';
 import Header from '../../pages/Header/header.jsx';
 import Modal from '../../pages/Modal/modal.jsx';
 import Popper from '../../pages/Solo/popper.jsx';
-import Footer from '../../pages/Footer/footer.jsx';
 
 export const store = createStore(reducer);
 

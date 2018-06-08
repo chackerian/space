@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Meteor } from 'meteor/meteor';
 import { Listing, Offer } from '/imports/api/links/db.js';
 
 export default class Footer extends Component {

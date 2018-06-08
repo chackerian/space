@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 
-class Popper extends Component {
+export default class Popper extends Component {
+
+  constructor(props) {
+    super(props)
+  }
 
   render() {
     return (
-		<div className='popover'>
-			<h3 className='popover-header'>Nathan</h3>
-			<div className='popover-body'>This is going to go well</div>
-		</div>
-	 )
+      <div className="popover">
+        <div>Nathan</div>
+        <div>asdasd</div>
+      </div>
+    )
   }
+
 }
