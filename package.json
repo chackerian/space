@@ -1,0 +1,39 @@
+{
+  "name": "bath",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.55",
+    "animate.css": "^3.5.2",
+    "aws": "0.0.3-2",
+    "aws-sdk": "^2.224.1",
+    "babel": "^6.23.0",
+    "babel-runtime": "^6.26.0",
+    "bcrypt": "^1.0.3",
+    "coinbase": "^2.0.7",
+    "compress.js": "^1.1.2",
+    "filestack-js": "^0.10.1",
+    "filestack-react": "^1.3.8",
+    "flickity": "^2.0.10",
+    "font-awesome": "^4.7.0",
+    "google-map-react": "^0.27.0",
+    "isotope-layout": "^3.0.4",
+    "jquery.rateit": "^1.1.1",
+    "meteor-node-stubs": "~0.2.4",
+    "node-sass": "^4.6.0",
+    "pikaday": "^1.6.1",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-google-ad": "^1.0.2",
+    "react-google-maps": "^9.4.5",
+    "react-markdown": "^3.1.4",
+    "react-mounter": "^1.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "s3": "^4.4.0",
+    "slideout": "^1.0.1",
+    "tinify": "^1.5.0"
+  }
+}
